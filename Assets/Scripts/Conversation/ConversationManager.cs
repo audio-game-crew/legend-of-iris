@@ -7,7 +7,7 @@ using UnityEditor;
 public class ConversationManager : MonoBehaviour {
 
     public TextAsset storyScript;
-    public bool loadStory;
+    public bool importConversationsFromStory;
     public List<Conversation> conversations;
     private int messageHintLength = 60;
 
@@ -80,10 +80,10 @@ public class ConversationManager : MonoBehaviour {
     {
         if (Application.isEditor)
         {
-            if (loadStory)
+            if (importConversationsFromStory)
             {
                 FillConversations();
-                loadStory = false;
+                importConversationsFromStory = false;
             }
 
             foreach (Conversation c in conversations)
