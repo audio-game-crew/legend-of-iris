@@ -13,7 +13,8 @@ public class CameraManager : MonoBehaviour {
     public Camera oculusRiftRightCamera;
     public Camera normalCamera;
     public CameraSetting setting;
-    public Camera current;
+    public static Camera currentFirstPersonCamera;
+    public static Camera currentViewingCamera;
 
     public enum CameraSetting
     {
@@ -23,19 +24,19 @@ public class CameraManager : MonoBehaviour {
     public static Vector3 GetCameraForwardVector() { return instance.getCameraForwardVector(); }
     private Vector3 getCameraForwardVector()
     {
-        return current.transform.TransformDirection(Vector3.forward);
+        return currentFirstPersonCamera.transform.TransformDirection(Vector3.forward);
     }
 
     public static Vector3 GetCameraForwardMovementVector() { return instance.getCameraForwardMovementVector(); }
     private Vector3 getCameraForwardMovementVector()
     {
-        return current.transform.TransformDirection(Vector3.forward).sety(0).normalized;
+        return currentFirstPersonCamera.transform.TransformDirection(Vector3.forward).sety(0).normalized;
     }
 
     public static Vector3 GetCameraRightVector() { return instance.getCameraRightVector(); }
     private Vector3 getCameraRightVector()
     {
-        return current.transform.TransformDirection(Vector3.right);
+        return currentFirstPersonCamera.transform.TransformDirection(Vector3.right);
     }
 
     public bool IsOculusRiftConnected()
@@ -59,7 +60,8 @@ public class CameraManager : MonoBehaviour {
         setting = CameraSetting.NORMAL;
         setNormalCameraEnabled(true);
         setOculusRiftCameraEnabled(false);
-        current = normalCamera;
+        currentFirstPersonCamera = normalCamera;
+        currentViewingCamera = visualAidsCamera.camera;
     }
 
     public void SetHeadTrackingMode()
@@ -72,7 +74,8 @@ public class CameraManager : MonoBehaviour {
         setting = CameraSetting.HEADTRACKING;
         setNormalCameraEnabled(true);
         setOculusRiftCameraEnabled(true);
-        current = oculusRiftRightCamera;
+        currentFirstPersonCamera = oculusRiftRightCamera;
+        currentViewingCamera = visualAidsCamera.camera;
     }
 
     public void SetOculusRiftMode()
@@ -85,7 +88,8 @@ public class CameraManager : MonoBehaviour {
         setting = CameraSetting.OCULUSRIFT;
         setNormalCameraEnabled(false);
         setOculusRiftCameraEnabled(true);
-        current = oculusRiftRightCamera;
+        currentFirstPersonCamera = oculusRiftRightCamera;
+        currentViewingCamera = oculusRiftRightCamera;
     }
 
     private void setNormalCameraEnabled(bool enabled)

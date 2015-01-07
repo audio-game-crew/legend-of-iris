@@ -19,6 +19,7 @@ class ConversationPlayer
     private List<MessageQueueItem> conversationQueue = new List<MessageQueueItem>();
     private List<AudioPlayer> activePlayers = new List<AudioPlayer>();
     private List<SubtitleElement> activeSubtitles = new List<SubtitleElement>();
+    private List<AudioIndicator> activeIndicators = new List<AudioIndicator>();
     private OnMessageStart onMessageStartListener;
     private OnMessageEnd onMessageEndListener;
 
@@ -79,14 +80,18 @@ class ConversationPlayer
             {
                 MessageQueueItem mqi = conversationQueue.Shift();
                 ConversationMessage msg = mqi.message;
+                float timer = msg.audioClip == null ? 0f : msg.audioClip.length;
 
                 // start audio
                 AudioPlayer ap = AudioManager.PlayAudio(new AudioObject(msg.source, msg.audioClip, msg.settings.volume));
                 activePlayers.Add(ap);
                 ap.SetPitch(msg.settings.pitch);
 
+                // show indicator
+                var ai = IndicatorManager.ShowAudioIndicator(msg.source, timer);
+                activeIndicators.Add(ai);
+
                 // set subtitles
-                float timer = msg.audioClip == null ? 0f : msg.audioClip.length;
                 var se = SubtitlesManager.ShowSubtitle(timer, msg.source.name, msg.subtitle);
                 activeSubtitles.Add(se);
 
@@ -96,9 +101,14 @@ class ConversationPlayer
                     int i = mqi.index;
                     AudioPlayer myAP = ap;
                     SubtitleElement mySE = se;
+                    AudioIndicator myAI = ai;
+
                     activePlayers.Remove(myAP);
                     activeSubtitles.Remove(mySE);
+                    activeIndicators.Remove(myAI);
+
                     mySE.FadeAfterSeconds(1f);
+                    myAI.Stop();
 
                     if (onMessageEndListener != null)
                     {

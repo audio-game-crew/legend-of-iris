@@ -333,7 +333,7 @@ public static class VectorExtension
     /// <summary> The angle on the unit circle of this vector (-pi, pi] </summary>
     public static float angle(this Vector2 v)
     {
-        return Mathf.Atan2(v.y, v.x);
+        return Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
     }
     /// <summary> The angle between 2 vectors. Angle is directional: returns positive value 
     /// if this vector should rotate counter clockwise in order to reach the 'other' </summary>
