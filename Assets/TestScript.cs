@@ -25,6 +25,7 @@ public class TestScript : MonoBehaviour {
         ao = new AudioObject(gameObject, clip, 1f);
         //AudioManager.PlayAudio(ao);
 
+        ConversationManager.PlayConversation("T2.1");
 	}
 	
 	// Update is called once per frame
@@ -32,6 +33,11 @@ public class TestScript : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.Return))
         {
             ConversationManager.PlayConversation("T2.1");
+        }
+
+        if (Input.GetKeyUp(KeyCode.F1))
+        {
+            Application.LoadLevel(Application.loadedLevel);
         }
 	}
 }

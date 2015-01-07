@@ -108,11 +108,6 @@ public class AudioPlayer
     {
         if (finished) return;
 
-        if (paused)
-        {
-            playAtTime += deltaTime;
-        }
-
         if (audio.pausable)
         {
             if (PauseManager.paused)
@@ -123,6 +118,11 @@ public class AudioPlayer
             {
                 ContinuePlaying();
             }
+        }
+
+        if (paused)
+        {
+            playAtTime += deltaTime;
         }
 
         if (audioAS == null || audioAS.clip == null || (!audioAS.loop && audioAS.time > audioAS.clip.length - 0.04f))
