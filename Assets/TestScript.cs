@@ -24,10 +24,14 @@ public class TestScript : MonoBehaviour {
         AudioManager.PlayAudio(ao);
         ao = new AudioObject(gameObject, clip, 1f);
         //AudioManager.PlayAudio(ao);
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+        if (Input.GetKeyUp(KeyCode.Return))
+        {
+            ConversationManager.PlayConversation("T2.1");
+        }
 	}
 }

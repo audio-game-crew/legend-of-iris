@@ -45,7 +45,7 @@ public class SettingsManager : MonoBehaviour
         settingsBackground.SetActive(!settingsBackground.activeInHierarchy);
         if (!IsSettingsShown())
         {
-            activePlayer.Delete();
+            activePlayer.MarkRemovable();
             activeSettingType = 0;
         }
     }
@@ -66,7 +66,7 @@ public class SettingsManager : MonoBehaviour
     {
         if (activePlayer != null)
         {
-            activePlayer.Delete();
+            activePlayer.MarkRemovable();
         }
         AudioObject ao = new AudioObject(PlayerController.instance.gameObject, ac, mute ? 0f : 0.6f, 0f, false, false);
         activePlayer = AudioManager.PlayAudio(ao);

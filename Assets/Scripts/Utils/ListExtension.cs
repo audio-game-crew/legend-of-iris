@@ -13,6 +13,17 @@ public static class ListExtension
     {
         return Randomg.Range(0, list.Count);
     }
+    public static T Shift<T>(this List<T> list)
+    {
+
+        T removable = default(T);
+        if (list.Count > 0)
+        {
+            removable = list[0];
+            list.RemoveAt(0);
+        }
+        return removable;
+    }
     public static T Pop<T>(this List<T> list)
     {
 

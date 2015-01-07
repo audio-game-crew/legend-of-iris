@@ -168,7 +168,7 @@ public class MineFieldScript : MonoBehaviour {
             {
                 if (mineProximitySensors.ContainsKey(mineToRemove))
                     mineProximitySensors[mineToRemove].SetActive(false);
-                minePlayers[mine].Delete();
+                minePlayers[mine].MarkRemovable();
                 mine.SetActive(false);
                 var minePosition = minePositions[mine];
                 grid[minePosition.x, minePosition.y] = false;

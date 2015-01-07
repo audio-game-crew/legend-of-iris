@@ -2,7 +2,6 @@
 
 public class AudioPlayer
 {
-    protected AudioObject audio;
     public bool finished
     {
         get;
@@ -14,12 +13,15 @@ public class AudioPlayer
         protected set;
     }
 
+    protected AudioObject audio;
     protected GameObject audioGO;
     protected AudioSource audioAS;
     protected AstoundSoundRTIFilter filterAS;
     protected bool paused = false;
     protected float playAtTime = 0f;
 
+    public delegate void OnRemoveListener();
+    protected OnRemoveListener onRemoveListener;
 
     public AudioPlayer(AudioObject audio)
     {
@@ -42,6 +44,11 @@ public class AudioPlayer
         audioAS.loop = audio.loop;
         playAtTime = Time.time + audio.delay;
         audioAS.PlayDelayed(audio.delay);
+    }
+
+    public void SetOnRemoveListener(OnRemoveListener listener)
+    {
+        onRemoveListener = listener;
     }
 
     public AudioClip GetAudioClip()
@@ -80,7 +87,7 @@ public class AudioPlayer
         }
     }
 
-    public void Delete()
+    public void MarkRemovable()
     {
         removable = true;
     }
@@ -128,5 +135,8 @@ public class AudioPlayer
     public virtual void OnRemove()
     {
         GameObject.Destroy(audioGO);
+
+        if (onRemoveListener != null)
+            onRemoveListener.Invoke();
     }
 }

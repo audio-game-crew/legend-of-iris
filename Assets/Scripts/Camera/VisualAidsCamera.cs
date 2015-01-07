@@ -9,6 +9,7 @@ public class VisualAidsCamera : MonoBehaviour {
     public Vector3 followeeLocalForward;
     public float rotationConvergeSpeed = 4f;
     public float positionConvergeSpeed = 4f;
+    public float scrollSpeed = 4f;
     public float minZoom = 4f;
     public float maxZoom = 10f;
     public float zoom = 0.5f;
@@ -23,6 +24,8 @@ public class VisualAidsCamera : MonoBehaviour {
     void FixedUpdate()
     {
         Transform followee = followeeOR.gameObject.activeInHierarchy ? followeeOR : followeeNormal;
+        zoom -= scrollSpeed * Input.GetAxis("Mouse ScrollWheel") / 20f;
+        zoom = Mathf.Clamp01(zoom);
 
         float y = maxZoom * zoom + minZoom;
         currentForward += (followee.TransformDirection(followeeLocalForward) - currentForward) * Timeg.safeFixedDelta(rotationConvergeSpeed);

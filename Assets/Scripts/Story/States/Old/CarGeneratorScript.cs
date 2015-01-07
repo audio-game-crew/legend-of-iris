@@ -61,7 +61,7 @@ public class CarGeneratorScript : MonoBehaviour {
     public void RemoveCar(GameObject car)
     {
         if (!listCarsActive.ContainsKey(car)) { Debug.LogWarning("Car not found"); return; }
-        listCarsActive[car].Delete();
+        listCarsActive[car].MarkRemovable();
         listCarsActive.Remove(car);
     }
 	/*

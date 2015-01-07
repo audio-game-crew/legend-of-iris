@@ -6,14 +6,94 @@ using UnityEditor;
 [ExecuteInEditMode]
 public class ConversationManager : MonoBehaviour {
 
+    private static ConversationManager instance;
+    void Awake()
+    {
+        instance = this;
+    }
+
+    [Header("Settings")]
+    public bool maxOneConversationActive = true;
+    public List<Conversation> conversations;
+
+    [Header("Story script importer")]
     public TextAsset storyScript;
     public bool importConversationsFromStory;
-    public List<Conversation> conversations;
     private int messageHintLength = 60;
+
+    [Header("Debug")]
+    public int playingConversationsCount = 0;
+
+    private List<ConversationPlayer> playingConversations = new List<ConversationPlayer>();
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Application.isEditor)
+        {
+            CheckConversations();
+        }
+
+        // check if player wants to skip
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            foreach (var cp in playingConversations)
+            {
+                cp.Skip();
+            }
+        }
+
+        // update the conversations
+        // remove if finished
+        for (int i = 0; i < playingConversations.Count; i++)
+        {
+            ConversationPlayer cp = playingConversations[i];
+            cp.Update();
+
+            if (cp.IsFinished())
+            {
+                playingConversations.Remove(cp);
+                i--;
+            }
+        }
+
+        playingConversationsCount = playingConversations.Count;
+    }
+
+    public static void PlayConversation(string conversationID)
+    {
+        instance.playConversation(conversationID);
+    }
+
+    private void playConversation(string conversationID)
+    {
+        Conversation toPlay = null;
+        foreach (Conversation c in conversations)
+        {
+            if (c.nameID.Equals(conversationID))
+            {
+                toPlay = c;
+                break;
+            }
+        }
+
+        if (toPlay != null)
+        {
+            if (maxOneConversationActive)
+            {
+                foreach (ConversationPlayer c in playingConversations)
+                {
+                    c.Skip();
+                }
+            }
+            ConversationPlayer cp = new ConversationPlayer(toPlay);
+            playingConversations.Add(cp);
+        }
+    }
 
     void AddConversation(List<Conversation> newconversations, string nameID, List<string> sources, List<string> texts)
     {
-        List<Conversation.Message> messages = new List<Conversation.Message>();
+        List<ConversationMessage> messages = new List<ConversationMessage>();
         Conversation c = new Conversation();
         c.nameID = nameID;
         c.messageSequence = messages;
@@ -21,7 +101,7 @@ public class ConversationManager : MonoBehaviour {
 
         for (int i = 0; i < sources.Count; i++ )
         {
-            var m = new Conversation.Message();
+            var m = new ConversationMessage();
             m.audioClip = Resources.Load(c.nameID + "_" + i, typeof(AudioClip)) as AudioClip;
             m.source = GameObject.Find(sources[i]);
             m.subtitle = texts[i];
@@ -74,45 +154,41 @@ public class ConversationManager : MonoBehaviour {
 
         conversations = newconversations;
 	}
-	
-	// Update is called once per frame
-	void Update () 
+
+    void CheckConversations()
     {
-        if (Application.isEditor)
+        if (importConversationsFromStory)
         {
-            if (importConversationsFromStory)
-            {
-                FillConversations();
-                importConversationsFromStory = false;
-            }
-
-            foreach (Conversation c in conversations)
-            {
-                bool incomplete = false;
-                int index = 0;
-                foreach (Conversation.Message m in c.messageSequence)
-                {
-                    m.name = "";
-                    if (m.source == null || m.audioClip == null || m.subtitle.Length == 0)
-                    {
-                        incomplete = true;
-                        m.name = "!Err! ";
-                    }
-
-                    string add = m.subtitle.Length > messageHintLength ? "..." : "";
-                    string msg = m.subtitle.Substring(0, Mathf.Min(m.subtitle.Length, messageHintLength));
-                    m.name += (m.source == null ? "" : m.source.name) + ": " + msg + add;
-
-                    index++;
-                }
-
-                c.name = "";
-                if (incomplete || c.nameID.Length == 0)
-                {
-                    c.name = "!Err! ";
-                }
-                c.name += c.nameID + (c.hint.Length > 0 ? ": " + c.hint : "");
-            }
+            FillConversations();
+            importConversationsFromStory = false;
         }
-	}
+
+        foreach (Conversation c in conversations)
+        {
+            bool incomplete = false;
+            int index = 0;
+            foreach (ConversationMessage m in c.messageSequence)
+            {
+                m.name = "";
+                if (m.source == null || m.audioClip == null || m.subtitle.Length == 0)
+                {
+                    incomplete = true;
+                    m.name = "!Err! ";
+                }
+
+                string add = m.subtitle.Length > messageHintLength ? "..." : "";
+                string msg = m.subtitle.Substring(0, Mathf.Min(m.subtitle.Length, messageHintLength));
+                m.name += (m.source == null ? "" : m.source.name) + ": " + msg + add;
+
+                index++;
+            }
+
+            c.name = "";
+            if (incomplete || c.nameID.Length == 0)
+            {
+                c.name = "!Err! ";
+            }
+            c.name += c.nameID + (c.hint.Length > 0 ? ": " + c.hint : "");
+        }
+    }
 }
