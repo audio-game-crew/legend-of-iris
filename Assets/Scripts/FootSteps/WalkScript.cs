@@ -48,7 +48,7 @@ public class WalkScript : MonoBehaviour {
         currentGroundType = DEFAULT_GROUND_TYPE;
 	}
 	
-	void Update () 
+	void FixedUpdate () 
     {
         DetermineGroundType();
 
