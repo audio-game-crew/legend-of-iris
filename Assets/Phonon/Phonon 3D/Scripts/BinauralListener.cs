@@ -19,6 +19,8 @@ public class BinauralListener : MonoBehaviour
     //
     void Awake()
     {
+        PhononRuntime.Start();
+        IntPtr hrtfLoaded = HRTF();
     }
     
     //
@@ -95,7 +97,24 @@ public class BinauralListener : MonoBehaviour
     {
         if (hrtf == IntPtr.Zero)
         {
+#if UNITY_ANDROID
+#else
+            PhononRuntime.iplOpenLogFile("phonon3d.log");
+#endif
+
+#if UNITY_ANDROID
+
+            string hrtfAssetFile = Application.streamingAssetsPath + "/cipic_124.hrtf";
+            WWW streamingAssetLoader = new WWW(hrtfAssetFile);
+            while (!streamingAssetLoader.isDone) ;
+            byte[] assetData = streamingAssetLoader.bytes;
+            string hrtfFileName = Application.temporaryCachePath + "/cipic_124.hrtf";
+            BinaryWriter dataWriter = new BinaryWriter(new FileStream(hrtfFileName, FileMode.Create));
+            dataWriter.Write(assetData);
+
+#else
             string hrtfFileName = Path.Combine(Application.streamingAssetsPath, "cipic_124.hrtf");
+#endif
             
             IPLerror errorCode = PhononRuntime.iplLoadHRTF(hrtfFileName, ref hrtf);
             if (errorCode != IPLerror.NONE)
@@ -122,6 +141,10 @@ public class BinauralListener : MonoBehaviour
             if (hrtf != IntPtr.Zero)
             {
                 PhononRuntime.iplUnloadHRTF(hrtf);
+#if UNITY_ANDROID
+#else
+                PhononRuntime.iplCloseLogFile();
+#endif
                 hrtf = IntPtr.Zero;
             }
         }
