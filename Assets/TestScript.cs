@@ -24,15 +24,32 @@ public class TestScript : MonoBehaviour {
         AudioManager.PlayAudio(ao);
         ao = new AudioObject(gameObject, clip, 1f);
         //AudioManager.PlayAudio(ao);
-
-        ConversationManager.PlayConversation("T2.1");
+        PlayConversation();
 	}
+
+    void PlayConversation()
+    {
+        var cp = ConversationManager.PlayConversation("T2.1", delegate()
+        {
+            Debug.Log("Conversation ended!!");
+        });
+
+        cp.SetOnMessageStartListener(delegate(int index)
+        {
+            Debug.Log("Started message #" + index);
+        });
+
+        cp.SetOnMessageEndListener(delegate(int index)
+        {
+            Debug.Log("Ended message #" + index);
+        });
+    }
 	
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyUp(KeyCode.Return))
         {
-            ConversationManager.PlayConversation("T2.1");
+            PlayConversation();
         }
 
         if (Input.GetKeyUp(KeyCode.F1))
