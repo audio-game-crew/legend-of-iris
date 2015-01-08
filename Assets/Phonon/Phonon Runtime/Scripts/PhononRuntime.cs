@@ -110,14 +110,10 @@ public class PhononRuntime
     //
     public static void Start()
     {
-        try
-        {
-            iplOpenLogFile("phononrt.log");
-            iplSetAudioFrameSize(1024);
-            iplSetAudioSamplingRate(AudioSettings.outputSampleRate);
-            iplSetSpeakerLayout(IPLSpeakerLayout.STEREO);
-        }
-        catch (Exception e) { }
+        iplOpenLogFile("phononrt.log");
+        iplSetAudioFrameSize(1024);
+        iplSetAudioSamplingRate(AudioSettings.outputSampleRate);
+        iplSetSpeakerLayout(IPLSpeakerLayout.STEREO);
     }
 
     //
@@ -125,12 +121,8 @@ public class PhononRuntime
     //
     public static void Stop()
     {
-        try
-        {
-            iplCloseLogFile();
-            iplDumpProfile();
-        }
-        catch (Exception e) { }
+        iplCloseLogFile();
+        iplDumpProfile();
     }
 
 }

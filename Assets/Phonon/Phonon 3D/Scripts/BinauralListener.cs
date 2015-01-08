@@ -93,23 +93,19 @@ public class BinauralListener : MonoBehaviour
     //
     public static IntPtr HRTF()
     {
-        try
+        if (hrtf == IntPtr.Zero)
         {
-            if (hrtf == IntPtr.Zero)
+            string hrtfFileName = Path.Combine(Application.streamingAssetsPath, "cipic_124.hrtf");
+            
+            IPLerror errorCode = PhononRuntime.iplLoadHRTF(hrtfFileName, ref hrtf);
+            if (errorCode != IPLerror.NONE)
             {
-                string hrtfFileName = Path.Combine(Application.streamingAssetsPath, "cipic_124.hrtf");
-
-                IPLerror errorCode = PhononRuntime.iplLoadHRTF(hrtfFileName, ref hrtf);
-                if (errorCode != IPLerror.NONE)
-                {
-                    Debug.LogError("Unable to load HRTF data from " + hrtfFileName + ". Please verify that the file is present.");
-                    return IntPtr.Zero;
-                }
+                Debug.LogError("Unable to load HRTF data from " + hrtfFileName + ". Please verify that the file is present.");
+                return IntPtr.Zero;
             }
-
-            numSources++;
         }
-        catch (Exception e) { }
+
+        numSources++;
 
         return hrtf;
     }
