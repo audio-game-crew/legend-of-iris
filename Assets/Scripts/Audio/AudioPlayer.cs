@@ -90,6 +90,8 @@ public class AudioPlayer
     public void MarkRemovable()
     {
         removable = true;
+        if (onRemoveListener != null)
+            onRemoveListener.Invoke();
     }
 
     public void SetVolume(float volume)
@@ -128,15 +130,12 @@ public class AudioPlayer
         if (audioAS == null || audioAS.clip == null || (!audioAS.loop && audioAS.time > audioAS.clip.length - 0.04f))
         {
             finished = true;
-            removable = true;
+            MarkRemovable();
         }
     }
 
     public virtual void OnRemove()
     {
         GameObject.Destroy(audioGO);
-
-        if (onRemoveListener != null)
-            onRemoveListener.Invoke();
     }
 }
