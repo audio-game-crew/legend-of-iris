@@ -5524,7 +5524,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1336715850}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5
@@ -5802,9 +5802,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1423677001}
+  - 114: {fileID: 1423677002}
   m_Layer: 0
   m_Name: Lucy
-  m_TagString: Untagged
+  m_TagString: Lucy
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5822,6 +5823,18 @@ Transform:
   - {fileID: 1336715851}
   m_Father: {fileID: 1527040402}
   m_RootOrder: 2
+--- !u!114 &1423677002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1423677000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6d5757b4320403386fdfa96fab762f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LucyFlyTime: 4
 --- !u!1 &1452973061
 GameObject:
   m_ObjectHideFlags: 0
@@ -11762,9 +11775,10 @@ GameObject:
   - 114: {fileID: 2076031671}
   - 114: {fileID: 2076031670}
   - 114: {fileID: 2076031669}
+  - 114: {fileID: 2076031674}
   m_Layer: 0
   m_Name: Beorn
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11868,6 +11882,19 @@ CapsuleCollider:
   m_Height: 4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2076031674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2076031667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2029dfdcce2c8741b7f291fc7de5674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingQuests:
+  - {fileID: 159651632}
 --- !u!1 &2093325993
 GameObject:
   m_ObjectHideFlags: 0
