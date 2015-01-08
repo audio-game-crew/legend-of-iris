@@ -110,8 +110,12 @@ public class PhononRuntime
     //
     public static void Start()
     {
-        iplOpenLogFile("phononrt.log");
-        iplSetAudioFrameSize(1024);
+        int bufferLength;
+        int numBuffers;
+        AudioSettings.GetDSPBufferSize(out bufferLength, out numBuffers);
+        FrameSize = bufferLength;
+
+        iplSetAudioFrameSize(bufferLength);
         iplSetAudioSamplingRate(AudioSettings.outputSampleRate);
         iplSetSpeakerLayout(IPLSpeakerLayout.STEREO);
     }
@@ -121,8 +125,8 @@ public class PhononRuntime
     //
     public static void Stop()
     {
-        iplCloseLogFile();
-        iplDumpProfile();
     }
+
+    public static int FrameSize = 0;
 
 }

@@ -67,7 +67,7 @@ public class BinauralSource : MonoBehaviour
         }
 
         // Allocate a buffer for downmixing audio to mono.
-        monoAudio = new float[1024];
+        monoAudio = new float[PhononRuntime.FrameSize];
 
         // Allocate unmanaged memory for effect parameters.
         binauralParamsBuffer = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(IPLBinauralUnlimitedEffectParams)));
