@@ -12,6 +12,7 @@ public class CameraManager : MonoBehaviour {
     public VisualAidsCamera visualAidsCamera;
     public Camera oculusRiftRightCamera;
     public Camera normalCamera;
+    public CanvasGroup visualAidsGroup;
     public CameraSetting setting;
     public static Camera currentFirstPersonCamera;
     public static Camera currentViewingCamera;
@@ -60,8 +61,10 @@ public class CameraManager : MonoBehaviour {
         setting = CameraSetting.NORMAL;
         setNormalCameraEnabled(true);
         setOculusRiftCameraEnabled(false);
+        setVisualAidsCameraEnabled(true);
         currentFirstPersonCamera = normalCamera;
         currentViewingCamera = visualAidsCamera.camera;
+        visualAidsGroup.alpha = 1f;
     }
 
     public void SetHeadTrackingMode()
@@ -72,10 +75,12 @@ public class CameraManager : MonoBehaviour {
             return;
         }
         setting = CameraSetting.HEADTRACKING;
-        setNormalCameraEnabled(true);
+        setNormalCameraEnabled(false);
         setOculusRiftCameraEnabled(true);
+        setVisualAidsCameraEnabled(true);
         currentFirstPersonCamera = oculusRiftRightCamera;
         currentViewingCamera = visualAidsCamera.camera;
+        visualAidsGroup.alpha = 1f;
     }
 
     public void SetOculusRiftMode()
@@ -88,13 +93,20 @@ public class CameraManager : MonoBehaviour {
         setting = CameraSetting.OCULUSRIFT;
         setNormalCameraEnabled(false);
         setOculusRiftCameraEnabled(true);
+        setVisualAidsCameraEnabled(false);
         currentFirstPersonCamera = oculusRiftRightCamera;
         currentViewingCamera = oculusRiftRightCamera;
+        visualAidsGroup.alpha = 0f;
     }
 
     private void setNormalCameraEnabled(bool enabled)
     {
         normalCamera.transform.parent.gameObject.SetActive(enabled);
+    }
+
+    private void setVisualAidsCameraEnabled(bool enabled)
+    {
+        visualAidsCamera.gameObject.SetActive(enabled);
     }
 
     private void setOculusRiftCameraEnabled(bool enabled)

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.Events;
 
 public class Story : MonoBehaviour {
 
@@ -102,7 +103,6 @@ public class Story : MonoBehaviour {
 	public FollowLucyToWaterState FollowLucyToWater = new FollowLucyToWaterState();
     public LucyExplainingState LucyExplainsYouWin = new LucyExplainingState();
     public EndState EndState = new EndState();
- 
        
     // Current state that we are in
     private BaseState currentState;

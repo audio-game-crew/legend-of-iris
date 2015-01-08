@@ -14,7 +14,7 @@ public class SingleAxisControls : BaseControls
 
     public override UnityEngine.Vector3 GetMove(Vector3 current)
     {
-        Vector3 forward = CameraManager.GetCameraForwardVector().sety(0);
+        Vector3 forward = CameraManager.GetCameraForwardMovementVector();
         return forward * Time.deltaTime * walkSpeed * Input.GetAxis("Vertical");
     }
 
