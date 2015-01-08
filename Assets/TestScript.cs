@@ -29,19 +29,16 @@ public class TestScript : MonoBehaviour {
 
     void PlayConversation()
     {
-        var cp = ConversationManager.PlayConversation("T2.1", delegate()
-        {
-            Debug.Log("Conversation ended!!");
+        var cp = ConversationManager.PlayConversation("T2.1", delegate() {
+            // Debug.Log("Conversation ended!!");
         });
 
-        cp.SetOnMessageStartListener(delegate(int index)
-        {
-            Debug.Log("Started message #" + index);
+        cp.SetOnMessageStartListener(delegate(int index) {
+            // Debug.Log("Started message #" + index);
         });
 
-        cp.SetOnMessageEndListener(delegate(int index)
-        {
-            Debug.Log("Ended message #" + index);
+        cp.SetOnMessageEndListener(delegate(int index) {
+            // Debug.Log("Ended message #" + index);
         });
     }
 	
