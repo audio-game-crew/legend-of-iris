@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-class ConversationPlayer
+public class ConversationPlayer
 {
     private class MessageQueueItem
     {
@@ -15,6 +15,7 @@ class ConversationPlayer
 
     public delegate void OnMessageStart(int index);
     public delegate void OnMessageEnd(int index);
+    public delegate void OnConversationEnd();
     private Conversation conversation;
     private List<MessageQueueItem> conversationQueue = new List<MessageQueueItem>();
     private List<AudioPlayer> activePlayers = new List<AudioPlayer>();
@@ -22,6 +23,22 @@ class ConversationPlayer
     private List<BaseIndicator> activeIndicators = new List<BaseIndicator>();
     private OnMessageStart onMessageStartListener;
     private OnMessageEnd onMessageEndListener;
+    private OnConversationEnd onConversationEndListener;
+
+    public void SetOnMessageStartListener(OnMessageStart listener)
+    {
+        onMessageStartListener = listener;
+    }
+
+    public void SetOnMessageEndListener(OnMessageEnd listener)
+    {
+        onMessageEndListener = listener;
+    }
+
+    public void SetOnConversationEndListener(OnConversationEnd listener)
+    {
+        onConversationEndListener = listener;
+    }
 
     public int MessagesCount
     {
@@ -49,10 +66,8 @@ class ConversationPlayer
         return RemainingCount == 0 && PlayingCount == 0;
     }
 
-    public void Start(OnMessageStart messageStartListener = null, OnMessageEnd messageEndListener = null)
+    public void Start()
     {
-        onMessageStartListener = messageStartListener;
-        onMessageEndListener = messageEndListener;
         conversationQueue = new List<MessageQueueItem>();
 
         float cumulativetime = Time.time;
@@ -118,6 +133,11 @@ class ConversationPlayer
                     {
                         onMessageEndListener.Invoke(i);
                     }
+
+                    if (IsFinished() && onConversationEndListener != null)
+                    {
+                        onConversationEndListener.Invoke();
+                    }
                 });
 
                 // on start
@@ -131,8 +151,9 @@ class ConversationPlayer
 
     public void Skip()
     {
+        var playersCopy = new List<AudioPlayer>(activePlayers);
         // stop all current audio
-        foreach (AudioPlayer ap in activePlayers)
+        foreach (AudioPlayer ap in playersCopy)
         {
             ap.MarkRemovable();
         }
@@ -152,6 +173,11 @@ class ConversationPlayer
             {
                 onMessageEndListener.Invoke(mqi.index);
             }
+        }
+
+        if (onConversationEndListener != null)
+        {
+            onConversationEndListener.Invoke();
         }
 
         // empty the queue

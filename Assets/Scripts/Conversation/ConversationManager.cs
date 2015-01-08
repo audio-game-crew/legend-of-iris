@@ -60,12 +60,12 @@ public class ConversationManager : MonoBehaviour {
         playingConversationsCount = playingConversations.Count;
     }
 
-    public static void PlayConversation(string conversationID)
+    public static ConversationPlayer PlayConversation(string conversationID, ConversationPlayer.OnConversationEnd onConversationEndListener = null)
     {
-        instance.playConversation(conversationID);
+        return instance.playConversation(conversationID, onConversationEndListener);
     }
 
-    private void playConversation(string conversationID)
+    private ConversationPlayer playConversation(string conversationID, ConversationPlayer.OnConversationEnd onConversationEndListener = null)
     {
         Conversation toPlay = null;
         foreach (Conversation c in conversations)
@@ -87,8 +87,15 @@ public class ConversationManager : MonoBehaviour {
                 }
             }
             ConversationPlayer cp = new ConversationPlayer(toPlay);
+            cp.SetOnConversationEndListener(onConversationEndListener);
             playingConversations.Add(cp);
+            return cp;
         }
+        else
+        {
+            Debug.LogError("Conversation with ID '" + conversationID + "' not found");
+        }
+        return null;
     }
 
     void AddConversation(List<Conversation> newconversations, string nameID, List<string> sources, List<string> texts)
