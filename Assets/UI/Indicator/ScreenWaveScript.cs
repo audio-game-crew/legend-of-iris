@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class SoundWaveScript : MonoBehaviour {
+public class ScreenWaveScript : MonoBehaviour {
 
     public float waveDuration;
     public float waveTimer;
@@ -11,14 +11,16 @@ public class SoundWaveScript : MonoBehaviour {
     private Image img;
 
 	// Use this for initialization
-	void Start () {
+    void Start()
+    {
         img = GetComponent<Image>();
         waveTimer = waveDuration;
         Update();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+    void Update()
+    {
         waveTimer -= Time.deltaTime;
         float t = (waveDuration - waveTimer) / waveDuration;
         img.color = img.color.seta(alphaCurve.Evaluate(t));

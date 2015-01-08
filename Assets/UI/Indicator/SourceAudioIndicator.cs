@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AudioIndicator : MonoBehaviour {
+public class SourceAudioIndicator : BaseIndicator
+{
 
     public GameObject source;
     public RectTransform soundWavePrefab;

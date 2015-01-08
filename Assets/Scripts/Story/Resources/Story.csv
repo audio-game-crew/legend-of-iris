@@ -23,147 +23,147 @@ T1.6;Iris;Question confirmed.
 ;Iris;*connection sounds*
 ;Lucy;*during connection sounds* Here we go!
 T2.1;Iris;Connection established. Good luck.
-;Lucy;Alright, human. You are now in connection with a fluffy spirit bear, called Grumble. Right now he is waking up.
-;Grumble;muhehue *sleepy*
+;Lucy;Alright, human. You are now in connection with a fluffy spirit bear, called Beorn. Right now he is waking up.
+;Beorn;muhehue *sleepy*
 ;Lucy;Alright, he got up. 
 ;Iris;Forward and backward movement enabled.
-;Lucy;Let’s see if you can move him. Press forward and backward to move Grumble. 
-T2.2;Grumble;*impatiently* muuuuuuu
-;Lucy;Human, press forward and backward to move Grumble. If you don’t understand your controls, you can press escape to check or change the controls settings of Iris.
-T2.3A;Grumble;*falling* mumUmUUU *thud*
-;Lucy;Haha, aww poor Grumble. He fell down, but that is okay. He is quite strong and has a lot of fur to break his fall. He is a bit clumsy sometimes though. At least he is fully awake now! 
+;Lucy;Let’s see if you can move him. Press forward and backward to move Beorn. 
+T2.2;Beorn;*impatiently* muuuuuuu
+;Lucy;Human, press forward and backward to move Beorn. If you don’t understand your controls, you can press escape to check or change the controls settings of Iris.
+T2.3A;Beorn;*falling* mumUmUUU *thud*
+;Lucy;Haha, aww poor Beorn. He fell down, but that is okay. He is quite strong and has a lot of fur to break his fall. He is a bit clumsy sometimes though. At least he is fully awake now! 
 ;Iris;Rotations enabled.
-;Lucy;Let’s try and see if you can turn Grumble around in order to look at a different direction. First do a full rotation to the left.
+;Lucy;Let’s try and see if you can turn Beorn around in order to look at a different direction. First do a full rotation to the left.
 ;;Press the left or right keys to turn left or right.
-T2.3B;Grumble;*falling* mumUmUUU *thud*
-;Lucy;Haha, aww poor Grumble. He fell down, but that is okay. He is quite strong and has a lot of fur to break his fall. He is a bit clumsy sometimes though. At least he is fully awake now! 
+T2.3B;Beorn;*falling* mumUmUUU *thud*
+;Lucy;Haha, aww poor Beorn. He fell down, but that is okay. He is quite strong and has a lot of fur to break his fall. He is a bit clumsy sometimes though. At least he is fully awake now! 
 ;Iris;Rotations enabled.
-;Lucy;Let’s try and see if you can turn Grumble around in order to look at a different direction. First do a full rotation to the left.
+;Lucy;Let’s try and see if you can turn Beorn around in order to look at a different direction. First do a full rotation to the left.
 ;;Move your mouse to the right, to turn right and visa versa.
-T2.3C;Grumble;*falling* mumUmUUU *thud*
-;Lucy;Haha, aww poor Grumble. He fell down, but that is okay. He is quite strong and has a lot of fur to break his fall. He is a bit clumsy sometimes though. At least he is fully awake now! 
+T2.3C;Beorn;*falling* mumUmUUU *thud*
+;Lucy;Haha, aww poor Beorn. He fell down, but that is okay. He is quite strong and has a lot of fur to break his fall. He is a bit clumsy sometimes though. At least he is fully awake now! 
 ;Iris;Rotations enabled.
-;Lucy;Let’s try and see if you can turn Grumble around in order to look at a different direction. First do a full rotation to the left.
-;;Just turn your head into the direction that you want Grumble to look at.
-T2.4A;Grumble;*impatiently* muuuuuuu
+;Lucy;Let’s try and see if you can turn Beorn around in order to look at a different direction. First do a full rotation to the left.
+;;Just turn your head into the direction that you want Beorn to look at.
+T2.4A;Beorn;*impatiently* muuuuuuu
 ;Lucy;Human, just press the left or right keys to turn left or right.
-T2.4B;Grumble;*impatiently* muuuuuuu
+T2.4B;Beorn;*impatiently* muuuuuuu
 ;Lucy;Human, move your mouse to the right, to turn right and visa versa.
-T2.4C;Grumble;*impatiently* muuuuuuu
-;Lucy;Human, just turn your head into the direction that you want Grumble to look at.
-T2.5A;Grumble;*disapprovingly* muuuuuuu
+T2.4C;Beorn;*impatiently* muuuuuuu
+;Lucy;Human, just turn your head into the direction that you want Beorn to look at.
+T2.5A;Beorn;*disapprovingly* muuuuuuu
 ;Lucy;Human, you are turning into the wrong direction.
 ;;You have to turn right!
-T2.5B;Grumble;*disapprovingly* muuuuuuu
+T2.5B;Beorn;*disapprovingly* muuuuuuu
 ;Lucy;Human, you are turning into the wrong direction.
 ;;You have to turn left!
-T2.6;Grumble;*happy* muuuuuuu
+T2.6;Beorn;*happy* muuuuuuu
 ;Lucy;Well done!! Now let’s turn back around. Do a full rotation to the left!
-T2.7;Grumble;*happy* muumumuuuu!!
+T2.7;Beorn;*happy* muumumuuuu!!
 ;Lucy;Well done, human!! Notice how the sound changes when you turn? You should pay close attention attention to the changes of audio in order to orient yourself. 
-T3.1;Lucy;Alright, you are ready to try walking around! Before we can get to the spirit village, we should get Grumble ready to move out. First he needs his shoes, and second… well… he needs to unplug his belly rubbing machine. He doesn’t like it when devices are on stand-by when he leaves the house. It may start a fire, you know? Let’s first move Grumble to his shoes. I’ll fly over to their location, so you may follow the sound of my wings.
-T3.2;Grumble;*impatiently* muuuuuuu
+T3.1;Lucy;Alright, you are ready to try walking around! Before we can get to the spirit village, we should get Beorn ready to move out. First he needs his shoes, and second… well… he needs to unplug his belly rubbing machine. He doesn’t like it when devices are on stand-by when he leaves the house. It may start a fire, you know? Let’s first move Beorn to his shoes. I’ll fly over to their location, so you may follow the sound of my wings.
+T3.2;Beorn;*impatiently* muuuuuuu
 ;Lucy;Human! Try to focus on the sound of my wings and walk towards me! Listen carefully to where my sound comes from, turn towards it and walk into my direction. You can do it, I believe in you.
-T3.3;Grumble;*making effort, putting on shoes* muuuuuuumumuu
-;Lucy;Good job, human!... haha, Grumble! Your shoes are even bigger than your belly is.
-;Grumble;*yea so?* muumuu?
+T3.3;Beorn;*making effort, putting on shoes* muuuuuuumumuu
+;Lucy;Good job, human!... haha, Beorn! Your shoes are even bigger than your belly is.
+;Beorn;*yea so?* muumuu?
 ;Lucy;Okay, human. Let’s now head towards his belly rubbing machine. Follow me!
-T3.4;Grumble;*impatiently* muuuuuuu
+T3.4;Beorn;*impatiently* muuuuuuu
 ;Lucy;Human! Try to focus on the sound of my wings and walk towards me! Listen carefully to where my sound comes from, turn towards it and walk into my direction. You can do it, I believe in you.
 T3.5;Other;*belly rubbing machine turns on*
-;Grumble;*very satisfied, being rubbed* mu! mu! mu! mu! *burp* mu! mu! mu! mu!
-;Lucy;Grumble!! No! Get out and turn it off!
+;Beorn;*very satisfied, being rubbed* mu! mu! mu! mu! *burp* mu! mu! mu! mu!
+;Lucy;Beorn!! No! Get out and turn it off!
 ;Other;*belly rubbing machine turns off*
-;Grumble;*disappointed* muhhh.
-;Lucy;Good, Grumble! You can get a belly rub later, when you come back home.. 
+;Beorn;*disappointed* muhhh.
+;Lucy;Good, Beorn! You can get a belly rub later, when you come back home.. 
 ;;
-;;Alright, human! Let’s head to the door so we can get out of this place. It smell funky in here. You should be glad you are not connected to Grumble by smell! It smells like my grandma’s feet, when she doesn’t shower for a month. 
+;;Alright, human! Let’s head to the door so we can get out of this place. It smell funky in here. You should be glad you are not connected to Beorn by smell! It smells like my grandma’s feet, when she doesn’t shower for a month. 
 ;;
 ;;Quickly, follow me!
-T3.6;Grumble;*impatiently* muuuuuuu
+T3.6;Beorn;*impatiently* muuuuuuu
 ;Lucy;Human! Try to focus on the sound of my wings and walk towards me! Listen carefully to where my sound comes from, turn towards it and walk into my direction. You can do it, I believe in you.
-T3.7;Grumble;*happy* muuuuu!
-;Lucy;Yes!! You made it! You now know how to control Grumble and how to follow the sound of my wings. This will come in handy!
+T3.7;Beorn;*happy* muuuuu!
+;Lucy;Yes!! You made it! You now know how to control Beorn and how to follow the sound of my wings. This will come in handy!
 ;Other;*door opens*
 T4.1;Lucy;Ahhhh fresh air
-;Grumble;*very much liking the air too* muuuuuuu
+;Beorn;*very much liking the air too* muuuuuuu
 ;Lucy;We are now on a very lengthy bridge that goes to my village. The bridge is a bit narrow, and has a lot of turns. That’s because the bridge is built over a river that runs through a few high mountains. However, I...
-;Grumble;*running, panting* hu hu hu hu hu hu 
-;Lucy;*while grumble is running* Grumble!!!
-;Grumble;huuuuUU *falls*
+;Beorn;*running, panting* hu hu hu hu hu hu 
+;Lucy;*while Beorn is running* Beorn!!!
+;Beorn;huuuuUU *falls*
 ;Other;*teleportation sounds*
-;Grumble;*relieved* muu!!
-;Lucy;Grumble!! Wh... why..?? Oh wait... I see. Below us is not just a regular river, it is a river of... honey! I actually have some for you, Grumble! Here! Just save some f...
-;Grumble;*drinking like crazy* 
-;Lucy;WOW! He drank it all in one go!! Oh Grumble...
-;Grumble;*happy* muuu!
+;Beorn;*relieved* muu!!
+;Lucy;Beorn!! Wh... why..?? Oh wait... I see. Below us is not just a regular river, it is a river of... honey! I actually have some for you, Beorn! Here! Just save some f...
+;Beorn;*drinking like crazy* 
+;Lucy;WOW! He drank it all in one go!! Oh Beorn...
+;Beorn;*happy* muuu!
 ;Lucy;Haha!
 ;;
-;;By the way, human, as you noticed I have magical powers! If something significant happens, I get my spirit juices flowing through my magnificent body! The spirit world then opens up highly concentrated Wibbly Wobbly Timey Wimey spirit magic locations where I can teleport Grumble to. Whenever he falls off, I will teleport him back to the beginning of the bridge section he fell off from. 
+;;By the way, human, as you noticed I have magical powers! If something significant happens, I get my spirit juices flowing through my magnificent body! The spirit world then opens up highly concentrated Wibbly Wobbly Timey Wimey spirit magic locations where I can teleport Beorn to. Whenever he falls off, I will teleport him back to the beginning of the bridge section he fell off from. 
 ;;
 ;;Alright! Let’s cross this bridge! Follow me!
-T4.2*1;Grumble;huuuuuUUu *falls*
+T4.2*1;Beorn;huuuuuUUu *falls*
 ;Lucy;Uh oh!
 ;Other;*teleportation sounds*
 ;Lucy;Good! You are safe now. Let’s try again. Follow me!
-T4.2*2;Grumble;huuuuUU *falls*
+T4.2*2;Beorn;huuuuUU *falls*
 ;Lucy;Woops! 
 ;Other;*teleportation sounds*
 ;Lucy;Okay! You are safe. Let’s try again. Follow me!
-T4.2*3;Grumble;hu hu HUUUU *falls*
+T4.2*3;Beorn;hu hu HUUUU *falls*
 ;Lucy;Oh nooo!
 ;Other;*teleportation sounds*
 ;Lucy;Phew!! That was close. Let’s try again. Follow me!
-T4.3;Grumble;*silly* muu
+T4.3;Beorn;*silly* muu
 ;Lucy;Hey come back! You are going the wrong direction!
-T4.4*1;Grumble;*scared* uhh hoh uhoh!
+T4.4*1;Beorn;*scared* uhh hoh uhoh!
 ;Lucy;Watch out for the edge, human!
-T4.4*2;Grumble;*scared* uhoh uhoh uhoh!
+T4.4*2;Beorn;*scared* uhoh uhoh uhoh!
 ;Lucy;Ohhh watch out for the edge!
-T4.4*3;Grumble;*scared* uuuuuuuuuuh!
-;Lucy;Human! Watch out, Grumble is standing really close to the edge.
-T4.5*1;Grumble;*glad* muu!
+T4.4*3;Beorn;*scared* uuuuuuuuuuh!
+;Lucy;Human! Watch out, Beorn is standing really close to the edge.
+T4.5*1;Beorn;*glad* muu!
 ;Lucy;Well done! Now the next segment. Follow me!
-T4.5*2;Grumble;*glad* muuuuu!
+T4.5*2;Beorn;*glad* muuuuu!
 ;Lucy;Yes! Very good. Ok, next one!
-T4.6;Lucy;Hmmm, human, you have to watch out now. Some spirits are crossing the bridge sideways. They appear very scared because of the giant in our village. I am afriad they might push Grumble off the bridge if he touches them… So you have to listen carefully in order to avoid them. But I believe you can do it. Follow me, human! :)
+T4.6;Lucy;Hmmm, human, you have to watch out now. Some spirits are crossing the bridge sideways. They appear very scared because of the giant in our village. I am afriad they might push Beorn off the bridge if he touches them… So you have to listen carefully in order to avoid them. But I believe you can do it. Follow me, human! :)
 T4.7*1;Spirit;Out of the way!! There is a giant in the village!!
-;Grumble;huuuuuUUu *falls*
+;Beorn;huuuuuUUu *falls*
 ;Lucy;Uh oh!
 ;Other;*teleportation sounds*
 ;Lucy;Good! You are safe now. Let’s try again. Follow me!
 T4.7*2;Spirit;Ahhh! A giant in the village!!
-;Grumble;huuuuUU *falls*
+;Beorn;huuuuUU *falls*
 ;Lucy;Woops! 
 ;Other;*teleportation sounds*
 ;Lucy;Okay! You are safe. Let’s try again. Follow me!
 T4.7*3;Spirit;Oh no, oh no! Out of the way!
-;Grumble;hu hu HUUUU *falls*
+;Beorn;hu hu HUUUU *falls*
 ;Lucy;Oh nooo!
 ;Other;*teleportation sounds*
 ;Lucy;Phew!! That was close. Let’s try again. Follow me!
-T4.8;Grumble;*scared* MU!
-;Lucy;Phew! Close call, Grumble almost touched a spirit.
-T4.9*1;Grumble;*happy* mu muuu
+T4.8;Beorn;*scared* MU!
+;Lucy;Phew! Close call, Beorn almost touched a spirit.
+T4.9*1;Beorn;*happy* mu muuu
 ;Lucy;Awesome!! Well done. Okay, let’s continue over the next section.
-T4.9*2;Grumble;*happy* muuu
+T4.9*2;Beorn;*happy* muuu
 ;Lucy;You are very good at this! Let's tackle the next section too!
 T4.10;Lucy;Alright, the next few sections are a bit more difficult. I can’t fly over them, because the bridge is kept in the air by machines. The energy they send off damages my wings so I can’t guide you over of these parts. You are going to have to orient using the sound of these machines. Good luck, human! You can do it!!
-T4.11;Grumble;huuuuUU *falls*
+T4.11;Beorn;huuuuUU *falls*
 ;Lucy;Woops! Watch out, the bridge turns here.
 ;Other;*teleportation sounds*
 ;Lucy;Okay! You are safe. Let’s try again. Follow the sound of the machines.
-T4.12*1;Grumble;*relief* muuu! 
+T4.12*1;Beorn;*relief* muuu! 
 ;Lucy;Well done! That was tough, wasn’it it? You did great though. You are a great listener! Let’s continue over the next section with machines. 
-T4.12*2;Grumble;*glad* uuuuuggg! 
+T4.12*2;Beorn;*glad* uuuuuggg! 
 ;Lucy; You are the master of listening! Let's tackle the next section too!
-T4.13;Grumble;*very happy* muu muu muuuuuu!
-;Lucy;Very goood!! We reached the end of the bridge. Here is a portal to my village. Grumble, don’t be scared, you might feel some dizziness and lightheadedness, but that is normal. Here we go!! woooop!
+T4.13;Beorn;*very happy* muu muu muuuuuu!
+;Lucy;Very goood!! We reached the end of the bridge. Here is a portal to my village. Beorn, don’t be scared, you might feel some dizziness and lightheadedness, but that is normal. Here we go!! woooop!
 ;Other;*awesome teleportation sounds*
 T5.1;Other;*teleportation sounds end*
 ;Lucy;*whispers* uhoh…. we arrived at my village but we are standing right next to the giant... Let’s hope he doesn’t see us. Stay still!
-;Grumble;*GIANT!?* MUHUH?! muuuuu!!
-;Lucy;*whispers* GRUMBLE! SSSST!
+;Beorn;*GIANT!?* MUHUH?! muuuuu!!
+;Lucy;*whispers* Beorn! SSSST!
 ;Giant;*slow low voice* Huuuhhh? Who is there? A fairy!! Wait! I don’t mean any harm. I am only here because I am hiding from the science birds in the forest! I just want shelter. I am scared! Can you help me please?
 ;Lucy;Uh… uhm… OH!! Of course! Giants hate science!! But, why are there science birds in our forest?
 ;Giant;They are studying and copying the sounds of the animals in the forest… Fairy, what if they will start copying my voice as well? Can you imagine a bird, saying things like “my butt itches”, or “mom!! I don’t like vegetables”?? That would be embarrassing.
@@ -181,13 +181,13 @@ T5.1;Other;*teleportation sounds end*
 T5.2*1;Boris;*hooot*
 T5.2*2;Boris;*hooot*
 T5.2*3;Boris;*hooot*
-T5.3;Grumble;*annoyed* muuuu
+T5.3;Beorn;*annoyed* muuuu
 ;Lucy;Try to focus on the sounds of the environment in comparison to Boris. If you forget where he is, he might make some noises once in a while.
 ;Boris;*hooot*
 T5.4;Boris;Hmmm.. You got me! *hooot* But you got lucky human! Let's tr... AAAH
-;Grumble;MUHH HAWHAW
-;Lucy;GRUMBLE!! Don't bite our king you idiot!
-;Grumble;*disappointed* muhhhh
+;Beorn;MUHH HAWHAW
+;Lucy;Beorn!! Don't bite our king you idiot!
+;Beorn;*disappointed* muhhhh
 ;Boris;*hOOOt* Oh fudge, now my feathers are all messy. Ah, well.  I needed a haircut anyway. Right, where was I. *hooot* Oh yes: let's try again and see if you got lucky!!
 ;Other;*flapping wings of boris flying to some random location*
 ;Boris;*hoot at location*
@@ -197,55 +197,55 @@ T5.5;Boris;Great! *hooot* You are doing well. Perhaps you are indeed as talented
 ;Boris;*hoot at location*
 ;Lucy;OK, let’s go find him again, one last time!
 T5.6;Boris;Awesome! *hooot* I see you are indeed very talented!
-;Grumble;*happy* muhhhhh
+;Beorn;*happy* muhhhhh
 ;Lucy;Yaay! I told you!
-;Boris;Yes! *hooot* Very well. *hooot* I’ll fly you to the forest where you can find the science birds. I think I know where they are. Here we go! hold on tight, Grumble! *hooot*
+;Boris;Yes! *hooot* Very well. *hooot* I’ll fly you to the forest where you can find the science birds. I think I know where they are. Here we go! hold on tight, Beorn! *hooot*
 ;Other;*wings start flapping around player*
-;Grumble;*scared* muh? muhh! MUHHHHHHH HEHHUHUEHE
+;Beorn;*scared* muh? muhh! MUHHHHHHH HEHHUHUEHE
 ;Lucy;*happy* Wiiiiiii
 T6.1;Other;*wings stop flapping, landed*
-;Grumble;*relief* muhhhhhh
-;Lucy;It smells here, IEEUW. Even worse than Grumble’s house. Where ARE we??
+;Beorn;*relief* muhhhhhh
+;Lucy;It smells here, IEEUW. Even worse than Beorn’s house. Where ARE we??
 ;Boris;Well, we arrived at the swamp! *hooot* I was only able to land here. The birds are further ahead, beyond the swamp, *hooot* so you are going to have to cross it. However, there are frogs that really like biting fluffy spirit bears. *hooot*
 ;Lucy;Hmm, alright. Human, I will fly to the end of the swamp. Again, follow the sound of my wings, but avoid the frogs!
 T6.2;Other;*frog bite*
-;Grumble;*pain* MUU!
+;Beorn;*pain* MUU!
 ;Lucy;Woops! 
 ;Other;*teleportation sounds*
 ;Lucy;Okay! You are safe. Let’s try again.
-T6.3;Grumble;*impatiently* Muuuu
+T6.3;Beorn;*impatiently* Muuuu
 ;Lucy;Try to focus on the sound of my wings and avoid those slimy frogs on the way! You can do it, human!
 T6.4;Lucy;Hooray! You made it! Well done! Those frogs were sooo smelly, and slimey. Ughhh!! I am super glad we passed the swamp.
-;Grumble;*agrees* muu!! mu muu
+;Beorn;*agrees* muu!! mu muu
 ;Lucy;Let's continue quickly
 ;Boris;Perhaps I will install a frog shower at the swamp one day. *hooot* For now, let’s move on! We'll move to the clearing where I heard the birds are located. Follow me and Lucy, Human! *hooot*
-T6.5;Grumble;*impatiently* muhhhh
+T6.5;Beorn;*impatiently* muhhhh
 ;Boris;Focus on the sound of lucy's wings or my hooting! You can do it. *hooot*
-T6.6;Grumble;*silly* muu
+T6.6;Beorn;*silly* muu
 ;Lucy;Hey come back! You are going the wrong direction!
-T6.7;Grumble;*playing with flies* muhhh muhuheuhe muhe HUH huheu
-;Lucy;Grumble! Leave those poor flies alone!
+T6.7;Beorn;*playing with flies* muhhh muhuheuhe muhe HUH huheu
+;Lucy;Beorn! Leave those poor flies alone!
 ;Boris;Human, What is the difference between a fly and a bird? A bird can fly but a fly can't bird! *hoot* HUAHUAHUAH
-;Grumble;huehuehue
+;Beorn;huehuehue
 ;Lucy;hihihi
 T6.8;Boris;Oh oh oh! Another one! *hooot!* What do you call a fly without wings? A walk. HUAHUAHUAH
-;Grumble;huehuehue
+;Beorn;huehuehue
 ;Lucy;hihihi
 T6.9;Boris;Lucy *hoot* someone said you sound like an owl.
 ;Lucy;Who??
 ;Boris;haha! *hoot* 
 ;Lucy;OH! hihi, fooled me!
-;Grumble;*mimics the joke in mumbles, laughs* muu?? huehuehue
+;Beorn;*mimics the joke in mumbles, laughs* muu?? huehuehue
 T6.10;Boris;Ahhh! yes! here we are. The science bird must be around here!
-;Grumble;*glad* muuuu!
+;Beorn;*glad* muuuu!
 ;Lucy;OK! What’s next, Boris?
 T7.1;Boris;Well, if you listen carefully, you may hear many bird callings. However, there is one that mimics all the others. That is the science bird! Humans call them Lyre Birds!
 ;Lucy;Ok, human, you are a great listener! Why don’t you go find him. Good luck!
 ;Boris;*hooot*
-T7.2;Grumble;*impatiently* muhhhh
+T7.2;Beorn;*impatiently* muhhhh
 ;Lucy;Human, the bird you are looking for mimics the sounds of the forest, including those of other birds. Listen carefully!
 T7.3;Boris;I don't think that is the bird we are looking for! That is just a regular bird.
-;Grumble;*disappointed* muhhhh
+;Beorn;*disappointed* muhhhh
 T7.4;Boris;YESSS!! *hoothoot* That’s the one! But to be sure, let’s test him. 
 ;;"Bird, what is ""sound""?"
 ;Bird #1;*whistle* Sound is a vibration, or wave, that can be heard as it reaches our ears by traveling through matter, such as air, wood or water. *whistles*
@@ -260,13 +260,13 @@ T8.1;Bird #1;*whistle* Why do seagulls fly over the sea? *whistle*
 ;Boris;Oh oh *hoot*, I can see spirit crows approaching
 ;Bird #1;*whistle* Oh did I forget to mention, that crows also respond our emergency calls? It is a problem we still haven’t figured out how to avoid.
 ;Boris;Ok, human, birds will be flying passed you. Only grab the science birds *hoot*, so listen carefully to their calls. Whenever you do catch a crow, you have to bring it to Lucy. She will then keep it in a cage for now. Good luck! *hoot*
-T8.2*1;Grumble;*disappointed* muuu…
+T8.2*1;Beorn;*disappointed* muuu…
 ;Lucy;You caught a crow. You can bring him to me.
 ;Crow;*kaaaa*
-T8.2*2;Grumble;*disappointed* muuuu
+T8.2*2;Beorn;*disappointed* muuuu
 ;Lucy;Oops! That was a crow. Please, bring him to me.
 ;Crow;*kaaaa*
-T8.2*3;Grumble;*disappointed* muuu
+T8.2*3;Beorn;*disappointed* muuu
 ;Lucy;Oh! That is a crow, human! Can you bring him here?
 ;Crow;*kaaaa*
 T8.3*1;Lucy;OK! I have got the crow. Now go get that science bird!
@@ -292,7 +292,7 @@ T8.6;Boris;Aha! The final one. Let's test it to be sure. Bird, if I make noise i
 ;Bird #4;Easy! That is called an echo! Sound waves are partially absorbed by objects in your environment, and partially bounced back. So some sound waves might have bounced on other objects before reaching your ears, while some other waves reach you directly. Since it takes time for sound to travel from the source to your ear, it takes even longer for bounced sound waves to reach your ears, so that you hear the sound a bit later too.
 ;Boris;Lucy! *hoot* Teleport us into a big empty hall!!
 ;Lucy;I have never heard anyone be so happy to go to a big hall to test echoing farts. Here we go *teleport sounds*
-;Boris;Awesome!! Ok, *grumbles of stomach* here goes nothing....  *difficult hoot* *pfffff*...fff*..ff*..f*
+;Boris;Awesome!! Ok, *Beorns of stomach* here goes nothing....  *difficult hoot* *pfffff*...fff*..ff*..f*
 ;Lucy;OK! ENOUGH! Ugh, who gives our king beans for dinner??
 ;Boris;The royal cook, Beany Jean Beany. If it wasn’t clear from his name, his speciality is: beans.
 ;Lucy;Sounds like he is the the master of gasses himself. Let’s get back to the village. *teleport sounds*
@@ -313,7 +313,7 @@ T9.1;Boris;Ahhh *hoooot* home sweet home. Thank you human, for your exceptional 
 ;Lucy;It is time to disconnect you. Thank you sooo much for your help!! The village is now happy again. All because of you. You are awesome! Perhaps see you soon again! *kisses human* 
 ;Boris;Hopefully we'll see you again. *hoot* It was nice working with you! Byeeee!
 ;Lucy;byeeee
-;Grumble ;byeehhhh byehhhh muhh!!
+;Beorn ;byeehhhh byehhhh muhh!!
 ;Iris;Disconnected. Iris shutting down. Goodbye! 
 T10.1;Iris;Credits:
 ;;Names & roles

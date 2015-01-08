@@ -9,24 +9,40 @@ public class IndicatorManager : MonoBehaviour {
         instance = this;
     }
 
-    public static AudioIndicator ShowAudioIndicator(GameObject source, float timer)
+    public static BaseIndicator ShowAudioIndicator(GameObject source, float timer)
     {
         return instance.showAudioIndicator(source, timer);
     }
 
+    public static BaseIndicator ShowScreenIndicator(float timer)
+    {
+        return instance.showScreenndicator(timer);
+    }
+
     public RectTransform indicatorPanel;
     [Header("Indicator Prefabs")]
-    public AudioIndicator audioIndicatorPrefab;
+    public SourceAudioIndicator audioIndicatorPrefab;
+    public ScreenAudioIndicator screenIndicatorPrefab;
 
-    private AudioIndicator showAudioIndicator(GameObject source, float timer)
+    private BaseIndicator showAudioIndicator(GameObject source, float timer)
     {
-        AudioIndicator ai = (AudioIndicator)Instantiate(audioIndicatorPrefab);
+        SourceAudioIndicator ai = (SourceAudioIndicator)Instantiate(audioIndicatorPrefab);
         ai.source = source;
         ai.activeTimer = timer;
         RectTransform r = ai.GetComponent<RectTransform>();
         r.SetParent(indicatorPanel);
         r.localPosition = Vector3.zero;
         return ai;
+    }
+
+    private BaseIndicator showScreenndicator(float timer)
+    {
+        ScreenAudioIndicator si = (ScreenAudioIndicator)Instantiate(screenIndicatorPrefab);
+        si.activeTimer = timer;
+        RectTransform r = si.GetComponent<RectTransform>();
+        r.SetParent(indicatorPanel);
+        r.localPosition = Vector3.zero;
+        return si;
     }
 
 	// Use this for initialization

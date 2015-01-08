@@ -31,6 +31,7 @@ public class ConversationMessage
 [System.Serializable]
 public class ConversationMessageSettings
 {
+    public bool screenAsSource = false;
     public float timeOffset = 0f;
     [Range(0f, 1f)]
     public float volume = 1f;
