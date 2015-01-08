@@ -19,6 +19,7 @@ public class WaypointQuest : Quest<WaypointQuest, WaypointQuestDefinition> {
 		}
 		Waypoint waypoint = definition.waypoints[index++];
 		waypoint.onPlayerEnter += OnPlayerEnter;
+        Characters.Lucy.GotoLocation(new PositionRotation(waypoint.transform.position, waypoint.transform.rotation));
 	}
 
 	private void OnPlayerEnter(Waypoint waypoint, GameObject player) {

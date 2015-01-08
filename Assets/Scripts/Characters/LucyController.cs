@@ -2,6 +2,13 @@
 using System.Collections;
 
 public class LucyController : MonoBehaviour {
+    [Tooltip("Time it takes lucy to fly to a new location")]
+    public float LucyFlyTime = 5f;
+
+    private float flyingTime;
+    private PositionRotation lucyStart;
+    private PositionRotation targetLocation;
+
 
 	// Use this for initialization
 	void Start () {
@@ -10,7 +17,21 @@ public class LucyController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        flyingTime += Time.deltaTime;
+        float progress = flyingTime / LucyFlyTime;
+        if (progress < 1)
+        {
+            var newLucyPos = PositionRotation.Interpolate(lucyStart,
+                new PositionRotation(this.targetLocation.Position, this.targetLocation.Rotation),
+                Ease.ioSinusoidal(progress));
+            this.gameObject.transform.position = newLucyPos.Position;
+            this.gameObject.transform.rotation = newLucyPos.Rotation;
+        }
+        else
+        {
+            this.gameObject.transform.position = targetLocation.Position;
+            this.gameObject.transform.rotation = targetLocation.Rotation;
+        }
 	}
 
     void OnDrawGizmos()
@@ -19,22 +40,9 @@ public class LucyController : MonoBehaviour {
         Gizmos.DrawWireSphere(transform.position, 1f);
     }
 
-    //void OnTriggerEnter (Collider other) {
-    //    if (other.gameObject.tag == "Player") {
-    //        print ("The player found me!");
-
-    //        while (true) {
-    //            Vector3 newPos = new Vector3(Random.Range(-100.0F, -82.0F), 2, Random.Range(-100.0F, -86.0F));
-    //            float dist2Player = Vector3.Distance(newPos, other.gameObject.transform.position);
-    //            //print (dist2Player);
-
-    //            if (dist2Player > 8) {
-    //                transform.position = newPos;
-    //                break;
-    //            }
-    //        }
-
-    //    }
-    //}
+    public void GotoLocation(PositionRotation loc)
+    {
+        this.targetLocation = loc;
+    }
 
 }
