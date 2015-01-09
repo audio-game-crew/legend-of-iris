@@ -42,6 +42,8 @@ public class LucyController : MonoBehaviour {
 
     public void GotoLocation(PositionRotation loc)
     {
+        flyingTime = 0;
+        lucyStart = new PositionRotation(this.gameObject);
         this.targetLocation = loc;
     }
 

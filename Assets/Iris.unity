@@ -1285,7 +1285,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint 1
   m_TagString: Untagged
-  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1701,6 +1701,7 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 456855224}
+  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -2202,7 +2203,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint 3
   m_TagString: Untagged
-  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2585,6 +2586,7 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 591589451}
+  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -3458,6 +3460,7 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 771070050}
+  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -3596,6 +3599,7 @@ CanvasGroup:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 809600078}
+  m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -4704,6 +4708,7 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1086999017}
+  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -5010,6 +5015,7 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1118669527}
+  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -5834,7 +5840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d6d5757b4320403386fdfa96fab762f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LucyFlyTime: 4
+  LucyFlyTime: 2
 --- !u!1 &1452973061
 GameObject:
   m_ObjectHideFlags: 0
@@ -7098,7 +7104,6 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -7345,7 +7350,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint 2
   m_TagString: Untagged
-  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

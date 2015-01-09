@@ -16,6 +16,12 @@ public struct PositionRotation
         this.Rotation = rotation;
     }
 
+    public PositionRotation(GameObject source)
+    {
+        this.Position = source.transform.position;
+        this.Rotation = source.transform.rotation;
+    }
+
     public static PositionRotation Interpolate(PositionRotation start, PositionRotation end, float progress)
     {
         if (progress <= 0)
