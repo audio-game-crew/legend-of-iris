@@ -607,6 +607,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 336119974}
+  - {fileID: 1073659769}
   m_Father: {fileID: 1623556267}
   m_RootOrder: 0
 --- !u!1 &179960996
@@ -2624,7 +2625,7 @@ GameObject:
   - 135: {fileID: 505459954}
   - 114: {fileID: 505459953}
   m_Layer: 8
-  m_Name: PlayerEventLocation
+  m_Name: PlayerStartLocation
   m_TagString: Location
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2751,6 +2752,10 @@ Prefab:
     - target: {fileID: 400000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+      propertyPath: m_Name
+      value: PlayerStartLocation
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
@@ -3114,7 +3119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38fdd025db3a4be4f9cc5b681734478d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startIndex: 6
+  startIndex: 0
   indexOffset: 1
 --- !u!1 &580333595
 GameObject:
@@ -6032,7 +6037,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2030860984}
-  m_Father: {fileID: 1623556267}
+  m_Father: {fileID: 159651634}
   m_RootOrder: 1
 --- !u!1 &1079653807
 GameObject:
@@ -9679,7 +9684,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 159651634}
-  - {fileID: 1073659769}
   m_Father: {fileID: 0}
   m_RootOrder: 8
 --- !u!1001 &1634778530
@@ -9720,6 +9724,10 @@ Prefab:
     - target: {fileID: 400000, guid: 772288348916a114fb961e5437deebcf, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 772288348916a114fb961e5437deebcf, type: 2}
+      propertyPath: m_Name
+      value: LucyStartLocation
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 772288348916a114fb961e5437deebcf, type: 2}
@@ -14068,7 +14076,7 @@ GameObject:
   - 4: {fileID: 1951500278}
   - 135: {fileID: 1951500279}
   m_Layer: 8
-  m_Name: LucyEventLocation
+  m_Name: LucyStartLocation
   m_TagString: Location
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -14370,16 +14378,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f93a0bfa97a5a4b49b445cb8c6d119e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetLocation: {fileID: 0}
-  ObjectToTeleport: {fileID: 0}
+  TargetLocation: {fileID: 505459951}
+  ObjectToTeleport: {fileID: 2076031667}
   TeleportAnimationVerticalDisplacementValue:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: .491994202
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1.00145555
+      value: .00243902416
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   TeleportAnimationHorizontalDisplacementEasing:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   JumpHeight: 10
@@ -14608,8 +14641,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2058100596}
+  - 114: {fileID: 2058100597}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SwitchLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14627,6 +14661,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2030860984}
   m_RootOrder: 2
+--- !u!114 &2058100597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2058100595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b50721deecf53047b68df922537ac6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: 6
 --- !u!1 &2070661525
 GameObject:
   m_ObjectHideFlags: 0
