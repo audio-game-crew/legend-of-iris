@@ -7,7 +7,8 @@ public class WaypointQuest : Quest<WaypointQuest, WaypointQuestDefinition> {
 
 	public WaypointQuest(WaypointQuestDefinition definition) : base(definition) {}
 
-	override protected void _Start() {
+    protected override void _Start()
+    {
 		base._Start();
 		Next();
 	}
@@ -19,7 +20,8 @@ public class WaypointQuest : Quest<WaypointQuest, WaypointQuestDefinition> {
 		}
 		Waypoint waypoint = definition.waypoints[index++];
 		waypoint.onPlayerEnter += OnPlayerEnter;
-        Characters.Lucy.GotoLocation(new PositionRotation(waypoint.transform.position, waypoint.transform.rotation));
+        var lucy = Characters.instance.Lucy.GetComponent<LucyController>();
+        lucy.GotoLocation(new PositionRotation(waypoint.transform.position, waypoint.transform.rotation));
 	}
 
 	private void OnPlayerEnter(Waypoint waypoint, GameObject player) {
