@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System;
+using System.Linq;
 using UnityEngine;
 
 public class QuestManager : MonoBehaviour {
@@ -22,6 +23,17 @@ public class QuestManager : MonoBehaviour {
 			}
 		}
 	}
+
+    void Update()
+    {
+        Debug.Log("Updating quests" + String.Join(",", quests.Select(q => q.ToString()).ToArray()));
+        // Send the quests update notifications, so they can keep internal timers etc.
+        foreach (var quest in quests)
+        {
+            Debug.Log("Updating quest", quest.definition);
+            quest.Update();
+        }
+    }
 
 	private static void OnQuestEvent(Quest quest) {
 		Debug.Log(quest.state + ": " + quest.definition.gameObject.name);

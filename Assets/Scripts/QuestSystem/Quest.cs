@@ -1,9 +1,8 @@
 ﻿using System;
 
-public class Quest {
+public abstract class Quest {
 
 	// static
-
 	public enum State { CREATED, STARTED, COMPLETED };
 
 	static public event QuestEvent<Quest>.Subscriber onAnyQuestStart;
@@ -42,6 +41,8 @@ public class Quest {
 		if (Quest.onAnyQuestStart != null) Quest.onAnyQuestStart(this);
 		if (this.onQuestStart != null) this.onQuestStart(this);
 	}
+
+    public virtual void Update() { }
 
 	public void Complete() {
 		if (_PreComplete() == false) return;

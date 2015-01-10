@@ -26,14 +26,9 @@ public class LevelSwitcher : MonoBehaviour {
         for (int i = indexOffset; i < transform.childCount; i++)
         {
             GameObject child = transform.GetChild(i).gameObject;
-            if (i == index && !child.activeSelf)
-            {
-                child.SetActive(true);
-            }
-            else if (child.activeSelf)
-            {
-                child.SetActive(false);
-            }
+            bool enable = (i - indexOffset) == index;
+            if (child.activeSelf != enable)
+                child.SetActive(enable);
         }
     }
 }

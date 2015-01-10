@@ -32,7 +32,16 @@ public abstract class RecursiveQuest<QuestSC, DefinitionSC> : Quest<QuestSC, Def
 		}
 		Complete();
 	}
-	
+
+    public override void Update()
+    {
+        foreach (var quest in children)
+        {
+            quest.Update();
+        }
+        base.Update();
+    }
+
 	private void OnChildQuestComplete(Quest quest) {
 		quest.onQuestComplete -= OnChildQuestComplete;
 		Check();
