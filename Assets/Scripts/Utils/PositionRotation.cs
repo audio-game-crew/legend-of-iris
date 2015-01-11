@@ -33,4 +33,17 @@ public struct PositionRotation
         res.Rotation = Quaternion.RotateTowards(start.Rotation, end.Rotation, Quaternion.Angle(start.Rotation, end.Rotation) * progress);
         return res;
     }
+
+    public static PositionRotation Interpolate(PositionRotation start, PositionRotation end, float progress, AnimationCurve curve)
+    {
+        var diff = (end.Position - start.Position);
+        var curveProgress = curve.Evaluate(progress);
+        var pos = new Vector3(
+                start.Position.x + diff.x * curveProgress,
+                start.Position.y + diff.y * curveProgress,
+                start.Position.z + diff.z * curveProgress
+                );
+        var rot = Quaternion.RotateTowards(start.Rotation, end.Rotation, Quaternion.Angle(start.Rotation, end.Rotation) * curveProgress);
+        return new PositionRotation(pos, rot);
+    }
 }
