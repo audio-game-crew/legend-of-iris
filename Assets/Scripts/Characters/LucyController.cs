@@ -8,6 +8,7 @@ public class LucyController : MonoBehaviour {
     private float flyingTime;
     private PositionRotation lucyStart;
     private PositionRotation targetLocation;
+    private bool moving;
 
 
 	// Use this for initialization
@@ -17,6 +18,12 @@ public class LucyController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (moving)
+            UpdatePosition();
+	}
+
+    private void UpdatePosition()
+    {
         flyingTime += Time.deltaTime;
         float progress = flyingTime / LucyFlyTime;
         if (progress < 1)
@@ -31,8 +38,9 @@ public class LucyController : MonoBehaviour {
         {
             this.gameObject.transform.position = targetLocation.Position;
             this.gameObject.transform.rotation = targetLocation.Rotation;
+            moving = false;
         }
-	}
+    }
 
     void OnDrawGizmos()
     {
@@ -45,6 +53,7 @@ public class LucyController : MonoBehaviour {
         flyingTime = 0;
         lucyStart = new PositionRotation(this.gameObject);
         this.targetLocation = loc;
+        moving = true;
     }
 
 }

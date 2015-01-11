@@ -6009,7 +6009,7 @@ GameObject:
   - 4: {fileID: 1073659769}
   - 114: {fileID: 1073659768}
   m_Layer: 0
-  m_Name: Level6
+  m_Name: 'Level #3 [Cross Swamp]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15081,6 +15081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingQuests:
   - {fileID: 159651632}
+  cheatQuests: []
 --- !u!1 &2145988226
 GameObject:
   m_ObjectHideFlags: 0

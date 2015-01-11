@@ -21,6 +21,8 @@ public class WalkScript : MonoBehaviour {
     public GroundType currentGroundType;
     public FootStepScript currentFootsteps;
 
+    public bool enabled = true;
+
     [System.Serializable]
     public class GoundTypeToSound
     {
@@ -50,6 +52,9 @@ public class WalkScript : MonoBehaviour {
 	
 	void FixedUpdate () 
     {
+        if (!enabled)
+            return;
+
         DetermineGroundType();
 
         Vector3 positionNow = transform.position;

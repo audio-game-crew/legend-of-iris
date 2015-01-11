@@ -6,6 +6,7 @@ using UnityEngine;
 public class QuestManager : MonoBehaviour {
 
 	public List<GameObject> startingQuests = new List<GameObject>();
+    public List<GameObject> cheatQuests = new List<GameObject>();
 
 	public List<Quest> quests = new List<Quest>();
 
@@ -26,13 +27,46 @@ public class QuestManager : MonoBehaviour {
 
     void Update()
     {
-        Debug.Log("Updating quests" + String.Join(",", quests.Select(q => q.ToString()).ToArray()));
         // Send the quests update notifications, so they can keep internal timers etc.
         foreach (var quest in quests)
         {
-            Debug.Log("Updating quest", quest.definition);
+            //Debug.Log("Updating quest", quest.definition.gameObject.name);
             quest.Update();
         }
+
+        var cheatPressed = GetCheatPressed();
+        if (cheatPressed.HasValue)
+        {
+            Debug.Log("Cheat, started quest " + cheatPressed.Value);
+            if (cheatQuests.Count > cheatPressed.Value)
+                StartQuest(cheatQuests[cheatPressed.Value]);
+        }
+
+    }
+
+    public void StartQuest(GameObject questGO)
+    {
+        foreach(var quest in questGO.GetComponents<QuestDefinition>())
+        {
+            foreach (QuestDefinition d in quest.GetComponents<QuestDefinition>())
+            {
+                Quest q = d.Create();
+                quests.Add(q);
+                q.Start();
+            }
+        }
+    }
+
+    private int? GetCheatPressed()
+    {
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            if (Input.GetKeyDown(KeyCode.F2))
+                return 0;
+            if (Input.GetKeyDown(KeyCode.F3))
+                return 1;
+        }
+        return null;
     }
 
 	private static void OnQuestEvent(Quest quest) {

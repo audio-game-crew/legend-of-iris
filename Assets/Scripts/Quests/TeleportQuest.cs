@@ -21,10 +21,10 @@ public class TeleportQuest : Quest<TeleportQuest, TeleportQuestDefinition>
 
     public override void Update()
     {
-        Debug.Log("Updating");
+        if (this.state == State.COMPLETED)
+            return;
         time += Time.deltaTime;
         var progress = time / definition.TeleportTime;
-        var bounce = Ease.loopBounce(progress / 2f);
         if (progress > 1)
         {
             definition.ObjectToTeleport.transform.position = definition.TargetLocation.transform.position;
@@ -33,7 +33,9 @@ public class TeleportQuest : Quest<TeleportQuest, TeleportQuestDefinition>
         } else
         {
             var newPosRot = PositionRotation.Interpolate(start, target, progress, definition.TeleportAnimationHorizontalDisplacementEasing);
-            definition.ObjectToTeleport.transform.position = newPosRot.Position.addy(definition.TeleportAnimationVerticalDisplacementValue.Evaluate(bounce) * definition.JumpHeight);
+            definition.ObjectToTeleport.transform.position = newPosRot.Position
+                // Add the vertical movement to lift up the player a bit while teleporting
+                .addy(definition.TeleportAnimationVerticalDisplacementValue.Evaluate(progress) * definition.JumpHeight);
             definition.ObjectToTeleport.transform.rotation = newPosRot.Rotation;
         }
         base.Update();

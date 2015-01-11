@@ -111,6 +111,8 @@ public class ConversationManager : MonoBehaviour {
             var m = new ConversationMessage();
             m.audioClip = Resources.Load(c.nameID + "_" + i, typeof(AudioClip)) as AudioClip;
             m.source = GameObject.Find(sources[i]);
+            if (m.source == null)
+                Debug.LogWarning("Source \"" + sources[i] + "\" not found");
             m.subtitle = texts[i];
             messages.Add(m);
         }
