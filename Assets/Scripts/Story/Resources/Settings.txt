@@ -1,0 +1,100 @@
+This is my settings menu. Press escape to exit this menu and continue with the Iris connection, or press M to mute my voice in this menu. The settings menu may be navigated by pressing up or down. Settings can be changed by pressing left or right.
+
+The settings menu contains the following:
+1. Visual aids settings, this setting enables or disables visual aids. These visual aids allow a guide to help a visually impaired human through the game.
+2. Controls settings, here you can select the prefered method of manoeuvring through the 3D environment with a spirit bear.
+3. 3D Sound Simulation settings, here you can choose which method should be used for simulating 3D sound over stero headphones. Warning: some of these methods are experimental and could possibly crash me if selected.
+4. Oculus Rift settings, the oculus rift is a virtual reality device that allows humans to feel fully immersed into the spirit world. Accurate head tracking is an important feature that is essential to a fully immersive experience.
+5. Demonstration mode, if this mode is enabled, certain cheats are enabled that allows one to demonstrate what I am capable of.
+
+The recommended setup for the most optimal immersive experience is as follows:
+1) Use wireless high-quality stereo headphones
+2) Set 3D sound simulation to AstoundSound
+3) Connect a wireless XBOX 360 controller
+4) Connect an Oculus Rift and enable its head tracking
+
+All cables to and from a connected human, should be routed over his or her head. This allows one to do full rotations, without being limited by any cable.
+
+
+
+
+
+
+Visual Aids settings set to: "No visual aids".
+The screen will be black. This simulates complete blindness for humans that are not (or not fully) visually impaired. Remember: a connected human is only meant to orientate itself by sound, so the use of visual aids by that person, is considered cheating.
+Press right to change the current setting.
+Press down to go to a different setting.
+Press escape to exit the settings menu.
+
+// In order to accomplish this, I take incomming audio signals and let it be processed by my patented Spirit World Visualization Technology. 
+
+Visual Aids settings set to: "Full visual Aids".
+The screen will show a top-down simulation of the spirit world on which audio sources are indicated. This allows connected humans to have guidance by a non-visually impaired guide. Remember: a connected human is only meant to orient by means of audio, so the use of visual aids by that person, is considered cheating.
+Press left to change the current setting.
+Press down to go to a different setting.
+Press escape to exit the settings menu.
+
+Controls settings set to: Single Handed.
+Single handed controls allow you to move and turn a spirit bear using a keyboard or controller. Pressing and holding forward and backward using the arrow keys on the keyboard, or an analog stick on a controller, makes the bear move forward or backward. Pressing and holding left or right using the arrow keys, or an analog stick on a controller, turns the spirit bear around. In addition to the arrow keys, the keys with letters W A S D can be used, as they work the same. The amount that the bear turns or moves, depends on how long one holds down the associated keys.
+Press right to change the current setting.
+Press up or down to go to a different setting.
+Press escape to exit the settings menu.
+
+Controls settings set to: First Person Shooter.
+The first person shooter controls allows one to use a keyboard and a mouse. The arrow keys on the keyboard make a spirit bear walk forward, backward, and sideways. However, moving the mouse causes him to turn. For instance, moving the mouse to the right causes the bear to turn right, while moving the mouse up causes him to look up. In addition to the arrow keys, the keys with letters W A S D can be used, as they work the same. The amount that the bear moves, depends on how long one holds down the arrow keys.
+Press left or right to change the current setting.
+Press up or down to go to a different setting.
+Press escape to exit the settings menu.
+
+Controls settings set to: Relative Turns.
+A controller is necessary for this setting. The first analogue stick only controls the spirit bear's body movements, such as walking forward, or sideways. The second stick, however, controls the bear's head rotations. This is always relative to the direction that the bear's body is facing, so that pressing right with the second stick, makes the bear look(!) to the right. When releasing this second stick, the spirit bear turns his full body in the direction that the head was facing.
+Press left to change the current setting.
+Press up or down to go to a different setting.
+Press escape to exit the settings menu.
+
+3D Sound Simulation settings set to: Stereo Panned.
+Using this setting, a connected human is only able to hear how far left or right an object is. Determining whether a sound originated from behind or in front of the bear, is impossible, unless you use rotations.
+Press right to change the current setting.
+Press up or down to go to a different setting.
+Press escape to exit the settings menu.
+
+3D Sound Simulation settings set to: Phonon 3D.
+Sound will be spatially simulated by Phonon 3D's technology, using models that mimic how the ears(!) would perceive audio in a 3D environment. Allows full 3D spatial audio recognition. Warning: Experimental.
+Press left or right to change the current setting.
+Press up or down to go to a different setting.
+Press escape to exit the settings menu.
+
+3D Sound Simulation settings set to: AstoundSound.
+Sound will be spatially simulated by AstoundSound's technology, using models that mimic how the brain(!) would perceive audio in a 3D environment. Allows full 3D spatial audio recognition. Warning: Experimental.
+Press left to change the current setting.
+Press up or down to go to a different setting.
+Press escape to exit the settings menu.
+
+Virtual Reality by Oculus Rift turned off.
+With this setting, virtual reality through the Oculus Rift will not be used.
+Press right to change the current setting.
+Press up to go to a different setting.
+Press escape to exit the settings menu.
+
+Virtual Reality by Oculus Rift settings set to Head Tracking Only.
+This setting requires the Oculus Rift device to be connected. Its accurate head tracking is an important feature that is essential to an immersive experience. This setting only uses the head tracking of the Oculus Rift and completely overrides the controls settings. Rotations are determined by the actual rotations of the human's head, while movements are done with the keyboard or controller. The use of a controller is advised so that the connected human can easily do full rotations in the human world. Visual aids may be turned on so that a guide could help the human to get through if necessary. However, please do not connect the Oculus Rifts display to the computer, so that its screen stays black. 
+Press left or right to change the current setting.
+Press up or down to go to a different setting.
+Press escape to exit the settings menu.
+
+Virtual Reality by Oculus Rift settings set to Full Virtual Reality.
+This setting requires the Oculus Rift device to be connected. Stereoscopic camera output to the Oculus Rift is enabled. Controls and audio output are the same as the Head Tracking Only setting. However, it is not of any use to visually impaired humans as a spirit bear's visual cortex is connected to the device. This means that 3D imagary is outputted to the oculus rift's screen. A connected human would then be immersed into the spirit world using both audio and video.
+Press left to change the current setting.
+Press up or down to go to a different setting.
+Press escape to exit the settings menu.
+
+Demonstration mode is disabled.
+Press right to change the current setting.
+Press up to go to a different setting.
+Press escape to exit the settings menu.
+
+Demonstration mode is enabled.
+I can now make use of an advanced time machine in order to control time in the spirit world. This allows me to travel to key moments of the provided adventure. By pressing both the control button and a number, I will take us to the moment associated with that number. In addition, conversations can be skipped by pressing the space button. Finally, I can be completely reset and refreshed by pressing F5. This setting may also prove useful for guidance.
+Press left to change the current setting.
+Press up to go to a different setting.
+Press escape to exit the settings menu.
