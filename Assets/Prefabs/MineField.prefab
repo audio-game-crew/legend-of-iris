@@ -36,23 +36,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 504d8cb658a81a040a54d7740334fcb6, type: 3}
+  m_Script: {fileID: 11500000, guid: 4dabf49dee6254544a8a429eda9110f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SizeX: 5
-  SizeY: 5
+  SizeX: 10
+  SizeY: 10
   MineCount: 7
   GridCellSize: 2
   MaxPlacementTries: 1000
   StartPos:
-    x: 3
-    y: 4
-  EndPos:
-    x: 4
+    x: 0
     y: 0
+  EndPos:
+    x: 10
+    y: 10
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
-  MineSound: {fileID: 8300000, guid: bbb9b7a2bfa9a77479b3a414846e3c66, type: 3}
+  MineSound: {fileID: 8300000, guid: 6ff22bfa6b746da4cbdf141b7db1f064, type: 3}
+  OnlyProximity: 0
+  CheckPath: 1
+  MarkAll: 0
+  DragBackLocation: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

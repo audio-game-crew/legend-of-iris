@@ -14,13 +14,18 @@ public class MineFieldScript : MonoBehaviour {
     public GameObject Mine;
     public GameObject MineProximitySensor;
     public AudioClip MineSound;
+    public bool OnlyProximity  = false;
+    public bool CheckPath = true;
+    public bool MarkAll = false;
+    public GameObject DragBackLocation;
+
+    public GameObject[] Mines { get { return mines.ToArray(); } }
 
     private bool[,] grid;
     private List<GameObject> mines = new List<GameObject>();
     Dictionary<GameObject, GameObject> mineProximitySensors = new Dictionary<GameObject, GameObject>();
     private Dictionary<GameObject, AudioPlayer> minePlayers = new Dictionary<GameObject, AudioPlayer>();
     private Dictionary<GameObject, Point2> minePositions = new Dictionary<GameObject, Point2>();
-    public GameObject[] Mines { get { return mines.ToArray(); } }
     private int placementTries = 0;
 
 	// Use this for initialization
@@ -34,14 +39,31 @@ public class MineFieldScript : MonoBehaviour {
         placementTries = 0;
         PlaceMines();
         AddMines();
+
 	}
+
+    void OnEnable()
+    {
+        // Register collider events
+        var player = Characters.instance.Beorn.GetComponent<PlayerController>();
+        player.TriggerEntered += player_TriggerEntered;
+        player.TriggerExit += player_TriggerExit;
+    }
+
+    void OnDisable()
+    {
+        // Unregister collider events
+        var player = Characters.instance.Beorn.GetComponent<PlayerController>();
+        player.TriggerEntered -= player_TriggerEntered;
+        player.TriggerExit -= player_TriggerExit;
+    }
 
     private void ResetGrid()
     {
         for (int i = 0; i < SizeX; i++)
             for (int j = 0; j < SizeY; j++)
             {
-                grid[i, j] = false;
+                grid[i, j] = MarkAll;
             }
     }
 
@@ -54,19 +76,22 @@ public class MineFieldScript : MonoBehaviour {
     {
         placementTries++;
         ResetGrid();
-        int placedMines = 0;
-        while (placedMines < MineCount)
+        if (!MarkAll)
         {
-            int x = Random.Range(0, SizeX);
-            int y = Random.Range(0, SizeY);
-            if (!grid[x, y] && !(StartPos.x == x && StartPos.y == y) && !(EndPos.x == x && EndPos.y == y))
+            int placedMines = 0;
+            while (placedMines <= MineCount)
             {
-                grid[x, y] = true;
-                placedMines++;
+                int x = Random.Range(0, SizeX);
+                int y = Random.Range(0, SizeY);
+                if (!grid[x, y] && !(StartPos.x == x && StartPos.y == y) && !(EndPos.x == x && EndPos.y == y))
+                {
+                    grid[x, y] = true;
+                    placedMines++;
+                }
             }
+            if (CheckPath && !PathExists() && placementTries < MaxPlacementTries)
+                PlaceMines();
         }
-        if (!PathExists() && placementTries < MaxPlacementTries)
-            PlaceMines();
     }
 
     private bool PathExists()
@@ -120,7 +145,7 @@ public class MineFieldScript : MonoBehaviour {
         var mine = (GameObject)GameObject.Instantiate(Mine, minePosition, new Quaternion());
         mine.transform.parent = this.transform;
         var delay = Randomg.Range(0f, MineSound.length);
-        var minePlayer = AudioManager.PlayAudio(new AudioObject(mine, MineSound, 1, delay, true));
+        var minePlayer = AudioManager.PlayAudio(new AudioObject(mine, MineSound, OnlyProximity ? 0 : 1, delay, true));
         if (MineProximitySensor != null)
         {
             var mineProximitySensor = (GameObject)GameObject.Instantiate(MineProximitySensor, minePosition, new Quaternion());
@@ -130,6 +155,36 @@ public class MineFieldScript : MonoBehaviour {
         mines.Add(mine);
         minePlayers.Add(mine, minePlayer);
         minePositions.Add(mine, new Point2(i, j));
+    }
+
+    #region HandlePlayerCollisions
+    void player_TriggerExit(object sender, TriggerEventArgs e)
+    {
+        var collider = e.Trigger;
+        var collisionType = GetCollisionType(collider);
+        if (collisionType == MineCollisionType.Proximity)
+        {
+            TriggerProximitySensor(GetCollidingMine(collider), false);
+        }
+    }
+
+    void player_TriggerEntered(object sender, TriggerEventArgs e)
+    {
+        var collider = e.Trigger;
+        var collisionType = GetCollisionType(collider);
+        if (collisionType != MineCollisionType.None) // player collided with a mine
+        {
+            var collidedMine = GetCollidingMine(collider);
+            if (collisionType == MineCollisionType.Proximity)
+            {
+                TriggerProximitySensor(collidedMine, true);
+            }
+            else
+            {
+                var player = Characters.instance.Beorn.GetComponent<PlayerController>();
+                player.MoveToLocation(new PositionRotation(DragBackLocation));
+            }
+        }
     }
 
     public MineCollisionType GetCollisionType(Collider col)
@@ -157,8 +212,11 @@ public class MineFieldScript : MonoBehaviour {
             Debug.LogError("Mine not found!");
             return;
         }
+        if (OnlyProximity)
+            minePlayers[mine].SetVolume(trigger ? 1 : 0);
         minePlayers[mine].SetPitch(trigger ? 2 : 1);
     }
+    #endregion
 
     public void RemoveMine(GameObject mineToRemove)
     {
@@ -175,11 +233,6 @@ public class MineFieldScript : MonoBehaviour {
             }
         }
     }
-
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
     void OnDrawGizmos()
     {

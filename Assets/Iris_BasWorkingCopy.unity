@@ -385,6 +385,64 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 93585230}
+--- !u!1 &98079225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+  m_PrefabInternal: {fileID: 1020899694}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 98079226}
+  - 114: {fileID: 98079227}
+  m_Layer: 0
+  m_Name: MineField1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &98079226
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+  m_PrefabInternal: {fileID: 1020899694}
+  m_GameObject: {fileID: 98079225}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -61.2400017, y: -1, z: -69.9100037}
+  m_LocalScale: {x: 25, y: 1, z: 25}
+  m_Children: []
+  m_Father: {fileID: 2086084834}
+  m_RootOrder: 0
+--- !u!114 &98079227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638,
+    type: 2}
+  m_PrefabInternal: {fileID: 1020899694}
+  m_GameObject: {fileID: 98079225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dabf49dee6254544a8a429eda9110f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SizeX: 6
+  SizeY: 6
+  MineCount: 2
+  GridCellSize: 2
+  MaxPlacementTries: 1000
+  StartPos:
+    x: 0
+    y: 2
+  EndPos:
+    x: 5
+    y: 3
+  Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
+  MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
+  MineSound: {fileID: 8300000, guid: 6ff22bfa6b746da4cbdf141b7db1f064, type: 3}
+  OnlyProximity: 0
+  CheckPath: 1
+  MarkAll: 0
+  DragBackLocation: {fileID: 1220528816}
 --- !u!1 &107823560
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,6 +668,78 @@ Transform:
   - {fileID: 1073659769}
   m_Father: {fileID: 1623556267}
   m_RootOrder: 0
+--- !u!1001 &171560914
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2086084834}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -61.3400002
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -82.9000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: SizeY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: SizeX
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_Name
+      value: MineFieldEdge1R
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: CheckPath
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: MarkAll
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: OnlyProximity
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+  m_RootGameObject: {fileID: 811517565}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &179960996
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +828,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 533174366}
   m_GameObject: {fileID: 179960996}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &183843754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 772288348916a114fb961e5437deebcf, type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 183843755}
+  - 135: {fileID: 183843756}
+  m_Layer: 8
+  m_Name: LucyEventLocation
+  m_TagString: Location
+  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &183843755
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 772288348916a114fb961e5437deebcf, type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 183843754}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
+  m_LocalPosition: {x: -49.1899986, y: 2, z: -68.1699982}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 513901058}
+  - {fileID: 582728328}
+  - {fileID: 223342111}
+  - {fileID: 815302432}
+  - {fileID: 641807190}
+  m_Father: {fileID: 2086084834}
+  m_RootOrder: 4
+--- !u!135 &183843756
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500000, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 183843754}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &199622008
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,6 +1124,94 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1760629205}
   m_RootOrder: 6
+--- !u!1 &223342110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100006, guid: 772288348916a114fb961e5437deebcf, type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 223342111}
+  - 33: {fileID: 223342115}
+  - 135: {fileID: 223342114}
+  - 23: {fileID: 223342113}
+  - 114: {fileID: 223342112}
+  m_Layer: 8
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &223342111
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400006, guid: 772288348916a114fb961e5437deebcf, type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 223342110}
+  m_LocalRotation: {x: 0, y: -.707106888, z: 0, w: .707106769}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .591035485, y: .591035843, z: .591035724}
+  m_Children: []
+  m_Father: {fileID: 183843755}
+  m_RootOrder: 2
+--- !u!114 &223342112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 223342110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ecb4c0e5ca48b449a3bf1609f6db9dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: .300000012
+  magnitude: .0500000007
+  animateColor: 0
+--- !u!23 &223342113
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300004, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 223342110}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: a228fc2854668724ebb3a0167159b305, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!135 &223342114
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500006, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 223342110}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &223342115
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300004, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 223342110}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &225428932
 GameObject:
   m_ObjectHideFlags: 0
@@ -2673,6 +2937,94 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &513901057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: 772288348916a114fb961e5437deebcf, type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 513901058}
+  - 33: {fileID: 513901062}
+  - 135: {fileID: 513901061}
+  - 23: {fileID: 513901060}
+  - 114: {fileID: 513901059}
+  m_Layer: 8
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &513901058
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: 772288348916a114fb961e5437deebcf, type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 513901057}
+  m_LocalRotation: {x: 0, y: -.707106888, z: 0, w: .707106769}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.25970197, y: 2.2597034, z: 2.2597034}
+  m_Children: []
+  m_Father: {fileID: 183843755}
+  m_RootOrder: 0
+--- !u!114 &513901059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 513901057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ecb4c0e5ca48b449a3bf1609f6db9dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+  magnitude: .200000003
+  animateColor: 0
+--- !u!23 &513901060
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 513901057}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: c8b98292ff238804bafea007516aca74, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!135 &513901061
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500002, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 513901057}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &513901062
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 513901057}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &521396561
 GameObject:
   m_ObjectHideFlags: 0
@@ -3148,6 +3500,94 @@ Transform:
   m_Children: []
   m_Father: {fileID: 579748978}
   m_RootOrder: 5
+--- !u!1 &582728327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: 772288348916a114fb961e5437deebcf, type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 582728328}
+  - 33: {fileID: 582728332}
+  - 135: {fileID: 582728331}
+  - 23: {fileID: 582728330}
+  - 114: {fileID: 582728329}
+  m_Layer: 8
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &582728328
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: 772288348916a114fb961e5437deebcf, type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 582728327}
+  m_LocalRotation: {x: 0, y: -.707106888, z: 0, w: .707106769}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .893991709, y: .893992007, z: .893992007}
+  m_Children: []
+  m_Father: {fileID: 183843755}
+  m_RootOrder: 1
+--- !u!114 &582728329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 582728327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ecb4c0e5ca48b449a3bf1609f6db9dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: .300000012
+  magnitude: .0500000007
+  animateColor: 0
+--- !u!23 &582728330
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300002, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 582728327}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: a228fc2854668724ebb3a0167159b305, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!135 &582728331
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500004, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 582728327}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &582728332
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300002, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 582728327}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &591589451
 GameObject:
   m_ObjectHideFlags: 0
@@ -3518,6 +3958,226 @@ Transform:
   - {fileID: 1813403012}
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!1001 &625210001
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2086084834}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 772288348916a114fb961e5437deebcf, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -49.1899986
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 772288348916a114fb961e5437deebcf, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 772288348916a114fb961e5437deebcf, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -68.1699982
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 772288348916a114fb961e5437deebcf, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 772288348916a114fb961e5437deebcf, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: .707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 772288348916a114fb961e5437deebcf, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 772288348916a114fb961e5437deebcf, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 772288348916a114fb961e5437deebcf, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 772288348916a114fb961e5437deebcf, type: 2}
+  m_RootGameObject: {fileID: 183843754}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1 &638925907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 638925908}
+  - 33: {fileID: 638925912}
+  - 135: {fileID: 638925911}
+  - 23: {fileID: 638925910}
+  - 114: {fileID: 638925909}
+  m_Layer: 8
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &638925908
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 638925907}
+  m_LocalRotation: {x: 0, y: -.707106888, z: 0, w: .707106769}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .472828686, y: .472828776, z: .472828686}
+  m_Children: []
+  m_Father: {fileID: 1220528817}
+  m_RootOrder: 3
+--- !u!114 &638925909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 638925907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ecb4c0e5ca48b449a3bf1609f6db9dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: .300000012
+  magnitude: .0199999996
+  animateColor: 0
+--- !u!23 &638925910
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300002, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 638925907}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: a228fc2854668724ebb3a0167159b305, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!135 &638925911
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500004, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 638925907}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &638925912
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300002, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 638925907}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &641807189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100010, guid: 772288348916a114fb961e5437deebcf, type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 641807190}
+  - 33: {fileID: 641807194}
+  - 135: {fileID: 641807193}
+  - 23: {fileID: 641807192}
+  - 114: {fileID: 641807191}
+  m_Layer: 8
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &641807190
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400010, guid: 772288348916a114fb961e5437deebcf, type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 641807189}
+  m_LocalRotation: {x: 0, y: -.707106888, z: 0, w: .707106769}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .382234901, y: .382234931, z: .382234842}
+  m_Children: []
+  m_Father: {fileID: 183843755}
+  m_RootOrder: 4
+--- !u!114 &641807191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400008, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 641807189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ecb4c0e5ca48b449a3bf1609f6db9dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: .300000012
+  magnitude: .0199999996
+  animateColor: 0
+--- !u!23 &641807192
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300008, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 641807189}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: a228fc2854668724ebb3a0167159b305, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!135 &641807193
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500010, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 641807189}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &641807194
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300008, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 641807189}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &647197909
 GameObject:
   m_ObjectHideFlags: 0
@@ -3951,6 +4611,94 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!1 &726448380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100006, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 726448381}
+  - 33: {fileID: 726448385}
+  - 135: {fileID: 726448384}
+  - 23: {fileID: 726448383}
+  - 114: {fileID: 726448382}
+  m_Layer: 8
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &726448381
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400006, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 726448380}
+  m_LocalRotation: {x: 0, y: -.707106888, z: 0, w: .707106769}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .591035485, y: .591035843, z: .591035724}
+  m_Children: []
+  m_Father: {fileID: 1220528817}
+  m_RootOrder: 2
+--- !u!114 &726448382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 726448380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ecb4c0e5ca48b449a3bf1609f6db9dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: .300000012
+  magnitude: .0199999996
+  animateColor: 0
+--- !u!23 &726448383
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300004, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 726448380}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: a228fc2854668724ebb3a0167159b305, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!135 &726448384
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500006, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 726448380}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &726448385
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300004, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 726448380}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &733450987
 GameObject:
   m_ObjectHideFlags: 0
@@ -4148,6 +4896,7 @@ Transform:
   - {fileID: 1411348540}
   - {fileID: 1951500278}
   - {fileID: 505459952}
+  - {fileID: 1945995719}
   m_Father: {fileID: 579748978}
   m_RootOrder: 7
 --- !u!1 &750701670
@@ -4474,6 +5223,78 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 771070050}
+--- !u!1001 &783702439
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2086084834}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -61.3400002
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -56.9799995
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: SizeY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: SizeX
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_Name
+      value: MineFieldEdge1L
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: CheckPath
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: MarkAll
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: OnlyProximity
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+  m_RootGameObject: {fileID: 1269838668}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &786011787
 GameObject:
   m_ObjectHideFlags: 0
@@ -4617,6 +5438,64 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 809600078}
+--- !u!1 &811517565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+  m_PrefabInternal: {fileID: 171560914}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 811517566}
+  - 114: {fileID: 811517567}
+  m_Layer: 0
+  m_Name: MineFieldEdge1R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &811517566
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+  m_PrefabInternal: {fileID: 171560914}
+  m_GameObject: {fileID: 811517565}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -61.3400002, y: -1, z: -82.9000015}
+  m_LocalScale: {x: 26.5, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2086084834}
+  m_RootOrder: 2
+--- !u!114 &811517567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638,
+    type: 2}
+  m_PrefabInternal: {fileID: 171560914}
+  m_GameObject: {fileID: 811517565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dabf49dee6254544a8a429eda9110f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SizeX: 20
+  SizeY: 1
+  MineCount: 7
+  GridCellSize: 2
+  MaxPlacementTries: 1000
+  StartPos:
+    x: 0
+    y: 0
+  EndPos:
+    x: 10
+    y: 10
+  Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
+  MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
+  MineSound: {fileID: 8300000, guid: 6ff22bfa6b746da4cbdf141b7db1f064, type: 3}
+  OnlyProximity: 1
+  CheckPath: 0
+  MarkAll: 1
+  DragBackLocation: {fileID: 0}
 --- !u!1001 &811721454
 Prefab:
   m_ObjectHideFlags: 0
@@ -4678,6 +5557,94 @@ Prefab:
   m_RootGameObject: {fileID: 1766996850}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &815302431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100008, guid: 772288348916a114fb961e5437deebcf, type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 815302432}
+  - 33: {fileID: 815302436}
+  - 135: {fileID: 815302435}
+  - 23: {fileID: 815302434}
+  - 114: {fileID: 815302433}
+  m_Layer: 8
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &815302432
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400008, guid: 772288348916a114fb961e5437deebcf, type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 815302431}
+  m_LocalRotation: {x: 0, y: -.707106888, z: 0, w: .707106769}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .472828686, y: .472828776, z: .472828686}
+  m_Children: []
+  m_Father: {fileID: 183843755}
+  m_RootOrder: 3
+--- !u!114 &815302433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400006, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 815302431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ecb4c0e5ca48b449a3bf1609f6db9dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: .300000012
+  magnitude: .0500000007
+  animateColor: 0
+--- !u!23 &815302434
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300006, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 815302431}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: a228fc2854668724ebb3a0167159b305, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!135 &815302435
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500008, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 815302431}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &815302436
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300006, guid: 772288348916a114fb961e5437deebcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 625210001}
+  m_GameObject: {fileID: 815302431}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &839952909
 GameObject:
   m_ObjectHideFlags: 0
@@ -5526,6 +6493,94 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 916077020}
+--- !u!1 &940471782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100010, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 940471783}
+  - 33: {fileID: 940471787}
+  - 135: {fileID: 940471786}
+  - 23: {fileID: 940471785}
+  - 114: {fileID: 940471784}
+  m_Layer: 8
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &940471783
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400010, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 940471782}
+  m_LocalRotation: {x: 0, y: -.707106888, z: 0, w: .707106769}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.25970197, y: 2.2597034, z: 2.2597034}
+  m_Children: []
+  m_Father: {fileID: 1220528817}
+  m_RootOrder: 0
+--- !u!114 &940471784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400008, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 940471782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ecb4c0e5ca48b449a3bf1609f6db9dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: .300000012
+  magnitude: .200000003
+  animateColor: 0
+--- !u!23 &940471785
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300008, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 940471782}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 51ce6906c3b80ad42809c9bd6017a873, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!135 &940471786
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500010, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 940471782}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &940471787
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300008, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 940471782}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &958114308
 GameObject:
   m_ObjectHideFlags: 0
@@ -5882,6 +6937,106 @@ MeshFilter:
   m_PrefabInternal: {fileID: 811721454}
   m_GameObject: {fileID: 1013758980}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1020899694
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2086084834}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -61.2400017
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -69.9100037
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: SizeX
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: SizeY
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: StartPos.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: StartPos.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: EndPos.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: EndPos.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_Name
+      value: MineField1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: MarkXEdges
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: MarkYEdges
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: MineCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+      propertyPath: DragBackLocation
+      value: 
+      objectReference: {fileID: 1220528816}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+  m_RootGameObject: {fileID: 98079225}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1022890892
 GameObject:
   m_ObjectHideFlags: 0
@@ -7044,6 +8199,65 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!1 &1220528816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1220528817}
+  - 135: {fileID: 1220528819}
+  - 114: {fileID: 1220528818}
+  m_Layer: 8
+  m_Name: MineField1DragbackLocation
+  m_TagString: Location
+  m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1220528817
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 1220528816}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -75.2200012, y: 2, z: -72.1100006}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 940471783}
+  - {fileID: 1710528086}
+  - {fileID: 726448381}
+  - {fileID: 638925908}
+  - {fileID: 1859771887}
+  m_Father: {fileID: 2086084834}
+  m_RootOrder: 3
+--- !u!114 &1220528818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11483178, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 1220528816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7246c0292e072c94d86f0be51278df53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &1220528819
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500000, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 1220528816}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1246900290
 GameObject:
   m_ObjectHideFlags: 0
@@ -7279,6 +8493,112 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2077911296}
   m_GameObject: {fileID: 1257309434}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1266382307
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2086084834}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -75.2200012
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -72.1100006
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+      propertyPath: m_Name
+      value: MineField1DragbackLocation
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  m_RootGameObject: {fileID: 1220528816}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1 &1269838668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+  m_PrefabInternal: {fileID: 783702439}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1269838669}
+  - 114: {fileID: 1269838670}
+  m_Layer: 0
+  m_Name: MineFieldEdge1L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1269838669
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 7da81d9f513797d44815c40c2fae9638, type: 2}
+  m_PrefabInternal: {fileID: 783702439}
+  m_GameObject: {fileID: 1269838668}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -61.3400002, y: -1, z: -56.9799995}
+  m_LocalScale: {x: 26.5, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2086084834}
+  m_RootOrder: 1
+--- !u!114 &1269838670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 7da81d9f513797d44815c40c2fae9638,
+    type: 2}
+  m_PrefabInternal: {fileID: 783702439}
+  m_GameObject: {fileID: 1269838668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dabf49dee6254544a8a429eda9110f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SizeX: 20
+  SizeY: 1
+  MineCount: 7
+  GridCellSize: 2
+  MaxPlacementTries: 1000
+  StartPos:
+    x: 0
+    y: 0
+  EndPos:
+    x: 10
+    y: 10
+  Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
+  MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
+  MineSound: {fileID: 8300000, guid: 6ff22bfa6b746da4cbdf141b7db1f064, type: 3}
+  OnlyProximity: 1
+  CheckPath: 0
+  MarkAll: 1
+  DragBackLocation: {fileID: 0}
 --- !u!1 &1286036703
 GameObject:
   m_ObjectHideFlags: 0
@@ -9867,6 +11187,94 @@ Transform:
   m_Children: []
   m_Father: {fileID: 579748978}
   m_RootOrder: 4
+--- !u!1 &1710528085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100008, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1710528086}
+  - 33: {fileID: 1710528090}
+  - 135: {fileID: 1710528089}
+  - 23: {fileID: 1710528088}
+  - 114: {fileID: 1710528087}
+  m_Layer: 8
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1710528086
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400008, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 1710528085}
+  m_LocalRotation: {x: 0, y: -.707106888, z: 0, w: .707106769}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .893991709, y: .893992007, z: .893992007}
+  m_Children: []
+  m_Father: {fileID: 1220528817}
+  m_RootOrder: 1
+--- !u!114 &1710528087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400006, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 1710528085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ecb4c0e5ca48b449a3bf1609f6db9dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: .300000012
+  magnitude: .0299999993
+  animateColor: 0
+--- !u!23 &1710528088
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300006, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 1710528085}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: a228fc2854668724ebb3a0167159b305, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!135 &1710528089
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500008, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 1710528085}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1710528090
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300006, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 1710528085}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1711509466
 GameObject:
   m_ObjectHideFlags: 0
@@ -10637,6 +12045,94 @@ MeshFilter:
   m_PrefabInternal: {fileID: 533174366}
   m_GameObject: {fileID: 1833309735}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1859771886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1859771887}
+  - 33: {fileID: 1859771891}
+  - 135: {fileID: 1859771890}
+  - 23: {fileID: 1859771889}
+  - 114: {fileID: 1859771888}
+  m_Layer: 8
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1859771887
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 1859771886}
+  m_LocalRotation: {x: 0, y: -.707106888, z: 0, w: .707106769}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .382234901, y: .382234931, z: .382234842}
+  m_Children: []
+  m_Father: {fileID: 1220528817}
+  m_RootOrder: 4
+--- !u!114 &1859771888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 1859771886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ecb4c0e5ca48b449a3bf1609f6db9dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: .300000012
+  magnitude: .00999999978
+  animateColor: 0
+--- !u!23 &1859771889
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 1859771886}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: a228fc2854668724ebb3a0167159b305, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!135 &1859771890
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500002, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 1859771886}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1859771891
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 59739849dbde62748bd71d5a9dafc990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266382307}
+  m_GameObject: {fileID: 1859771886}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1887429365
 GameObject:
   m_ObjectHideFlags: 0
@@ -10830,8 +12326,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : *phone effect* Hello? Human? I need your help!! Are you ther...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: *phone effect* Hello? Human? I need your help!! Are you ther...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "*phone effect* Hello? Human? I need your help!! Are you there? Please
         press up/down/left/right in that order, to confirm you can hear me and that
@@ -10845,8 +12341,9 @@ MonoBehaviour:
     nameID: T1.2
     hint: 
     messageSequence:
-    - name: '!Err! : Human, please press up/down/left/right in that order. You ca...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Human, please press up/down/left/right in that order. You
+        ca...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Human, please press up/down/left/right in that order. You can do
         it! If you are not sure about how your controls work, you can press escape
@@ -10872,8 +12369,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : What?! NO stop!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: What?! NO stop!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "What?! NO stop!\r\n"
       settings:
@@ -10890,8 +12387,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Ah phew! haha! Iris is a bit silly sometimes. Anyway, we wil...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Ah phew! haha! Iris is a bit silly sometimes. Anyway, we
+        wil...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Ah phew! haha! Iris is a bit silly sometimes. Anyway, we will start
         the connection in a moment. But first, let me explain what is going on. I
@@ -10917,8 +12415,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : No, human, dont! Iris is kidding... again. \r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: No, human, dont! Iris is kidding... again. \r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "No, human, dont! Iris is kidding... again. \r\n"
       settings:
@@ -10935,8 +12433,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Just press forward to confirm. Will you help us, human?\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Just press forward to confirm. Will you help us, human?\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Just press forward to confirm. Will you help us, human?\r\n"
       settings:
@@ -10948,8 +12446,8 @@ MonoBehaviour:
     nameID: T1.4
     hint: 
     messageSequence:
-    - name: '!Err! : Oh... you don''t.. want to help us? If you make up your mind,...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Oh... you don''t.. want to help us? If you make up your mind,...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Oh... you don't.. want to help us? If you make up your mind, please
         press forward to confirm that you want to help us. We can really use the help
@@ -10963,8 +12461,8 @@ MonoBehaviour:
     nameID: T1.5
     hint: 
     messageSequence:
-    - name: '!Err! : Human, would you like to help us? We can really use the help...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Human, would you like to help us? We can really use the help...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Human, would you like to help us? We can really use the help of a
         talented human like you! Press forward to confirm!\r\n"
@@ -10986,8 +12484,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Yaaay! That is so great to hear. We are going on an adventur...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Yaaay! That is so great to hear. We are going on an adventur...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Yaaay! That is so great to hear. We are going on an adventure together.
         It is going to be awesome! Lets start connecting you to a spirit bear now.
@@ -11018,8 +12516,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *during connection sounds* Here we go!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: *during connection sounds* Here we go!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "*during connection sounds* Here we go!\r\n"
       settings:
@@ -11040,8 +12538,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Alright, human. You are now in connection with a fluffy spir...'
-      source: {fileID: 0}
+    - name: 'Lucy: Alright, human. You are now in connection with a fluffy spir...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 8300000, guid: 98250cdbd36b4e046b3378f0e9e7c983, type: 3}
       subtitle: "Alright, human. You are now in connection with a fluffy spirit bear,
         called Beorn. Right now he is waking up.\r\n"
@@ -11059,8 +12557,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Alright, he got up. \r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Alright, he got up. \r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Alright, he got up. \r\n"
       settings:
@@ -11077,8 +12575,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Lets see if you can move him. Press forward and backward to ...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Lets see if you can move him. Press forward and backward
+        to ...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Lets see if you can move him. Press forward and backward to move
         Beorn. \r\n"
@@ -11100,8 +12599,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Human, press forward and backward to move Beorn. If you dont...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Human, press forward and backward to move Beorn. If you dont...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Human, press forward and backward to move Beorn. If you dont understand
         your controls, you can press escape to check or change the controls settings
@@ -11124,8 +12623,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Haha, aww poor Beorn. He fell down, but that is okay. He is ...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Haha, aww poor Beorn. He fell down, but that is okay. He
+        is ...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Haha, aww poor Beorn. He fell down, but that is okay. He is quite
         strong and has a lot of fur to break his fall. He is a bit clumsy sometimes
@@ -11144,8 +12644,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Lets try and see if you can turn Beorn around in order to lo...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Lets try and see if you can turn Beorn around in order to
+        lo...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Lets try and see if you can turn Beorn around in order to look at
         a different direction. First do a full rotation to the left.\r\nPress the
@@ -11168,8 +12669,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Haha, aww poor Beorn. He fell down, but that is okay. He is ...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Haha, aww poor Beorn. He fell down, but that is okay. He
+        is ...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Haha, aww poor Beorn. He fell down, but that is okay. He is quite
         strong and has a lot of fur to break his fall. He is a bit clumsy sometimes
@@ -11188,8 +12690,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Lets try and see if you can turn Beorn around in order to lo...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Lets try and see if you can turn Beorn around in order to
+        lo...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Lets try and see if you can turn Beorn around in order to look at
         a different direction. First do a full rotation to the left.\r\nMove your
@@ -11212,8 +12715,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Haha, aww poor Beorn. He fell down, but that is okay. He is ...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Haha, aww poor Beorn. He fell down, but that is okay. He
+        is ...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Haha, aww poor Beorn. He fell down, but that is okay. He is quite
         strong and has a lot of fur to break his fall. He is a bit clumsy sometimes
@@ -11232,8 +12736,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Lets try and see if you can turn Beorn around in order to lo...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Lets try and see if you can turn Beorn around in order to
+        lo...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Lets try and see if you can turn Beorn around in order to look at
         a different direction. First do a full rotation to the left.\r\nJust turn
@@ -11256,8 +12761,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Human, just press the left or right keys to turn left or rig...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Human, just press the left or right keys to turn left or
+        rig...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Human, just press the left or right keys to turn left or right.\r\n"
       settings:
@@ -11278,8 +12784,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Human, move your mouse to the right, to turn right and visa ...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Human, move your mouse to the right, to turn right and visa
+        ...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Human, move your mouse to the right, to turn right and visa versa.\r\n"
       settings:
@@ -11300,8 +12807,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Human, just turn your head into the direction that you want ...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Human, just turn your head into the direction that you want
+        ...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Human, just turn your head into the direction that you want Beorn
         to look at.\r\n"
@@ -11323,9 +12831,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Human, you are turning into the wrong direction.\r\nYou have
+    - name: "!Err! Lucy: Human, you are turning into the wrong direction.\r\nYou have
         t..."
-      source: {fileID: 0}
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Human, you are turning into the wrong direction.\r\nYou have to turn
         right!\r\n"
@@ -11347,9 +12855,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Human, you are turning into the wrong direction.\r\nYou have
+    - name: "!Err! Lucy: Human, you are turning into the wrong direction.\r\nYou have
         t..."
-      source: {fileID: 0}
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Human, you are turning into the wrong direction.\r\nYou have to turn
         left!\r\n"
@@ -11371,8 +12879,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Well done!! Now lets turn back around. Do a full rotation to...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Well done!! Now lets turn back around. Do a full rotation
+        to...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Well done!! Now lets turn back around. Do a full rotation to the
         left!\r\n"
@@ -11394,8 +12903,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Well done, human!! Notice how the sound changes when you tur...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Well done, human!! Notice how the sound changes when you
+        tur...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Well done, human!! Notice how the sound changes when you turn? You
         should pay close attention attention to the changes of audio in order to orient
@@ -11409,8 +12919,9 @@ MonoBehaviour:
     nameID: T3.1
     hint: 
     messageSequence:
-    - name: '!Err! : Alright, you are ready to try walking around! Before we can ...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Alright, you are ready to try walking around! Before we can
+        ...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Alright, you are ready to try walking around! Before we can get to
         the spirit village, we should get Beorn ready to move out. First he needs
@@ -11436,8 +12947,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Human! Try to focus on the sound of my wings and walk toward...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Human! Try to focus on the sound of my wings and walk toward...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Human! Try to focus on the sound of my wings and walk towards me!
         Listen carefully to where my sound comes from, turn towards it and walk into
@@ -11460,8 +12971,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Good job, human!... haha, Beorn! Your shoes are even bigger ...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Good job, human!... haha, Beorn! Your shoes are even bigger
+        ...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Good job, human!... haha, Beorn! Your shoes are even bigger than
         your belly is.\r\n"
@@ -11479,8 +12991,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Okay, human. Lets now head towards his belly rubbing machine...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Okay, human. Lets now head towards his belly rubbing machine...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Okay, human. Lets now head towards his belly rubbing machine. Follow
         me!\r\n"
@@ -11502,8 +13014,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Human! Try to focus on the sound of my wings and walk toward...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Human! Try to focus on the sound of my wings and walk toward...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Human! Try to focus on the sound of my wings and walk towards me!
         Listen carefully to where my sound comes from, turn towards it and walk into
@@ -11537,8 +13049,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Beorn!! No! Get out and turn it off!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Beorn!! No! Get out and turn it off!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Beorn!! No! Get out and turn it off!\r\n"
       settings:
@@ -11564,8 +13076,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Good, Beorn! You can get a belly rub later, when you come ba...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Good, Beorn! You can get a belly rub later, when you come
+        ba...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Good, Beorn! You can get a belly rub later, when you come back home..
         \r\n\r\nAlright, human! Lets head to the door so we can get out of this place.
@@ -11590,8 +13103,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Human! Try to focus on the sound of my wings and walk toward...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Human! Try to focus on the sound of my wings and walk toward...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Human! Try to focus on the sound of my wings and walk towards me!
         Listen carefully to where my sound comes from, turn towards it and walk into
@@ -11614,8 +13127,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Yes!! You made it! You now know how to control Beorn and how...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Yes!! You made it! You now know how to control Beorn and
+        how...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Yes!! You made it! You now know how to control Beorn and how to follow
         the sound of my wings. This will come in handy!\r\n"
@@ -11637,8 +13151,8 @@ MonoBehaviour:
     nameID: T4.1
     hint: 
     messageSequence:
-    - name: "!Err! : Ahhhh fresh air\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Ahhhh fresh air\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Ahhhh fresh air\r\n"
       settings:
@@ -11655,8 +13169,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : We are now on a very lengthy bridge that goes to my village....'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: We are now on a very lengthy bridge that goes to my village....'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "We are now on a very lengthy bridge that goes to my village. The
         bridge is a bit narrow, and has a lot of turns. Thats because the bridge is
@@ -11675,8 +13189,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *while Beorn is running* Beorn!!!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: *while Beorn is running* Beorn!!!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "*while Beorn is running* Beorn!!!\r\n"
       settings:
@@ -11711,8 +13225,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Beorn!! Wh... why..?? Oh wait... I see. Below us is not just...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Beorn!! Wh... why..?? Oh wait... I see. Below us is not just...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Beorn!! Wh... why..?? Oh wait... I see. Below us is not just a regular
         river, it is a river of... honey! I actually have some for you, Beorn! Here!
@@ -11731,8 +13245,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : WOW! He drank it all in one go!! Oh Beorn...\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: WOW! He drank it all in one go!! Oh Beorn...\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "WOW! He drank it all in one go!! Oh Beorn...\r\n"
       settings:
@@ -11749,9 +13263,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Haha!\r\n\r\nBy the way, human, as you noticed I have magical
+    - name: "!Err! Lucy: Haha!\r\n\r\nBy the way, human, as you noticed I have magical
         po..."
-      source: {fileID: 0}
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Haha!\r\n\r\nBy the way, human, as you noticed I have magical powers!
         If something significant happens, I get my spirit juices flowing through my
@@ -11777,8 +13291,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Uh oh!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Uh oh!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Uh oh!\r\n"
       settings:
@@ -11795,8 +13309,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Good! You are safe now. Lets try again. Follow me!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Good! You are safe now. Lets try again. Follow me!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Good! You are safe now. Lets try again. Follow me!\r\n"
       settings:
@@ -11817,8 +13331,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Woops! \r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Woops! \r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Woops! \r\n"
       settings:
@@ -11835,8 +13349,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Okay! You are safe. Lets try again. Follow me!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Okay! You are safe. Lets try again. Follow me!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Okay! You are safe. Lets try again. Follow me!\r\n"
       settings:
@@ -11857,8 +13371,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Oh nooo!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Oh nooo!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Oh nooo!\r\n"
       settings:
@@ -11875,8 +13389,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Phew!! That was close. Lets try again. Follow me!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Phew!! That was close. Lets try again. Follow me!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Phew!! That was close. Lets try again. Follow me!\r\n"
       settings:
@@ -11897,8 +13411,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Hey come back! You are going the wrong direction!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Hey come back! You are going the wrong direction!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Hey come back! You are going the wrong direction!\r\n"
       settings:
@@ -11919,8 +13433,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Watch out for the edge, human!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Watch out for the edge, human!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Watch out for the edge, human!\r\n"
       settings:
@@ -11941,8 +13455,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Ohhh watch out for the edge!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Ohhh watch out for the edge!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Ohhh watch out for the edge!\r\n"
       settings:
@@ -11963,8 +13477,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Human! Watch out, Beorn is standing really close to the edge...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Human! Watch out, Beorn is standing really close to the edge...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Human! Watch out, Beorn is standing really close to the edge.\r\n"
       settings:
@@ -11985,8 +13499,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Well done! Now the next segment. Follow me!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Well done! Now the next segment. Follow me!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Well done! Now the next segment. Follow me!\r\n"
       settings:
@@ -12007,8 +13521,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Yes! Very good. Ok, next one!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Yes! Very good. Ok, next one!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Yes! Very good. Ok, next one!\r\n"
       settings:
@@ -12020,8 +13534,9 @@ MonoBehaviour:
     nameID: T4.6
     hint: 
     messageSequence:
-    - name: '!Err! : Hmmm, human, you have to watch out now. Some spirits are cro...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Hmmm, human, you have to watch out now. Some spirits are
+        cro...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Hmmm, human, you have to watch out now. Some spirits are crossing
         the bridge sideways. They appear very scared because of the giant in our village.
@@ -12055,8 +13570,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Uh oh!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Uh oh!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Uh oh!\r\n"
       settings:
@@ -12073,8 +13588,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Good! You are safe now. Lets try again. Follow me!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Good! You are safe now. Lets try again. Follow me!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Good! You are safe now. Lets try again. Follow me!\r\n"
       settings:
@@ -12104,8 +13619,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Woops! \r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Woops! \r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Woops! \r\n"
       settings:
@@ -12122,8 +13637,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Okay! You are safe. Lets try again. Follow me!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Okay! You are safe. Lets try again. Follow me!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Okay! You are safe. Lets try again. Follow me!\r\n"
       settings:
@@ -12153,8 +13668,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Oh nooo!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Oh nooo!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Oh nooo!\r\n"
       settings:
@@ -12171,8 +13686,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Phew!! That was close. Lets try again. Follow me!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Phew!! That was close. Lets try again. Follow me!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Phew!! That was close. Lets try again. Follow me!\r\n"
       settings:
@@ -12193,8 +13708,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Phew! Close call, Beorn almost touched a spirit.\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Phew! Close call, Beorn almost touched a spirit.\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Phew! Close call, Beorn almost touched a spirit.\r\n"
       settings:
@@ -12215,8 +13730,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Awesome!! Well done. Okay, lets continue over the next secti...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Awesome!! Well done. Okay, lets continue over the next secti...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Awesome!! Well done. Okay, lets continue over the next section.\r\n"
       settings:
@@ -12237,8 +13752,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : You are very good at this! Let''s tackle the next section too...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: You are very good at this! Let''s tackle the next section
+        too...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "You are very good at this! Let's tackle the next section too!\r\n"
       settings:
@@ -12250,8 +13766,9 @@ MonoBehaviour:
     nameID: T4.10
     hint: 
     messageSequence:
-    - name: '!Err! : Alright, the next few sections are a bit more difficult. I c...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Alright, the next few sections are a bit more difficult.
+        I c...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Alright, the next few sections are a bit more difficult. I cant fly
         over them, because the bridge is kept in the air by machines. The energy they
@@ -12276,8 +13793,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Woops! Watch out, the bridge turns here.\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Woops! Watch out, the bridge turns here.\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Woops! Watch out, the bridge turns here.\r\n"
       settings:
@@ -12294,8 +13811,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Okay! You are safe. Lets try again. Follow the sound of the ...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Okay! You are safe. Lets try again. Follow the sound of the
+        ...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Okay! You are safe. Lets try again. Follow the sound of the machines.\r\n"
       settings:
@@ -12316,8 +13834,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Well done! That was tough, wasnit it? You did great though. ...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Well done! That was tough, wasnit it? You did great though.
+        ...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Well done! That was tough, wasnit it? You did great though. You are
         a great listener! Lets continue over the next section with machines. \r\n"
@@ -12339,8 +13858,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! :  You are the master of listening! Let''s tackle the next sect...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy:  You are the master of listening! Let''s tackle the next
+        sect...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: " You are the master of listening! Let's tackle the next section too!\r\n"
       settings:
@@ -12361,8 +13881,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Very goood!! We reached the end of the bridge. Here is a por...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Very goood!! We reached the end of the bridge. Here is a
+        por...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Very goood!! We reached the end of the bridge. Here is a portal to
         my village. Beorn, dont be scared, you might feel some dizziness and lightheadedness,
@@ -12394,8 +13915,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : *whispers* uhoh. we arrived at my village but we are standin...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: *whispers* uhoh. we arrived at my village but we are standin...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "*whispers* uhoh. we arrived at my village but we are standing right
         next to the giant... Lets hope he doesnt see us. Stay still!\r\n"
@@ -12413,8 +13934,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *whispers* Beorn! SSSST!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: *whispers* Beorn! SSSST!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "*whispers* Beorn! SSSST!\r\n"
       settings:
@@ -12433,8 +13954,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Uh uhm OH!! Of course! Giants hate science!! But, why are th...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Uh uhm OH!! Of course! Giants hate science!! But, why are
+        th...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Uh uhm OH!! Of course! Giants hate science!! But, why are there science
         birds in our forest?\r\n"
@@ -12455,8 +13977,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Haha it would. We will help you, but if we get the science b...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Haha it would. We will help you, but if we get the science
+        b...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Haha it would. We will help you, but if we get the science birds
         out of the forest, will you go back there and leave us alone?\r\n"
@@ -12483,8 +14006,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Oh here comes Boris the 77th, the great owl of Gahoot, the k...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Oh here comes Boris the 77th, the great owl of Gahoot, the
+        k...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Oh here comes Boris the 77th, the great owl of Gahoot, the king of
         our village, and protector of all that is spirit. He is not THAT great though,
@@ -12505,8 +14029,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Yes, 100% sure.\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Yes, 100% sure.\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Yes, 100% sure.\r\n"
       settings:
@@ -12526,8 +14050,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : OK human, stand still when he takes off, and listen closely ...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: OK human, stand still when he takes off, and listen closely
+        ...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "OK human, stand still when he takes off, and listen closely to the
         sounds he makes. Use the sounds of the village around you to orient yourself
@@ -12555,8 +14080,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : OK, go find him!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: OK, go find him!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "OK, go find him!\r\n"
       settings:
@@ -12616,8 +14141,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Try to focus on the sounds of the environment in comparison ...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Try to focus on the sounds of the environment in comparison
+        ...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Try to focus on the sounds of the environment in comparison to Boris.
         If you forget where he is, he might make some noises once in a while.\r\n"
@@ -12658,8 +14184,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Beorn!! Don't bite our king you idiot!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Beorn!! Don't bite our king you idiot!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Beorn!! Don't bite our king you idiot!\r\n"
       settings:
@@ -12706,8 +14232,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : OK, lets go find him again!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: OK, lets go find him again!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "OK, lets go find him again!\r\n"
       settings:
@@ -12748,8 +14274,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : OK, lets go find him again, one last time!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: OK, lets go find him again, one last time!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "OK, lets go find him again, one last time!\r\n"
       settings:
@@ -12779,8 +14305,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Yaay! I told you!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Yaay! I told you!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Yaay! I told you!\r\n"
       settings:
@@ -12818,8 +14344,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *happy* Wiiiiiii\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: *happy* Wiiiiiii\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "*happy* Wiiiiiii\r\n"
       settings:
@@ -12849,8 +14375,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : It smells here, IEEUW. Even worse than Beorns house. Where A...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: It smells here, IEEUW. Even worse than Beorns house. Where
+        A...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "It smells here, IEEUW. Even worse than Beorns house. Where ARE we??\r\n"
       settings:
@@ -12871,8 +14398,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Hmm, alright. Human, I will fly to the end of the swamp. Aga...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Hmm, alright. Human, I will fly to the end of the swamp.
+        Aga...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Hmm, alright. Human, I will fly to the end of the swamp. Again, follow
         the sound of my wings, but avoid the frogs!\r\n"
@@ -12903,8 +14431,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Woops! \r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Woops! \r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Woops! \r\n"
       settings:
@@ -12921,8 +14449,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Okay! You are safe. Lets try again.\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Okay! You are safe. Lets try again.\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Okay! You are safe. Lets try again.\r\n"
       settings:
@@ -12943,8 +14471,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Try to focus on the sound of my wings and avoid those slimy ...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Try to focus on the sound of my wings and avoid those slimy
+        ...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Try to focus on the sound of my wings and avoid those slimy frogs
         on the way! You can do it, human!\r\n"
@@ -12957,8 +14486,8 @@ MonoBehaviour:
     nameID: T6.4
     hint: 
     messageSequence:
-    - name: '!Err! : Hooray! You made it! Well done! Those frogs were sooo smelly...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Hooray! You made it! Well done! Those frogs were sooo smelly...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Hooray! You made it! Well done! Those frogs were sooo smelly, and
         slimey. Ughhh!! I am super glad we passed the swamp.\r\n"
@@ -12976,8 +14505,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Let's continue quickly\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Let's continue quickly\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Let's continue quickly\r\n"
       settings:
@@ -13034,8 +14563,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Hey come back! You are going the wrong direction!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Hey come back! You are going the wrong direction!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Hey come back! You are going the wrong direction!\r\n"
       settings:
@@ -13056,8 +14585,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Beorn! Leave those poor flies alone!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Beorn! Leave those poor flies alone!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Beorn! Leave those poor flies alone!\r\n"
       settings:
@@ -13085,8 +14614,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : hihihi\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: hihihi\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "hihihi\r\n"
       settings:
@@ -13117,8 +14646,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : hihihi\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: hihihi\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "hihihi\r\n"
       settings:
@@ -13139,8 +14668,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Who??\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Who??\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Who??\r\n"
       settings:
@@ -13157,8 +14686,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : OH! hihi, fooled me!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: OH! hihi, fooled me!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "OH! hihi, fooled me!\r\n"
       settings:
@@ -13198,8 +14727,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : OK! Whats next, Boris?\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: OK! Whats next, Boris?\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "OK! Whats next, Boris?\r\n"
       settings:
@@ -13222,8 +14751,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Ok, human, you are a great listener! Why dont you go find hi...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Ok, human, you are a great listener! Why dont you go find
+        hi...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Ok, human, you are a great listener! Why dont you go find him. Good
         luck!\r\n"
@@ -13254,8 +14784,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Human, the bird you are looking for mimics the sounds of the...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Human, the bird you are looking for mimics the sounds of
+        the...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Human, the bird you are looking for mimics the sounds of the forest,
         including those of other birds. Listen carefully!\r\n"
@@ -13436,8 +14967,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : You caught a crow. You can bring him to me.\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: You caught a crow. You can bring him to me.\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "You caught a crow. You can bring him to me.\r\n"
       settings:
@@ -13467,8 +14998,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Oops! That was a crow. Please, bring him to me.\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Oops! That was a crow. Please, bring him to me.\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Oops! That was a crow. Please, bring him to me.\r\n"
       settings:
@@ -13498,8 +15029,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Oh! That is a crow, human! Can you bring him here?\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Oh! That is a crow, human! Can you bring him here?\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Oh! That is a crow, human! Can you bring him here?\r\n"
       settings:
@@ -13520,8 +15051,8 @@ MonoBehaviour:
     nameID: T8.3*1
     hint: 
     messageSequence:
-    - name: "!Err! : OK! I have got the crow. Now go get that science bird!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: OK! I have got the crow. Now go get that science bird!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "OK! I have got the crow. Now go get that science bird!\r\n"
       settings:
@@ -13533,8 +15064,8 @@ MonoBehaviour:
     nameID: T8.3*2
     hint: 
     messageSequence:
-    - name: "!Err! : OK! Thanks. Now try to get that science bird!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: OK! Thanks. Now try to get that science bird!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "OK! Thanks. Now try to get that science bird!\r\n"
       settings:
@@ -13546,8 +15077,8 @@ MonoBehaviour:
     nameID: T8.3*3
     hint: 
     messageSequence:
-    - name: "!Err! : Alright. He is taken care of. Give it another go, human!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Alright. He is taken care of. Give it another go, human!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Alright. He is taken care of. Give it another go, human!\r\n"
       settings:
@@ -13594,8 +15125,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : 1 2 3\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: 1 2 3\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "1 2 3\r\n"
       settings:
@@ -13612,8 +15143,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : IEEEUW, seriously??\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: IEEEUW, seriously??\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "IEEEUW, seriously??\r\n"
       settings:
@@ -13704,8 +15235,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Be careful, boris!! But, the bird is right!\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: Be careful, boris!! But, the bird is right!\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Be careful, boris!! But, the bird is right!\r\n"
       settings:
@@ -13760,8 +15291,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : I have never heard anyone be so happy to go to a big hall to...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: I have never heard anyone be so happy to go to a big hall
+        to...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "I have never heard anyone be so happy to go to a big hall to test
         echoing farts. Here we go *teleport sounds*\r\n"
@@ -13781,8 +15313,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : OK! ENOUGH! Ugh, who gives our king beans for dinner??\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: OK! ENOUGH! Ugh, who gives our king beans for dinner??\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "OK! ENOUGH! Ugh, who gives our king beans for dinner??\r\n"
       settings:
@@ -13801,8 +15333,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Sounds like he is the the master of gasses himself. Lets get...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Sounds like he is the the master of gasses himself. Lets
+        get...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Sounds like he is the the master of gasses himself. Lets get back
         to the village. *teleport sounds*\r\n"
@@ -13888,8 +15421,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : It is time to disconnect you. Thank you sooo much for your h...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: It is time to disconnect you. Thank you sooo much for your
+        h...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "It is time to disconnect you. Thank you sooo much for your help!!
         The village is now happy again. All because of you. You are awesome! Perhaps
@@ -13910,8 +15444,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : byeeee\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Lucy: byeeee\r\n"
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "byeeee\r\n"
       settings:
@@ -14066,6 +15600,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1905643431}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1945995718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1945995719}
+  m_Layer: 0
+  m_Name: MineFields
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1945995719
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1945995718}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2086084834}
+  m_Father: {fileID: 740654939}
+  m_RootOrder: 3
 --- !u!1 &1951500277
 GameObject:
   m_ObjectHideFlags: 0
@@ -14869,6 +16431,38 @@ Prefab:
   m_RootGameObject: {fileID: 611681154}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &2086084833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2086084834}
+  m_Layer: 0
+  m_Name: MineField1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2086084834
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2086084833}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 98079226}
+  - {fileID: 1269838669}
+  - {fileID: 811517566}
+  - {fileID: 1220528817}
+  - {fileID: 183843755}
+  m_Father: {fileID: 1945995719}
+  m_RootOrder: 0
 --- !u!1 &2093325993
 GameObject:
   m_ObjectHideFlags: 0

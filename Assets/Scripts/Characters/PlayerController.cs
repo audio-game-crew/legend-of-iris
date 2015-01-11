@@ -61,6 +61,13 @@ public class PlayerController : MonoBehaviour {
             TriggerExit(this, new TriggerEventArgs(other));
     }
 
+    public void MoveToLocation(PositionRotation location, float moveTime = 0)
+    {
+        // TODO: make this smooth
+        this.transform.position = location.Position;
+        this.transform.rotation = location.Rotation;
+    }
+
 	public void setOnFire(bool state) {
 		onFire = state;
 	}
