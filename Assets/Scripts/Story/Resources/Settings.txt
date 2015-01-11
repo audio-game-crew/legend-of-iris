@@ -1,9 +1,9 @@
 This is my settings menu. Press escape to exit this menu and continue with the Iris connection, or press M to mute my voice in this menu. The settings menu may be navigated by pressing up or down. Settings can be changed by pressing left or right.
 
 The settings menu contains the following:
-1. Visual aids settings, this setting enables or disables visual aids. These visual aids allow a guide to help a visually impaired human through the game.
-2. Controls settings, here you can select the prefered method of manoeuvring through the 3D environment with a spirit bear.
-3. 3D Sound Simulation settings, here you can choose which method should be used for simulating 3D sound over stero headphones. Warning: some of these methods are experimental and could possibly crash me if selected.
+1. Visual aids settings, this setting enables or disables visual aids. These visual aids allow a guide to help a human who is connected to the spirit world by sound.
+2. Controls settings, here you can select the preferred method of manoeuvring through the 3D environment with a spirit bear.
+3. 3D Sound Simulation settings, here you can choose which method should be used for simulating 3D sound over stereo headphones. Warning: some of these methods are experimental and could possibly crash me if selected.
 4. Oculus Rift settings, the oculus rift is a virtual reality device that allows humans to feel fully immersed into the spirit world. Accurate head tracking is an important feature that is essential to a fully immersive experience.
 5. Demonstration mode, if this mode is enabled, certain cheats are enabled that allows one to demonstrate what I am capable of.
 
@@ -26,16 +26,16 @@ Press right to change the current setting.
 Press down to go to a different setting.
 Press escape to exit the settings menu.
 
-// In order to accomplish this, I take incomming audio signals and let it be processed by my patented Spirit World Visualization Technology. 
+// In order to accomplish this, I take incoming audio signals and let it be processed by my patented Spirit World Visualization Technology. 
 
 Visual Aids settings set to: "Full visual Aids".
-The screen will show a top-down simulation of the spirit world on which audio sources are indicated. This allows connected humans to have guidance by a non-visually impaired guide. Remember: a connected human is only meant to orient by means of audio, so the use of visual aids by that person, is considered cheating.
+The screen will show a top-down simulation of the spirit world on which audio sources are indicated. This allows connected humans to have guidance by a non-visually impaired guide. Remember: a connected human is only meant to orientate itself by sound, so the use of visual aids by that person, is considered cheating.
 Press left to change the current setting.
 Press down to go to a different setting.
 Press escape to exit the settings menu.
 
 Controls settings set to: Single Handed.
-Single handed controls allow you to move and turn a spirit bear using a keyboard or controller. Pressing and holding forward and backward using the arrow keys on the keyboard, or an analog stick on a controller, makes the bear move forward or backward. Pressing and holding left or right using the arrow keys, or an analog stick on a controller, turns the spirit bear around. In addition to the arrow keys, the keys with letters W A S D can be used, as they work the same. The amount that the bear turns or moves, depends on how long one holds down the associated keys.
+Single handed controls allow you to move and turn a spirit bear using a keyboard or controller. Pressing and holding forward or backward using the arrow keys on the keyboard, or an analog stick on a controller, makes the bear move forward or backward. Pressing and holding left or right using the arrow keys, or an analog stick on a controller, turns the spirit bear around. In addition to the arrow keys, the keys with letters W A S D can be used, as they work the same. The amount that the bear turns or moves, depends on how long one holds down the associated keys.
 Press right to change the current setting.
 Press up or down to go to a different setting.
 Press escape to exit the settings menu.
