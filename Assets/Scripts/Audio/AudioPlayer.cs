@@ -32,6 +32,7 @@ public class AudioPlayer
 
         // create audio source with clip
         audioGO = (GameObject)GameObject.Instantiate(AudioManager.instance.audioSourcePrefab);
+        Debug.Log(audio.parent);
         audioGO.transform.parent = audio.parent.transform;
         audioGO.transform.localPosition = Vector3.zero;
 

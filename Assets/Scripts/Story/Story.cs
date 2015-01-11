@@ -175,7 +175,6 @@ public class Story : MonoBehaviour {
 
 	void Update () 
     {
-        return;
         RemoveFinishedSuccessSounds();
         if (currentState != null)
             currentState.Update(this);

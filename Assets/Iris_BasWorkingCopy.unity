@@ -6009,7 +6009,7 @@ GameObject:
   - 4: {fileID: 1073659769}
   - 114: {fileID: 1073659768}
   m_Layer: 0
-  m_Name: Level6
+  m_Name: 'Level #3 [Cross Swamp]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9978,7 +9978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1760629205
 Transform:
   m_ObjectHideFlags: 0
@@ -14375,11 +14375,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2024133919}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f93a0bfa97a5a4b49b445cb8c6d119e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 2de0e2f547b58f948909ddbac515f4e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TargetLocation: {fileID: 505459951}
-  ObjectToTeleport: {fileID: 2076031667}
+  ObjectToTeleport: {fileID: 0}
   TeleportAnimationVerticalDisplacementValue:
     serializedVersion: 2
     m_Curve:
@@ -14388,12 +14388,12 @@ MonoBehaviour:
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: .491994202
+    - time: .497816622
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 1.00145555
+    - time: .998544335
       value: .00243902416
       inSlope: 0
       outSlope: 0
@@ -14467,7 +14467,7 @@ GameObject:
   - 4: {fileID: 2030860984}
   - 114: {fileID: 2030860985}
   m_Layer: 0
-  m_Name: StartLevel6
+  m_Name: StartLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14761,6 +14761,7 @@ MonoBehaviour:
     sounds: {fileID: 11400000, guid: 4282fb713ac9ac3449584844d1b60b4b, type: 2}
   currentGroundType: 0
   currentFootsteps: {fileID: 0}
+  enabled: 1
 --- !u!114 &2076031670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15081,6 +15082,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingQuests:
   - {fileID: 159651632}
+  cheatQuests:
+  - {fileID: 1073659767}
 --- !u!1 &2145988226
 GameObject:
   m_ObjectHideFlags: 0
