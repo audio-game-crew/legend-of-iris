@@ -339,9 +339,8 @@ public static class VectorExtension
     /// if this vector should rotate counter clockwise in order to reach the 'other' </summary>
     public static float angle(this Vector2 v, Vector2 other)
     {
-        float a1 = v.angle();
-        float a2 = other.angle();
-        return a2 - a1;
+        var diff = v - other;
+        return diff.angle();
     }
     /// <summary> The angle on the unit circle of this vector [0, 2pi) </summary>
     public static float angleFull(this Vector2 v)
