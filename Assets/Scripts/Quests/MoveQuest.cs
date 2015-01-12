@@ -7,7 +7,7 @@ public class MoveQuest : Quest<MoveQuest, MoveQuestDefinition> {
     public Quaternion startRotation;
     public Vector2 startDirection;
 
-    private bool started = false;
+    private bool active = false;
 
     private Vector2 lastDirection;
     private float totalRotation;
@@ -21,25 +21,25 @@ public class MoveQuest : Quest<MoveQuest, MoveQuestDefinition> {
         startRotation = Characters.instance.Beorn.transform.rotation;
         startDirection = CameraManager.GetCameraForwardMovementVector().castxz();
         lastDirection = startDirection;
-        started = true;
+        active = true;
         totalRotation = 0;
 	}
 
     public override void Update()
     {
-        if (!started)
+        if (!active)
             return;
         var player = Characters.instance.Beorn;
         var movement = startRotation * (player.transform.position - startPosition);
         bool sufficientMovement = false;
         
         var curDirection = CameraManager.GetCameraForwardMovementVector().castxz();
-        var rotationDelta = curDirection.angle(lastDirection);
+        var rotationDelta = lastDirection.angle(curDirection);
         lastDirection = curDirection;
 
         totalRotation += rotationDelta;
         if (definition.direction == MoveQuestDefinition.Direction.Left || definition.direction == MoveQuestDefinition.Direction.Right)
-            Debug.Log(curDirection + " " + lastDirection + " " + rotationDelta);
+            Debug.Log(curDirection + " " + lastDirection + " " + rotationDelta + " " + totalRotation);
 
         switch(definition.direction)
         {
@@ -52,4 +52,9 @@ public class MoveQuest : Quest<MoveQuest, MoveQuestDefinition> {
             Complete();
     }
 
+    protected override void _Complete()
+    {
+        active = false;
+        base._Complete();
+    }
 }

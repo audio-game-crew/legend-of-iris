@@ -339,8 +339,12 @@ public static class VectorExtension
     /// if this vector should rotate counter clockwise in order to reach the 'other' </summary>
     public static float angle(this Vector2 v, Vector2 other)
     {
-        var diff = v - other;
-        return diff.angle();
+        float ang = Vector2.Angle(v, other);
+        Vector3 cross = Vector3.Cross(v, other);
+
+        if (cross.z > 0)
+            ang = -ang;
+        return ang;
     }
     /// <summary> The angle on the unit circle of this vector [0, 2pi) </summary>
     public static float angleFull(this Vector2 v)
