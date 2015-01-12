@@ -16,6 +16,7 @@ public class MoveQuest : Quest<MoveQuest, MoveQuestDefinition> {
 
     protected override void _Start()
     {
+        base._Start();
         startPosition = Characters.instance.Beorn.transform.position;
         startRotation = Characters.instance.Beorn.transform.rotation;
         startDirection = CameraManager.GetCameraForwardMovementVector().castxz();
@@ -50,8 +51,5 @@ public class MoveQuest : Quest<MoveQuest, MoveQuestDefinition> {
         if (sufficientMovement)
             Complete();
     }
-
-	private void Next() {
-	}
 
 }
