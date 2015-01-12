@@ -1798,7 +1798,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812295602}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &212553415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3424,7 +3424,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812295602}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!114 &364619499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3465,7 +3465,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812295602}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!114 &365496301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4786,7 +4786,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812295602}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!114 &521396563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5419,7 +5419,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812295602}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!114 &576760075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6485,7 +6485,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812295602}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!114 &650252846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17465,230 +17465,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1753851784}
---- !u!1 &1760629204
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1760629205}
-  - 114: {fileID: 1760629206}
-  m_Layer: 0
-  m_Name: Story Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1760629205
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1760629204}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1812295602}
-  m_RootOrder: 0
---- !u!114 &1760629206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1760629204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ef831ce710228b4db7b5c38d20e8654, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Grumble: {fileID: 0}
-  Lucy: {fileID: 1766996850}
-  Boris: {fileID: 219113810}
-  Iris: {fileID: 689019606}
-  Birds:
-  - {fileID: 1545846372}
-  - {fileID: 124562908}
-  - {fileID: 1588277269}
-  - {fileID: 1961227575}
-  - {fileID: 1079653807}
-  LucyBell: {fileID: 0}
-  SuccessSound: {fileID: 0}
-  LucyExplains1:
-    Skip: 0
-    playableSound: {fileID: 0}
-  InitialMove:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyAppearanceDelay: 5
-  SecondMove:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyAppearanceDelay: 5
-  LucyExplains2:
-    Skip: 0
-    playableSound: {fileID: 0}
-  RemoveDoor:
-    TargetObject: {fileID: 0}
-  ParentRoomState:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyAppearanceDelay: 5
-    MotherSound: {fileID: 0}
-    FatherSound: {fileID: 0}
-    BrotherSound: {fileID: 0}
-    Mother: {fileID: 0}
-    Father: {fileID: 0}
-    Brother: {fileID: 0}
-    MaxRandomDelay: .5
-  RemoveFlatDoor:
-    TargetObject: {fileID: 0}
-  FollowLucyToElevator:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyAppearanceDelay: 5
-  RemoveElevatorDoor:
-    TargetObject: {fileID: 0}
-  ElevatorState:
-    targetPlayerPosition: {fileID: 0}
-    targetLucyPosition: {fileID: 0}
-    sound: {fileID: 0}
-  LucyExplainsCars:
-    Skip: 0
-    playableSound: {fileID: 0}
-  EvadeFirstRoad:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyAppearanceDelay: 5
-    generator: {fileID: 0}
-    carBraking: {fileID: 0}
-    lucyWarning: {fileID: 0}
-  WalkPastBuilding1:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyEventPrefab: {fileID: 0}
-    maxStepDistance: 25
-    LucyStepFlyTime: 2
-  WalkPastBuilding2:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyEventPrefab: {fileID: 0}
-    maxStepDistance: 25
-    LucyStepFlyTime: 2
-  LucyExplainsToCrossOtherRoad:
-    Skip: 0
-    playableSound: {fileID: 0}
-  EvadeFirstRoadCars:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyAppearanceDelay: 5
-    generator: {fileID: 0}
-    carBraking: {fileID: 0}
-    lucyWarning: {fileID: 0}
-  EvadeSecondRoadCars:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyAppearanceDelay: 5
-    generator: {fileID: 0}
-    carBraking: {fileID: 0}
-    lucyWarning: {fileID: 0}
-  WalkToPortal:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyEventPrefab: {fileID: 0}
-    maxStepDistance: 25
-    LucyStepFlyTime: 2
-  LucyExplainsPortal:
-    Skip: 0
-    playableSound: {fileID: 0}
-  PortalState:
-    Skip: 0
-    playableSound: {fileID: 0}
-    PortalSoundDuration: 5
-  teleportLevel2:
-    targetPlayerPosition: {fileID: 0}
-    targetLucyPosition: {fileID: 0}
-    sound: {fileID: 0}
-  ExplainsFortress:
-    Skip: 0
-    playableSound: {fileID: 0}
-  SingPuzzle:
-    Monster1: {fileID: 0}
-    Monster2: {fileID: 0}
-    Monster3: {fileID: 0}
-    Ruby: {fileID: 0}
-    playableSoundMonster1: {fileID: 0}
-    playableSoundMonster2: {fileID: 0}
-    playableSoundMonster3: {fileID: 0}
-    playableSoundRuby: {fileID: 0}
-    playableSoundLucyWarning: {fileID: 0}
-    MaxRandomDelay: .5
-  RubyExplainsSomething:
-    Skip: 0
-    character: {fileID: 0}
-    playableSound: {fileID: 0}
-  RubyRemovesDoorState:
-    TargetObject: {fileID: 0}
-  FollowLucyToMines1:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyEventPrefab: {fileID: 0}
-    maxStepDistance: 25
-    LucyStepFlyTime: 2
-  FollowLucyToMines2:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyEventPrefab: {fileID: 0}
-    maxStepDistance: 25
-    LucyStepFlyTime: 2
-  FollowLucyToMines3:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyEventPrefab: {fileID: 0}
-    maxStepDistance: 25
-    LucyStepFlyTime: 2
-  FollowLucyToMines4:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyEventPrefab: {fileID: 0}
-    maxStepDistance: 25
-    LucyStepFlyTime: 2
-  MinesPuzzle:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyAppearanceDelay: 5
-    MineField: {fileID: 0}
-    DragBackLocation: {fileID: 0}
-    DragBackSound: {fileID: 0}
-    MineFieldDoor: {fileID: 0}
-  FollowLucyToBoss1:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyAppearanceDelay: 5
-  FollowLucyToBoss2:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyAppearanceDelay: 5
-  FollowLucyToBoss3:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyAppearanceDelay: 5
-  LucyExplainsBoss:
-    Skip: 0
-    playableSound: {fileID: 0}
-  FinalBoss:
-    Boss: {fileID: 0}
-  FollowLucyToWater:
-    MaxRandomBellDelay: .5
-    TargetLocation: {fileID: 0}
-    LucyAppearanceDelay: 5
-  LucyExplainsYouWin:
-    Skip: 0
-    playableSound: {fileID: 0}
-  EndState:
-    EndUI: {fileID: 0}
 --- !u!1 &1760693418
 GameObject:
   m_ObjectHideFlags: 0
@@ -18166,7 +17942,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1760629205}
   - {fileID: 576760074}
   - {fileID: 212553414}
   - {fileID: 2027723406}
@@ -18440,8 +18215,8 @@ CanvasRenderer:
 --- !u!1 &1823617924
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 111648, guid: bd8f034b4c9d8194f9faac079802c871, type: 2}
+  m_PrefabInternal: {fileID: 2097491698}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1823617925}
@@ -18456,20 +18231,21 @@ GameObject:
 --- !u!4 &1823617925
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 411648, guid: bd8f034b4c9d8194f9faac079802c871, type: 2}
+  m_PrefabInternal: {fileID: 2097491698}
   m_GameObject: {fileID: 1823617924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812295602}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!114 &1823617926
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 11411648, guid: bd8f034b4c9d8194f9faac079802c871,
+    type: 2}
+  m_PrefabInternal: {fileID: 2097491698}
   m_GameObject: {fileID: 1823617924}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -22266,7 +22042,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812295602}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &1900926691
 GameObject:
   m_ObjectHideFlags: 0
@@ -23705,7 +23481,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812295602}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &2027723407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24241,6 +24017,54 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2093325993}
+--- !u!1001 &2097491698
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1812295602}
+    m_Modifications:
+    - target: {fileID: 411648, guid: bd8f034b4c9d8194f9faac079802c871, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411648, guid: bd8f034b4c9d8194f9faac079802c871, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411648, guid: bd8f034b4c9d8194f9faac079802c871, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411648, guid: bd8f034b4c9d8194f9faac079802c871, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411648, guid: bd8f034b4c9d8194f9faac079802c871, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411648, guid: bd8f034b4c9d8194f9faac079802c871, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411648, guid: bd8f034b4c9d8194f9faac079802c871, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411648, guid: bd8f034b4c9d8194f9faac079802c871, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11411648, guid: bd8f034b4c9d8194f9faac079802c871, type: 2}
+      propertyPath: InitialCheckpoint
+      value: 
+      objectReference: {fileID: 921443686}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: bd8f034b4c9d8194f9faac079802c871, type: 2}
+  m_RootGameObject: {fileID: 1823617924}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &2104635373
 GameObject:
   m_ObjectHideFlags: 0
