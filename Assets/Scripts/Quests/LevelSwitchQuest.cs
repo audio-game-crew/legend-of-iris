@@ -11,8 +11,8 @@ public class LevelSwitchQuest : Quest<LevelSwitchQuest, LevelSwitchQuestDefiniti
 
     protected override void _Start()
     {
-        LevelSwitcher.ActivateLevel(definition.Level);
         base._Start();
+        LevelSwitcher.ActivateLevel(definition.Level);
     }
 
     public override void Update()
