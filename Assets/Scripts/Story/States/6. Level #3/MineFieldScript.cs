@@ -17,7 +17,7 @@ public class MineFieldScript : MonoBehaviour {
     public bool OnlyProximity  = false;
     public bool CheckPath = true;
     public bool MarkAll = false;
-    public GameObject DragBackLocation;
+    public Checkpoint DragBackLocation;
 
     public GameObject[] Mines { get { return mines.ToArray(); } }
 
@@ -39,7 +39,8 @@ public class MineFieldScript : MonoBehaviour {
         placementTries = 0;
         PlaceMines();
         AddMines();
-
+        if (CheckpointManager.instance != null)
+            CheckpointManager.instance.SetLastCheckpoint(DragBackLocation);
 	}
 
     void OnEnable()
@@ -79,7 +80,7 @@ public class MineFieldScript : MonoBehaviour {
         if (!MarkAll)
         {
             int placedMines = 0;
-            while (placedMines <= MineCount)
+            while (placedMines < MineCount)
             {
                 int x = Random.Range(0, SizeX);
                 int y = Random.Range(0, SizeY);
@@ -172,7 +173,7 @@ public class MineFieldScript : MonoBehaviour {
     {
         var collider = e.Trigger;
         var collisionType = GetCollisionType(collider);
-        if (collisionType != MineCollisionType.None) // player collided with a mine
+        if (collisionType != MineCollisionType.None) // player collided with a mine or proximity sensor
         {
             var collidedMine = GetCollidingMine(collider);
             if (collisionType == MineCollisionType.Proximity)
@@ -180,9 +181,9 @@ public class MineFieldScript : MonoBehaviour {
                 TriggerProximitySensor(collidedMine, true);
             }
             else
-            {
-                var player = Characters.instance.Beorn.GetComponent<PlayerController>();
-                player.MoveToLocation(new PositionRotation(DragBackLocation));
+            { // Player collided with a mine.
+                CheckpointManager.instance.GotoLastCheckpoint();
+                // TODO: Play some sound to notigy the player he/she is being dragged back.
             }
         }
     }
@@ -220,6 +221,7 @@ public class MineFieldScript : MonoBehaviour {
 
     public void RemoveMine(GameObject mineToRemove)
     {
+        Debug.Log("Removing mine " + mineToRemove.name, mineToRemove);
         foreach (var mine in mines)
         {
             if (mine == mineToRemove)
