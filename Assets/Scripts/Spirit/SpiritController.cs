@@ -25,7 +25,7 @@ public class SpiritController : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other) {
 
-		if (other.tag == "Player" || other.tag == "Spirit") {
+		if ( other.tag == "Spirit") {
 			speed = 0;
 			generator.SetActive(false);
 		}
@@ -45,8 +45,10 @@ public class SpiritController : MonoBehaviour {
 				} else if (other.tag == "Player") {
 					// if the player touches a spirit he is pushed down
 					var directionToPush = transform.position - other.transform.position;
+					directionToPush.Normalize();;
 					Debug.Log ("directionToPush: "+directionToPush);
 					other.transform.position += directionToPush*10;
+					
 				}
 	}
 	
