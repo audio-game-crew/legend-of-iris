@@ -4,6 +4,7 @@ using UnityEngine;
 public class WaypointQuest : Quest<WaypointQuest, WaypointQuestDefinition> {
 
 	public int index = 0;
+
     private float timeoutTimer;
     private float wrongWayTimer;
     private float minTargetDistance;
@@ -28,11 +29,11 @@ public class WaypointQuest : Quest<WaypointQuest, WaypointQuestDefinition> {
 		waypoint.onPlayerEnter += OnPlayerEnter;
         var lucy = Characters.instance.Lucy.GetComponent<LucyController>();
         lucy.GotoLocation(new PositionRotation(waypoint.transform.position, waypoint.transform.rotation));
-        var player = Characters.instance.Beorn;
 
         // Reset the timers
         timeoutTimer = 0;
         wrongWayTimer = definition.WrongWayTimeout; // Make sure the wrongway conversation always works the first time after a checkpoint
+        var player = Characters.instance.Beorn;
         minTargetDistance = (player.transform.position - waypoint.transform.position).magnitude;
 	}
 
@@ -50,7 +51,7 @@ public class WaypointQuest : Quest<WaypointQuest, WaypointQuestDefinition> {
     public override void Update()
     {
         base.Update();
-        if (!active)
+        if (state != State.STARTED)
             return;
         timeoutTimer += Time.deltaTime;
         wrongWayTimer += Time.deltaTime;

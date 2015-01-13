@@ -7,8 +7,8 @@ public class WaypointQuestDefinition : QuestDefinition {
     public string TimeoutConversationID = null;
     public float Timeout = 10;
     public string WrongWayConversationID = null;
-    public float WrongWayThreshold = 5;
-    public float WrongWayTimeout = 10;
+    public float WrongWayThreshold = 2;
+    public float WrongWayTimeout = 5;
 	
 	override public Quest Create() {
 		return new WaypointQuest(this);

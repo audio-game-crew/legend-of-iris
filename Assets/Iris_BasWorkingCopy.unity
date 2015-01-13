@@ -1107,7 +1107,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 336119974}
   - {fileID: 1073659769}
   - {fileID: 287053442}
   m_Father: {fileID: 1623556267}
@@ -2364,7 +2363,7 @@ Transform:
   m_Children:
   - {fileID: 632069938}
   m_Father: {fileID: 159651634}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &287053443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2639,54 +2638,6 @@ Transform:
   - {fileID: 1013758981}
   m_Father: {fileID: 1246900291}
   m_RootOrder: 1
---- !u!1 &336119973
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 336119974}
-  - 114: {fileID: 336119975}
-  m_Layer: 0
-  m_Name: Follow 3 Waypoints
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &336119974
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 336119973}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 159651634}
-  m_RootOrder: 0
---- !u!114 &336119975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 336119973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcd68f54570bf1b42b2974a8c8b4cae7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 611681157}
-  - {fileID: 476112740}
-  - {fileID: 1346346805}
-  TimeoutConversationID: 
-  Timeout: 0
-  WrongWayConversationID: 
-  WrongWayThreshold: 0
-  WrongWayTimeout: 0
 --- !u!1 &355747512
 GameObject:
   m_ObjectHideFlags: 0
@@ -6937,7 +6888,7 @@ MonoBehaviour:
   - {fileID: 5349547}
   TimeoutConversationID: T6.3
   Timeout: 10
-  WrongWayConversationID: T6.4
+  WrongWayConversationID: 
   WrongWayThreshold: 1
   WrongWayTimeout: 5
 --- !u!1 &771070050
@@ -10365,7 +10316,7 @@ Transform:
   - {fileID: 582501204}
   - {fileID: 2058964860}
   m_Father: {fileID: 159651634}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1 &1079653807
 GameObject:
   m_ObjectHideFlags: 0
@@ -11915,6 +11866,33 @@ MonoBehaviour:
   DragBackCheckpoint: {fileID: 0}
   FailConversations:
   - T6.2
+--- !u!1 &1242063613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1242063614}
+  m_Layer: 0
+  m_Name: Other
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1242063614
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1242063613}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2076031668}
+  m_RootOrder: 1
 --- !u!1 &1246900290
 GameObject:
   m_ObjectHideFlags: 0
@@ -13492,7 +13470,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: c092ee3f061d53e4b915ba8b07b93584, type: 2}
+  - {fileID: 2100000, guid: 4a09bc230d174f0409a41a7f8486f45e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -18194,10 +18172,6 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 2353282, guid: 93afb250fa93d7b42b062da82c00f615, type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c092ee3f061d53e4b915ba8b07b93584, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 93afb250fa93d7b42b062da82c00f615, type: 2}
   m_RootGameObject: {fileID: 1411348539}
@@ -19187,8 +19161,8 @@ MonoBehaviour:
     nameID: T3.5
     hint: 
     messageSequence:
-    - name: "!Err! : *belly rubbing machine turns on*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *belly rubbing machine turns on*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*belly rubbing machine turns on*\r\n"
       settings:
@@ -19216,8 +19190,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *belly rubbing machine turns off*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *belly rubbing machine turns off*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*belly rubbing machine turns off*\r\n"
       settings:
@@ -19296,8 +19270,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *door opens*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *door opens*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*door opens*\r\n"
       settings:
@@ -19365,8 +19339,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *teleportation sounds*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *teleportation sounds*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -19458,8 +19432,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *teleportation sounds*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *teleportation sounds*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -19498,8 +19472,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *teleportation sounds*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *teleportation sounds*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -19538,8 +19512,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *teleportation sounds*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *teleportation sounds*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -19737,8 +19711,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *teleportation sounds*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *teleportation sounds*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -19786,8 +19760,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *teleportation sounds*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *teleportation sounds*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -19835,8 +19809,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *teleportation sounds*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *teleportation sounds*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -19960,8 +19934,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *teleportation sounds*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *teleportation sounds*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -20051,8 +20025,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *awesome teleportation sounds*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *awesome teleportation sounds*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*awesome teleportation sounds*\r\n"
       settings:
@@ -20064,8 +20038,8 @@ MonoBehaviour:
     nameID: T5.1
     hint: 
     messageSequence:
-    - name: "!Err! : *teleportation sounds end*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *teleportation sounds end*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds end*\r\n"
       settings:
@@ -20155,8 +20129,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *Approaching flapping wings*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *Approaching flapping wings*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*Approaching flapping wings*\r\n"
       settings:
@@ -20220,8 +20194,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *flapping wings of boris flying to some random location*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *flapping wings of boris flying to some random location*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*flapping wings of boris flying to some random location*\r\n"
       settings:
@@ -20372,8 +20346,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *flapping wings of boris flying to some random location*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *flapping wings of boris flying to some random location*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*flapping wings of boris flying to some random location*\r\n"
       settings:
@@ -20414,8 +20388,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *flapping wings of boris flying to some random location*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *flapping wings of boris flying to some random location*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*flapping wings of boris flying to some random location*\r\n"
       settings:
@@ -20484,8 +20458,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *wings start flapping around player*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *wings start flapping around player*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*wings start flapping around player*\r\n"
       settings:
@@ -20515,8 +20489,8 @@ MonoBehaviour:
     nameID: T6.1
     hint: 
     messageSequence:
-    - name: "!Err! : *wings stop flapping, landed*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *wings stop flapping, landed*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*wings stop flapping, landed*\r\n"
       settings:
@@ -20571,8 +20545,8 @@ MonoBehaviour:
     nameID: T6.2
     hint: 
     messageSequence:
-    - name: "!Err! : *frog bite*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *frog bite*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*frog bite*\r\n"
       settings:
@@ -20598,8 +20572,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *teleportation sounds*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *teleportation sounds*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -21292,8 +21266,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *distant fart sound*\r\n"
-      source: {fileID: 0}
+    - name: "!Err! Other: *distant fart sound*\r\n"
+      source: {fileID: 1242063613}
       audioClip: {fileID: 0}
       subtitle: "*distant fart sound*\r\n"
       settings:
@@ -22801,6 +22775,11 @@ MonoBehaviour:
   - {fileID: 300311504}
   - {fileID: 1291792371}
   WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  TimeoutConversationID: T6.5
+  Timeout: 10
+  WrongWayConversationID: T6.6
+  WrongWayThreshold: 2
+  WrongWayTimeout: 5
 --- !u!1 &2070661525
 GameObject:
   m_ObjectHideFlags: 0
@@ -22860,6 +22839,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1900926692}
+  - {fileID: 1242063614}
   m_Father: {fileID: 1527040402}
   m_RootOrder: 1
 --- !u!114 &2076031669
