@@ -4,6 +4,7 @@ public class AudioObject
 {
     public float delay;
     public float volume;
+    public float? maxDistance;
     public bool loop;
     public bool pausable;
 

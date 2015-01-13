@@ -199,6 +199,7 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
+  SoundMaxDistance: 20
   OnlyProximity: 0
   CheckPath: 1
   MarkAll: 0
@@ -508,6 +509,7 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
+  SoundMaxDistance: 20
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -758,6 +760,7 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
+  SoundMaxDistance: 20
   OnlyProximity: 0
   CheckPath: 1
   MarkAll: 0
@@ -3077,6 +3080,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 90.0000153
       objectReference: {fileID: 0}
+    - target: {fileID: 2353282, guid: 93afb250fa93d7b42b062da82c00f615, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ad2b318bc6fa4142a616705178126f3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 93afb250fa93d7b42b062da82c00f615, type: 2}
   m_RootGameObject: {fileID: 2136371324}
@@ -4406,6 +4413,7 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
+  SoundMaxDistance: 20
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -6083,6 +6091,7 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
+  SoundMaxDistance: 20
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -6928,9 +6937,9 @@ MonoBehaviour:
   - {fileID: 5349547}
   TimeoutConversationID: T6.3
   Timeout: 10
-  WrongWayConversationID: 
-  WrongWayThreshold: 0
-  WrongWayTimeout: 0
+  WrongWayConversationID: T6.4
+  WrongWayThreshold: 1
+  WrongWayTimeout: 5
 --- !u!1 &771070050
 GameObject:
   m_ObjectHideFlags: 0
@@ -7583,6 +7592,7 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
+  SoundMaxDistance: 20
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -8923,6 +8933,7 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
+  SoundMaxDistance: 20
   OnlyProximity: 0
   CheckPath: 1
   MarkAll: 0
@@ -11897,6 +11908,7 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
+  SoundMaxDistance: 20
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -12359,6 +12371,7 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
+  SoundMaxDistance: 20
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -12808,6 +12821,7 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
+  SoundMaxDistance: 20
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -13478,7 +13492,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 4a09bc230d174f0409a41a7f8486f45e, type: 2}
+  - {fileID: 2100000, guid: c092ee3f061d53e4b915ba8b07b93584, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -16613,6 +16627,7 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
+  SoundMaxDistance: 20
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -16974,6 +16989,7 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
+  SoundMaxDistance: 20
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -17034,6 +17050,7 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
+  SoundMaxDistance: 20
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -18177,6 +18194,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2353282, guid: 93afb250fa93d7b42b062da82c00f615, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c092ee3f061d53e4b915ba8b07b93584, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 93afb250fa93d7b42b062da82c00f615, type: 2}
   m_RootGameObject: {fileID: 1411348539}
@@ -23509,7 +23530,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 4a09bc230d174f0409a41a7f8486f45e, type: 2}
+  - {fileID: 2100000, guid: 6ad2b318bc6fa4142a616705178126f3, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

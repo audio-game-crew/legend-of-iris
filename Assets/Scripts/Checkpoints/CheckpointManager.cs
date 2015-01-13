@@ -35,7 +35,8 @@ public class CheckpointManager : MonoBehaviour {
             time += Time.deltaTime;
             var progress = time / TeleportTime;
             if (progress > 1)
-            {
+            { // Stop the teleportation
+                SetWalkScriptEnabled(true);
                 player.transform.position = target.Position;
                 player.transform.rotation = target.Rotation;
                 teleporting = false;
@@ -51,11 +52,22 @@ public class CheckpointManager : MonoBehaviour {
         }
 	}
 
+    private void SetWalkScriptEnabled(bool enabled)
+    {
+        var player = Characters.instance.Beorn;
+        if (player == null)
+            return;
+
+        var walkScript = Characters.instance.Beorn.GetComponent<WalkScript>();
+        if (walkScript != null) walkScript.enabled = enabled;
+    }
+
     public void GotoLastCheckpoint()
     {
         start = new PositionRotation(Characters.instance.Beorn);
         target = new PositionRotation(lastCheckpoint.gameObject);
         teleporting = true;
+        SetWalkScriptEnabled(false);
         time = 0;
     }
 
