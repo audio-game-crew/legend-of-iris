@@ -11,12 +11,19 @@ public class ConversationQuest : Quest<ConversationQuest, ConversationQuestDefin
 		// conversation.onConversationEnd += OnConversationEnd;
 		// conversation.Play();
 		var player = ConversationManager.GetConversationPlayer(definition.conversationId);
-        player.onConversationEnd += OnConversationEnd;
-        player.Start();
+        if (player != null)
+        {
+            player.onConversationEnd += OnConversationEnd;
+            player.Start();
+        } else
+        {
+            Complete();
+        }
 	}
 
 	private void OnConversationEnd(ConversationPlayer player) {
-        player.onConversationEnd -= OnConversationEnd;
+        if (player != null)
+            player.onConversationEnd -= OnConversationEnd;
 		Complete();
 	}
 
