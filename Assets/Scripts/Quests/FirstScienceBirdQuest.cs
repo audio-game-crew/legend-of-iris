@@ -6,17 +6,24 @@ public class FirstScienceBirdQuest : Quest<FirstScienceBirdQuest, FirstScienceBi
 
 	/* This class needs to spawn a science bird somewhere around the player */
 	List<GameObject> prefabs = new List<GameObject>();
+	float lastExplanationTime;
+	float nextExplanationTime;
+	ConversationPlayer explanationPlayer = null;
 
 	public FirstScienceBirdQuest(FirstScienceBirdQuestDefinition definition) : base(definition) {}
 
     protected override void _Start() {
-		base._Start();
+		// Play explanation
+		lastExplanationTime = Time.time;
+		nextExplanationTime = lastExplanationTime + definition.explanationDelay;
 
 		for (int i = 0; i < definition.scienceBirdCount; i++)
 			SpawnScienceBird();
 
 		for (int i = 0; i < definition.crapBirdCount; i++)
 			SpawnCrapBird();
+
+		base._Start();
 	}
 
 	private GameObject RandomSpawn(GameObject prefab) {
@@ -66,6 +73,27 @@ public class FirstScienceBirdQuest : Quest<FirstScienceBirdQuest, FirstScienceBi
 
 	public override void Update() {
 		base.Update();
+		// add timer that triggers lucy to explain
+		if (explanationPlayer == null) {
+			if (Input.anyKey) {
+				nextExplanationTime = Math.Min(
+					Time.time + definition.explanationDelay, 
+					lastExplanationTime + definition.maxExplanationDelay
+				);
+			}
 
+			if (Time.time > nextExplanationTime) {
+				explanationPlayer = ConversationManager.GetConversationPlayer("T7.2");
+				explanationPlayer.onConversationEnd += OnExplanationEnd;
+				explanationPlayer.Start();
+			}
+		}
+	}
+
+	private void OnExplanationEnd(ConversationPlayer _) {
+		explanationPlayer.onConversationEnd -= OnExplanationEnd;
+		explanationPlayer = null;
+		lastExplanationTime = Time.time;
+		nextExplanationTime = lastExplanationTime + definition.explanationDelay;
 	}
 }

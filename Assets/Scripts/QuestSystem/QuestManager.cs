@@ -28,10 +28,8 @@ public class QuestManager : MonoBehaviour {
     void Update()
     {
         // Send the quests update notifications, so they can keep internal timers etc.
-        foreach (var quest in quests)
-        {
-            //Debug.Log("Updating quest", quest.definition.gameObject.name);
-            quest.Update();
+        foreach (var quest in quests) {
+            if (quest.state == Quest.State.STARTED) quest.Update();
         }
 
         var cheatPressed = GetCheatPressed();

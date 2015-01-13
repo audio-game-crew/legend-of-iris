@@ -9427,8 +9427,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Ok, human, you are a great listener! Why dont you go find hi...'
-      source: {fileID: 0}
+    - name: '!Err! Boris: Ok, human, you are a great listener! Why dont you go find
+        hi...'
+      source: {fileID: 219113810}
       audioClip: {fileID: 0}
       subtitle: "Ok, human, you are a great listener! Why dont you go find him. Good
         luck!\r\n"
@@ -9459,8 +9460,9 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Human, the bird you are looking for mimics the sounds of the...'
-      source: {fileID: 0}
+    - name: '!Err! Lucy: Human, the bird you are looking for mimics the sounds of
+        the...'
+      source: {fileID: 1766996850}
       audioClip: {fileID: 0}
       subtitle: "Human, the bird you are looking for mimics the sounds of the forest,
         including those of other birds. Listen carefully!\r\n"
@@ -10330,6 +10332,8 @@ MonoBehaviour:
   scienceBirdCount: 1
   crapBirdPrefab: {fileID: 100002, guid: 64bfde3a871db064b87931f11ab5ccd2, type: 2}
   crapBirdCount: 3
+  explanationDelay: 10
+  maxExplanationDelay: 30
 --- !u!1 &2027723405
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,8 @@ public class FirstScienceBirdQuestDefinition : QuestDefinition {
 	public int scienceBirdCount = 1;
 	public GameObject crapBirdPrefab = null;
 	public int crapBirdCount = 3;
+	public float explanationDelay = 10f;
+	public float maxExplanationDelay = 30f;
 
 	override public Quest Create() {
 		return new FirstScienceBirdQuest(this);
