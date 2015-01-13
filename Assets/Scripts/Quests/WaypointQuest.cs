@@ -56,7 +56,7 @@ public class WaypointQuest : Quest<WaypointQuest, WaypointQuestDefinition> {
         wrongWayTimer += Time.deltaTime;
         var player = Characters.instance.Beorn;
         var targetDistance = (player.transform.position - definition.waypoints[index-1].transform.position).magnitude;
-        Debug.Log(definition.gameObject.name + ": " + targetDistance + " < " + minTargetDistance + "?");
+        //Debug.Log(definition.gameObject.name + ": " + targetDistance + " < " + minTargetDistance + "?");
         if (targetDistance < minTargetDistance)
             minTargetDistance = targetDistance;
 
