@@ -17,7 +17,8 @@ public class MineFieldScript : MonoBehaviour {
     public bool OnlyProximity  = false;
     public bool CheckPath = true;
     public bool MarkAll = false;
-    public Checkpoint DragBackLocation;
+    public Checkpoint DragBackCheckpoint;
+    public List<string> FailConversations = new List<string> { "T6.2" };
 
     public GameObject[] Mines { get { return mines.ToArray(); } }
 
@@ -40,7 +41,7 @@ public class MineFieldScript : MonoBehaviour {
         PlaceMines();
         AddMines();
         if (CheckpointManager.instance != null)
-            CheckpointManager.instance.SetLastCheckpoint(DragBackLocation);
+            CheckpointManager.instance.SetLastCheckpoint(DragBackCheckpoint);
 	}
 
     void OnEnable()
@@ -182,10 +183,18 @@ public class MineFieldScript : MonoBehaviour {
             }
             else
             { // Player collided with a mine.
-                CheckpointManager.instance.GotoLastCheckpoint();
-                // TODO: Play some sound to notigy the player he/she is being dragged back.
+                var failPlayer = ConversationManager.GetConversationPlayer(FailConversations[Random.Range(0, FailConversations.Count)]);
+                failPlayer.onConversationEnd += failPlayer_onConversationEnd;
+                failPlayer.Start();
+                // TODO: Play some sound to notify the player he/she is being dragged back.
             }
         }
+    }
+
+    void failPlayer_onConversationEnd(ConversationPlayer player)
+    {
+        player.onConversationEnd -= failPlayer_onConversationEnd;
+        CheckpointManager.instance.GotoLastCheckpoint();
     }
 
     public MineCollisionType GetCollisionType(Collider col)
