@@ -14,6 +14,7 @@ public class MineFieldScript : MonoBehaviour {
     public GameObject Mine;
     public GameObject MineProximitySensor;
     public AudioClip MineSound;
+    public float SoundMaxDistance = 20;
     public bool OnlyProximity  = false;
     public bool CheckPath = true;
     public bool MarkAll = false;
@@ -24,10 +25,11 @@ public class MineFieldScript : MonoBehaviour {
 
     private bool[,] grid;
     private List<GameObject> mines = new List<GameObject>();
-    Dictionary<GameObject, GameObject> mineProximitySensors = new Dictionary<GameObject, GameObject>();
+    private Dictionary<GameObject, GameObject> mineProximitySensors = new Dictionary<GameObject, GameObject>();
     private Dictionary<GameObject, AudioPlayer> minePlayers = new Dictionary<GameObject, AudioPlayer>();
     private Dictionary<GameObject, Point2> minePositions = new Dictionary<GameObject, Point2>();
     private int placementTries = 0;
+    private bool initialized = false;
 
 	// Use this for initialization
 	void Start () 
@@ -36,16 +38,27 @@ public class MineFieldScript : MonoBehaviour {
             Debug.LogWarning("Start Position is outside the grid");
         if (OutsideGrid(EndPos))
             Debug.LogWarning("End Position is outside the grid");
+        initialized = false;
+	}
+
+    private void Init()
+    {
         grid = new bool[SizeX, SizeY];
         placementTries = 0;
         PlaceMines();
         AddMines();
         if (CheckpointManager.instance != null)
             CheckpointManager.instance.SetLastCheckpoint(DragBackCheckpoint);
-	}
+    }
 
     void OnEnable()
     {
+        if (!initialized)
+        {
+            Init();
+            initialized = true;
+        }
+
         // Register collider events
         var player = Characters.instance.Beorn.GetComponent<PlayerController>();
         player.TriggerEntered += player_TriggerEntered;
@@ -147,7 +160,7 @@ public class MineFieldScript : MonoBehaviour {
         var mine = (GameObject)GameObject.Instantiate(Mine, minePosition, new Quaternion());
         mine.transform.parent = this.transform;
         var delay = Randomg.Range(0f, MineSound.length);
-        var minePlayer = AudioManager.PlayAudio(new AudioObject(mine, MineSound, OnlyProximity ? 0 : 1, delay, true));
+        var minePlayer = AudioManager.PlayAudio(new AudioObject(mine, MineSound, OnlyProximity ? 0 : 1, delay, true) { maxDistance = SoundMaxDistance });
         if (MineProximitySensor != null)
         {
             var mineProximitySensor = (GameObject)GameObject.Instantiate(MineProximitySensor, minePosition, new Quaternion());
@@ -186,7 +199,7 @@ public class MineFieldScript : MonoBehaviour {
                 var failPlayer = ConversationManager.GetConversationPlayer(FailConversations[Random.Range(0, FailConversations.Count)]);
                 failPlayer.onConversationEnd += failPlayer_onConversationEnd;
                 failPlayer.Start();
-                // TODO: Play some sound to notify the player he/she is being dragged back.
+                RemoveMine(collidedMine);
             }
         }
     }
