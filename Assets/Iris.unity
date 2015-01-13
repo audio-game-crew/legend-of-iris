@@ -5115,6 +5115,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400018, guid: 3ba19b839fc36ba4181da852174ed56e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -8.19999981
+      objectReference: {fileID: 0}
+    - target: {fileID: 400018, guid: 3ba19b839fc36ba4181da852174ed56e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.30000019
+      objectReference: {fileID: 0}
+    - target: {fileID: 400018, guid: 3ba19b839fc36ba4181da852174ed56e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -6.30000019
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ba19b839fc36ba4181da852174ed56e, type: 2}
   m_RootGameObject: {fileID: 361346391}
@@ -7030,6 +7042,94 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!1 &629857263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 629857264}
+  - 114: {fileID: 629857265}
+  m_Layer: 0
+  m_Name: MoveToSpotsMachines
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &629857264
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 629857263}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 735120714}
+  m_RootOrder: 3
+--- !u!114 &629857265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 629857263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcd68f54570bf1b42b2974a8c8b4cae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 1993046268}
+  - {fileID: 436424791}
+  - {fileID: 1235372141}
+  TimeoutConversationID: 
+  Timeout: 10
+  WrongWayConversationID: 
+  WrongWayThreshold: 5
+  WrongWayTimeout: 10
+--- !u!1 &631915851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 631915852}
+  - 114: {fileID: 631915853}
+  m_Layer: 0
+  m_Name: DialogueBeforeListeningToMachines
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &631915852
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 631915851}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 735120714}
+  m_RootOrder: 2
+--- !u!114 &631915853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 631915851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationId: T0.1
 --- !u!1 &634189181
 GameObject:
   m_ObjectHideFlags: 0
@@ -8472,6 +8572,8 @@ Transform:
   m_Children:
   - {fileID: 1972730620}
   - {fileID: 234766783}
+  - {fileID: 631915852}
+  - {fileID: 629857264}
   m_Father: {fileID: 159651634}
   m_RootOrder: 4
 --- !u!114 &735120715
@@ -15646,7 +15748,7 @@ Transform:
   m_PrefabInternal: {fileID: 490765808}
   m_GameObject: {fileID: 1383307475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.21927261, y: 4.89868641, z: -6.25900269}
+  m_LocalPosition: {x: -8.19999981, y: 4.30000019, z: -6.30000019}
   m_LocalScale: {x: 30, y: 1, z: 30}
   m_Children: []
   m_Father: {fileID: 361346392}
