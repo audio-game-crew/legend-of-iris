@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypointQuestDefinition> {
 
-	public int index = 0;
     private Queue<Waypoint> steps = new Queue<Waypoint>();
     private HashSet<Waypoint> addedWaypoints = new HashSet<Waypoint>();
+    Waypoint current;
+
+    private float timeoutTimer;
+    private float wrongWayTimer;
+    private float minTargetDistance;
+    private bool playingConversation = false;
+    private bool active = false;
 
     public StepwiseWaypointQuest(StepwiseWaypointQuestDefinition definition) : base(definition) { }
 
@@ -35,7 +41,6 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
                 for (int i = 1; i <= stepCount; i++)
                 {
                     var percentageDone = stepSize * (float)i;
-                    Debug.Log(lastPosition + ", " + waypoint);
                     var newWaypointGO = (GameObject)GameObject.Instantiate(definition.WaypointPrefab, 
                         lastPosition + percentageDone * targetVec,
                         Quaternion.RotateTowards(lastRotation, waypoint.transform.rotation, percentageDone));
@@ -57,21 +62,68 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
 			Complete();
 			return;
 		}
-        Waypoint waypoint = steps.Dequeue();
-		waypoint.onPlayerEnter += OnPlayerEnter;
+        current = steps.Dequeue();
+        current.onPlayerEnter += OnPlayerEnter;
         var lucy = Characters.instance.Lucy.GetComponent<LucyController>();
-        lucy.GotoLocation(new PositionRotation(waypoint.transform.position, waypoint.transform.rotation));
+        lucy.GotoLocation(new PositionRotation(current.transform.position, current.transform.rotation));
+
+        // Reset the timers
+        timeoutTimer = 0;
+        wrongWayTimer = definition.WrongWayTimeout; // Make sure the wrongway conversation always works the first time after a checkpoint
+        var player = Characters.instance.Beorn;
+        minTargetDistance = (player.transform.position - current.transform.position).magnitude;
 	}
 
 	private void OnPlayerEnter(Waypoint waypoint, GameObject player) {
 		waypoint.onPlayerEnter -= OnPlayerEnter;
         if (addedWaypoints.Contains(waypoint))
         {
-            Debug.Log("Destroying waypoint");
             addedWaypoints.Remove(waypoint);
             GameObject.Destroy(waypoint.gameObject);
         }
 		Next();
 	}
 
+    public override void Update()
+    {
+        base.Update();
+        if (state != State.STARTED)
+            return;
+        timeoutTimer += Time.deltaTime;
+        wrongWayTimer += Time.deltaTime;
+        var player = Characters.instance.Beorn;
+        var targetDistance = (player.transform.position - current.transform.position).magnitude;
+        //Debug.Log(definition.gameObject.name + ": " + targetDistance + " < " + minTargetDistance + "?");
+        if (targetDistance < minTargetDistance)
+            minTargetDistance = targetDistance;
+
+        if (definition.TimeoutActive && !playingConversation && timeoutTimer > definition.Timeout)
+            PlayTimeoutConversation();
+
+        if (definition.WrongWayActive && !playingConversation && wrongWayTimer > definition.WrongWayTimeout && targetDistance - minTargetDistance > definition.WrongWayThreshold)
+        {
+            PlayWrongWayConversation();
+            minTargetDistance = targetDistance; // Reset to make sure it only plays again if the player keeps moving away
+        }
+    }
+
+    private void PlayTimeoutConversation()
+    {
+        if (string.IsNullOrEmpty(definition.TimeoutConversationID))
+            return;
+        var player = ConversationManager.GetConversationPlayer(definition.TimeoutConversationID);
+        player.onConversationEnd += s => { timeoutTimer = 0; playingConversation = false; };
+        playingConversation = true;
+        player.Start();
+    }
+
+    private void PlayWrongWayConversation()
+    {
+        if (string.IsNullOrEmpty(definition.WrongWayConversationID))
+            return;
+        var player = ConversationManager.GetConversationPlayer(definition.WrongWayConversationID);
+        player.onConversationEnd += s => { wrongWayTimer = 0; playingConversation = false; };
+        playingConversation = true;
+        player.Start();
+    }
 }

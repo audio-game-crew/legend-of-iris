@@ -43,6 +43,9 @@ public class AudioPlayer
         audioAS.clip = audio.clip;
         audioAS.volume = audio.volume;
         audioAS.loop = audio.loop;
+        if (audio.maxDistance.HasValue)
+            audioAS.maxDistance = audio.maxDistance.Value;
+
         playAtTime = Time.time + audio.delay;
         audioAS.PlayDelayed(audio.delay);
     }

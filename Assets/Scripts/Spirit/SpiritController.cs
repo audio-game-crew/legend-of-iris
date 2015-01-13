@@ -25,14 +25,14 @@ public class SpiritController : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other) {
 
-		if (other.tag == "Player" || other.tag == "Spirit") {
+		if ( other.tag == "Spirit") {
 			speed = 0;
 			generator.SetActive(false);
 		}
 	}
 	
 	void OnTriggerExit(Collider other) {
-		Debug.Log ("we call trigger with collider other");
+
 		if (other == generator.spiritLiveArea.collider) {
 						// If a spirit isn't in the game anymore we take if off the spirit list
 						generator.RemoveSpirit (this.gameObject);
@@ -45,8 +45,10 @@ public class SpiritController : MonoBehaviour {
 				} else if (other.tag == "Player") {
 					// if the player touches a spirit he is pushed down
 					var directionToPush = transform.position - other.transform.position;
+					directionToPush.Normalize();;
 					Debug.Log ("directionToPush: "+directionToPush);
 					other.transform.position += directionToPush*10;
+					
 				}
 	}
 	

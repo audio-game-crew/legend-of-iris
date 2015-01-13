@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
+using System.Linq;
 
 [ExecuteInEditMode]
 public class ConversationManager : MonoBehaviour {
@@ -68,13 +69,12 @@ public class ConversationManager : MonoBehaviour {
     private ConversationPlayer getConversationPlayer(string conversationID)
     {
         Conversation toPlay = null;
-        foreach (Conversation c in conversations)
-        {
-            if (c.nameID.Equals(conversationID))
-            {
-                toPlay = c;
-                break;
-            }
+        toPlay = conversations.FirstOrDefault(c => c.nameID.Equals(conversationID));
+        if (toPlay == null && !string.IsNullOrEmpty(conversationID))
+        { // If no conversation is found with that ID, select a random conversation that starts with it.
+           var options = conversations.Where(c => c.nameID.StartsWith(conversationID));
+           if (options.Any())
+               toPlay = options.ToArray()[Random.Range(0, options.Count())];
         }
 
         if (toPlay != null)
