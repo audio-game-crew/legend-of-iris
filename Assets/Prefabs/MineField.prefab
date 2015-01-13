@@ -52,7 +52,7 @@ MonoBehaviour:
     y: 10
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
-  MineSound: {fileID: 8300000, guid: 6ff22bfa6b746da4cbdf141b7db1f064, type: 3}
+  MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
   OnlyProximity: 0
   CheckPath: 1
   MarkAll: 0
