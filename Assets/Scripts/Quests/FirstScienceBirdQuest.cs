@@ -11,7 +11,7 @@ public class FirstScienceBirdQuest : Quest<FirstScienceBirdQuest, FirstScienceBi
 
     protected override void _Start() {
 		base._Start();
-		
+
 		for (int i = 0; i < definition.scienceBirdCount; i++)
 			SpawnScienceBird();
 
@@ -26,12 +26,29 @@ public class FirstScienceBirdQuest : Quest<FirstScienceBirdQuest, FirstScienceBi
 		return UnityEngine.Object.Instantiate(prefab, spawnLocation, Quaternion.identity) as GameObject;
 	}
 
+	// Science Bird
+
 	private void SpawnScienceBird() {
 		var bird = RandomSpawn(definition.scienceBirdPrefab);
 		var waypoint = bird.GetComponent<Waypoint>();
 		waypoint.onPlayerEnter += OnPlayerEnterScienceBird;
 		prefabs.Add(bird);
 	}
+
+	private void OnPlayerEnterScienceBird(Waypoint waypoint, GameObject _) {
+		waypoint.onPlayerEnter -= OnPlayerEnterScienceBird;
+		GameObject.Destroy(waypoint.gameObject);
+		var player = ConversationManager.GetConversationPlayer("T7.4");
+		player.onConversationEnd += OnScienceBirdConversationEnd;
+		player.Start();
+	}
+
+	private void OnScienceBirdConversationEnd(ConversationPlayer player) {
+		player.onConversationEnd -= OnScienceBirdConversationEnd;
+		Complete();
+	}
+
+	// Crap bird
 
 	private void SpawnCrapBird() {
 		var bird = RandomSpawn(definition.crapBirdPrefab);
@@ -40,16 +57,11 @@ public class FirstScienceBirdQuest : Quest<FirstScienceBirdQuest, FirstScienceBi
 		prefabs.Add(bird);
 	}
 
-	private void OnPlayerEnterScienceBird(Waypoint waypoint, GameObject player) {
-		waypoint.onPlayerEnter -= OnPlayerEnterScienceBird;
-		GameObject.Destroy(waypoint.gameObject);
-		Debug.Log("Yay you found the science bird", waypoint);
-	}
-
-	private void OnPlayerEnterCrapBird(Waypoint waypoint, GameObject player) {
+	private void OnPlayerEnterCrapBird(Waypoint waypoint, GameObject _) {
 		waypoint.onPlayerEnter -= OnPlayerEnterCrapBird;
 		GameObject.Destroy(waypoint.gameObject);
-		Debug.Log("Crap you found a crap bird", waypoint);
+		var player = ConversationManager.GetConversationPlayer("T7.3");
+		player.Start();
 	}
 
 	public override void Update() {
