@@ -8,6 +8,8 @@ public class SpiritController : MonoBehaviour {
 	private float speed;
 	
 	public void Init(SpiritGeneratorScript g, float startingSpeed) {
+		Debug.Log ("we call init spirit controller", gameObject);
+
 		this.generator = g;
 		this.initialSpeed = startingSpeed;
 		this.speed = startingSpeed;
@@ -22,22 +24,32 @@ public class SpiritController : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter(Collider other) {
-		if (other.tag == "Player" || other.tag == "Spirit") {
+
+		if ( other.tag == "Spirit") {
 			speed = 0;
 			generator.SetActive(false);
 		}
 	}
 	
 	void OnTriggerExit(Collider other) {
+
 		if (other == generator.spiritLiveArea.collider) {
-			// If a spirit isn't in the game anymore we take if off the spirit list
-			generator.RemoveSpirit(this.gameObject);
-			Destroy (gameObject);
-			
-		} else if (other.tag == "Player" || other.tag == "Spirit") {
-			speed = initialSpeed;
-			generator.SetActive(true);
-		}
+						// If a spirit isn't in the game anymore we take if off the spirit list
+						generator.RemoveSpirit (this.gameObject);
+						Destroy (gameObject);
+
+
+				} else if (other.tag == "Spirit") {
+						speed = initialSpeed;
+						generator.SetActive (false);
+				} else if (other.tag == "Player") {
+					// if the player touches a spirit he is pushed down
+					var directionToPush = transform.position - other.transform.position;
+					directionToPush.Normalize();;
+					Debug.Log ("directionToPush: "+directionToPush);
+					other.transform.position += directionToPush*10;
+					
+				}
 	}
 	
 	public void changeSpeed(float newSpeed){

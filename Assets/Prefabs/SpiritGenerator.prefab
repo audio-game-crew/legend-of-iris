@@ -166,11 +166,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050f99875ac39434eacaf75073cab862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spirit: {fileID: 100000, guid: 338410c9d5312de4e9f2f5d1d5bd54cb, type: 2}
+  spirit: {fileID: 100000, guid: 8ddd8c0172c2465449c58e2b8520c08d, type: 2}
   spiritSound: {fileID: 8300000, guid: 1badd6c894e984a32b60c12b28035f1f, type: 3}
   spawnPosition: {fileID: 0}
   spiritLiveArea: {fileID: 0}
-  spiritSpeed: 0
+  spiritSpeed: 4
   crossing: {fileID: 0}
   isActive: 0
 --- !u!1001 &100100000

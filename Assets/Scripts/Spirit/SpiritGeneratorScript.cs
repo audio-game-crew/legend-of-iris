@@ -60,6 +60,7 @@ public class SpiritGeneratorScript : MonoBehaviour {
 	
 	public void RemoveSpirit(GameObject spirit)
 	{
+
 		if (!listSpiritsActive.ContainsKey(spirit)) { Debug.LogWarning("Spirit not found"); return; }
 		//listSpiritsActive[spirit].Delete();
 		listSpiritsActive.Remove(spirit);
