@@ -11,9 +11,12 @@ public class FirstScienceBirdQuest : Quest<FirstScienceBirdQuest, FirstScienceBi
 
     protected override void _Start() {
 		base._Start();
-		SpawnScienceBird();
-		SpawnCrapBird();
-		SpawnCrapBird();
+		
+		for (int i = 0; i < definition.scienceBirdCount; i++)
+			SpawnScienceBird();
+
+		for (int i = 0; i < definition.crapBirdCount; i++)
+			SpawnCrapBird();
 	}
 
 	private GameObject RandomSpawn(GameObject prefab) {

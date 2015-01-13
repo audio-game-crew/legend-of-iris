@@ -10327,7 +10327,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnDistance: 10
   scienceBirdPrefab: {fileID: 100002, guid: 4111eff7ef0879e4da3cffcb0a2de14c, type: 2}
+  scienceBirdCount: 1
   crapBirdPrefab: {fileID: 100002, guid: 64bfde3a871db064b87931f11ab5ccd2, type: 2}
+  crapBirdCount: 3
 --- !u!1 &2027723405
 GameObject:
   m_ObjectHideFlags: 0
