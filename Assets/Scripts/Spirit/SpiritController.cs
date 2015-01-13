@@ -32,7 +32,7 @@ public class SpiritController : MonoBehaviour {
 	}
 	
 	void OnTriggerExit(Collider other) {
-		Debug.Log ("we call trigger with collider other");
+
 		if (other == generator.spiritLiveArea.collider) {
 						// If a spirit isn't in the game anymore we take if off the spirit list
 						generator.RemoveSpirit (this.gameObject);
