@@ -93,7 +93,7 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         wrongWayTimer += Time.deltaTime;
         var player = Characters.instance.Beorn;
         var targetDistance = (player.transform.position - current.transform.position).magnitude;
-        Debug.Log(definition.gameObject.name + ": " + targetDistance + " < " + minTargetDistance + "?");
+        //Debug.Log(definition.gameObject.name + ": " + targetDistance + " < " + minTargetDistance + "?");
         if (targetDistance < minTargetDistance)
             minTargetDistance = targetDistance;
 
