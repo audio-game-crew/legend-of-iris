@@ -1,0 +1,28 @@
+// A slug is a unique identifier for an object, preferably of the format [\w\d\-\.]+
+
+// Serializable data for conversations
+ConversationData
+	slug : String
+
+// Serializable data for conversation lines
+ConversationLineData
+	speakerSlug : String
+	text : String
+	audioSlug : String
+	offset : Integer
+
+// Converts ConversationData into a playable Conversation
+Conversation
+	lines : ConversationLine
+
+// Converts LineData into a playable Line
+ConversationLine
+	speaker : Speaker
+	text : String
+	audio : AudioClip
+	offset : Integer
+
+ConversationManager.getConveration(slug);
+
+SpeakerManager.getSpeaker(slug);
+AudioManager.getClip(slug);
