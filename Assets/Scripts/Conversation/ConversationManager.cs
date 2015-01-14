@@ -97,7 +97,7 @@ public class ConversationManager : MonoBehaviour {
         return null;
     }
 
-    void AddConversation(List<Conversation> newconversations, string nameID, List<string> sources, List<string> names, List<string> texts)
+    void AddConversation(List<Conversation> newconversations, string nameID, List<string> sources, List<string> names, List<string> texts, List<float> delays, List<bool> screen)
     {
         List<ConversationMessage> messages = new List<ConversationMessage>();
         Conversation c = new Conversation();
@@ -114,8 +114,10 @@ public class ConversationManager : MonoBehaviour {
             if (m.source == null)
                 Debug.LogWarning("Source \"" + sources[i] + "\" not found");
             if (m.audioClip == null)
-                Debug.LogWarning("Audio Clip \"" + sources[i] + "/" + sources[i] + " - " + c.nameID + "_" + (i + 1) + "\" not found. With text: \n" + texts[i]);
+                Debug.LogError("Audio Clip \"" + sources[i] + "/" + sources[i] + " - " + c.nameID + "_" + (i + 1) + "\" not found. With text: \n" + texts[i]);
             m.subtitle = texts[i];
+            m.settings.screenAsSource = screen[i];
+            m.settings.timeOffset = delays[i];
             messages.Add(m);
         }
 
@@ -132,38 +134,52 @@ public class ConversationManager : MonoBehaviour {
         string nameID = "";
         List<string> sources = null;
         List<string> names = null;
+        List<float> delays = null;
+        List<bool> screen = null;
         List<string> texts = null;
 
+        bool skippedFirst = false;
+
         foreach (string line in lines) {
+            if (!skippedFirst)
+            {
+                skippedFirst = true;
+                continue;
+            }
+
             string[] items = line.Split(';');
-            if (items.Length != 4) continue;
+            if (items.Length != 6) continue;
             if (items[0].Length > 0)
             {
                 if (started)
                 {
-                    AddConversation(newconversations, nameID, sources, names, texts);
+                    AddConversation(newconversations, nameID, sources, names, texts, delays, screen);
                 }
                 started = true;
                 nameID = items[0];
                 sources = new List<string>();
                 names = new List<string>();
+                delays = new List<float>();
+                screen = new List<bool>();
                 texts = new List<string>();
             }
             if (items[1].Length > 0)
             {
                 sources.Add(items[1]);
                 names.Add(items[2]);
+                delays.Add(float.Parse(items[3].Replace(",",".")));
+                screen.Add(items[4].Equals("1"));
                 texts.Add("");
             }
-            if (items[3].Length > 0)
+            if (items[5].Length > 0)
             {
-                texts[texts.Count - 1] += items[3] + "\n";
+                texts[texts.Count - 1] += items[5] + "\n";
             }
         }
 
         if (started)
         {
-            AddConversation(newconversations, nameID, sources, names, texts);
+            AddConversation(newconversations, nameID, sources, names, texts, delays, screen);
         }
 
         conversations = newconversations;
