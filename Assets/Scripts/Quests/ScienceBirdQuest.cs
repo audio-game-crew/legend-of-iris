@@ -6,13 +6,16 @@ public class ScienceBirdQuest : Quest<ScienceBirdQuest, ScienceBirdQuestDefiniti
 
 	/* This class needs to spawn a science bird somewhere around the player */
 	List<GameObject> prefabs = new List<GameObject>();
+
 	float lastExplanationTime;
 	float nextExplanationTime;
 	ConversationPlayer explanationPlayer = null;
 
+	float nextSpawnTime;
+
 	enum State { COLLECTING, RETURNING };
 
-	new State state = COLLECTING;
+	new State state = State.COLLECTING;
 
 	public ScienceBirdQuest(ScienceBirdQuestDefinition definition) : base(definition) {}
 
@@ -29,9 +32,9 @@ public class ScienceBirdQuest : Quest<ScienceBirdQuest, ScienceBirdQuestDefiniti
 	private GameObject RandomSpawn(GameObject prefab) {
 		Vector3 spawnBase = Characters.instance.Beorn.transform.position;
 		Vector3 spawnOffset = new Vector3(definition.mainSpawnDistance, 0, definition.crossSpawnDistance);
-		float spawnRotation = UnityEngine.Random.Range(0, 360);
-		Vector3 spawnLocation = spawnBase + spawnOffset * spawnRotation;
-		return UnityEngine.Object.Instantiate(prefab, spawnLocation, -spawnRotation) as GameObject;
+		Quaternion spawnRotation = Quaternion.AngleAxis(UnityEngine.Random.Range(0, 360), Vector3.up);
+		Vector3 spawnLocation = spawnBase + spawnRotation * spawnOffset;
+		return UnityEngine.Object.Instantiate(prefab, spawnLocation, Quaternion.Inverse(spawnRotation)) as GameObject;
 	}
 
 	// Science Bird
