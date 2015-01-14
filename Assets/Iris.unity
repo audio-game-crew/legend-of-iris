@@ -14185,6 +14185,10 @@ Prefab:
       propertyPath: LucyBell
       value: 
       objectReference: {fileID: 8300000, guid: db163f30d7e44fe49b841cbf428de6ce, type: 3}
+    - target: {fileID: 11400002, guid: 582f3ecc4257fd943a66be2f73c47271, type: 2}
+      propertyPath: silence
+      value: 
+      objectReference: {fileID: 8300000, guid: 4728b1a9d383b4c31bdfd417b47a1220, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 582f3ecc4257fd943a66be2f73c47271, type: 2}
   m_RootGameObject: {fileID: 1766996850}
@@ -14959,7 +14963,7 @@ MonoBehaviour:
   Timeout: 5
   WrongWayConversationID: T5.3
   WrongWayThreshold: 10
-  WrongWayTimeout: 20
+  WrongWayTimeout: 100
   ResetConversationID: T4.2
 --- !u!1 &830326743
 GameObject:
@@ -17572,7 +17576,7 @@ MonoBehaviour:
   Timeout: 10
   WrongWayConversationID: T4.3
   WrongWayThreshold: 10
-  WrongWayTimeout: 20
+  WrongWayTimeout: 100
   ResetConversationID: T4.2
 --- !u!1 &955491314
 GameObject:
@@ -30637,6 +30641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LucyFlyTime: 2
   LucyBell: {fileID: 8300000, guid: db163f30d7e44fe49b841cbf428de6ce, type: 3}
+  silence: {fileID: 8300000, guid: 4728b1a9d383b4c31bdfd417b47a1220, type: 3}
 --- !u!135 &1766996853
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -38947,7 +38952,7 @@ MonoBehaviour:
   Timeout: 15
   WrongWayConversationID: T4.3
   WrongWayThreshold: 10
-  WrongWayTimeout: 20
+  WrongWayTimeout: 100
   ResetConversationID: T4.2
 --- !u!1 &2084791933
 GameObject:
