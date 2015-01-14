@@ -3555,7 +3555,7 @@ Transform:
   m_Children:
   - {fileID: 1479103037}
   m_Father: {fileID: 1527040402}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &219113812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11861,12 +11861,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 689019606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.69999981, y: 0, z: -7.94000006}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2145988227}
-  m_Father: {fileID: 1527040402}
-  m_RootOrder: 0
+  m_Father: {fileID: 2076031668}
+  m_RootOrder: 2
 --- !u!1 &693550467
 GameObject:
   m_ObjectHideFlags: 0
@@ -27170,7 +27170,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 689019607}
   - {fileID: 2076031668}
   - {fileID: 219113811}
   - {fileID: 1766996851}
@@ -31276,7 +31275,7 @@ Transform:
   m_Children:
   - {fileID: 1246900291}
   m_Father: {fileID: 1527040402}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &1766996852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33374,103 +33373,107 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxOneConversationActive: 1
   conversations:
-  - name: '!Err! T0.1'
+  - name: T0.1
     nameID: T0.1
     hint: 
     messageSequence:
-    - name: '!Err! Iris: Welcome to Iris, the most immersive all-in-one software for
-        ...'
+    - name: 'Iris: Welcome to Iris, the most immersive all-in-one software for ...'
       source: {fileID: 689019606}
-      audioClip: {fileID: 0}
+      sourceName: Iris
+      audioClip: {fileID: 8300000, guid: 1a7ee59b041cc564fbbe5f6e9b497eef, type: 3}
       subtitle: "Welcome to Iris, the most immersive all-in-one software for remote
         control of spirit bears. We offer the best online connection to the spirit
-        world. You can modify many settings, by pressing escape at any point.\r\n\r\nWhen
-        you are ready to continue, press forward.\r\n*wait 10s*\r\nWhen you are ready
-        to continue, press forward.\r\n*wait 10s*\r\n"
+        world. \r\n\r\nWhen you are ready to continue, press forward.\r\nYou can modify
+        many settings, by pressing escape at any point.\r\n*wait 10s*\r\nWhen you
+        are ready, press forward.\r\n*wait 10s*\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T1.1'
+  - name: T1.1
     nameID: T1.1
     hint: 
     messageSequence:
-    - name: '!Err! Iris: *tuuuut*tuuuut* You have 1 incoming call from *Lucy*. Connec...'
+    - name: 'Iris: *tuuuut*tuuuut* You have 1 incoming call from *Lucy*. Connec...'
       source: {fileID: 689019606}
-      audioClip: {fileID: 0}
+      sourceName: Iris
+      audioClip: {fileID: 8300000, guid: a2dcd2dbf3cee044e949ded0482e8207, type: 3}
       subtitle: "*tuuuut*tuuuut* You have 1 incoming call from *Lucy*. Connecting
         you through now.\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: *phone effect* Hello? Human? I need your help!! Are you ther...'
+    - name: 'Lucy: Hello? Human? I need your help!! Are you there? Please press...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "*phone effect* Hello? Human? I need your help!! Are you there? Please
-        press up/down/left/right in that order, to confirm you can hear me and that
-        the connection is properly working.\r\n"
+      sourceName: Lucy*
+      audioClip: {fileID: 8300000, guid: 6f62b3911d2cbed49a6b75bb38665f50, type: 3}
+      subtitle: "Hello? Human? I need your help!! Are you there? Please press up/down/left/right
+        in that order to confirm you can hear me and that the connection is properly
+        working.\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T1.2'
+  - name: T1.2
     nameID: T1.2
     hint: 
     messageSequence:
-    - name: '!Err! Lucy: Human, please press up/down/left/right in that order. You
-        ca...'
+    - name: 'Lucy: Human, please press up/down/left/right in that order. You ca...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy*
+      audioClip: {fileID: 8300000, guid: 95f2e0bb8277f504495cde6b85a60506, type: 3}
       subtitle: "Human, please press up/down/left/right in that order. You can do
         it! If you are not sure about how your controls work, you can press escape
         to check the settings of Iris.\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T1.3'
+  - name: T1.3
     nameID: T1.3
     hint: 
     messageSequence:
-    - name: '!Err! Iris: Checking response from spirit world Connection in perfectly
-        ...'
+    - name: 'Iris: Checking response from spirit world Connection in perfectly ...'
       source: {fileID: 689019606}
-      audioClip: {fileID: 0}
+      sourceName: Iris
+      audioClip: {fileID: 8300000, guid: 50cb33f721f12ff469ebbaaf32a70546, type: 3}
       subtitle: "Checking response from spirit world Connection in perfectly stable
         condition. You are now ready to connect to a spirit bear. Disconnecting because
         of reason, in 5 4...\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: What?! NO stop!\r\n"
+    - name: "Lucy: What?! NO stop!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy*
+      audioClip: {fileID: 8300000, guid: 07508d122eab32f41977cd0faf31052f, type: 3}
       subtitle: "What?! NO stop!\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Iris: *monotone* Ha. ha. ha. just kidding.\r\n"
+    - name: "Iris: *monotone* Ha. ha. ha. just kidding.\r\n"
       source: {fileID: 689019606}
-      audioClip: {fileID: 0}
+      sourceName: Iris
+      audioClip: {fileID: 8300000, guid: ed97b868bfee6d945a1b6b5ba307aa73, type: 3}
       subtitle: "*monotone* Ha. ha. ha. just kidding.\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Ah phew! haha! Iris is a bit silly sometimes. Anyway, we
-        wil...'
+    - name: 'Lucy: Ah phew! haha! Iris is a bit silly sometimes. Anyway, we wil...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy*
+      audioClip: {fileID: 8300000, guid: 0f244c32eec47ab48b244400938948d8, type: 3}
       subtitle: "Ah phew! haha! Iris is a bit silly sometimes. Anyway, we will start
         the connection in a moment. But first, let me explain what is going on. I
         am Lucy, a fairy from the spirit world. We have a huge giant roaming the streets
@@ -33482,72 +33485,79 @@ MonoBehaviour:
         everything that he hears. It is quite the experience, really! So, will you
         help us, human?\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Iris: Turn off your computer to confirm\r\n"
+    - name: "Iris: Turn off your computer to confirm\r\n"
       source: {fileID: 689019606}
-      audioClip: {fileID: 0}
+      sourceName: Iris
+      audioClip: {fileID: 8300000, guid: ad80082438f42b64484666b880375b5f, type: 3}
       subtitle: "Turn off your computer to confirm\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: No, human, dont! Iris is kidding... again. \r\n"
+    - name: "Lucy: No, human, dont! Iris is kidding... again. \r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy*
+      audioClip: {fileID: 8300000, guid: 2a1c9ebac08053446b1634a4aa9bdd42, type: 3}
       subtitle: "No, human, dont! Iris is kidding... again. \r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Iris: Ha.ha.ha.\r\n"
+    - name: "Iris: Ha.ha.ha.\r\n"
       source: {fileID: 689019606}
-      audioClip: {fileID: 0}
+      sourceName: Iris
+      audioClip: {fileID: 8300000, guid: 7b181887263ecb0489b671b37ecfa2c0, type: 3}
       subtitle: "Ha.ha.ha.\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Just press forward to confirm. Will you help us, human?\r\n"
+    - name: 'Lucy: Dont listen to iris! Just press forward to confirm. Will you...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "Just press forward to confirm. Will you help us, human?\r\n"
+      sourceName: Lucy*
+      audioClip: {fileID: 8300000, guid: 459db5fd795e3bf47958088c00f3ef6f, type: 3}
+      subtitle: "Dont listen to iris! Just press forward to confirm. Will you help
+        us, human?\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T1.4'
+  - name: T1.4
     nameID: T1.4
     hint: 
     messageSequence:
-    - name: '!Err! Lucy: Oh... you don''t.. want to help us? If you make up your mind,...'
+    - name: 'Lucy: Oh... you don''t.. want to help us? If you make up your mind,...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy*
+      audioClip: {fileID: 8300000, guid: 0691b3a509f268c4e84567e784cf6339, type: 3}
       subtitle: "Oh... you don't.. want to help us? If you make up your mind, please
         press forward to confirm that you want to help us. We can really use the help
         of a talented human like you! Press forward to confirm!\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T1.5'
+  - name: T1.5
     nameID: T1.5
     hint: 
     messageSequence:
-    - name: '!Err! Lucy: Human, would you like to help us? We can really use the help...'
+    - name: 'Lucy: Human, would you like to help us? We can really use the help...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy*
+      audioClip: {fileID: 8300000, guid: b305103dc1aecaa43a6fd7f315a109dd, type: 3}
       subtitle: "Human, would you like to help us? We can really use the help of a
         talented human like you! Press forward to confirm!\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
@@ -33555,72 +33565,78 @@ MonoBehaviour:
     nameID: T1.6
     hint: 
     messageSequence:
-    - name: "!Err! Iris: Question confirmed.\r\n"
+    - name: "Iris: Question confirmed.\r\n"
       source: {fileID: 689019606}
-      audioClip: {fileID: 0}
+      sourceName: Iris
+      audioClip: {fileID: 8300000, guid: 8ffd704826a888340a29086855b35b34, type: 3}
       subtitle: "Question confirmed.\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Yaaay! That is so great to hear. We are going on an adventur...'
+    - name: 'Lucy: Yaaay! That is so great to hear. We are going on an adventur...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy*
+      audioClip: {fileID: 8300000, guid: e6afc7a7309b7c641bb554b988c1e8a4, type: 3}
       subtitle: "Yaaay! That is so great to hear. We are going on an adventure together.
         It is going to be awesome! Lets start connecting you to a spirit bear now.
         Amazing what technology can do nowadays.\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Iris: Neh, it is okay. Whoever said technology would replace all
-        p...'
+    - name: 'Iris: You are wrong. Whoever said technology would replace all pap...'
       source: {fileID: 689019606}
-      audioClip: {fileID: 0}
-      subtitle: "Neh, it is okay. Whoever said technology would replace all paper
-        obviously hasn't tried wiping their butt with an IPadha. ha. ha. Starting
-        connection in 3 2 1\r\n"
+      sourceName: Iris
+      audioClip: {fileID: 8300000, guid: 20cd795e3b3e1434dad9057fc54afdff, type: 3}
+      subtitle: "You are wrong. Whoever said technology would replace all paper obviously
+        hasn't tried wiping their butt with an IPadha. ha. ha. Starting connection
+        in 3 2 1\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
     - name: "!Err! Iris: *connection sounds*\r\n"
       source: {fileID: 689019606}
+      sourceName: Iris
       audioClip: {fileID: 0}
       subtitle: "*connection sounds*\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: *during connection sounds* Here we go!\r\n"
+    - name: "Lucy: *during connection sounds* Here we go!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy*
+      audioClip: {fileID: 8300000, guid: d33b22b1256cd304b9f26e3daa931749, type: 3}
       subtitle: "*during connection sounds* Here we go!\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T2.1'
+  - name: T2.1
     nameID: T2.1
     hint: 
     messageSequence:
     - name: "Iris: Connection established. Good luck.\r\n"
       source: {fileID: 689019606}
-      audioClip: {fileID: 8300000, guid: 6339eb9921a98f1439907c9e9c17464e, type: 3}
+      sourceName: Iris
+      audioClip: {fileID: 8300000, guid: dc1ec7b8eacf4994fadd40c000e70f8f, type: 3}
       subtitle: "Connection established. Good luck.\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
     - name: 'Lucy: Alright, human. You are now in connection with a fluffy spir...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 8300000, guid: 98250cdbd36b4e046b3378f0e9e7c983, type: 3}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 614a40ee690741145a9a2c8389ae3cf8, type: 3}
       subtitle: "Alright, human. You are now in connection with a fluffy spirit bear,
         called Beorn. Right now he is waking up.\r\n"
       settings:
@@ -33630,58 +33646,63 @@ MonoBehaviour:
         pitch: 1
     - name: "Beorn: muhehue *sleepy*\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 8300000, guid: 6e03e85a0691fee4185cb8d75b9f0467, type: 3}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 4a8621b5688045d42babbef340a86148, type: 3}
       subtitle: "muhehue *sleepy*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Alright, he got up. \r\n"
+    - name: "Lucy: Alright, he got up. \r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: c491d29878586104db106217ad4069ad, type: 3}
       subtitle: "Alright, he got up. \r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Iris: Forward and backward movement enabled.\r\n"
+    - name: "Iris: Forward and backward movement enabled.\r\n"
       source: {fileID: 689019606}
-      audioClip: {fileID: 0}
+      sourceName: Iris
+      audioClip: {fileID: 8300000, guid: 2c6745c59e8d7544c87276e1d07bc918, type: 3}
       subtitle: "Forward and backward movement enabled.\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Lets see if you can move him. Press forward and backward
-        to ...'
+    - name: 'Lucy: Now, lets see if you can move him. Press forward and backwar...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "Lets see if you can move him. Press forward and backward to move
-        Beorn. \r\n"
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: f37edd7c890590c4fb82245fceb61252, type: 3}
+      subtitle: "Now, lets see if you can move him. Press forward and backward to
+        move Beorn. \r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T2.2'
+  - name: T2.2
     nameID: T2.2
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *impatiently* muuuuuuu\r\n"
+    - name: "Beorn: *impatiently* muuuuuuu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: c71633aa23b450b48bb7a9698d289ad5, type: 3}
       subtitle: "*impatiently* muuuuuuu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Human, press forward and backward to move Beorn. If you dont...'
+    - name: 'Lucy: Human, press forward and backward to move Beorn. If you dont...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 5e2702594715ebe448622ac6af2ee950, type: 3}
       subtitle: "Human, press forward and backward to move Beorn. If you dont understand
         your controls, you can press escape to check or change the controls settings
         of Iris.\r\n"
@@ -33690,24 +33711,25 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T2.3A'
-    nameID: T2.3A
+  - name: T2.3
+    nameID: T2.3
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *falling* mumUmUUU *thud*\r\n"
+    - name: "Beorn: mumUmUUU *thud* (falling)\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
-      subtitle: "*falling* mumUmUUU *thud*\r\n"
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 28b9061a69471984e9165459396a6dab, type: 3}
+      subtitle: "mumUmUUU *thud* (falling)\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Haha, aww poor Beorn. He fell down, but that is okay. He
-        is ...'
+    - name: 'Lucy: Haha, aww poor Beorn. He fell down, but that''s okay. He is q...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "Haha, aww poor Beorn. He fell down, but that is okay. He is quite
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 81b7b61fe3d9ee24cae4cca8adf6c513, type: 3}
+      subtitle: "Haha, aww poor Beorn. He fell down, but that's okay. He is quite
         strong and has a lot of fur to break his fall. He is a bit clumsy sometimes
         though. At least he is fully awake now! \r\n"
       settings:
@@ -33715,321 +33737,138 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Iris: Rotations enabled.\r\n"
+    - name: "Iris: Rotations enabled.\r\n"
       source: {fileID: 689019606}
-      audioClip: {fileID: 0}
+      sourceName: Iris
+      audioClip: {fileID: 8300000, guid: 18d19281f48a4ef4ab9e7dc4d33cf8d2, type: 3}
       subtitle: "Rotations enabled.\r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Lets try and see if you can turn Beorn around in order to
-        lo...'
+    - name: 'Lucy: Lets try and see if you can turn Beorn around. First, do a f...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "Lets try and see if you can turn Beorn around in order to look at
-        a different direction. First do a full rotation to the left.\r\nPress the
-        left or right keys to turn left or right.\r\n"
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 47bd156c5f315ae47a5ec52b2b4d4a18, type: 3}
+      subtitle: "Lets try and see if you can turn Beorn around. First, do a full rotation
+        to the left.\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T2.3B'
-    nameID: T2.3B
+  - name: T2.5
+    nameID: T2.5
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *falling* mumUmUUU *thud*\r\n"
+    - name: "Beorn: *disapprovingly* muuuuuuu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
-      subtitle: "*falling* mumUmUUU *thud*\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-    - name: '!Err! Lucy: Haha, aww poor Beorn. He fell down, but that is okay. He
-        is ...'
-      source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "Haha, aww poor Beorn. He fell down, but that is okay. He is quite
-        strong and has a lot of fur to break his fall. He is a bit clumsy sometimes
-        though. At least he is fully awake now! \r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-    - name: "!Err! Iris: Rotations enabled.\r\n"
-      source: {fileID: 689019606}
-      audioClip: {fileID: 0}
-      subtitle: "Rotations enabled.\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-    - name: '!Err! Lucy: Lets try and see if you can turn Beorn around in order to
-        lo...'
-      source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "Lets try and see if you can turn Beorn around in order to look at
-        a different direction. First do a full rotation to the left.\r\nMove your
-        mouse to the right, to turn right and visa versa.\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-  - name: '!Err! T2.3C'
-    nameID: T2.3C
-    hint: 
-    messageSequence:
-    - name: "!Err! Beorn: *falling* mumUmUUU *thud*\r\n"
-      source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
-      subtitle: "*falling* mumUmUUU *thud*\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-    - name: '!Err! Lucy: Haha, aww poor Beorn. He fell down, but that is okay. He
-        is ...'
-      source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "Haha, aww poor Beorn. He fell down, but that is okay. He is quite
-        strong and has a lot of fur to break his fall. He is a bit clumsy sometimes
-        though. At least he is fully awake now! \r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-    - name: "!Err! Iris: Rotations enabled.\r\n"
-      source: {fileID: 689019606}
-      audioClip: {fileID: 0}
-      subtitle: "Rotations enabled.\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-    - name: '!Err! Lucy: Lets try and see if you can turn Beorn around in order to
-        lo...'
-      source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "Lets try and see if you can turn Beorn around in order to look at
-        a different direction. First do a full rotation to the left.\r\nJust turn
-        your head into the direction that you want Beorn to look at.\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-  - name: '!Err! T2.4A'
-    nameID: T2.4A
-    hint: 
-    messageSequence:
-    - name: "!Err! Beorn: *impatiently* muuuuuuu\r\n"
-      source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
-      subtitle: "*impatiently* muuuuuuu\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-    - name: '!Err! Lucy: Human, just press the left or right keys to turn left or
-        rig...'
-      source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "Human, just press the left or right keys to turn left or right.\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-  - name: '!Err! T2.4B'
-    nameID: T2.4B
-    hint: 
-    messageSequence:
-    - name: "!Err! Beorn: *impatiently* muuuuuuu\r\n"
-      source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
-      subtitle: "*impatiently* muuuuuuu\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-    - name: '!Err! Lucy: Human, move your mouse to the right, to turn right and visa
-        ...'
-      source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "Human, move your mouse to the right, to turn right and visa versa.\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-  - name: '!Err! T2.4C'
-    nameID: T2.4C
-    hint: 
-    messageSequence:
-    - name: "!Err! Beorn: *impatiently* muuuuuuu\r\n"
-      source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
-      subtitle: "*impatiently* muuuuuuu\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-    - name: '!Err! Lucy: Human, just turn your head into the direction that you want
-        ...'
-      source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "Human, just turn your head into the direction that you want Beorn
-        to look at.\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-  - name: '!Err! T2.5A'
-    nameID: T2.5A
-    hint: 
-    messageSequence:
-    - name: "!Err! Beorn: *disapprovingly* muuuuuuu\r\n"
-      source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: ca15ed70e0984294589150ee4dcd676b, type: 3}
       subtitle: "*disapprovingly* muuuuuuu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Human, you are turning into the wrong direction.\r\nYou have
-        t..."
+    - name: "Lucy: Human, you are turning into the wrong direction.\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "Human, you are turning into the wrong direction.\r\nYou have to turn
-        right!\r\n"
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 5024a3e1592c2f941abee93bc3763288, type: 3}
+      subtitle: "Human, you are turning into the wrong direction.\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T2.5B'
-    nameID: T2.5B
-    hint: 
-    messageSequence:
-    - name: "!Err! Beorn: *disapprovingly* muuuuuuu\r\n"
-      source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
-      subtitle: "*disapprovingly* muuuuuuu\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-    - name: "!Err! Lucy: Human, you are turning into the wrong direction.\r\nYou have
-        t..."
-      source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "Human, you are turning into the wrong direction.\r\nYou have to turn
-        left!\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-  - name: '!Err! T2.6'
+  - name: T2.6
     nameID: T2.6
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *happy* muuuuuuu\r\n"
+    - name: "Beorn: *happy* muuuuuuu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 322d9d8f6f1bf0e49a1d079aeede8dea, type: 3}
       subtitle: "*happy* muuuuuuu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Well done!! Now lets turn back around. Do a full rotation
-        to...'
+    - name: "Lucy: Well done!! Now lets turn back around.\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "Well done!! Now lets turn back around. Do a full rotation to the
-        left!\r\n"
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 54662d7ad8ddf6a40acb4ba73419d525, type: 3}
+      subtitle: "Well done!! Now lets turn back around.\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T2.7'
+  - name: T2.7
     nameID: T2.7
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *happy* muumumuuuu!!\r\n"
+    - name: "Beorn: *happy* muumumuuuu!!\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: ee6514c8854bed04fa9f903249406d2f, type: 3}
       subtitle: "*happy* muumumuuuu!!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Well done, human!! Notice how the sound changes when you
-        tur...'
+    - name: 'Lucy: Well done, human!! Notice how the sound changes when you tur...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 8d7214a6184ca1d4ebea53218ed8f94f, type: 3}
       subtitle: "Well done, human!! Notice how the sound changes when you turn? You
-        should pay close attention attention to the changes of audio in order to orient
-        yourself. \r\n"
+        should pay close attention to the changes of audio in order to orientate yourself.
+        \r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T3.1'
+  - name: T3.1
     nameID: T3.1
     hint: 
     messageSequence:
-    - name: '!Err! Lucy: Alright, you are ready to try walking around! Before we can
-        ...'
+    - name: 'Lucy: Alright, you are ready to try walking around! Before we can ...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: a82bfdce0e29a0b488042b19babf0a30, type: 3}
       subtitle: "Alright, you are ready to try walking around! Before we can get to
         the spirit village, we should get Beorn ready to move out. First he needs
         his shoes, and second well he needs to unplug his belly rubbing machine. He
         doesnt like it when devices are on stand-by when he leaves the house. It may
-        start a fire, you know? Lets first move Beorn to his shoes. Ill fly over to
+        start a fire, you know?Lets first walk Beorn to his shoes. Ill fly over to
         their location, so you may follow the sound of my wings.\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T3.2'
+  - name: T3.2
     nameID: T3.2
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *impatiently* muuuuuuu\r\n"
+    - name: "Beorn: *impatiently* muuuuuuu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 0c8e26f1987563f45975a3eebd6b414d, type: 3}
       subtitle: "*impatiently* muuuuuuu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Human! Try to focus on the sound of my wings and walk toward...'
+    - name: 'Lucy: Human! Try to focus on the sound of my wings and walk toward...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 742fb5e3644f14e428cb81b354dea8c0, type: 3}
       subtitle: "Human! Try to focus on the sound of my wings and walk towards me!
         Listen carefully to where my sound comes from, turn towards it and walk into
         my direction. You can do it, I believe in you.\r\n"
@@ -34038,23 +33877,24 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T3.3'
+  - name: T3.3
     nameID: T3.3
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *making effort, putting on shoes* muuuuuuumumuu\r\n"
+    - name: "Beorn: *making effort, putting on shoes* muuuuuuumumuu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: e6b5229ae118d0d42b0d17c223c902d8, type: 3}
       subtitle: "*making effort, putting on shoes* muuuuuuumumuu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Good job, human!... haha, Beorn! Your shoes are even bigger
-        ...'
+    - name: 'Lucy: Good job, human!... haha, Beorn! Your shoes are even bigger ...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 97f1b70c95bb1ec42b12f49c6341e8bf, type: 3}
       subtitle: "Good job, human!... haha, Beorn! Your shoes are even bigger than
         your belly is.\r\n"
       settings:
@@ -34062,18 +33902,20 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: *yea so?* muumuu?\r\n"
+    - name: "Beorn: *my belly?* muumuu?\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
-      subtitle: "*yea so?* muumuu?\r\n"
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 0a70459098e4ac04c9e1731510744f5a, type: 3}
+      subtitle: "*my belly?* muumuu?\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Okay, human. Lets now head towards his belly rubbing machine...'
+    - name: 'Lucy: Okay, human. Lets now head towards his belly rubbing machine...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 3d05e1e02438fd145abcf2e33dae593d, type: 3}
       subtitle: "Okay, human. Lets now head towards his belly rubbing machine. Follow
         me!\r\n"
       settings:
@@ -34081,22 +33923,24 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T3.4'
+  - name: T3.4
     nameID: T3.4
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *impatiently* muuuuuuu\r\n"
+    - name: "Beorn: *impatiently* muuuuuuu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 20d4084ae73c3394fa6fc3f4963522a6, type: 3}
       subtitle: "*impatiently* muuuuuuu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Human! Try to focus on the sound of my wings and walk toward...'
+    - name: 'Lucy: Human! Try to focus on the sound of my wings and walk toward...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 9ebc489a73b51ea449f8c444a3e04456, type: 3}
       subtitle: "Human! Try to focus on the sound of my wings and walk towards me!
         Listen carefully to where my sound comes from, turn towards it and walk into
         my direction. You can do it, I believe in you.\r\n"
@@ -34111,6 +33955,7 @@ MonoBehaviour:
     messageSequence:
     - name: "!Err! Other: *belly rubbing machine turns on*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*belly rubbing machine turns on*\r\n"
       settings:
@@ -34118,10 +33963,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Beorn: *very satisfied, being rubbed* mu! mu! mu! mu! *burp* mu!
-        mu...'
+    - name: 'Beorn: *very satisfied, being rubbed* mu! mu! mu! mu! *burp* mu! mu...'
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 22369e6e0b34f60489fdc4bc95b631de, type: 3}
       subtitle: "*very satisfied, being rubbed* mu! mu! mu! mu! *burp* mu! mu! mu!
         mu!\r\n"
       settings:
@@ -34129,26 +33974,19 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Beorn!! No! Get out and turn it off!\r\n"
+    - name: "Lucy: Beorn!! No! Get out and turn it off!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 98f70f66a10d942468beb4959846f2e4, type: 3}
       subtitle: "Beorn!! No! Get out and turn it off!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-    - name: "!Err! Other: *belly rubbing machine turns off*\r\n"
-      source: {fileID: 1459252793}
-      audioClip: {fileID: 0}
-      subtitle: "*belly rubbing machine turns off*\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -3.4000001
         volume: 1
         pitch: 1
     - name: "!Err! Beorn: *disappointed* muhhh.\r\n"
       source: {fileID: 2076031667}
+      sourceName: Beorn
       audioClip: {fileID: 0}
       subtitle: "*disappointed* muhhh.\r\n"
       settings:
@@ -34156,13 +33994,13 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Good, Beorn! You can get a belly rub later, when you come
-        ba...'
+    - name: 'Lucy: Good, Beorn! You can get a belly rub later, when you come ba...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: e4e613c52cf302841a0200aeecbb1c1f, type: 3}
       subtitle: "Good, Beorn! You can get a belly rub later, when you come back home..
         \r\n\r\nAlright, human! Lets head to the door so we can get out of this place.
-        It smell funky in here. You should be glad you are not connected to Beorn
+        It smells funky in here. You should be glad you are not connected to Beorn
         by smell! It smells like my grandmas feet, when she doesnt shower for a month.
         \r\n\r\nQuickly, follow me!\r\n"
       settings:
@@ -34170,22 +34008,24 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T3.6'
+  - name: T3.6
     nameID: T3.6
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *impatiently* muuuuuuu\r\n"
+    - name: "Beorn: *impatiently* muuuuuuu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 1d9c98a83f813bf40b4987179eeb8496, type: 3}
       subtitle: "*impatiently* muuuuuuu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Human! Try to focus on the sound of my wings and walk toward...'
+    - name: 'Lucy: Human! Try to focus on the sound of my wings and walk toward...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 9280ca285cc76a84d829ae2ecd085d8f, type: 3}
       subtitle: "Human! Try to focus on the sound of my wings and walk towards me!
         Listen carefully to where my sound comes from, turn towards it and walk into
         my direction. You can do it, I believe in you.\r\n"
@@ -34198,19 +34038,20 @@ MonoBehaviour:
     nameID: T3.7
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *happy* muuuuu!\r\n"
+    - name: "Beorn: *happy* muuuuu!\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 8fba2e2219d3a0b4c9a6a7c491871e01, type: 3}
       subtitle: "*happy* muuuuu!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Yes!! You made it! You now know how to control Beorn and
-        how...'
+    - name: 'Lucy: Yes!! You made it! You now know how to control Beorn and how...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: a4974b6c6e1f81d4bb0fa9dc80c07823, type: 3}
       subtitle: "Yes!! You made it! You now know how to control Beorn and how to follow
         the sound of my wings. This will come in handy!\r\n"
       settings:
@@ -34220,6 +34061,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Other: *door opens*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*door opens*\r\n"
       settings:
@@ -34231,27 +34073,30 @@ MonoBehaviour:
     nameID: T4.1
     hint: 
     messageSequence:
-    - name: "!Err! Lucy: Ahhhh fresh air\r\n"
+    - name: "Lucy: Ahhhh fresh air\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: c83cd5ae9ceef644382c94dd7a01e421, type: 3}
       subtitle: "Ahhhh fresh air\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: *very much liking the air too* muuuuuuu\r\n"
+    - name: "Beorn: *very much liking the air too* muuuuuuu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: e2efb4cd0bc6fe24b87c8d94cf42fd82, type: 3}
       subtitle: "*very much liking the air too* muuuuuuu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: We are now on a very lengthy bridge that goes to my village....'
+    - name: 'Lucy: We are now on a very lengthy bridge that goes to my village....'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 8e9208cb651a689438001ae85de6a07c, type: 3}
       subtitle: "We are now on a very lengthy bridge that goes to my village. The
         bridge is a bit narrow, and has a lot of turns. Thats because the bridge is
         built over a river that runs through a few high mountains. However, I...\r\n"
@@ -34260,28 +34105,21 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: *running, panting* hu hu hu hu hu hu \r\n"
+    - name: "Beorn: *running, panting* hu hu hu hu hu hu \r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 264537323e6a3a6439d947f618e9b08e, type: 3}
       subtitle: "*running, panting* hu hu hu hu hu hu \r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: *while Beorn is running* Beorn!!!\r\n"
+    - name: "Lucy: *while Beorn is running* Beorn!!!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: f70eea08b58b87742b4b9b7ebb5deb67, type: 3}
       subtitle: "*while Beorn is running* Beorn!!!\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-    - name: "!Err! Beorn: huuuuUU *falls*\r\n"
-      source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
-      subtitle: "huuuuUU *falls*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
@@ -34289,6 +34127,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -34296,18 +34135,20 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: *relieved* muu!!\r\n"
+    - name: "Beorn: *relieved* muu!!\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: ca6a3444e782a884089eab2965740aba, type: 3}
       subtitle: "*relieved* muu!!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Beorn!! Wh... why..?? Oh wait... I see. Below us is not just...'
+    - name: 'Lucy: Beorn!! Wh... why..?? Oh wait... I see. Below us is not just...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 97b43abbc6e147a4181f78338f4561f2, type: 3}
       subtitle: "Beorn!! Wh... why..?? Oh wait... I see. Below us is not just a regular
         river, it is a river of... honey! I actually have some for you, Beorn! Here!
         Just save some f...\r\n"
@@ -34316,64 +34157,70 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: *drinking like crazy* \r\n"
+    - name: "Beorn: *drinking like crazy* \r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 7fa4dd4dec01b69458e310e47f051402, type: 3}
       subtitle: "*drinking like crazy* \r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: WOW! He drank it all in one go!! Oh Beorn...\r\n"
+    - name: "Lucy: WOW! He drank it all in one go!! Oh Beorn...\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 01933199950434045aba82d6394666d6, type: 3}
       subtitle: "WOW! He drank it all in one go!! Oh Beorn...\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: *happy* muuu!\r\n"
+    - name: "Beorn: *happy* muuu!\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 69e224a7dd62c014784c9b2d5d203584, type: 3}
       subtitle: "*happy* muuu!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Haha!\r\n\r\nBy the way, human, as you noticed I have magical
-        po..."
+    - name: "Lucy: Haha!\r\n\r\nBy the way, human, as you noticed I have magical po..."
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: b2a67ecd597b02343858c860d97d4912, type: 3}
       subtitle: "Haha!\r\n\r\nBy the way, human, as you noticed I have magical powers!
         If something significant happens, I get my spirit juices flowing through my
-        magnificent body! The spirit world then opens up highly concentrated Wibbly
-        Wobbly Timey Wimey spirit magic locations where I can teleport Beorn to. Whenever
-        he falls off, I will teleport him back to the beginning of the bridge section
-        he fell off from. \r\n\r\nAlright! Lets cross this bridge! Follow me!\r\n"
+        magnificent body! The spirit world then opens up spirit locations with highly
+        concentrated Wibbly Wobbly Timey Wimey spirit magic stuff where I can  teleport
+        Beorn to. Whenever he falls off, I will teleport him back to the beginning
+        of the bridge section he fell off from. \r\n\r\nAlright! Lets cross this bridge!
+        Follow me!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.2*1'
-    nameID: T4.2*1
+  - name: '!Err! T4.2~1'
+    nameID: T4.2~1
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: huuuuuUUu *falls*\r\n"
+    - name: "Beorn: huuuuuUUu *falls*\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: d58cab1c382d1734680e6f6934e2afcd, type: 3}
       subtitle: "huuuuuUUu *falls*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Uh oh!\r\n"
+    - name: "Lucy: Uh oh!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 0dfbba183fe9d1346bd22095d7bc67bd, type: 3}
       subtitle: "Uh oh!\r\n"
       settings:
         screenAsSource: 0
@@ -34382,6 +34229,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -34389,31 +34237,34 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Good! You are safe now. Lets try again. Follow me!\r\n"
+    - name: "Lucy: Good! You are safe now. Lets try again. Follow me!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: ff12915926c2b484095bb23a3a57450a, type: 3}
       subtitle: "Good! You are safe now. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.2*2'
-    nameID: T4.2*2
+  - name: '!Err! T4.2~2'
+    nameID: T4.2~2
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: huuuuUU *falls*\r\n"
+    - name: "Beorn: huuuuUU *falls*\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: e588c791a7ab1fe48817419ea0556133, type: 3}
       subtitle: "huuuuUU *falls*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Woops! \r\n"
+    - name: "Lucy: Woops! \r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 14e31159dbae5a34ea48d3a8a5a22134, type: 3}
       subtitle: "Woops! \r\n"
       settings:
         screenAsSource: 0
@@ -34422,6 +34273,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -34429,31 +34281,34 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Okay! You are safe. Lets try again. Follow me!\r\n"
+    - name: "Lucy: Okay! You are safe. Lets try again. Follow me!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: a24c5be50d942f14594964be690eb2fe, type: 3}
       subtitle: "Okay! You are safe. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.2*3'
-    nameID: T4.2*3
+  - name: '!Err! T4.2~3'
+    nameID: T4.2~3
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: hu hu HUUUU *falls*\r\n"
+    - name: "Beorn: hu hu HUUUU *falls*\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: a6de29594c38c9241acb806427790fae, type: 3}
       subtitle: "hu hu HUUUU *falls*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Oh nooo!\r\n"
+    - name: "Lucy: Oh nooo!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: a7b341e2afd9e6b4d975fa42c8f7b1d0, type: 3}
       subtitle: "Oh nooo!\r\n"
       settings:
         screenAsSource: 0
@@ -34462,6 +34317,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -34469,155 +34325,166 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Phew!! That was close. Lets try again. Follow me!\r\n"
+    - name: "Lucy: Phew!! That was close. Lets try again. Follow me!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: d0632c5dee4ce8841aee929c1705f848, type: 3}
       subtitle: "Phew!! That was close. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.3'
+  - name: T4.3
     nameID: T4.3
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *silly* muu\r\n"
+    - name: "Beorn: *silly* muu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: a1eea1ea306465f4c8e55bedb93c22ae, type: 3}
       subtitle: "*silly* muu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Hey come back! You are going the wrong direction!\r\n"
+    - name: "Lucy: Hey come back! You are going the wrong direction!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 1c8477e7e9de6ba47842906cdd2a65eb, type: 3}
       subtitle: "Hey come back! You are going the wrong direction!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.4*1'
-    nameID: T4.4*1
+  - name: T4.4~1
+    nameID: T4.4~1
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *scared* uhh hoh uhoh!\r\n"
-      source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
-      subtitle: "*scared* uhh hoh uhoh!\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-    - name: "!Err! Lucy: Watch out for the edge, human!\r\n"
+    - name: "Lucy: Watch out for the edge, human!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 7fc1ca5df888e13419b9dba80bfffdff, type: 3}
       subtitle: "Watch out for the edge, human!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.4*2'
-    nameID: T4.4*2
+  - name: T4.4~2
+    nameID: T4.4~2
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *scared* uhoh uhoh uhoh!\r\n"
-      source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
-      subtitle: "*scared* uhoh uhoh uhoh!\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-    - name: "!Err! Lucy: Ohhh watch out for the edge!\r\n"
+    - name: "Lucy: Ohhh watch out for the edge!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 2fb26e00c1dcd3b4792a8e7616723b69, type: 3}
       subtitle: "Ohhh watch out for the edge!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.4*3'
-    nameID: T4.4*3
+  - name: T4.4~3
+    nameID: T4.4~3
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *scared* uuuuuuuuuuh!\r\n"
-      source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
-      subtitle: "*scared* uuuuuuuuuuh!\r\n"
-      settings:
-        screenAsSource: 0
-        timeOffset: 0
-        volume: 1
-        pitch: 1
-    - name: '!Err! Lucy: Human! Watch out, Beorn is standing really close to the edge...'
+    - name: 'Lucy: Human! Watch out, Beorn is standing really close to the edge...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: b1a36a8d222b8844bb9378a24b0686ba, type: 3}
       subtitle: "Human! Watch out, Beorn is standing really close to the edge.\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.5*1'
-    nameID: T4.5*1
+  - name: T4.4A
+    nameID: T4.4A
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *glad* muu!\r\n"
+    - name: "Beorn: *scared panting*\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 31e2437af164d7749bb659e0998b8915, type: 3}
+      subtitle: "*scared panting*\r\n"
+      settings:
+        screenAsSource: 0
+        timeOffset: 0
+        volume: 1
+        pitch: 1
+  - name: T4.4B
+    nameID: T4.4B
+    hint: 
+    messageSequence:
+    - name: "Beorn: *relieved* muuhh\r\n"
+      source: {fileID: 2076031667}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 2ccb2c45b4f740d4b8326a4845cb803c, type: 3}
+      subtitle: "*relieved* muuhh\r\n"
+      settings:
+        screenAsSource: 0
+        timeOffset: 0
+        volume: 1
+        pitch: 1
+  - name: T4.5~1
+    nameID: T4.5~1
+    hint: 
+    messageSequence:
+    - name: "Beorn: *glad* muu!\r\n"
+      source: {fileID: 2076031667}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: a26d3c1b74082ee4ba2521662d14ae14, type: 3}
       subtitle: "*glad* muu!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Well done! Now the next segment. Follow me!\r\n"
+    - name: "Lucy: Well done! Now the next section. Follow me!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "Well done! Now the next segment. Follow me!\r\n"
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 58f8172bae4d9374a99cec67d996572f, type: 3}
+      subtitle: "Well done! Now the next section. Follow me!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.5*2'
-    nameID: T4.5*2
+  - name: T4.5~2
+    nameID: T4.5~2
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *glad* muuuuu!\r\n"
+    - name: "Beorn: *glad* muuuuu!\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 382994faf2be9254da9a5f94f9ede76d, type: 3}
       subtitle: "*glad* muuuuu!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Yes! Very good. Ok, next one!\r\n"
+    - name: "Lucy: Yes! Very good. Ok, next one!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: df179aa860a883246ab5d99607453596, type: 3}
       subtitle: "Yes! Very good. Ok, next one!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.6'
+  - name: T4.6
     nameID: T4.6
     hint: 
     messageSequence:
-    - name: '!Err! Lucy: Hmmm, human, you have to watch out now. Some spirits are
-        cro...'
+    - name: 'Lucy: Hmmm, human, you have to watch out now. Some spirits are cro...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 2805709c97d06ce48b8dfd1eb316919e, type: 3}
       subtitle: "Hmmm, human, you have to watch out now. Some spirits are crossing
         the bridge sideways. They appear very scared because of the giant in our village.
         I am afriad they might push Beorn off the bridge if he touches them So you
@@ -34628,12 +34495,13 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.7*1'
-    nameID: T4.7*1
+  - name: '!Err! T4.7~1'
+    nameID: T4.7~1
     hint: 
     messageSequence:
     - name: "!Err! : Out of the way!! There is a giant in the village!!\r\n"
       source: {fileID: 0}
+      sourceName: Spirit
       audioClip: {fileID: 0}
       subtitle: "Out of the way!! There is a giant in the village!!\r\n"
       settings:
@@ -34641,18 +34509,20 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: huuuuuUUu *falls*\r\n"
+    - name: "Beorn: huuuuuUUu *falls*\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 5f9e1efd085a18747aacd1c92bb2dd6b, type: 3}
       subtitle: "huuuuuUUu *falls*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Uh oh!\r\n"
+    - name: "Lucy: Uh oh!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: c1bfd957f598eea49becc641095682c5, type: 3}
       subtitle: "Uh oh!\r\n"
       settings:
         screenAsSource: 0
@@ -34661,6 +34531,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -34668,21 +34539,23 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Good! You are safe now. Lets try again. Follow me!\r\n"
+    - name: "Lucy: Good! You are safe now. Lets try again. Follow me!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 72dc0960a556d2f4c93323a5a70d9a89, type: 3}
       subtitle: "Good! You are safe now. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.7*2'
-    nameID: T4.7*2
+  - name: '!Err! T4.7~2'
+    nameID: T4.7~2
     hint: 
     messageSequence:
     - name: "!Err! : Ahhh! A giant in the village!!\r\n"
       source: {fileID: 0}
+      sourceName: Spirit
       audioClip: {fileID: 0}
       subtitle: "Ahhh! A giant in the village!!\r\n"
       settings:
@@ -34690,18 +34563,20 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: huuuuUU *falls*\r\n"
+    - name: "Beorn: huuuuUU *falls*\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: f5dd4f5ef3409a34c9a1addde1ba0736, type: 3}
       subtitle: "huuuuUU *falls*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Woops! \r\n"
+    - name: "Lucy: Woops! \r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 221e6fa728bfce8468f0c05d482dfe32, type: 3}
       subtitle: "Woops! \r\n"
       settings:
         screenAsSource: 0
@@ -34710,6 +34585,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -34717,21 +34593,23 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Okay! You are safe. Lets try again. Follow me!\r\n"
+    - name: "Lucy: Okay! You are safe. Lets try again. Follow me!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 578bdc4671cf3bb41b095f61a39be659, type: 3}
       subtitle: "Okay! You are safe. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.7*3'
-    nameID: T4.7*3
+  - name: '!Err! T4.7~3'
+    nameID: T4.7~3
     hint: 
     messageSequence:
     - name: "!Err! : Oh no, oh no! Out of the way!\r\n"
       source: {fileID: 0}
+      sourceName: Spirit
       audioClip: {fileID: 0}
       subtitle: "Oh no, oh no! Out of the way!\r\n"
       settings:
@@ -34739,18 +34617,20 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: hu hu HUUUU *falls*\r\n"
+    - name: "Beorn: hu hu HUUUU *falls*\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: cfd460f57663088448201cfe974a0df0, type: 3}
       subtitle: "hu hu HUUUU *falls*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Oh nooo!\r\n"
+    - name: "Lucy: Oh nooo!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 183ea56d22f827f44b4352544f9883fe, type: 3}
       subtitle: "Oh nooo!\r\n"
       settings:
         screenAsSource: 0
@@ -34759,6 +34639,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -34766,90 +34647,96 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Phew!! That was close. Lets try again. Follow me!\r\n"
+    - name: "Lucy: Phew!! That was close. Lets try again. Follow me!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 26e2d178fec6549498d87478184e7faa, type: 3}
       subtitle: "Phew!! That was close. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.8'
+  - name: T4.8
     nameID: T4.8
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *scared* MU!\r\n"
+    - name: "Beorn: *scared* MU!\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: d09c01263397d5a4daff9bca2ba396c0, type: 3}
       subtitle: "*scared* MU!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Phew! Close call, Beorn almost touched a spirit.\r\n"
+    - name: "Lucy: Phew! Close call, Beorn almost touched a spirit.\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: c2aa1531eb3d19a4ba1998fe80fe35ea, type: 3}
       subtitle: "Phew! Close call, Beorn almost touched a spirit.\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.9*1'
-    nameID: T4.9*1
+  - name: T4.9~1
+    nameID: T4.9~1
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *happy* mu muuu\r\n"
+    - name: "Beorn: *happy* mu muuu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 67382578f66154c4abe957ad5678cfbc, type: 3}
       subtitle: "*happy* mu muuu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Awesome!! Well done. Okay, lets continue over the next secti...'
+    - name: 'Lucy: Awesome!! Well done. Okay, lets continue over to the next se...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "Awesome!! Well done. Okay, lets continue over the next section.\r\n"
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: eae0bd73ef70f994f913d316dd28b6cf, type: 3}
+      subtitle: "Awesome!! Well done. Okay, lets continue over to the next section.\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.9*2'
-    nameID: T4.9*2
+  - name: T4.9~2
+    nameID: T4.9~2
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *happy* muuu\r\n"
+    - name: "Beorn: *happy* muuu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 8a8e519047dbab04889176666f5c88e8, type: 3}
       subtitle: "*happy* muuu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: You are very good at this! Let''s tackle the next section
-        too...'
+    - name: 'Lucy: You are very good at this! Let''s tackle the next section too...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 079303afd75cb0d4faaf2a56c5ab05ba, type: 3}
       subtitle: "You are very good at this! Let's tackle the next section too!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.10'
+  - name: T4.10
     nameID: T4.10
     hint: 
     messageSequence:
-    - name: '!Err! Lucy: Alright, the next few sections are a bit more difficult.
-        I c...'
+    - name: 'Lucy: Alright, the next few sections are a bit more difficult. I c...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: d1483237717987d41a9afa3ac486cbe6, type: 3}
       subtitle: "Alright, the next few sections are a bit more difficult. I cant fly
         over them, because the bridge is kept in the air by machines. The energy they
         send off damages my wings so I cant guide you over of these parts. You are
@@ -34864,18 +34751,20 @@ MonoBehaviour:
     nameID: T4.11
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: huuuuUU *falls*\r\n"
+    - name: "Beorn: huuuuUU *falls*\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 97fcc0e9bdb62584da7cf8416ba46042, type: 3}
       subtitle: "huuuuUU *falls*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Woops! Watch out, the bridge turns here.\r\n"
+    - name: "Lucy: Woops! Watch out, the bridge turns here.\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: b43453c96464edc429e31f4cdeed8432, type: 3}
       subtitle: "Woops! Watch out, the bridge turns here.\r\n"
       settings:
         screenAsSource: 0
@@ -34884,6 +34773,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -34891,33 +34781,34 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Okay! You are safe. Lets try again. Follow the sound of the
-        ...'
+    - name: 'Lucy: Okay! You are safe. Lets try again. Follow the sound of the ...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: d635e620e6e19fd46b59a3dc0536f04b, type: 3}
       subtitle: "Okay! You are safe. Lets try again. Follow the sound of the machines.\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.12*1'
-    nameID: T4.12*1
+  - name: T4.12~1
+    nameID: T4.12~1
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *relief* muuu! \r\n"
+    - name: "Beorn: *relief* muuu! \r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 1a5ffa1f9a387fa45b3fe18b8c34d2db, type: 3}
       subtitle: "*relief* muuu! \r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Well done! That was tough, wasnit it? You did great though.
-        ...'
+    - name: 'Lucy: Well done! That was tough, wasnit it? You did great though. ...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 646be2197f0a5d9439251f09c4649035, type: 3}
       subtitle: "Well done! That was tough, wasnit it? You did great though. You are
         a great listener! Lets continue over the next section with machines. \r\n"
       settings:
@@ -34925,23 +34816,24 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.12*2'
-    nameID: T4.12*2
+  - name: T4.12~2
+    nameID: T4.12~2
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *glad* uuuuuggg! \r\n"
+    - name: "Beorn: *glad* uuuuuggg! \r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 959f8fca2030ec848879ea19c6ca45c4, type: 3}
       subtitle: "*glad* uuuuuggg! \r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy:  You are the master of listening! Let''s tackle the next
-        sect...'
+    - name: 'Lucy:  You are the master of listening! Let''s tackle the next sect...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: b481a0bbb2e2adb428b7b04c3f89250a, type: 3}
       subtitle: " You are the master of listening! Let's tackle the next section too!\r\n"
       settings:
         screenAsSource: 0
@@ -34952,22 +34844,23 @@ MonoBehaviour:
     nameID: T4.13
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *very happy* muu muu muuuuuu!\r\n"
+    - name: "Beorn: *very happy* muu muu muuuuuu!\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 39bb01837451d2b47b2a0a41852ef061, type: 3}
       subtitle: "*very happy* muu muu muuuuuu!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Very goood!! We reached the end of the bridge. Here is a
-        por...'
+    - name: 'Lucy: Very goood!! We have reached the end of the bridge. Here we ...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "Very goood!! We reached the end of the bridge. Here is a portal to
-        my village. Beorn, dont be scared, you might feel some dizziness and lightheadedness,
-        but that is normal. Here we go!! woooop!\r\n"
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 419756a80f6b1b14c86d90190e8715f2, type: 3}
+      subtitle: "Very goood!! We have reached the end of the bridge. Here we will
+        now take the portal to my village. Beorn, dont be scared, you might feel a
+        bit dizzy, but that is normal. Here we go!! woooop!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
@@ -34975,6 +34868,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Other: *awesome teleportation sounds*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*awesome teleportation sounds*\r\n"
       settings:
@@ -34988,6 +34882,7 @@ MonoBehaviour:
     messageSequence:
     - name: "!Err! Other: *teleportation sounds end*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds end*\r\n"
       settings:
@@ -34995,9 +34890,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: *whispers* uhoh. we arrived at my village but we are standin...'
+    - name: 'Lucy: *whispers* uhoh. we arrived at my village but we are standin...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 9264e57e82963f84da8ed0525c9eaae6, type: 3}
       subtitle: "*whispers* uhoh. we arrived at my village but we are standing right
         next to the giant... Lets hope he doesnt see us. Stay still!\r\n"
       settings:
@@ -35005,28 +34901,30 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: *GIANT!?* MUHUH?! muuuuu!!\r\n"
+    - name: "Beorn: *GIANT!?* MUHUH?! muuuuu!!\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: bcfa74c8a8b132041a86b9abfacf8567, type: 3}
       subtitle: "*GIANT!?* MUHUH?! muuuuu!!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: *whispers* Beorn! SSSST!\r\n"
+    - name: "Lucy: *whispers* Beorn! SSSST!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: ddf5486552764c141afe0a96114f9e76, type: 3}
       subtitle: "*whispers* Beorn! SSSST!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Giant: *slow low voice* Huuuhhh? Who is there? A fairy!! Wait!
-        I do...'
+    - name: 'Giant: *slow low voice* Huuuhhh? Who is there? A fairy!! Wait! I do...'
       source: {fileID: 2013512893}
-      audioClip: {fileID: 0}
+      sourceName: Giant
+      audioClip: {fileID: 8300000, guid: 24595274e7a61a34cbcb2c7e231c5cd5, type: 3}
       subtitle: "*slow low voice* Huuuhhh? Who is there? A fairy!! Wait! I dont mean
         any harm. I am only here because I am hiding from the science birds in the
         forest! I just want shelter. I am scared! Can you help me please?\r\n"
@@ -35035,10 +34933,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Uh uhm OH!! Of course! Giants hate science!! But, why are
-        th...'
+    - name: 'Lucy: Uh uhm OH!! Of course! Giants hate science!! But, why are th...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 813b74f77b11cb74d824d87065779fa6, type: 3}
       subtitle: "Uh uhm OH!! Of course! Giants hate science!! But, why are there science
         birds in our forest?\r\n"
       settings:
@@ -35046,10 +34944,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Giant: They are studying and copying the sounds of the animals
-        in t...'
+    - name: 'Giant: They are studying and copying the sounds of the animals in t...'
       source: {fileID: 2013512893}
-      audioClip: {fileID: 0}
+      sourceName: Giant
+      audioClip: {fileID: 8300000, guid: 3e994bc6c8825d849bc2a699e27f2e87, type: 3}
       subtitle: "They are studying and copying the sounds of the animals in the forest
         Fairy, what if they will start copying my voice as well? Can you imagine a
         bird, saying things like my butt itches, or mom!! I dont like vegetables??
@@ -35059,10 +34957,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Haha it would. We will help you, but if we get the science
-        b...'
+    - name: 'Lucy: Haha it would. We will help you, but if we get the science b...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: b815cbabca376e44f8e218a622d5fb00, type: 3}
       subtitle: "Haha it would. We will help you, but if we get the science birds
         out of the forest, will you go back there and leave us alone?\r\n"
       settings:
@@ -35070,9 +34968,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Giant: I promise. This is no place for me!\r\n"
+    - name: "Giant: I promise. This is no place for me!\r\n"
       source: {fileID: 2013512893}
-      audioClip: {fileID: 0}
+      sourceName: Giant
+      audioClip: {fileID: 8300000, guid: 9910087389b8eba408f188cccad6df8d, type: 3}
       subtitle: "I promise. This is no place for me!\r\n"
       settings:
         screenAsSource: 0
@@ -35081,6 +34980,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Other: *Approaching flapping wings*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*Approaching flapping wings*\r\n"
       settings:
@@ -35088,10 +34988,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Oh here comes Boris the 77th, the great owl of Gahoot, the
-        k...'
+    - name: 'Lucy: Oh here comes Boris the 77th, the great owl of Gahoot, the k...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 4f3768b20e1971b4980450c35b10d064, type: 3}
       subtitle: "Oh here comes Boris the 77th, the great owl of Gahoot, the king of
         our village, and protector of all that is spirit. He is not THAT great though,
         he has a depressing Candy Crush highscore... I am guessing he wants to speak
@@ -35101,9 +35001,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Boris: Hi there, *hooot* I couldnt help but overhearing the convers...'
+    - name: 'Boris: Hi there, *hooot* I couldnt help but overhearing the convers...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 6f5da74bf41d5a242ac4086f371d29ba, type: 3}
       subtitle: "Hi there, *hooot* I couldnt help but overhearing the conversation.
         Lucy, are you sure you picked the right human for the task at hand?\r\n"
       settings:
@@ -35111,19 +35012,20 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Yes, 100% sure.\r\n"
+    - name: "Lucy: Yes, 100% sure.\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: bbd06512520e08d46bf45834c9545fcc, type: 3}
       subtitle: "Yes, 100% sure.\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Boris: Well, to be sure, human, I am going to test you. *hooot*
-        I w...'
+    - name: 'Boris: Well, to be sure, human, I am going to test you. *hooot* I w...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 06bc3b359e8c3d0409ae1c92d4b1942b, type: 3}
       subtitle: "Well, to be sure, human, I am going to test you. *hooot* I will fly
         towards some location closeby and you have to remember where that was so that
         you can come and find me. \r\n"
@@ -35132,10 +35034,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: OK human, stand still when he takes off, and listen closely
-        ...'
+    - name: 'Lucy: OK human, stand still when he takes off, and listen closely ...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: a1628bbd4e712d04bb256e9fb4060cac, type: 3}
       subtitle: "OK human, stand still when he takes off, and listen closely to the
         sounds he makes. Use the sounds of the village around you to orient yourself
         and to remember Boris location!\r\n"
@@ -35146,6 +35048,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Other: *flapping wings of boris flying to some random location*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*flapping wings of boris flying to some random location*\r\n"
       settings:
@@ -35153,80 +35056,86 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Boris: *hoot at location*\r\n"
+    - name: "Boris: *hoot at location*\r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 8aa7adb3cfd96bf4e91bab33ba5d4c54, type: 3}
       subtitle: "*hoot at location*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: OK, go find him!\r\n"
+    - name: "Lucy: OK, go find him!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: f2d822cfbe5fc8744b643e8290593192, type: 3}
       subtitle: "OK, go find him!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T5.2*1'
-    nameID: T5.2*1
+  - name: T5.2~1
+    nameID: T5.2~1
     hint: 
     messageSequence:
-    - name: "!Err! Boris: *hooot*\r\n"
+    - name: "Boris: *hooot*\r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: c8871c48edb00da4086318ea937b53dd, type: 3}
       subtitle: "*hooot*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T5.2*2'
-    nameID: T5.2*2
+  - name: T5.2~2
+    nameID: T5.2~2
     hint: 
     messageSequence:
-    - name: "!Err! Boris: *hooot*\r\n"
+    - name: "Boris: *hooot*\r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 95d652dc3151a464eade81662eb279a3, type: 3}
       subtitle: "*hooot*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T5.2*3'
-    nameID: T5.2*3
+  - name: T5.2~3
+    nameID: T5.2~3
     hint: 
     messageSequence:
-    - name: "!Err! Boris: *hooot*\r\n"
+    - name: "Boris: *hooot*\r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: b5a61dc4ebdee064e81f8b480acf2e46, type: 3}
       subtitle: "*hooot*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T5.3'
+  - name: T5.3
     nameID: T5.3
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *annoyed* muuuu\r\n"
+    - name: "Beorn: *annoyed* muuuu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 820359074d221a444a27a132917854a0, type: 3}
       subtitle: "*annoyed* muuuu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Try to focus on the sounds of the environment in comparison
-        ...'
+    - name: 'Lucy: Try to focus on the sounds of the environment in comparison ...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 2f4f361961bd1434dafd20b7a1fbd19d, type: 3}
       subtitle: "Try to focus on the sounds of the environment in comparison to Boris.
         If you forget where he is, he might make some noises once in a while.\r\n"
       settings:
@@ -35234,9 +35143,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Boris: *hooot*\r\n"
+    - name: "Boris: *hooot*\r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 4694fe41a57bf7d47a66705996b27552, type: 3}
       subtitle: "*hooot*\r\n"
       settings:
         screenAsSource: 0
@@ -35247,49 +35157,52 @@ MonoBehaviour:
     nameID: T5.4
     hint: 
     messageSequence:
-    - name: '!Err! Boris: Hmmm.. You got me! *hooot* But you got lucky human! Let''s
-        tr...'
+    - name: 'Boris: Hmmm.. You got me! *hooot* But you got lucky human! Let''s tr...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 7d28d6d394e03da4584f38884281c7c9, type: 3}
       subtitle: "Hmmm.. You got me! *hooot* But you got lucky human! Let's tr... AAAH\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: MUHH HAWHAW\r\n"
+    - name: "Beorn: MUHH HAWHAW\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 02208ccb12fb5a444a7bdd21b3644437, type: 3}
       subtitle: "MUHH HAWHAW\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Beorn!! Don't bite our king you idiot!\r\n"
+    - name: "Lucy: Beorn!! Don't bite our king you idiot!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: f658430eaab3bec4ca61863fb1d06c5d, type: 3}
       subtitle: "Beorn!! Don't bite our king you idiot!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: *disappointed* muhhhh\r\n"
+    - name: "Beorn: *disappointed* muhhhh\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: f01d6f36dcc06bc4c900be66b8f0ddeb, type: 3}
       subtitle: "*disappointed* muhhhh\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Boris: *hOOOt* Oh fudge, now my feathers are all messy. Ah, well.
-        I...'
+    - name: 'Boris: *hOOOt* Oh fudge, now my feathers are all messy. Ah, well. I...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: f37237cca52880e4b8648363ece261c1, type: 3}
       subtitle: "*hOOOt* Oh fudge, now my feathers are all messy. Ah, well. I needed
-        a haircut anyway. Right, where was I. *hooot* Oh yes: let's try again and
+        a feathercut anyway. Right, where was I. *hooot* Oh yes: let's try again and
         see if you got lucky!!\r\n"
       settings:
         screenAsSource: 0
@@ -35298,6 +35211,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Other: *flapping wings of boris flying to some random location*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*flapping wings of boris flying to some random location*\r\n"
       settings:
@@ -35305,18 +35219,20 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Boris: *hoot at location*\r\n"
+    - name: "Boris: *hoot at location*\r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 234140b8344d9774d9135ec4ab395ff3, type: 3}
       subtitle: "*hoot at location*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: OK, lets go find him again!\r\n"
+    - name: "Lucy: OK, lets go find him again!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: ab7edc0af37900a4785a737434bd7759, type: 3}
       subtitle: "OK, lets go find him again!\r\n"
       settings:
         screenAsSource: 0
@@ -35327,10 +35243,10 @@ MonoBehaviour:
     nameID: T5.5
     hint: 
     messageSequence:
-    - name: '!Err! Boris: Great! *hooot* You are doing well. Perhaps you are indeed
-        as...'
+    - name: 'Boris: Great! *hooot* You are doing well. Perhaps you are indeed as...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 609f98d7f2b9d324cbceeac2cbf0521e, type: 3}
       subtitle: "Great! *hooot* You are doing well. Perhaps you are indeed as talented
         as lucy said. *hooot* One more to be sure!\r\n"
       settings:
@@ -35340,6 +35256,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Other: *flapping wings of boris flying to some random location*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*flapping wings of boris flying to some random location*\r\n"
       settings:
@@ -35347,18 +35264,20 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Boris: *hoot at location*\r\n"
+    - name: "Boris: *hoot at location*\r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 4d94f7387d3a3cf4fb7a0db0041aabe7, type: 3}
       subtitle: "*hoot at location*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: OK, lets go find him again, one last time!\r\n"
+    - name: "Lucy: OK, lets go find him again, one last time!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 09bfd8a04a85dc24087c772825dff181, type: 3}
       subtitle: "OK, lets go find him again, one last time!\r\n"
       settings:
         screenAsSource: 0
@@ -35369,37 +35288,40 @@ MonoBehaviour:
     nameID: T5.6
     hint: 
     messageSequence:
-    - name: "!Err! Boris: Awesome! *hooot* I see you are indeed very talented!\r\n"
+    - name: "Boris: Awesome! *hooot* I see you are indeed very talented!\r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: f5526d5e8ba178047b0557676c6a34b3, type: 3}
       subtitle: "Awesome! *hooot* I see you are indeed very talented!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: *happy* muhhhhh\r\n"
+    - name: "Beorn: *happy* muhhhhh\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: b62e02b28407eb54999ab09b0a3e749a, type: 3}
       subtitle: "*happy* muhhhhh\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Yaay! I told you!\r\n"
+    - name: "Lucy: Yaay! I told you!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 19caa44406b506a4185a8bcd35b79721, type: 3}
       subtitle: "Yaay! I told you!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Boris: Yes! *hooot* Very well. *hooot* Ill fly you to the forest
-        wh...'
+    - name: 'Boris: Yes! *hooot* Very well. *hooot* Ill fly you to the forest wh...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 8bf30d1c67de0a141b3723d1c5e4ba0d, type: 3}
       subtitle: "Yes! *hooot* Very well. *hooot* Ill fly you to the forest where you
         can find the science birds. I think I know where they are. Here we go! hold
         on tight, Beorn! *hooot*\r\n"
@@ -35410,6 +35332,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Other: *wings start flapping around player*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*wings start flapping around player*\r\n"
       settings:
@@ -35417,18 +35340,20 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: *scared* muh? muhh! MUHHHHHHH HEHHUHUEHE\r\n"
+    - name: "Beorn: *happy* muuhh buhuhbuhhh\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
-      subtitle: "*scared* muh? muhh! MUHHHHHHH HEHHUHUEHE\r\n"
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 706a7806b17ba334889f24c8b8713554, type: 3}
+      subtitle: "*happy* muuhh buhuhbuhhh\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: *happy* Wiiiiiii\r\n"
+    - name: "Lucy: *happy* Wiiiiiii\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 70faea3cb9ea3e649a5f595d9e8a3161, type: 3}
       subtitle: "*happy* Wiiiiiii\r\n"
       settings:
         screenAsSource: 0
@@ -35441,6 +35366,7 @@ MonoBehaviour:
     messageSequence:
     - name: "!Err! Other: *wings stop flapping, landed*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*wings stop flapping, landed*\r\n"
       settings:
@@ -35448,29 +35374,30 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: *relief* muhhhhhh\r\n"
+    - name: "Beorn: *disappointed* muhhhhhh\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
-      subtitle: "*relief* muhhhhhh\r\n"
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: c6a89de7010274345a146d75012473b9, type: 3}
+      subtitle: "*disappointed* muhhhhhh\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: It smells here, IEEUW. Even worse than Beorns house. Where
-        A...'
+    - name: 'Lucy: It smells here, IEEUW. Even worse than Beorns house. Where A...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: d828f1ea52e73614c8aed9c3cabf454b, type: 3}
       subtitle: "It smells here, IEEUW. Even worse than Beorns house. Where ARE we??\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Boris: Well, we arrived at the swamp! *hooot* I was only able to
-        la...'
+    - name: 'Boris: Well, we arrived at the swamp! *hooot* I was only able to la...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 50c84c04d4c3fc2469a363f5456d8731, type: 3}
       subtitle: "Well, we arrived at the swamp! *hooot* I was only able to land here.
         The birds are further ahead, beyond the swamp, *hooot* so you are going to
         have to cross it. However, there are frogs that really like biting fluffy
@@ -35480,10 +35407,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Hmm, alright. Human, I will fly to the end of the swamp.
-        Aga...'
+    - name: 'Lucy: Hmm, alright. Human, I will fly to the end of the swamp. Aga...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 55311976818ae0942ac3a5a9cd9032b2, type: 3}
       subtitle: "Hmm, alright. Human, I will fly to the end of the swamp. Again, follow
         the sound of my wings, but avoid the frogs!\r\n"
       settings:
@@ -35497,6 +35424,7 @@ MonoBehaviour:
     messageSequence:
     - name: "!Err! Other: *frog bite*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*frog bite*\r\n"
       settings:
@@ -35504,18 +35432,20 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: *pain* MUU!\r\n"
+    - name: "Beorn: *pain* MUU!\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 31fed86d9330c674db2df08c232ad95d, type: 3}
       subtitle: "*pain* MUU!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Woops! \r\n"
+    - name: "Lucy: Woops! \r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 9418f56de57af7947a9209ebe6c36179, type: 3}
       subtitle: "Woops! \r\n"
       settings:
         screenAsSource: 0
@@ -35524,6 +35454,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*teleportation sounds*\r\n"
       settings:
@@ -35531,32 +35462,34 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Okay! You are safe. Lets try again.\r\n"
+    - name: "Lucy: Okay! You are safe. Lets try again.\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 0aeac7c787de72b4d86ede07cbf912c8, type: 3}
       subtitle: "Okay! You are safe. Lets try again.\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T6.3'
+  - name: T6.3
     nameID: T6.3
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *impatiently* Muuuu\r\n"
+    - name: "Beorn: *impatiently* Muuuu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: ed6545df2ef78a842b4ba581b1250438, type: 3}
       subtitle: "*impatiently* Muuuu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Try to focus on the sound of my wings and avoid those slimy
-        ...'
+    - name: 'Lucy: Try to focus on the sound of my wings and avoid those slimy ...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 67d0338bf2c76994a9fb54b08fc24b87, type: 3}
       subtitle: "Try to focus on the sound of my wings and avoid those slimy frogs
         on the way! You can do it, human!\r\n"
       settings:
@@ -35564,13 +35497,14 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T6.4'
+  - name: T6.4
     nameID: T6.4
     hint: 
     messageSequence:
-    - name: '!Err! Lucy: Hooray! You made it! Well done! Those frogs were sooo smelly...'
+    - name: 'Lucy: Hooray! You made it! Well done! Those frogs were sooo smelly...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: b237d5f196883a442953d746c8865823, type: 3}
       subtitle: "Hooray! You made it! Well done! Those frogs were sooo smelly, and
         slimey. Ughhh!! I am super glad we passed the swamp.\r\n"
       settings:
@@ -35578,53 +35512,56 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: *agrees* muu!! mu muu\r\n"
+    - name: "Beorn: *agrees* muu!! mu muu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 7fbda7b3fa6cd53419605655649d1788, type: 3}
       subtitle: "*agrees* muu!! mu muu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Let's continue quickly\r\n"
+    - name: "Lucy: Let's continue quickly\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 86d8906ab4c7f4241ae7f8b068a3d24c, type: 3}
       subtitle: "Let's continue quickly\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Boris: Perhaps I will install a frog shower at the swamp one day.
-        *...'
+    - name: 'Boris: Perhaps I will install a frog shower at the swamp one day. *...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 04cfbd8401a9038489b8ca9176f379cc, type: 3}
       subtitle: "Perhaps I will install a frog shower at the swamp one day. *hooot*
-        For now, lets move on! We'll move to the clearing where I heard the birds
-        are located. Follow me and Lucy, Human! *hooot*\r\n"
+        For now, lets move on! We'll move to the clearing where the birds are supposed
+        to be. Follow me and Lucy, Human! *hooot*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T6.5'
+  - name: T6.5
     nameID: T6.5
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *impatiently* muhhhh\r\n"
+    - name: "Beorn: *impatiently* muhhhh\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 5c95726353fc9b94ea3c47292714c65e, type: 3}
       subtitle: "*impatiently* muhhhh\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Boris: Focus on the sound of lucy''s wings or my hooting! You can
-        do...'
+    - name: 'Boris: Focus on the sound of lucy''s wings or my hooting! You can do...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 0128d914b6e33394baeaabe0d8446424, type: 3}
       subtitle: "Focus on the sound of lucy's wings or my hooting! You can do it.
         *hooot*\r\n"
       settings:
@@ -35632,86 +35569,93 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T6.6'
+  - name: T6.6
     nameID: T6.6
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *silly* muu\r\n"
+    - name: "Beorn: *silly* muu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: d4ded356f6386c443afef7b6df11842c, type: 3}
       subtitle: "*silly* muu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Hey come back! You are going the wrong direction!\r\n"
+    - name: "Lucy: Hey come back! You are going the wrong direction!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 34e0ade26a5a3b04388adb2f58bc5261, type: 3}
       subtitle: "Hey come back! You are going the wrong direction!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T6.7'
+  - name: T6.7
     nameID: T6.7
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *playing with flies* muhhh muhuheuhe muhe HUH huheu\r\n"
+    - name: "Beorn: *playing with flies* muhhh muhuheuhe muhe HUH huheu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 21398e15398120f46a84050875841038, type: 3}
       subtitle: "*playing with flies* muhhh muhuheuhe muhe HUH huheu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Beorn! Leave those poor flies alone!\r\n"
+    - name: "Lucy: Beorn! Leave those poor flies alone!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 3974c612d49f7064a9d2d22f172d51a6, type: 3}
       subtitle: "Beorn! Leave those poor flies alone!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Boris: Human, What is the difference between a fly and a bird?
-        A bi...'
+    - name: 'Boris: Human, what is the difference between a fly and a bird? A bi...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
-      subtitle: "Human, What is the difference between a fly and a bird? A bird can
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: b1dbcacaac33ffc40871abba4d14cbe7, type: 3}
+      subtitle: "Human, what is the difference between a fly and a bird? A bird can
         fly but a fly can't bird! *hoot* HUAHUAHUAH\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: huehuehue\r\n"
+    - name: "Beorn: huehuehue\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 6198d166cce6c4e419df81128665e896, type: 3}
       subtitle: "huehuehue\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: hihihi\r\n"
+    - name: "Lucy: hihihi\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 767ac67d55c2aa74da2052471d2c9260, type: 3}
       subtitle: "hihihi\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T6.8'
+  - name: T6.8
     nameID: T6.8
     hint: 
     messageSequence:
-    - name: '!Err! Boris: Oh oh oh! Another one! *hooot!* What do you call a fly witho...'
+    - name: 'Boris: Oh oh oh! Another one! *hooot!* What do you call a fly witho...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 5e0d1b00baddf7b46802965f2f9ba7fa, type: 3}
       subtitle: "Oh oh oh! Another one! *hooot!* What do you call a fly without wings?
         A walk. HUAHUAHUAH\r\n"
       settings:
@@ -35719,112 +35663,122 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: huehuehue\r\n"
+    - name: "Beorn: huehuehue\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: f970c42064f5e3444ae4e9e809da2866, type: 3}
       subtitle: "huehuehue\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: hihihi\r\n"
+    - name: "Lucy: hihihi\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: c396bd0379826b74fb2df4afd961538a, type: 3}
       subtitle: "hihihi\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T6.9'
+  - name: T6.9
     nameID: T6.9
     hint: 
     messageSequence:
-    - name: "!Err! Boris: Lucy *hoot* someone said you sound like an owl.\r\n"
+    - name: "Boris: Lucy *hoot* someone said you sound like an owl.\r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: a900bb78280cf9047919eee01317cf5d, type: 3}
       subtitle: "Lucy *hoot* someone said you sound like an owl.\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Who??\r\n"
+    - name: "Lucy: Who??\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: fe2a6f46a07601f4289706df6a5b003c, type: 3}
       subtitle: "Who??\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Boris: haha! *hoot* \r\n"
+    - name: "Boris: haha! *hoot* \r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 0a8258d1ae4d3c14b9c8e05f1ec48e0f, type: 3}
       subtitle: "haha! *hoot* \r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: OH! hihi, fooled me!\r\n"
+    - name: "Lucy: OH! hihi, fooled me!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: f98cc205065ff3841b126fc121303c4e, type: 3}
       subtitle: "OH! hihi, fooled me!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: *mimics the joke in mumbles, laughs* muu?? huehuehue\r\n"
+    - name: "Beorn: *mimics the joke in mumbles, laughs* muu?? huehuehue\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 09253427a3f02a046869ec5943ce957d, type: 3}
       subtitle: "*mimics the joke in mumbles, laughs* muu?? huehuehue\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T6.10'
+  - name: T6.10
     nameID: T6.10
     hint: 
     messageSequence:
-    - name: '!Err! Boris: Ahhh! yes! here we are. The science bird must be around
-        here...'
+    - name: 'Boris: Ahhh! yes! here we are. The science bird must be around here...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
-      subtitle: "Ahhh! yes! here we are. The science bird must be around here!\r\n"
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 0c508da0c9910ae47b5b0ccac0617407, type: 3}
+      subtitle: "Ahhh! yes! here we are. The science bird must be around here somewhere!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: *glad* muuuu!\r\n"
+    - name: "Beorn: *glad* muuuu!\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 4f6261a4ef622ac44a4e0d82bcfc70d2, type: 3}
       subtitle: "*glad* muuuu!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: OK! Whats next, Boris?\r\n"
+    - name: "Lucy: OK! Whats next, Boris?\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 3f20e9c84d8c323479a123dc0c6b748e, type: 3}
       subtitle: "OK! Whats next, Boris?\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T7.1'
+  - name: T7.1
     nameID: T7.1
     hint: 
     messageSequence:
-    - name: '!Err! Boris: Well, if you listen carefully, you may hear many bird callin...'
+    - name: 'Boris: Well, if you listen carefully, you may hear many bird callin...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 0b9cef53ebc21d946b655f40545ebbfe, type: 3}
       subtitle: "Well, if you listen carefully, you may hear many bird callings. However,
         there is one that mimics all the others. That is the science bird! Humans
         call them Lyre Birds!\r\n"
@@ -35833,10 +35787,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Ok, human, you are a great listener! Why dont you go find
-        hi...'
+    - name: 'Lucy: Ok, human, you are a great listener! Why dont you go find hi...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 514a6b8332e7ba049a24dba904f4a668, type: 3}
       subtitle: "Ok, human, you are a great listener! Why dont you go find him. Good
         luck!\r\n"
       settings:
@@ -35844,32 +35798,34 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Boris: *hooot*\r\n"
+    - name: "Boris: *hooot*\r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 05e1fb633b1bc934caa3c60c7937e23a, type: 3}
       subtitle: "*hooot*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T7.2'
+  - name: T7.2
     nameID: T7.2
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *impatiently* muhhhh\r\n"
+    - name: "Beorn: *impatiently* muhhhh\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 026cd4a46f85205439b2b75a460f4d8b, type: 3}
       subtitle: "*impatiently* muhhhh\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Human, the bird you are looking for mimics the sounds of
-        the...'
+    - name: 'Lucy: Human, the bird you are looking for mimics the sounds of the...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: a86c5ba2aee762c4b8185481b5be3c16, type: 3}
       subtitle: "Human, the bird you are looking for mimics the sounds of the forest,
         including those of other birds. Listen carefully!\r\n"
       settings:
@@ -35877,14 +35833,14 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T7.3'
+  - name: T7.3
     nameID: T7.3
     hint: 
     messageSequence:
-    - name: '!Err! Boris: I don''t think that is the bird we are looking for! That
-        is j...'
+    - name: 'Boris: I don''t think that is the bird we are looking for! That is j...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 52d8748052a85714898ceb82c468a460, type: 3}
       subtitle: "I don't think that is the bird we are looking for! That is just a
         regular bird.\r\n"
       settings:
@@ -35892,9 +35848,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: *disappointed* muhhhh\r\n"
+    - name: "Beorn: *disappointed* muhhhh\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 1da74a714a37a2343a74d53d7c39b8b6, type: 3}
       subtitle: "*disappointed* muhhhh\r\n"
       settings:
         screenAsSource: 0
@@ -35905,10 +35862,10 @@ MonoBehaviour:
     nameID: T7.4
     hint: 
     messageSequence:
-    - name: '!Err! Boris: YESSS!! *hoothoot* Thats the one! But to be sure, lets test
-        ...'
+    - name: 'Boris: YESSS!! *hoothoot* Thats the one! But to be sure, lets test ...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: b49a682576c931e47986a1fc61069e71, type: 3}
       subtitle: "YESSS!! *hoothoot* Thats the one! But to be sure, lets test him.
         \r\n\"Bird, what is \"\"sound\"\"?\"\r\n"
       settings:
@@ -35918,6 +35875,7 @@ MonoBehaviour:
         pitch: 1
     - name: '!Err! : *whistle* Sound is a vibration, or wave, that can be heard a...'
       source: {fileID: 0}
+      sourceName: 'Bird #1'
       audioClip: {fileID: 0}
       subtitle: "*whistle* Sound is a vibration, or wave, that can be heard as it
         reaches our ears by traveling through matter, such as air, wood or water.
@@ -35929,6 +35887,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Boris: *hoot* yes! I am convinced. How many more of you are there?\r..."
       source: {fileID: 219113810}
+      sourceName: Boris
       audioClip: {fileID: 0}
       subtitle: "*hoot* yes! I am convinced. How many more of you are there?\r\n"
       settings:
@@ -35938,6 +35897,7 @@ MonoBehaviour:
         pitch: 1
     - name: '!Err! : *whistle* there are still 3 others! I can call them out with...'
       source: {fileID: 0}
+      sourceName: 'Bird #1'
       audioClip: {fileID: 0}
       subtitle: "*whistle* there are still 3 others! I can call them out with our
         secret emergency question, but then one of you has to catch them. \r\n"
@@ -35948,6 +35908,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Boris: OK, do it!\r\n"
       source: {fileID: 219113810}
+      sourceName: Boris
       audioClip: {fileID: 0}
       subtitle: "OK, do it!\r\n"
       settings:
@@ -35961,7 +35922,8 @@ MonoBehaviour:
     messageSequence:
     - name: "!Err! : *whistle* Why do seagulls fly over the sea? *whistle*\r\n"
       source: {fileID: 0}
-      audioClip: {fileID: 0}
+      sourceName: 'Bird #1'
+      audioClip: {fileID: 8300000, guid: 42b43c45db0dbd246b64d4c7717a4030, type: 3}
       subtitle: "*whistle* Why do seagulls fly over the sea? *whistle*\r\n"
       settings:
         screenAsSource: 0
@@ -35970,7 +35932,8 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! : *from a distance* Because if the flew over the bay\r\n"
       source: {fileID: 0}
-      audioClip: {fileID: 0}
+      sourceName: 'Bird #2'
+      audioClip: {fileID: 8300000, guid: a318e9ffb5350b74b8fcf9fb3031fe20, type: 3}
       subtitle: "*from a distance* Because if the flew over the bay\r\n"
       settings:
         screenAsSource: 0
@@ -35979,7 +35942,8 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! : *from another distance* they would be called\r\n"
       source: {fileID: 0}
-      audioClip: {fileID: 0}
+      sourceName: 'Bird #3'
+      audioClip: {fileID: 8300000, guid: 34c8992f0b9bb154096fa0b518ff7a0c, type: 3}
       subtitle: "*from another distance* they would be called\r\n"
       settings:
         screenAsSource: 0
@@ -35988,7 +35952,8 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! : *from another distance* baygulls! \r\n"
       source: {fileID: 0}
-      audioClip: {fileID: 0}
+      sourceName: 'Bird #4'
+      audioClip: {fileID: 8300000, guid: 049ec174ae4bcdd47b9f8403a78b807a, type: 3}
       subtitle: "*from another distance* baygulls! \r\n"
       settings:
         screenAsSource: 0
@@ -35997,16 +35962,18 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! : *from another distance* oooooooh!!\r\n"
       source: {fileID: 0}
-      audioClip: {fileID: 0}
+      sourceName: 'Bird #1'
+      audioClip: {fileID: 8300000, guid: 8265ad3561e9aa747aa091e16db7caf3, type: 3}
       subtitle: "*from another distance* oooooooh!!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Boris: Oh oh *hoot*, I can see spirit crows approaching\r\n"
+    - name: "Boris: Oh oh *hoot*, I can see spirit crows approaching\r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: f352cc4523d78254d9c5ee62c905cda9, type: 3}
       subtitle: "Oh oh *hoot*, I can see spirit crows approaching\r\n"
       settings:
         screenAsSource: 0
@@ -36015,18 +35982,19 @@ MonoBehaviour:
         pitch: 1
     - name: '!Err! : *whistle* Oh did I forget to mention, that crows also respon...'
       source: {fileID: 0}
-      audioClip: {fileID: 0}
+      sourceName: 'Bird #1'
+      audioClip: {fileID: 8300000, guid: b7791a053c6db7b4fbfdf996c9695034, type: 3}
       subtitle: "*whistle* Oh did I forget to mention, that crows also respond our
-        emergency calls? It is a problem we still havent figured out how to avoid.\r\n"
+        emergency calls? Yeahhh, it is a problem we still haven't figured out.\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Boris: Ok, human, birds will be flying passed you. Only grab the
-        sc...'
+    - name: 'Boris: Ok, human, birds will be flying passed you. Only grab the sc...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: f8472c96e9333c34a805e8b8b74d5613, type: 3}
       subtitle: "Ok, human, birds will be flying passed you. Only grab the science
         birds *hoot*, so listen carefully to their calls. Whenever you do catch a
         crow, you have to bring it to Lucy. She will then keep it in a cage for now.
@@ -36036,22 +36004,24 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T8.2*1'
-    nameID: T8.2*1
+  - name: '!Err! T8.2~1'
+    nameID: T8.2~1
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *disappointed* muuu\r\n"
+    - name: "Beorn: *disappointed* muuu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: a6691206c32f2c440ab0edaa49000558, type: 3}
       subtitle: "*disappointed* muuu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: You caught a crow. You can bring him to me.\r\n"
+    - name: "Lucy: You caught a crow. You can bring him to me.\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 84be3789ab1c22743aaed50f3dc082de, type: 3}
       subtitle: "You caught a crow. You can bring him to me.\r\n"
       settings:
         screenAsSource: 0
@@ -36060,6 +36030,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! : *kaaaa*\r\n"
       source: {fileID: 0}
+      sourceName: Crow
       audioClip: {fileID: 0}
       subtitle: "*kaaaa*\r\n"
       settings:
@@ -36067,22 +36038,24 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T8.2*2'
-    nameID: T8.2*2
+  - name: '!Err! T8.2~2'
+    nameID: T8.2~2
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *disappointed* muuuu\r\n"
+    - name: "Beorn: *disappointed* muuuu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: dd95772c98f2552498c98d370ffae2bf, type: 3}
       subtitle: "*disappointed* muuuu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Oops! That was a crow. Please, bring him to me.\r\n"
+    - name: "Lucy: Oops! That was a crow. Please, bring him to me.\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: dd37ca0fe557bb04eb8186a63ce7c71d, type: 3}
       subtitle: "Oops! That was a crow. Please, bring him to me.\r\n"
       settings:
         screenAsSource: 0
@@ -36091,6 +36064,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! : *kaaaa*\r\n"
       source: {fileID: 0}
+      sourceName: Crow
       audioClip: {fileID: 0}
       subtitle: "*kaaaa*\r\n"
       settings:
@@ -36098,22 +36072,24 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T8.2*3'
-    nameID: T8.2*3
+  - name: '!Err! T8.2~3'
+    nameID: T8.2~3
     hint: 
     messageSequence:
-    - name: "!Err! Beorn: *disappointed* muuu\r\n"
+    - name: "Beorn: *disappointed* muuu\r\n"
       source: {fileID: 2076031667}
-      audioClip: {fileID: 0}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 69056e2f83925c54c9bf355e9e9e3ada, type: 3}
       subtitle: "*disappointed* muuu\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Oh! That is a crow, human! Can you bring him here?\r\n"
+    - name: "Lucy: Oh! That is a crow, human! Can you bring him here?\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 18af8b74ba47c444689d1a601bd11320, type: 3}
       subtitle: "Oh! That is a crow, human! Can you bring him here?\r\n"
       settings:
         screenAsSource: 0
@@ -36122,6 +36098,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! : *kaaaa*\r\n"
       source: {fileID: 0}
+      sourceName: Crow
       audioClip: {fileID: 0}
       subtitle: "*kaaaa*\r\n"
       settings:
@@ -36129,39 +36106,42 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T8.3*1'
-    nameID: T8.3*1
+  - name: T8.3~1
+    nameID: T8.3~1
     hint: 
     messageSequence:
-    - name: "!Err! Lucy: OK! I have got the crow. Now go get that science bird!\r\n"
+    - name: "Lucy: OK! I have got the crow. Now go get that science bird!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: a4e6b147c94ef7842b21aac1f08b621b, type: 3}
       subtitle: "OK! I have got the crow. Now go get that science bird!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T8.3*2'
-    nameID: T8.3*2
+  - name: T8.3~2
+    nameID: T8.3~2
     hint: 
     messageSequence:
-    - name: "!Err! Lucy: OK! Thanks. Now try to get that science bird!\r\n"
+    - name: "Lucy: OK! Thanks. Now try to get that science bird!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: d76a7181f1f423647bf1119f7c59d0f6, type: 3}
       subtitle: "OK! Thanks. Now try to get that science bird!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T8.3*3'
-    nameID: T8.3*3
+  - name: T8.3~3
+    nameID: T8.3~3
     hint: 
     messageSequence:
-    - name: "!Err! Lucy: Alright. He is taken care of. Give it another go, human!\r\n"
+    - name: "Lucy: Alright. He is taken care of. Give it another go, human!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 2d358499a855bf740ab5b513fd86e0c3, type: 3}
       subtitle: "Alright. He is taken care of. Give it another go, human!\r\n"
       settings:
         screenAsSource: 0
@@ -36172,10 +36152,10 @@ MonoBehaviour:
     nameID: T8.4
     hint: 
     messageSequence:
-    - name: '!Err! Boris: Yes! You have one! *hoot* Let''s test it. Bird, if I make
-        noi...'
+    - name: 'Boris: Yes! You have one! *hoot* Let''s test it. Bird, if I make noi...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 83d885de68eff8e42b89b2463d509b43, type: 3}
       subtitle: "Yes! You have one! *hoot* Let's test it. Bird, if I make noise a
         kilometer away from you, how long does it take for you to hear it? \r\n"
       settings:
@@ -36185,19 +36165,21 @@ MonoBehaviour:
         pitch: 1
     - name: '!Err! : Well, 1 kilometer is a 1000 meters and sound travels roughly...'
       source: {fileID: 0}
-      audioClip: {fileID: 0}
+      sourceName: 'Bird #2'
+      audioClip: {fileID: 8300000, guid: adb53ac1635bf074980742388ce6ec14, type: 3}
       subtitle: "Well, 1 kilometer is a 1000 meters and sound travels roughly 335
         meters per second through air. 1000 divided by 335 is about 3. Therefore,
-        3 seconds after the mentioned disgusting event, you will hear it.\r\n"
+        if you were to make a loud noise 1 kilometer away, we would hear it 3 seconds
+        later.\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Boris: Let''s test this!! Luckily, I have a friend who is currently
-        ...'
+    - name: 'Boris: Let''s test this!! Luckily, I have a friend who is currently ...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 27c39de0c341f9341ae197cdc043881f, type: 3}
       subtitle: "Let's test this!! Luckily, I have a friend who is currently 1 kilometer
         away from us. Lets call him and ask if he can make some noise. *dial tones,
         ringing* yooo bro! I am conducting an experiment and I need you to do the
@@ -36207,9 +36189,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: 1 2 3\r\n"
+    - name: "Lucy: 1 2 3\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: c8415cf4bc32c5541b400c676111da7e, type: 3}
       subtitle: "1 2 3\r\n"
       settings:
         screenAsSource: 0
@@ -36218,6 +36201,7 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! Other: *distant fart sound*\r\n"
       source: {fileID: 1459252793}
+      sourceName: Other
       audioClip: {fileID: 0}
       subtitle: "*distant fart sound*\r\n"
       settings:
@@ -36225,19 +36209,20 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: IEEEUW, seriously??\r\n"
+    - name: "Lucy: IEEEUW, seriously??\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 6ce4f5171d5930e43a09d2f836b76d1b, type: 3}
       subtitle: "IEEEUW, seriously??\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Boris: Thanks! Smell ya later! *hangs up* Well, that worked! Now
-        le...'
+    - name: 'Boris: Thanks! Smell ya later! *hangs up* Well, that worked! Now le...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: a7f4c3c98ca4d804ca3af9bb435b7af1, type: 3}
       subtitle: "Thanks! Smell ya later! *hangs up* Well, that worked! Now lets get
         the next science bird!\r\n"
       settings:
@@ -36249,10 +36234,10 @@ MonoBehaviour:
     nameID: T8.5
     hint: 
     messageSequence:
-    - name: '!Err! Boris: YAY! Another one! Let''s test him too. Bird, when something
-        p...'
+    - name: 'Boris: YAY! Another one! Let''s test him too. Bird, when something p...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 59f13cb19fbb45a4696168321e181400, type: 3}
       subtitle: "YAY! Another one! Let's test him too. Bird, when something passes
         by quickly, why does the tone change?\r\n"
       settings:
@@ -36262,73 +36247,81 @@ MonoBehaviour:
         pitch: 1
     - name: '!Err! : That is called the Doppler effect. Whenever an object comes ...'
       source: {fileID: 0}
-      audioClip: {fileID: 0}
+      sourceName: 'Bird #3'
+      audioClip: {fileID: 8300000, guid: 0f319fb8a50654d43ad6693df76a0755, type: 3}
       subtitle: "That is called the Doppler effect. Whenever an object comes towards
         you, the sound waves coming from that object, are more compressed! Therefore,
-        the sound sounds higher pitched. If the object would move away from you, the
-        sound waves are stretched so it sounds... can you guess it?.... yes! lower!!\r\n"
+        the sound sounds higher pitched. If the object moves away from you, the sound
+        waves are stretched so it sounds... can you guess it?.... yes! lower!!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Boris: Okay.. Let me fly by you a few times. Tell me if he is right...'
+    - name: 'Boris: Okay.. Let me fly by you a few times. Tell me if he''s right....'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
-      subtitle: "Okay.. Let me fly by you a few times. Tell me if he is right.\r\n"
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: adbab2711cc8c85499ceba1547639ea6, type: 3}
+      subtitle: "Okay.. Let me fly by you a few times. Tell me if he's right.\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Boris: wiiiiiiiiiiiiiiiiiiii\r\n"
+    - name: "Boris: wiiiiiiiiiiiiiiiiiiii\r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 48fca2feede10b843b12b7f2f2ef9d65, type: 3}
       subtitle: "wiiiiiiiiiiiiiiiiiiii\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Boris: wiiiiiiiiiiiiiiiiiiii\r\n"
+    - name: "Boris: wiiiiiiiiiiiiiiiiiiii\r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: afea029afafa08142ada61bb80a85f8a, type: 3}
       subtitle: "wiiiiiiiiiiiiiiiiiiii\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Boris: wiiiiiiiiiiiiiiiiiiii\r\n"
+    - name: "Boris: wiiiiiiiiiiiiiiiiiiii\r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 5394a25fa4ed6ae49ab2836a5379a3e6, type: 3}
       subtitle: "wiiiiiiiiiiiiiiiiiiii\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Boris: *CRASH* uhhhhhgggggg, im okay! im okay...\r\n"
+    - name: "Boris: *CRASH* uhhhhhgggggg, im okay! im okay...\r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 099f56dfd2dd2de4593e00930e94a92a, type: 3}
       subtitle: "*CRASH* uhhhhhgggggg, im okay! im okay...\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: Be careful, boris!! But, the bird is right!\r\n"
+    - name: "Lucy: Be careful, boris!! But, the bird is right!\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 91286e7c746978445a6573d0f2b8c730, type: 3}
       subtitle: "Be careful, boris!! But, the bird is right!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Boris: Perfect, *hoot* let's get the final science bird.\r\n"
+    - name: "Boris: Perfect, *hoot* let's get the final science bird.\r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 322e09d058258624f9535b6d0d5f7053, type: 3}
       subtitle: "Perfect, *hoot* let's get the final science bird.\r\n"
       settings:
         screenAsSource: 0
@@ -36339,12 +36332,12 @@ MonoBehaviour:
     nameID: T8.6
     hint: 
     messageSequence:
-    - name: '!Err! Boris: Aha! The final one. Let''s test it to be sure. Bird, if
-        I mak...'
+    - name: 'Boris: Aha! *hoothoot* The final one. Let''s test it to be sure. Bir...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
-      subtitle: "Aha! The final one. Let's test it to be sure. Bird, if I make noise
-        in a big empty hall, why do I hear it repeated?\r\n"
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 44b4a8417bde9d447af00770d9c8c18b, type: 3}
+      subtitle: "Aha! *hoothoot* The final one. Let's test it to be sure. Bird, if
+        I make noise in a big empty hall, why do I hear it repeated?\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
@@ -36352,62 +36345,64 @@ MonoBehaviour:
         pitch: 1
     - name: '!Err! : Easy! That is called an echo! Sound waves are partially abso...'
       source: {fileID: 0}
-      audioClip: {fileID: 0}
+      sourceName: 'Bird #4'
+      audioClip: {fileID: 8300000, guid: 96503aca51dba6f438ba418461215fdd, type: 3}
       subtitle: "Easy! That is called an echo! Sound waves are partially absorbed
-        by objects in your environment, and partially bounced back. So some sound
-        waves might have bounced on other objects before reaching your ears, while
-        some other waves reach you directly. Since it takes time for sound to travel
-        from the source to your ear, it takes even longer for bounced sound waves
-        to reach your ears, so that you hear the sound a bit later too.\r\n"
+        and partially reflected by objects in your environment, such as a cup, a wall,
+        or a MOUNTAIN. So before reaching your ears, some sound waves have bounced
+        on other objects, while other waves reach your ears directly. Since it takes
+        time for sound to travel from the source to your ear, it takes even longer
+        for reflected sound waves, so you hear that sound a bit later.\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Boris: Lucy! *hoot* Teleport us into a big empty hall!!\r\n"
+    - name: "Boris: Lucy! *hoot* Teleport us into a big empty hall!!\r\n"
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 6aeb974c3f0df89478777f481259771a, type: 3}
       subtitle: "Lucy! *hoot* Teleport us into a big empty hall!!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: I have never heard anyone be so happy to go to a big hall
-        to...'
+    - name: "Lucy: Okidoki!! Here we go *teleport sounds*\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
-      subtitle: "I have never heard anyone be so happy to go to a big hall to test
-        echoing farts. Here we go *teleport sounds*\r\n"
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: fadbffb89dc02b34ca18c7587eab4e7c, type: 3}
+      subtitle: "Okidoki!! Here we go *teleport sounds*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Boris: Awesome!! Ok, *Beorns of stomach* here goes nothing....
-        *dif...'
+    - name: 'Boris: Awesome!! Ok, *grumbles of stomach* here goes nothing.... *d...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
-      subtitle: "Awesome!! Ok, *Beorns of stomach* here goes nothing.... *difficult
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 111e4238b254e2a47858274cc22d1fcc, type: 3}
+      subtitle: "Awesome!! Ok, *grumbles of stomach* here goes nothing.... *difficult
         hoot* *pfffff*...fff*..ff*..f*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: OK! ENOUGH! Ugh, who gives our king beans for dinner??\r\n"
+    - name: "Lucy: OK! ENOUGH! Ugh, who gives our king beans for dinner??\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 3cecb40109d4ccd4a963b28890c95a27, type: 3}
       subtitle: "OK! ENOUGH! Ugh, who gives our king beans for dinner??\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Boris: The royal cook, Beany Jean Beany. If it wasnt clear from
-        his...'
+    - name: 'Boris: The royal cook, Beany Jean Beany. If it wasnt clear from his...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: cd0c458087081514f80df25050459552, type: 3}
       subtitle: "The royal cook, Beany Jean Beany. If it wasnt clear from his name,
         his speciality is: beans.\r\n"
       settings:
@@ -36415,10 +36410,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: Sounds like he is the the master of gasses himself. Lets
-        get...'
+    - name: 'Lucy: Sounds like he is the the master of gasses himself. Lets get...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: d0a7dab7a6de9754da49ea471f465a38, type: 3}
       subtitle: "Sounds like he is the the master of gasses himself. Lets get back
         to the village. *teleport sounds*\r\n"
       settings:
@@ -36430,13 +36425,23 @@ MonoBehaviour:
     nameID: T9.1
     hint: 
     messageSequence:
-    - name: '!Err! Boris: Ahhh *hoooot* home sweet home. Thank you human, for your
-        exc...'
+    - name: 'Boris: Ahhh *hoooot* home sweet home. Thank you human, for your exc...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 58d69a563812e6644a97cce01c65da22, type: 3}
       subtitle: "Ahhh *hoooot* home sweet home. Thank you human, for your exceptional
-        help. You are very talented, and will achieve a great many things!! I'll soon
-        bring back these science birds back to science land.\r\n"
+        help. You are very talented, and will achieve many great things!! I'll soon
+        bring these science birds back to science land.\r\n"
+      settings:
+        screenAsSource: 0
+        timeOffset: 0
+        volume: 1
+        pitch: 1
+    - name: "Giant: blegh science birds\r\n"
+      source: {fileID: 2013512893}
+      sourceName: Giant
+      audioClip: {fileID: 8300000, guid: 8d9c1517d5ac9a24382c30a39ce5c0d4, type: 3}
+      subtitle: "blegh science birds\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
@@ -36444,7 +36449,8 @@ MonoBehaviour:
         pitch: 1
     - name: '!Err! : NO!! *whistle* Wait! You can take my friends, but let me sta...'
       source: {fileID: 0}
-      audioClip: {fileID: 0}
+      sourceName: 'Bird #3'
+      audioClip: {fileID: 8300000, guid: 65cffbfe67c9ac14293538121925da6d, type: 3}
       subtitle: "NO!! *whistle* Wait! You can take my friends, but let me stay here!!
         Our study hasnt been completed, Id like to finish it. Plus, I like it here.
         It smells so good, and the air feels so nice and soft. Everyone here seems
@@ -36454,10 +36460,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Boris: Yes, *hoot* you are welcome to live here! As long as you
-        pay...'
+    - name: 'Boris: Yes, *hoot* you are welcome to live here! As long as you pay...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 93684b30a755ee54d93426765e9c9899, type: 3}
       subtitle: "Yes, *hoot* you are welcome to live here! As long as you pay your
         taxes!\r\n"
       settings:
@@ -36467,17 +36473,19 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! : But, *whistle* I scare away the giant! Isnt that enough?\r\n"
       source: {fileID: 0}
-      audioClip: {fileID: 0}
+      sourceName: 'Bird #3'
+      audioClip: {fileID: 8300000, guid: 06dd5e633cbb8fa48afad580c9b6b007, type: 3}
       subtitle: "But, *whistle* I scare away the giant! Isnt that enough?\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Boris: I was kidding, *hoot* we dont have taxes in the spirit world...'
+    - name: 'Boris: I was just kidding, *hoot* we dont have taxes in the spirit ...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
-      subtitle: "I was kidding, *hoot* we dont have taxes in the spirit world!\r\n"
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 4707b3be3edb0374fabdead71a724cf7, type: 3}
+      subtitle: "I was just kidding, *hoot* we dont have taxes in the spirit world!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
@@ -36485,28 +36493,89 @@ MonoBehaviour:
         pitch: 1
     - name: "!Err! : Haha ah! *whistle* Thank you, Boris!\r\n\r\nHuman, you seem very..."
       source: {fileID: 0}
-      audioClip: {fileID: 0}
+      sourceName: 'Bird #3'
+      audioClip: {fileID: 8300000, guid: b57b1b67d056dc041b619e9c6cf1a2b6, type: 3}
       subtitle: "Haha ah! *whistle* Thank you, Boris!\r\n\r\nHuman, you seem very
-        talented! I see you are motivated to learn how to orient even better by the
-        use of sound. So, let me tell you a secret. *whistle*\r\n\r\nIf you listen
-        well and practise enough, you could roughly determine the dimensions and type
-        of environment you are in, just by the use of sound. You could possibly even
-        learn to hear if there is a wall in front of you. The key here, is the effect
-        that sound has in an environment. Sound waves travel and bounce around, and
-        since each environment is different, the bounced sound waves are also different.
-        Lets call this the response of an environment. *whistle*\r\n\r\nSome hearing
-        impaired humans can distinguish these responses, just by making clicking sounds.
-        They listen to the response in the environment just like bats do. *whistle*\r\n\r\nI
-        hope this helps! Be safe in your human world, human! *whistle* Farewell! \r\n"
+        talented! I see you are motivated to learn how to orientate yourself even
+        better by the use of sound. So, let me tell you a secret. *whistle*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Lucy: It is time to disconnect you. Thank you sooo much for your
-        h...'
+    - name: "Giant: noooo not science!\r\n"
+      source: {fileID: 2013512893}
+      sourceName: Giant
+      audioClip: {fileID: 8300000, guid: 3d46e3656be2e1346b01804b785e8814, type: 3}
+      subtitle: "noooo not science!\r\n"
+      settings:
+        screenAsSource: 0
+        timeOffset: 0
+        volume: 1
+        pitch: 1
+    - name: '!Err! : If you listen well and practise enough, you can roughly dete...'
+      source: {fileID: 0}
+      sourceName: 'Bird #3'
+      audioClip: {fileID: 8300000, guid: 13e680f8847019b46a53b310a236071a, type: 3}
+      subtitle: "If you listen well and practise enough, you can roughly determine
+        the dimensions and type of environment you are in, just by the sound. You
+        can even learn to hear if there is a wall in front of you. The key here, is
+        the effect that sound has in an environment. Sound waves travel and bounce
+        around, and since each environment is different, the bounced sound waves are
+        also different. Lets call this the response of an environment. Even your position
+        in relation to your surroundings influences the response. *whistle*\r\n"
+      settings:
+        screenAsSource: 0
+        timeOffset: 0
+        volume: 1
+        pitch: 1
+    - name: "Giant: Ahh!! Science!! \r\n"
+      source: {fileID: 2013512893}
+      sourceName: Giant
+      audioClip: {fileID: 8300000, guid: fe7dead9f11838c4db8cc07e3d1ac6c2, type: 3}
+      subtitle: "Ahh!! Science!! \r\n"
+      settings:
+        screenAsSource: 0
+        timeOffset: 0
+        volume: 1
+        pitch: 1
+    - name: '!Err! : Some humans can distinguish these responses, just by making ...'
+      source: {fileID: 0}
+      sourceName: 'Bird #3'
+      audioClip: {fileID: 8300000, guid: c2168c80d4ed9584d8c59bfc60494052, type: 3}
+      subtitle: "Some humans can distinguish these responses, just by making clicking
+        sounds. They listen to the response in the environment just like bats do.
+        *whistle*\r\n"
+      settings:
+        screenAsSource: 0
+        timeOffset: 0
+        volume: 1
+        pitch: 1
+    - name: "Giant: Ahh!! Science!! \r\n"
+      source: {fileID: 2013512893}
+      sourceName: Giant
+      audioClip: {fileID: 8300000, guid: d90848ba6a35bfd40a012f1bed23cd26, type: 3}
+      subtitle: "Ahh!! Science!! \r\n"
+      settings:
+        screenAsSource: 0
+        timeOffset: 0
+        volume: 1
+        pitch: 1
+    - name: '!Err! : I hope this helps! Be safe in your human world, human! *whis...'
+      source: {fileID: 0}
+      sourceName: 'Bird #3'
+      audioClip: {fileID: 8300000, guid: 82972ceed92b0f144af35f274a349683, type: 3}
+      subtitle: "I hope this helps! Be safe in your human world, human! *whistle*
+        Farewell! \r\n"
+      settings:
+        screenAsSource: 0
+        timeOffset: 0
+        volume: 1
+        pitch: 1
+    - name: 'Lucy: It is time to disconnect you. Thank you sooo much for your h...'
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 793dd909d84fc7b4188a4746adf5d865, type: 3}
       subtitle: "It is time to disconnect you. Thank you sooo much for your help!!
         The village is now happy again. All because of you. You are awesome! Perhaps
         see you soon again! *kisses human* \r\n"
@@ -36515,10 +36584,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! Boris: Hopefully we''ll see you again. *hoot* It was nice working
-        wi...'
+    - name: 'Boris: Hopefully we''ll see you again. *hoot* It was nice working wi...'
       source: {fileID: 219113810}
-      audioClip: {fileID: 0}
+      sourceName: Boris
+      audioClip: {fileID: 8300000, guid: 7b7274fa9e9fe294fa68dd011280996d, type: 3}
       subtitle: "Hopefully we'll see you again. *hoot* It was nice working with you!
         Byeeee!\r\n"
       settings:
@@ -36526,30 +36595,57 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Lucy: byeeee\r\n"
+    - name: 'Giant: Thanks, little one, for clearing the forest. Now that the sc...'
+      source: {fileID: 2013512893}
+      sourceName: Giant
+      audioClip: {fileID: 8300000, guid: 64ba2fdca48400543885d312fd67e670, type: 3}
+      subtitle: "Thanks, little one, for clearing the forest. Now that the science
+        birds have finally stopped their experiments, I can go home and think what
+        to do with my life. Maybe, accountancy, or banking or lion taming! Yes that
+        sounds great. \r\n"
+      settings:
+        screenAsSource: 0
+        timeOffset: 0
+        volume: 1
+        pitch: 1
+    - name: "Lucy: byeeee\r\n"
       source: {fileID: 1766996850}
-      audioClip: {fileID: 0}
+      sourceName: Lucy
+      audioClip: {fileID: 8300000, guid: 2b7f4da60c0454444a563c6ed50cd99e, type: 3}
       subtitle: "byeeee\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : byeehhhh byehhhh muhh!!\r\n"
-      source: {fileID: 0}
-      audioClip: {fileID: 0}
+    - name: "Beorn: byeehhhh byehhhh muhh!!\r\n"
+      source: {fileID: 2076031667}
+      sourceName: Beorn
+      audioClip: {fileID: 8300000, guid: 8ea65a0eb91439146a2f784ffe6d3594, type: 3}
       subtitle: "byeehhhh byehhhh muhh!!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Iris: Disconnected. Iris shutting down. Goodbye! \r\n"
-      source: {fileID: 689019606}
-      audioClip: {fileID: 0}
-      subtitle: "Disconnected. Iris shutting down. Goodbye! \r\n"
+    - name: 'Giant: *in the distance* Mom!! I''m coming back home!! From now on I...'
+      source: {fileID: 2013512893}
+      sourceName: Giant
+      audioClip: {fileID: 8300000, guid: 91ed7bb1d6308604a90936742228af69, type: 3}
+      subtitle: "*in the distance* Mom!! I'm coming back home!! From now on I will
+        eat my greens like a good boy\r\n"
       settings:
         screenAsSource: 0
+        timeOffset: 0
+        volume: 1
+        pitch: 1
+    - name: "Iris: Disconnected. \r\n"
+      source: {fileID: 689019606}
+      sourceName: Iris
+      audioClip: {fileID: 8300000, guid: 6d8bfa71e47737d4190b38fd946b13ef, type: 3}
+      subtitle: "Disconnected. \r\n"
+      settings:
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
@@ -36559,11 +36655,12 @@ MonoBehaviour:
     messageSequence:
     - name: "!Err! Iris: Credits:\r\nNames & roles\r\nThanks\r\nSources\r\nAstoundSound\r\nThan..."
       source: {fileID: 689019606}
+      sourceName: Iris
       audioClip: {fileID: 0}
       subtitle: "Credits:\r\nNames & roles\r\nThanks\r\nSources\r\nAstoundSound\r\nThanks
         for playing\r\n\r\nIris shutting down. Goodbye! \r\n"
       settings:
-        screenAsSource: 0
+        screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
@@ -39719,8 +39816,9 @@ Transform:
   m_Children:
   - {fileID: 1900926692}
   - {fileID: 1459252794}
+  - {fileID: 689019607}
   m_Father: {fileID: 1527040402}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!114 &2076031669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40697,7 +40795,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2145988227
 Transform:
   m_ObjectHideFlags: 0
