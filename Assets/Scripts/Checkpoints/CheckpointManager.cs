@@ -13,13 +13,14 @@ public class CheckpointManager : MonoBehaviour {
 
     public Checkpoint InitialCheckpoint;
 
-    public event EventHandler StartLastCheckpointTeleport;
-    public event EventHandler EndLastCheckpointTeleport;
+    public event EventHandler<GotoCheckpointEventArgs> StartLastCheckpointTeleport;
+    public event EventHandler<GotoCheckpointEventArgs> EndLastCheckpointTeleport;
 
     private PositionRotation start;
     private PositionRotation target;
     private bool teleporting = false;
     private float time = 0;
+    private ConversationPlayer conversationPlayer;
 
     public void Start()
     {
@@ -40,11 +41,11 @@ public class CheckpointManager : MonoBehaviour {
             var progress = time / TeleportTime;
             if (progress > 1)
             { // Stop the teleportation
-                SetWalkScriptEnabled(true);
                 player.transform.position = target.Position;
                 player.transform.rotation = target.Rotation;
                 teleporting = false;
-                OnEndLastCheckpointTeleport();
+                if (conversationPlayer == null || conversationPlayer.IsFinished())
+                    OnEndLastCheckpointTeleport();
             }
             else
             {
@@ -67,26 +68,51 @@ public class CheckpointManager : MonoBehaviour {
         if (walkScript != null) walkScript.enabled = enabled;
     }
 
-    public void GotoLastCheckpoint(object sender)
+    private void LockMovement(bool enabled)
+    {
+        var player = Characters.instance.Beorn;
+        if (player == null)
+            return;
+
+        var playerController = player.GetComponent<PlayerController>();
+        playerController.LockMovement = enabled;
+    }
+
+    public void GotoLastCheckpoint(object sender, string conversation = null)
     {
         start = new PositionRotation(Characters.instance.Beorn);
         target = new PositionRotation(lastCheckpoint.gameObject);
         teleporting = true;
         SetWalkScriptEnabled(false);
         time = 0;
-        OnStartLastCheckpointTeleport(sender);
+        OnStartLastCheckpointTeleport(sender, conversation);
+        if (conversation != null)
+        {
+            PlayConversation(conversation);
+        }
     }
 
-    public void OnStartLastCheckpointTeleport(object sender)
+    private void PlayConversation(string conversation)
     {
+        var player = ConversationManager.GetConversationPlayer(conversation);
+        player.onConversationEnd += s => OnEndLastCheckpointTeleport();
+        player.Start();
+    }
+
+    public void OnStartLastCheckpointTeleport(object sender, string conversation)
+    {
+        SetWalkScriptEnabled(false);
+        LockMovement(true);
         if (StartLastCheckpointTeleport != null)
-            StartLastCheckpointTeleport(sender, EventArgs.Empty);
+            StartLastCheckpointTeleport(sender, new GotoCheckpointEventArgs(conversation));
     }
 
     public void OnEndLastCheckpointTeleport()
     {
+        SetWalkScriptEnabled(true);
+        LockMovement(false);
         if (EndLastCheckpointTeleport != null)
-            EndLastCheckpointTeleport(lastCheckpoint, EventArgs.Empty);
+            EndLastCheckpointTeleport(lastCheckpoint, new GotoCheckpointEventArgs());
     }
 
     public void SetLastCheckpoint(Checkpoint checkpoint)

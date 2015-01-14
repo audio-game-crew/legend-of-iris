@@ -167,5 +167,7 @@ public class ConversationPlayer
 
         // empty the queue
         conversationQueue = new List<MessageQueueItem>();
+
+        SetLucyBellEnabled(true);
     }
 }

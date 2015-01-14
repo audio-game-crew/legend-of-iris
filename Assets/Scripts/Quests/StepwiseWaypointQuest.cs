@@ -161,12 +161,10 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         player.Start();
     }
 
-    private void checkpointManager_StartLastCheckpointTeleport(object sender, EventArgs e)
+    private void checkpointManager_StartLastCheckpointTeleport(object sender, GotoCheckpointEventArgs e)
     {
         teleporting = true;
-        if (sender is GameObject)
-            Debug.Log("killer = " + ((GameObject)sender).tag);
-        if (sender is GameObject && ((GameObject)sender).tag == "Spirit") // Suppress conversations caused by spirits
+        if (!string.IsNullOrEmpty(e.ConversationID)) // Suppress quest conversation if checkpoint reset already has a conversation
             return;
         PlayResetConversation();
     }
@@ -178,7 +176,7 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         if (player == null)
             return;
         var newSteps = GetStepsBetween(player.transform.position, player.transform.rotation, current);
-        Debug.Log("newSteps: " + string.Join(", ", newSteps.Select(s => s.transform.position.ToString()).ToArray()));
+        //Debug.Log("newSteps: " + string.Join(", ", newSteps.Select(s => s.transform.position.ToString()).ToArray()));
         steps.AddFirst(current);
         foreach (var step in newSteps.Reverse())
             steps.AddFirst(step);

@@ -94,7 +94,10 @@ public class SpiritGeneratorScript : MonoBehaviour {
     /// <param name="spirit"></param>
     public void OnHitSpirit(GameObject spirit)
     {
-        StartConversation(HitSpiritConversationID, true);
+        if (currentConversation != null)
+            currentConversation.Skip();
+        conversationCooldown = 2f;
+        CheckpointManager.instance.GotoLastCheckpoint(this.gameObject, HitSpiritConversationID);
     }
 
     private void StartConversation(string conversationID, bool interruptCurrent)

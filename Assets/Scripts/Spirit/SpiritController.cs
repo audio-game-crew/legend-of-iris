@@ -70,7 +70,6 @@ public class SpiritController : MonoBehaviour {
         }
         if (e.Trigger.gameObject == Characters.instance.Beorn)
         {
-            Characters.instance.Beorn.GetComponent<PlayerController>().LockMovement = true;
             generator.OnHitSpirit(this.gameObject);
         }
     }
@@ -93,8 +92,6 @@ public class SpiritController : MonoBehaviour {
         }
         else if (e.Trigger.gameObject == Characters.instance.Beorn)
         {
-            Characters.instance.Beorn.GetComponent<PlayerController>().LockMovement = false;
-            CheckpointManager.instance.GotoLastCheckpoint(this.gameObject);
             // if the player touches a spirit he is pushed down
             //var directionToPush = transform.position - other.transform.position;
             //directionToPush.Normalize();
