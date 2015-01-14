@@ -14951,7 +14951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e95494ebfc7ca4c4ca8191faf079bf28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStepDistance: 20
+  maxStepDistance: 1000
   waypoints:
   - {fileID: 1557160343}
   WaypointPrefab: {fileID: 100000, guid: 338410c9d5312de4e9f2f5d1d5bd54cb, type: 2}
@@ -17564,7 +17564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e95494ebfc7ca4c4ca8191faf079bf28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStepDistance: 20
+  maxStepDistance: 1000
   waypoints:
   - {fileID: 1768604306}
   WaypointPrefab: {fileID: 100000, guid: 338410c9d5312de4e9f2f5d1d5bd54cb, type: 2}
@@ -38939,7 +38939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e95494ebfc7ca4c4ca8191faf079bf28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStepDistance: 20
+  maxStepDistance: 1000
   waypoints:
   - {fileID: 435523774}
   WaypointPrefab: {fileID: 100000, guid: 338410c9d5312de4e9f2f5d1d5bd54cb, type: 2}
