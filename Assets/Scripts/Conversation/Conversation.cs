@@ -22,6 +22,7 @@ public class ConversationMessage
     [HideInInspector]
     public string name;
     public GameObject source;
+    public string sourceName;
     public AudioClip audioClip;
     [Multiline(4)]
     public string subtitle;
