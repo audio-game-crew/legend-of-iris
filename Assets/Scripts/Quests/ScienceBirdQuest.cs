@@ -29,12 +29,26 @@ public class ScienceBirdQuest : Quest<ScienceBirdQuest, ScienceBirdQuestDefiniti
 		base._Start();
 	}
 
+	protected override void _Complete() {
+
+		foreach (var f in prefabs) {
+			if (f == null) continue;
+			GameObject.Destroy(f);
+		}
+		
+		base._Complete();
+	}
+
 	private GameObject RandomSpawn(GameObject prefab) {
 		Vector3 spawnBase = Characters.instance.Beorn.transform.position;
-		Vector3 spawnOffset = new Vector3(definition.mainSpawnDistance, 0, definition.crossSpawnDistance);
+		Vector3 spawnOffset = new Vector3(
+			UnityEngine.Random.Range(-definition.crossSpawnDistance, +definition.crossSpawnDistance),
+			0,
+			definition.mainSpawnDistance
+		);
 		Quaternion spawnRotation = Quaternion.AngleAxis(UnityEngine.Random.Range(0, 360), Vector3.up);
-		Vector3 spawnLocation = spawnBase + spawnRotation * spawnOffset;
-		return UnityEngine.Object.Instantiate(prefab, spawnLocation, Quaternion.Inverse(spawnRotation)) as GameObject;
+		Vector3 spawnLocation = spawnBase - spawnRotation * spawnOffset;
+		return UnityEngine.Object.Instantiate(prefab, spawnLocation, spawnRotation) as GameObject;
 	}
 
 	// Science Bird
@@ -49,7 +63,7 @@ public class ScienceBirdQuest : Quest<ScienceBirdQuest, ScienceBirdQuestDefiniti
 	private void OnPlayerEnterScienceBird(Waypoint waypoint, GameObject _) {
 		waypoint.onPlayerEnter -= OnPlayerEnterScienceBird;
 		GameObject.Destroy(waypoint.gameObject);
-		var player = ConversationManager.GetConversationPlayer("T7.4");
+		var player = ConversationManager.GetConversationPlayer(definition.successConversationId);
 		player.onConversationEnd += OnScienceBirdConversationEnd;
 		player.Start();
 	}
@@ -77,21 +91,47 @@ public class ScienceBirdQuest : Quest<ScienceBirdQuest, ScienceBirdQuestDefiniti
 
 	public override void Update() {
 		base.Update();
-		// add timer that triggers lucy to explain
-		if (explanationPlayer == null) {
-			if (Input.anyKey) {
-				nextExplanationTime = Math.Min(
-					Time.time + definition.explanationDelay, 
-					lastExplanationTime + definition.maxExplanationDelay
-				);
+		if (state == State.COLLECTING) {
+			if (explanationPlayer == null) {
+				if (Input.anyKey) {
+					nextExplanationTime = Math.Min(
+						Time.time + definition.explanationDelay, 
+						lastExplanationTime + definition.maxExplanationDelay
+					);
+				}
+
+				if (Time.time > nextExplanationTime) {
+					explanationPlayer = ConversationManager.GetConversationPlayer(definition.explanationConversationId);
+					explanationPlayer.onConversationEnd += OnExplanationEnd;
+					explanationPlayer.Start();
+				}
 			}
 
-			if (Time.time > nextExplanationTime) {
-				explanationPlayer = ConversationManager.GetConversationPlayer("T7.2");
-				explanationPlayer.onConversationEnd += OnExplanationEnd;
-				explanationPlayer.Start();
+			if (Time.time > nextSpawnTime) {
+				nextSpawnTime = Time.time + definition.spawnInterval;
+				if (UnityEngine.Random.Range(0f, 1f) < definition.scienceBirdProbability) {
+					SpawnScienceBird();
+				} else {
+					SpawnCrapBird();
+				}
 			}
+
+			var remaining = new List<GameObject>();
+			foreach (var f in prefabs) {
+				if (f == null) continue;
+				f.transform.Translate(Vector3.forward * Time.deltaTime * definition.birdSpeed);
+				if (Vector3.Distance(Characters.instance.Beorn.transform.position, f.transform.position) < definition.despawnDistance) {
+					remaining.Add(f);
+				} else {
+					GameObject.Destroy(f);
+				}
+			}
+			prefabs = remaining;
+		} else if (state == State.RETURNING) {
+
 		}
+
+
 	}
 
 	private void OnExplanationEnd(ConversationPlayer _) {
