@@ -27,6 +27,7 @@ public class AudioManager : MonoBehaviour {
     {
         instance = this;
         audioSourcePrefab = (GameObject)GameObject.Instantiate(audioSourcePrefab); // Make a copy of the prefab
+#if UnityEditor
         if (!UnityEditorInternal.InternalEditorUtility.HasPro())
         { // Disable Phonon 3D and Astoundsound on the audio sources, To remove errors for users without pro, 
             var phonon = audioSourcePrefab.GetComponent<BinauralSource>();
@@ -36,6 +37,7 @@ public class AudioManager : MonoBehaviour {
             if (astoundsound != null)
                 Component.Destroy(astoundsound);
         }
+#endif
     }
 	
 	// Update is called once per frame
