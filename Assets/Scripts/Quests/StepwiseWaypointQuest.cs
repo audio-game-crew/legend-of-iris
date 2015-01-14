@@ -164,6 +164,10 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
     private void checkpointManager_StartLastCheckpointTeleport(object sender, EventArgs e)
     {
         teleporting = true;
+        if (sender is GameObject)
+            Debug.Log("killer = " + ((GameObject)sender).tag);
+        if (sender is GameObject && ((GameObject)sender).tag == "Spirit") // Suppress conversations caused by spirits
+            return;
         PlayResetConversation();
     }
 

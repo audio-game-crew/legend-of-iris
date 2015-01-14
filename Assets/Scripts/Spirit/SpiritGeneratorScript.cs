@@ -16,7 +16,13 @@ public class SpiritGeneratorScript : MonoBehaviour {
 	public GameObject spiritLiveArea;
 	public float spiritSpeed;
 	public GameObject crossing;
-	public bool isActive;	
+	public bool isActive;
+
+    public string NearMissConverationID;
+    public string HitSpiritConversationID;
+    private float conversationCooldown = 0;
+
+    private ConversationPlayer currentConversation;
 	private Dictionary<GameObject, AudioPlayer> listSpiritsActive;
 	public SpiritController[] ListSpiritsActive
 	{
@@ -32,10 +38,12 @@ public class SpiritGeneratorScript : MonoBehaviour {
 		timeUntilNextSpirit = 0;
 		isActive = true;
 		listSpiritsActive = new Dictionary<GameObject, AudioPlayer>();
+        conversationCooldown = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        conversationCooldown -= Time.deltaTime;
 		timeUntilNextSpirit -= Time.deltaTime;
 		
 		if (timeUntilNextSpirit < 0 && isActive) {
@@ -70,4 +78,38 @@ public class SpiritGeneratorScript : MonoBehaviour {
 		ListSpiritsActive.IndexOf (i).changeSpeed (0f);
 	}
 	*/
+
+    /// <summary>
+    /// Call this if the player almost hit a spirit
+    /// </summary>
+    /// <param name="spirit"></param>
+    public void OnNearMissSpirit(GameObject spirit)
+    {
+        StartConversation(NearMissConverationID, false);
+    }
+
+    /// <summary>
+    /// Call this if the player hits a spirit
+    /// </summary>
+    /// <param name="spirit"></param>
+    public void OnHitSpirit(GameObject spirit)
+    {
+        StartConversation(HitSpiritConversationID, true);
+    }
+
+    private void StartConversation(string conversationID, bool interruptCurrent)
+    {
+        if (string.IsNullOrEmpty(conversationID) || conversationCooldown > 0)
+            return;
+        if (currentConversation != null && !currentConversation.IsFinished())
+        {
+            if (interruptCurrent)
+                currentConversation.Skip();
+            else
+                return;
+        }
+        conversationCooldown = 2f;
+        currentConversation = ConversationManager.GetConversationPlayer(conversationID);
+        currentConversation.Start();
+    }
 }
