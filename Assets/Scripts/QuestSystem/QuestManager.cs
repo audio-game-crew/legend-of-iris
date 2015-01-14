@@ -46,7 +46,7 @@ public class QuestManager : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Return))
         {
-            foreach (var q in activeQuests)
+            foreach (var q in activeQuests.ToArray())
             {
                 if (!(q is SerialQuest) && !(q is ParallelQuest))
                 {
