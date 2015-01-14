@@ -67,9 +67,12 @@ public class MoveQuest : Quest<MoveQuest, MoveQuestDefinition> {
             && PlayerHasMovedIntoDirection(OppositeDirection(definition.direction), definition.OppositeDirectionThreshold))
         {
             var convPlayer = ConversationManager.GetConversationPlayer(definition.OppositeDirectionConversation);
-            playingConversation = true;
-            convPlayer.onConversationEnd += (s) => { Reset(); };
-            convPlayer.Start();
+            if (convPlayer != null)
+            {
+                playingConversation = true;
+                convPlayer.onConversationEnd += (s) => { Reset(); };
+                convPlayer.Start();
+            }
         }
 
         if (PlayerHasMovedIntoDirection(definition.direction, definition.MovementThreshold))
