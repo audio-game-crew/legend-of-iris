@@ -3563,8 +3563,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d9e9606de1614a4fb164f74c2f3138f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BorisFlyTime: 5
-  BorisSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
+  BorisFlyTime: 10
+  BorisSound: {fileID: 0}
 --- !u!135 &219113813
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14955,11 +14955,11 @@ MonoBehaviour:
   waypoints:
   - {fileID: 1557160343}
   WaypointPrefab: {fileID: 100000, guid: 338410c9d5312de4e9f2f5d1d5bd54cb, type: 2}
-  TimeoutConversationID: 
-  Timeout: 10
+  TimeoutConversationID: T5.2
+  Timeout: 5
   WrongWayConversationID: T5.3
-  WrongWayThreshold: 2
-  WrongWayTimeout: 5
+  WrongWayThreshold: 10
+  WrongWayTimeout: 20
   ResetConversationID: T4.2
 --- !u!1 &830326743
 GameObject:
@@ -17568,12 +17568,12 @@ MonoBehaviour:
   waypoints:
   - {fileID: 1768604306}
   WaypointPrefab: {fileID: 100000, guid: 338410c9d5312de4e9f2f5d1d5bd54cb, type: 2}
-  TimeoutConversationID: 
+  TimeoutConversationID: T5.2
   Timeout: 10
-  WrongWayConversationID: 
-  WrongWayThreshold: 2
-  WrongWayTimeout: 5
-  ResetConversationID: 
+  WrongWayConversationID: T4.3
+  WrongWayThreshold: 10
+  WrongWayTimeout: 20
+  ResetConversationID: T4.2
 --- !u!1 &955491314
 GameObject:
   m_ObjectHideFlags: 0
@@ -38943,12 +38943,12 @@ MonoBehaviour:
   waypoints:
   - {fileID: 435523774}
   WaypointPrefab: {fileID: 100000, guid: 338410c9d5312de4e9f2f5d1d5bd54cb, type: 2}
-  TimeoutConversationID: 
-  Timeout: 10
-  WrongWayConversationID: 
-  WrongWayThreshold: 2
-  WrongWayTimeout: 5
-  ResetConversationID: 
+  TimeoutConversationID: T5.2
+  Timeout: 15
+  WrongWayConversationID: T4.3
+  WrongWayThreshold: 10
+  WrongWayTimeout: 20
+  ResetConversationID: T4.2
 --- !u!1 &2084791933
 GameObject:
   m_ObjectHideFlags: 0
