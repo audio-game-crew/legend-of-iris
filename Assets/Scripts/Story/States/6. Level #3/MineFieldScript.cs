@@ -207,7 +207,7 @@ public class MineFieldScript : MonoBehaviour {
     void failPlayer_onConversationEnd(ConversationPlayer player)
     {
         player.onConversationEnd -= failPlayer_onConversationEnd;
-        CheckpointManager.instance.GotoLastCheckpoint();
+        CheckpointManager.instance.GotoLastCheckpoint(this);
     }
 
     public MineCollisionType GetCollisionType(Collider col)

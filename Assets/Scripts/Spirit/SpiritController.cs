@@ -8,7 +8,7 @@ public class SpiritController : MonoBehaviour {
 	private float speed;
 	
 	public void Init(SpiritGeneratorScript g, float startingSpeed) {
-		Debug.Log ("we call init spirit controller", gameObject);
+        //Debug.Log ("we call init spirit controller", gameObject);
 
 		this.generator = g;
 		this.initialSpeed = startingSpeed;

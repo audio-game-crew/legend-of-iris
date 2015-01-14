@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class CheckpointManager : MonoBehaviour {
     private Checkpoint lastCheckpoint;
@@ -11,6 +12,9 @@ public class CheckpointManager : MonoBehaviour {
     public float TeleportTime = 2;
 
     public Checkpoint InitialCheckpoint;
+
+    public event EventHandler StartLastCheckpointTeleport;
+    public event EventHandler EndLastCheckpointTeleport;
 
     private PositionRotation start;
     private PositionRotation target;
@@ -40,6 +44,7 @@ public class CheckpointManager : MonoBehaviour {
                 player.transform.position = target.Position;
                 player.transform.rotation = target.Rotation;
                 teleporting = false;
+                OnEndLastCheckpointTeleport();
             }
             else
             {
@@ -62,13 +67,25 @@ public class CheckpointManager : MonoBehaviour {
         if (walkScript != null) walkScript.enabled = enabled;
     }
 
-    public void GotoLastCheckpoint()
+    public void GotoLastCheckpoint(object sender)
     {
         start = new PositionRotation(Characters.instance.Beorn);
         target = new PositionRotation(lastCheckpoint.gameObject);
         teleporting = true;
         SetWalkScriptEnabled(false);
         time = 0;
+    }
+
+    public void OnStartLastCheckpointTeleport(object sender)
+    {
+        if (StartLastCheckpointTeleport != null)
+            StartLastCheckpointTeleport(sender, EventArgs.Empty);
+    }
+
+    public void OnEndLastCheckpointTeleport()
+    {
+        if (EndLastCheckpointTeleport != null)
+            EndLastCheckpointTeleport(lastCheckpoint, EventArgs.Empty);
     }
 
     public void SetLastCheckpoint(Checkpoint checkpoint)
