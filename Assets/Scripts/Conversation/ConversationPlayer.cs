@@ -127,7 +127,7 @@ public class ConversationPlayer
         activeIndicators.Add(ind);
 
         // set subtitles
-        var se = SubtitlesManager.ShowSubtitle(timer, msg.source.name, msg.subtitle);
+        var se = SubtitlesManager.ShowSubtitle(timer, msg.sourceName, msg.subtitle);
         activeSubtitles.Add(se);
 
         // on remove
@@ -168,7 +168,7 @@ public class ConversationPlayer
         foreach (MessageQueueItem mqi in conversationQueue)
         {
             // set subtitles
-            SubtitlesManager.ShowSubtitle(1f, mqi.message.source.name, mqi.message.subtitle);
+            SubtitlesManager.ShowSubtitle(1f, mqi.message.sourceName, mqi.message.subtitle);
 
             // send out messages
             if (onMessageStart != null) onMessageStart(self, mqi.index);

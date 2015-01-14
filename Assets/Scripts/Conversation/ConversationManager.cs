@@ -97,7 +97,7 @@ public class ConversationManager : MonoBehaviour {
         return null;
     }
 
-    void AddConversation(List<Conversation> newconversations, string nameID, List<string> sources, List<string> texts)
+    void AddConversation(List<Conversation> newconversations, string nameID, List<string> sources, List<string> names, List<string> texts)
     {
         List<ConversationMessage> messages = new List<ConversationMessage>();
         Conversation c = new Conversation();
@@ -108,10 +108,13 @@ public class ConversationManager : MonoBehaviour {
         for (int i = 0; i < sources.Count; i++ )
         {
             var m = new ConversationMessage();
-            m.audioClip = Resources.Load(c.nameID + "_" + i, typeof(AudioClip)) as AudioClip;
+            m.audioClip = Resources.Load(sources[i] + "/" + sources[i] + " - " + c.nameID + "_" + (i + 1), typeof(AudioClip)) as AudioClip;
             m.source = GameObject.Find(sources[i]);
+            m.sourceName = names[i];
             if (m.source == null)
                 Debug.LogWarning("Source \"" + sources[i] + "\" not found");
+            if (m.audioClip == null)
+                Debug.LogWarning("Audio Clip \"" + sources[i] + "/" + sources[i] + " - " + c.nameID + "_" + (i + 1) + "\" not found. With text: \n" + texts[i]);
             m.subtitle = texts[i];
             messages.Add(m);
         }
@@ -128,36 +131,39 @@ public class ConversationManager : MonoBehaviour {
         bool started = false;
         string nameID = "";
         List<string> sources = null;
+        List<string> names = null;
         List<string> texts = null;
 
         foreach (string line in lines) {
             string[] items = line.Split(';');
-            if (items.Length != 3) continue;
+            if (items.Length != 4) continue;
             if (items[0].Length > 0)
             {
                 if (started)
                 {
-                    AddConversation(newconversations, nameID, sources, texts);
+                    AddConversation(newconversations, nameID, sources, names, texts);
                 }
                 started = true;
                 nameID = items[0];
                 sources = new List<string>();
+                names = new List<string>();
                 texts = new List<string>();
             }
             if (items[1].Length > 0)
             {
                 sources.Add(items[1]);
+                names.Add(items[2]);
                 texts.Add("");
             }
-            if (items[2].Length > 0)
+            if (items[3].Length > 0)
             {
-                texts[texts.Count - 1] += items[2] + "\n";
+                texts[texts.Count - 1] += items[3] + "\n";
             }
         }
 
         if (started)
         {
-            AddConversation(newconversations, nameID, sources, texts);
+            AddConversation(newconversations, nameID, sources, names, texts);
         }
 
         conversations = newconversations;
