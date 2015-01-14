@@ -74,6 +74,7 @@ public class CheckpointManager : MonoBehaviour {
         teleporting = true;
         SetWalkScriptEnabled(false);
         time = 0;
+        OnStartLastCheckpointTeleport(sender);
     }
 
     public void OnStartLastCheckpointTeleport(object sender)

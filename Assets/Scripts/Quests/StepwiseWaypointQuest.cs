@@ -14,6 +14,7 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
     private float minTargetDistance;
     private bool playingConversation = false;
     private bool active = false;
+    private bool teleporting = false;
 
     public StepwiseWaypointQuest(StepwiseWaypointQuestDefinition definition) : base(definition) { }
 
@@ -25,7 +26,7 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         var checkpointManager = CheckpointManager.instance;
         if (checkpointManager != null)
         {
-            checkpointManager.StartLastCheckpointTeleport += checkpointManager_GoingToLastCheckpoint;
+            checkpointManager.StartLastCheckpointTeleport += checkpointManager_StartLastCheckpointTeleport;
             checkpointManager.EndLastCheckpointTeleport += checkpointManager_EndLastCheckpointTeleport;
         }
 	}
@@ -119,7 +120,7 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         if (targetDistance < minTargetDistance)
             minTargetDistance = targetDistance;
 
-        if (definition.TimeoutActive && !playingConversation && timeoutTimer > definition.Timeout)
+        if (timeoutTimer > definition.Timeout)
             PlayTimeoutConversation();
 
         if (definition.WrongWayActive && !playingConversation && wrongWayTimer > definition.WrongWayTimeout && targetDistance - minTargetDistance > definition.WrongWayThreshold)
@@ -131,7 +132,7 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
 
     private void PlayTimeoutConversation()
     {
-        if (!definition.TimeoutActive)
+        if (playingConversation || teleporting || !definition.TimeoutActive)
             return;
         var player = ConversationManager.GetConversationPlayer(definition.TimeoutConversationID);
         player.onConversationEnd += s => { timeoutTimer = 0; playingConversation = false; };
@@ -141,7 +142,7 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
 
     private void PlayWrongWayConversation()
     {
-        if (!definition.WrongWayActive)
+        if (playingConversation || teleporting || !definition.WrongWayActive)
             return;
         var player = ConversationManager.GetConversationPlayer(definition.WrongWayConversationID);
         player.onConversationEnd += s => { wrongWayTimer = 0; playingConversation = false; };
@@ -152,7 +153,7 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
 
     private void PlayResetConversation()
     {
-        if (!definition.ResetActive)
+        if (playingConversation || !definition.ResetActive)
             return;
         var player = ConversationManager.GetConversationPlayer(definition.ResetConversationID);
         player.onConversationEnd += s => { ResetTimers(); playingConversation = false; };
@@ -160,8 +161,15 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         player.Start();
     }
 
-    void checkpointManager_EndLastCheckpointTeleport(object sender, EventArgs e)
+    private void checkpointManager_StartLastCheckpointTeleport(object sender, EventArgs e)
     {
+        teleporting = true;
+        PlayResetConversation();
+    }
+
+    private void checkpointManager_EndLastCheckpointTeleport(object sender, EventArgs e)
+    {
+        teleporting = false;
         var player = Characters.instance.Beorn;
         if (player == null)
             return;
@@ -174,10 +182,5 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
     }
 
 
-    private void checkpointManager_GoingToLastCheckpoint(object sender, EventArgs e)
-    {
-        PlayResetConversation();
 
-        throw new NotImplementedException();
-    }
 }
