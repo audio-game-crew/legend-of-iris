@@ -22,12 +22,6 @@ public class FollowBorisQuest : Quest<FollowBorisQuest, FollowBorisQuestDefiniti
 	{
 		base._Start();
 
-		var lucyControler = Characters.instance.Lucy.GetComponent<LucyController>();
-		lucyControler.StopBell ();
-		//lucyControler.StopAudio ();
-
-
-
 		FillSteps();
 		Next();
 

@@ -683,6 +683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T2.7
+  LucyQuiet: 0
 --- !u!1 &37307202
 GameObject:
   m_ObjectHideFlags: 0
@@ -2098,6 +2099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T3.5
+  LucyQuiet: 0
 --- !u!1 &149159595
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,6 +2140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T1.1
+  LucyQuiet: 0
 --- !u!1 &150254265
 GameObject:
   m_ObjectHideFlags: 0
@@ -3253,6 +3256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T4.1
+  LucyQuiet: 0
 --- !u!1 &210410659
 GameObject:
   m_ObjectHideFlags: 0
@@ -3563,7 +3567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d9e9606de1614a4fb164f74c2f3138f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BorisFlyTime: 10
+  BorisFlyTime: 3
   BorisSound: {fileID: 0}
 --- !u!135 &219113813
 SphereCollider:
@@ -4679,6 +4683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T5.5
+  LucyQuiet: 1
 --- !u!1 &273177294
 GameObject:
   m_ObjectHideFlags: 0
@@ -6577,6 +6582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T2.1
+  LucyQuiet: 0
 --- !u!1 &409057595
 GameObject:
   m_ObjectHideFlags: 0
@@ -8529,6 +8535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T6.4
+  LucyQuiet: 0
 --- !u!1 &504368044
 GameObject:
   m_ObjectHideFlags: 0
@@ -9472,6 +9479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T1.3
+  LucyQuiet: 0
 --- !u!1 &561850450
 GameObject:
   m_ObjectHideFlags: 0
@@ -15093,6 +15101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T3.1
+  LucyQuiet: 0
 --- !u!1 &832755371
 GameObject:
   m_ObjectHideFlags: 0
@@ -16425,6 +16434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T2.6
+  LucyQuiet: 0
 --- !u!1 &888531067
 GameObject:
   m_ObjectHideFlags: 0
@@ -17975,6 +17985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T5.1
+  LucyQuiet: 1
 --- !u!1 &987026982
 GameObject:
   m_ObjectHideFlags: 0
@@ -18613,6 +18624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T2.3
+  LucyQuiet: 0
 --- !u!1 &1048173404
 GameObject:
   m_ObjectHideFlags: 0
@@ -18822,6 +18834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T4.13
+  LucyQuiet: 0
 --- !u!1 &1051212807
 GameObject:
   m_ObjectHideFlags: 0
@@ -19022,6 +19035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T5.6
+  LucyQuiet: 0
 --- !u!1 &1063822811
 GameObject:
   m_ObjectHideFlags: 0
@@ -19150,6 +19164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T4.10
+  LucyQuiet: 0
 --- !u!1 &1071609382
 GameObject:
   m_ObjectHideFlags: 0
@@ -23199,6 +23214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T4.6
+  LucyQuiet: 0
 --- !u!1 &1316189951
 GameObject:
   m_ObjectHideFlags: 0
@@ -23293,6 +23309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T0.1
+  LucyQuiet: 0
 --- !u!1 &1334374440
 GameObject:
   m_ObjectHideFlags: 0
@@ -26185,6 +26202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T4.12
+  LucyQuiet: 0
 --- !u!1 &1507388369
 GameObject:
   m_ObjectHideFlags: 0
@@ -31033,6 +31051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T3.7
+  LucyQuiet: 0
 --- !u!1 &1790353099
 GameObject:
   m_ObjectHideFlags: 0
@@ -31105,6 +31124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T4.5
+  LucyQuiet: 0
 --- !u!1001 &1801301022
 Prefab:
   m_ObjectHideFlags: 0
@@ -36181,6 +36201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T3.3
+  LucyQuiet: 0
 --- !u!1 &1918919917
 GameObject:
   m_ObjectHideFlags: 0
@@ -36755,6 +36776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T5.4
+  LucyQuiet: 1
 --- !u!1 &1961227575
 GameObject:
   m_ObjectHideFlags: 0
@@ -38756,6 +38778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T6.1
+  LucyQuiet: 0
 --- !u!1 &2070661525
 GameObject:
   m_ObjectHideFlags: 0
@@ -39455,6 +39478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T4.9
+  LucyQuiet: 0
 --- !u!1 &2123905976
 GameObject:
   m_ObjectHideFlags: 0
