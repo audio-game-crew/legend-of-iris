@@ -68,6 +68,23 @@ public class ConversationPlayer
                 cumulativetime += m.audioClip.length + m.settings.timeOffset;
         }
         conversationQueue = conversationQueue.OrderBy(o => o.time).ToList();
+
+        // Pause Lucy's bell
+        SetLucyBellEnabled(false);
+    }
+
+    private void SetLucyBellEnabled(bool enabled)
+    {
+        var lucy = Characters.instance.Lucy;
+        if (lucy != null)
+        {
+            var lucyController = lucy.GetComponent<LucyController>();
+            if (lucyController != null)
+                if (enabled)
+                    lucyController.StartBell();
+                else
+                    lucyController.StopBell();
+        }
     }
 
     public void Update()
@@ -115,7 +132,11 @@ public class ConversationPlayer
             myAI.Stop();
 
             if (onMessageEnd != null) onMessageEnd(self, i);
-            if (IsFinished() && onConversationEnd != null) onConversationEnd(self);
+            if (IsFinished())
+            {
+                if (onConversationEnd != null) onConversationEnd(self);
+                SetLucyBellEnabled(true);
+            }
         });
 
         // on start
@@ -146,5 +167,7 @@ public class ConversationPlayer
 
         // empty the queue
         conversationQueue = new List<MessageQueueItem>();
+
+        SetLucyBellEnabled(true);
     }
 }

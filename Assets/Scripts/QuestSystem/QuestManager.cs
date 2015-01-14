@@ -10,6 +10,8 @@ public class QuestManager : MonoBehaviour {
 
 	public List<Quest> quests = new List<Quest>();
 
+    private List<Quest> activeQuests = new List<Quest>();
+
 	void Start () {
 		// Register handlers on all quests for logging purposes
 		Quest.onAnyQuestStart += OnQuestEvent;
@@ -23,6 +25,8 @@ public class QuestManager : MonoBehaviour {
 				q.Start();
 			}
 		}
+        Quest.onAnyQuestStart += s => activeQuests.Add(s);
+        Quest.onAnyQuestComplete += s => activeQuests.Remove(s);
 	}
 
     void Update()
@@ -38,6 +42,17 @@ public class QuestManager : MonoBehaviour {
             Debug.Log("Cheat, started quest " + cheatPressed.Value);
             if (cheatQuests.Count > cheatPressed.Value)
                 StartQuest(cheatQuests[cheatPressed.Value]);
+        }
+
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Return))
+        {
+            foreach (var q in activeQuests.ToArray())
+            {
+                if (!(q is SerialQuest) && !(q is ParallelQuest))
+                {
+                    q.Complete();
+                }
+            }
         }
 
     }
