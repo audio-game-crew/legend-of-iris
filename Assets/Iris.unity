@@ -3530,6 +3530,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 219113811}
+  - 135: {fileID: 219113813}
+  - 114: {fileID: 219113812}
   m_Layer: 0
   m_Name: Boris
   m_TagString: Untagged
@@ -3550,6 +3552,31 @@ Transform:
   - {fileID: 1479103037}
   m_Father: {fileID: 1527040402}
   m_RootOrder: 2
+--- !u!114 &219113812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 219113810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d9e9606de1614a4fb164f74c2f3138f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BorisFlyTime: 10
+  BorisSound: {fileID: 0}
+--- !u!135 &219113813
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 219113810}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &219612503
 GameObject:
   m_ObjectHideFlags: 0
@@ -4612,6 +4639,46 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1533454387}
   m_GameObject: {fileID: 268080401}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &272775351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 272775352}
+  - 114: {fileID: 272775353}
+  m_Layer: 0
+  m_Name: T5.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &272775352
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 272775351}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1523136512}
+  m_RootOrder: 5
+--- !u!114 &272775353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 272775351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationId: T5.5
 --- !u!1 &273177294
 GameObject:
   m_ObjectHideFlags: 0
@@ -6993,6 +7060,7 @@ GameObject:
   - 4: {fileID: 435523773}
   - 135: {fileID: 435523775}
   - 114: {fileID: 435523774}
+  - 114: {fileID: 435523776}
   m_Layer: 8
   m_Name: PlayerEventLocation3
   m_TagString: Location
@@ -7042,6 +7110,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &435523776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 435523772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5407f32ffeb8af74c823c366a32d824d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &436424788
 GameObject:
   m_ObjectHideFlags: 0
@@ -7713,7 +7792,6 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 456855224}
-  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -10192,7 +10270,6 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 591589451}
-  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -13416,7 +13493,6 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 771070050}
-  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -13970,7 +14046,6 @@ CanvasGroup:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 809600078}
-  m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -14110,6 +14185,10 @@ Prefab:
       propertyPath: LucyBell
       value: 
       objectReference: {fileID: 8300000, guid: db163f30d7e44fe49b841cbf428de6ce, type: 3}
+    - target: {fileID: 11400002, guid: 582f3ecc4257fd943a66be2f73c47271, type: 2}
+      propertyPath: silence
+      value: 
+      objectReference: {fileID: 8300000, guid: 4728b1a9d383b4c31bdfd417b47a1220, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 582f3ecc4257fd943a66be2f73c47271, type: 2}
   m_RootGameObject: {fileID: 1766996850}
@@ -14837,6 +14916,55 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1533454387}
   m_GameObject: {fileID: 826087749}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &829034696
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 829034697}
+  - 114: {fileID: 829034698}
+  m_Layer: 0
+  m_Name: CatchBoris1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &829034697
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 829034696}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1523136512}
+  m_RootOrder: 2
+--- !u!114 &829034698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 829034696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e95494ebfc7ca4c4ca8191faf079bf28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStepDistance: 1000
+  waypoints:
+  - {fileID: 1557160343}
+  WaypointPrefab: {fileID: 100000, guid: 338410c9d5312de4e9f2f5d1d5bd54cb, type: 2}
+  TimeoutConversationID: T5.2
+  Timeout: 5
+  WrongWayConversationID: T5.3
+  WrongWayThreshold: 10
+  WrongWayTimeout: 100
+  ResetConversationID: T4.2
 --- !u!1 &830326743
 GameObject:
   m_ObjectHideFlags: 0
@@ -17401,6 +17529,55 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &954106246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 954106247}
+  - 114: {fileID: 954106248}
+  m_Layer: 0
+  m_Name: CatchBoris2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &954106247
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 954106246}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1523136512}
+  m_RootOrder: 4
+--- !u!114 &954106248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 954106246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e95494ebfc7ca4c4ca8191faf079bf28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStepDistance: 1000
+  waypoints:
+  - {fileID: 1768604306}
+  WaypointPrefab: {fileID: 100000, guid: 338410c9d5312de4e9f2f5d1d5bd54cb, type: 2}
+  TimeoutConversationID: T5.2
+  Timeout: 10
+  WrongWayConversationID: T4.3
+  WrongWayThreshold: 10
+  WrongWayTimeout: 100
+  ResetConversationID: T4.2
 --- !u!1 &955491314
 GameObject:
   m_ObjectHideFlags: 0
@@ -18805,6 +18982,46 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1063797324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1063797325}
+  - 114: {fileID: 1063797326}
+  m_Layer: 0
+  m_Name: T5.6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1063797325
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1063797324}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1523136512}
+  m_RootOrder: 7
+--- !u!114 &1063797326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1063797324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationId: T5.6
 --- !u!1 &1063822811
 GameObject:
   m_ObjectHideFlags: 0
@@ -19553,7 +19770,6 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1086999017}
-  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -20622,7 +20838,6 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1118669527}
-  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -26488,6 +26703,12 @@ Transform:
   m_Children:
   - {fileID: 1194385432}
   - {fileID: 982914576}
+  - {fileID: 829034697}
+  - {fileID: 1960873396}
+  - {fileID: 954106247}
+  - {fileID: 272775352}
+  - {fileID: 2081608086}
+  - {fileID: 1063797325}
   m_Father: {fileID: 159651634}
   m_RootOrder: 5
 --- !u!114 &1523136513
@@ -27098,6 +27319,7 @@ GameObject:
   - 4: {fileID: 1557160342}
   - 135: {fileID: 1557160344}
   - 114: {fileID: 1557160343}
+  - 114: {fileID: 1557160345}
   m_Layer: 8
   m_Name: PlayerEventLocation1
   m_TagString: Location
@@ -27147,6 +27369,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1557160345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1557160341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5407f32ffeb8af74c823c366a32d824d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1557993667
 GameObject:
   m_ObjectHideFlags: 0
@@ -27885,6 +28118,7 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -30407,6 +30641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LucyFlyTime: 2
   LucyBell: {fileID: 8300000, guid: db163f30d7e44fe49b841cbf428de6ce, type: 3}
+  silence: {fileID: 8300000, guid: 4728b1a9d383b4c31bdfd417b47a1220, type: 3}
 --- !u!135 &1766996853
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -30430,6 +30665,7 @@ GameObject:
   - 4: {fileID: 1768604305}
   - 135: {fileID: 1768604307}
   - 114: {fileID: 1768604306}
+  - 114: {fileID: 1768604308}
   m_Layer: 8
   m_Name: PlayerEventLocation2
   m_TagString: Location
@@ -30479,6 +30715,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1768604308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1768604304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5407f32ffeb8af74c823c366a32d824d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1773780033
 Prefab:
   m_ObjectHideFlags: 0
@@ -36468,6 +36715,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 579748978}
   m_RootOrder: 9
+--- !u!1 &1960873395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1960873396}
+  - 114: {fileID: 1960873397}
+  m_Layer: 0
+  m_Name: T5.4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1960873396
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960873395}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1523136512}
+  m_RootOrder: 3
+--- !u!114 &1960873397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960873395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationId: T5.4
 --- !u!1 &1961227575
 GameObject:
   m_ObjectHideFlags: 0
@@ -38618,6 +38905,55 @@ CapsuleCollider:
   m_Height: 4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2081608085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2081608086}
+  - 114: {fileID: 2081608087}
+  m_Layer: 0
+  m_Name: CatchBoris3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2081608086
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2081608085}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1523136512}
+  m_RootOrder: 6
+--- !u!114 &2081608087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2081608085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e95494ebfc7ca4c4ca8191faf079bf28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStepDistance: 1000
+  waypoints:
+  - {fileID: 435523774}
+  WaypointPrefab: {fileID: 100000, guid: 338410c9d5312de4e9f2f5d1d5bd54cb, type: 2}
+  TimeoutConversationID: T5.2
+  Timeout: 15
+  WrongWayConversationID: T4.3
+  WrongWayThreshold: 10
+  WrongWayTimeout: 100
+  ResetConversationID: T4.2
 --- !u!1 &2084791933
 GameObject:
   m_ObjectHideFlags: 0
