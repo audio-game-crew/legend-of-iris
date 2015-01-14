@@ -9,14 +9,14 @@ public class IndicatorManager : MonoBehaviour {
         instance = this;
     }
 
-    public static BaseIndicator ShowAudioIndicator(GameObject source, float timer)
+    public static BaseIndicator ShowAudioIndicator(GameObject source, float timer, float scale = 1f, float? waveperiod = null, float opacity = 1f)
     {
-        return instance.showAudioIndicator(source, timer);
+        return instance.showAudioIndicator(source, timer, scale, waveperiod, opacity);
     }
 
     public static BaseIndicator ShowScreenIndicator(float timer)
     {
-        return instance.showScreenndicator(timer);
+        return instance.showScreenIndicator(timer);
     }
 
     public RectTransform indicatorPanel;
@@ -24,18 +24,21 @@ public class IndicatorManager : MonoBehaviour {
     public SourceAudioIndicator audioIndicatorPrefab;
     public ScreenAudioIndicator screenIndicatorPrefab;
 
-    private BaseIndicator showAudioIndicator(GameObject source, float timer)
+    private BaseIndicator showAudioIndicator(GameObject source, float timer, float scale, float? waveperiod, float opacity)
     {
         SourceAudioIndicator ai = (SourceAudioIndicator)Instantiate(audioIndicatorPrefab);
+        ai.transform.localScale = ai.transform.localScale * scale;
         ai.source = source;
         ai.activeTimer = timer;
+        if (waveperiod.HasValue)
+            ai.wavePeriod = waveperiod.Value;
         RectTransform r = ai.GetComponent<RectTransform>();
         r.SetParent(indicatorPanel);
         r.localPosition = Vector3.zero;
         return ai;
     }
 
-    private BaseIndicator showScreenndicator(float timer)
+    private BaseIndicator showScreenIndicator(float timer)
     {
         ScreenAudioIndicator si = (ScreenAudioIndicator)Instantiate(screenIndicatorPrefab);
         si.activeTimer = timer;

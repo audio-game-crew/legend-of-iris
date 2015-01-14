@@ -6,39 +6,23 @@ using UnityEngine;
 
 public class ConversationPlayer
 {
-    private class MessageQueueItem
-    {
+    private class MessageQueueItem {
         public float time;
         public int index;
         public ConversationMessage message;
     }
 
-    public delegate void OnMessageStart(int index);
-    public delegate void OnMessageEnd(int index);
-    public delegate void OnConversationEnd();
+    public delegate void OnMessageStart(ConversationPlayer player, int index);
+    public delegate void OnMessageEnd(ConversationPlayer player, int index);
+    public delegate void OnConversationEnd(ConversationPlayer player);
+    public event OnMessageStart onMessageStart;
+    public event OnMessageEnd onMessageEnd;
+    public event OnConversationEnd onConversationEnd;
     private Conversation conversation;
     private List<MessageQueueItem> conversationQueue = new List<MessageQueueItem>();
     private List<AudioPlayer> activePlayers = new List<AudioPlayer>();
     private List<SubtitleElement> activeSubtitles = new List<SubtitleElement>();
     private List<BaseIndicator> activeIndicators = new List<BaseIndicator>();
-    private OnMessageStart onMessageStartListener;
-    private OnMessageEnd onMessageEndListener;
-    private OnConversationEnd onConversationEndListener;
-
-    public void SetOnMessageStartListener(OnMessageStart listener)
-    {
-        onMessageStartListener = listener;
-    }
-
-    public void SetOnMessageEndListener(OnMessageEnd listener)
-    {
-        onMessageEndListener = listener;
-    }
-
-    public void SetOnConversationEndListener(OnConversationEnd listener)
-    {
-        onConversationEndListener = listener;
-    }
 
     public int MessagesCount
     {
@@ -58,7 +42,6 @@ public class ConversationPlayer
     public ConversationPlayer(Conversation conversation)
     {
         this.conversation = conversation;
-        Start();
     }
 
     public bool IsFinished()
@@ -85,78 +68,88 @@ public class ConversationPlayer
                 cumulativetime += m.audioClip.length + m.settings.timeOffset;
         }
         conversationQueue = conversationQueue.OrderBy(o => o.time).ToList();
+
+        // Pause Lucy's bell
+        SetLucyBellEnabled(false);
+    }
+
+    private void SetLucyBellEnabled(bool enabled)
+    {
+        var lucy = Characters.instance.Lucy;
+        if (lucy != null)
+        {
+            var lucyController = lucy.GetComponent<LucyController>();
+            if (lucyController != null)
+                if (enabled)
+                    lucyController.StartBell();
+                else
+                    lucyController.StopBell();
+        }
     }
 
     public void Update()
     {
-        if (conversationQueue.Count > 0)
+        var self = this;
+
+        if (conversationQueue.Count <= 0) return;
+
+        if (conversationQueue[0].time > Time.time) return;
+
+        MessageQueueItem mqi = conversationQueue.Shift();
+        ConversationMessage msg = mqi.message;
+        float timer = msg.audioClip == null ? 0f : msg.audioClip.length;
+
+        // start audio
+        AudioPlayer ap = AudioManager.PlayAudio(new AudioObject(msg.source, msg.audioClip, msg.settings.volume));
+        activePlayers.Add(ap);
+        ap.SetPitch(msg.settings.pitch);
+
+        // show indicator
+        BaseIndicator ind = null;
+        if (msg.settings.screenAsSource)
+            ind = IndicatorManager.ShowScreenIndicator(timer);
+        else
+            ind = IndicatorManager.ShowAudioIndicator(msg.source, timer);
+        activeIndicators.Add(ind);
+
+        // set subtitles
+        var se = SubtitlesManager.ShowSubtitle(timer, msg.source.name, msg.subtitle);
+        activeSubtitles.Add(se);
+
+        // on remove
+        ap.SetOnRemoveListener(delegate()
         {
-            if (conversationQueue[0].time < Time.time)
+            int i = mqi.index;
+            AudioPlayer myAP = ap;
+            SubtitleElement mySE = se;
+            BaseIndicator myAI = ind;
+
+            activePlayers.Remove(myAP);
+            activeSubtitles.Remove(mySE);
+            activeIndicators.Remove(myAI);
+
+            mySE.FadeAfterSeconds(1f);
+            myAI.Stop();
+
+            if (onMessageEnd != null) onMessageEnd(self, i);
+            if (IsFinished())
             {
-                MessageQueueItem mqi = conversationQueue.Shift();
-                ConversationMessage msg = mqi.message;
-                float timer = msg.audioClip == null ? 0f : msg.audioClip.length;
-
-                // start audio
-                AudioPlayer ap = AudioManager.PlayAudio(new AudioObject(msg.source, msg.audioClip, msg.settings.volume));
-                activePlayers.Add(ap);
-                ap.SetPitch(msg.settings.pitch);
-
-                // show indicator
-                BaseIndicator ind = null;
-                if (msg.settings.screenAsSource)
-                    ind = IndicatorManager.ShowScreenIndicator(timer);
-                else
-                    ind = IndicatorManager.ShowAudioIndicator(msg.source, timer);
-                activeIndicators.Add(ind);
-
-                // set subtitles
-                var se = SubtitlesManager.ShowSubtitle(timer, msg.source.name, msg.subtitle);
-                activeSubtitles.Add(se);
-
-                // on remove
-                ap.SetOnRemoveListener(delegate()
-                {
-                    int i = mqi.index;
-                    AudioPlayer myAP = ap;
-                    SubtitleElement mySE = se;
-                    BaseIndicator myAI = ind;
-
-                    activePlayers.Remove(myAP);
-                    activeSubtitles.Remove(mySE);
-                    activeIndicators.Remove(myAI);
-
-                    mySE.FadeAfterSeconds(1f);
-                    myAI.Stop();
-
-                    if (onMessageEndListener != null)
-                    {
-                        onMessageEndListener.Invoke(i);
-                    }
-
-                    if (IsFinished() && onConversationEndListener != null)
-                    {
-                        onConversationEndListener.Invoke();
-                    }
-                });
-
-                // on start
-                if (onMessageStartListener != null)
-                {
-                    onMessageStartListener.Invoke(mqi.index);
-                }
+                if (onConversationEnd != null) onConversationEnd(self);
+                SetLucyBellEnabled(true);
             }
-        }
+        });
+
+        // on start
+        if (onMessageStart != null) onMessageStart(self, mqi.index);
     }
 
     public void Skip()
     {
+        var self = this;
+
         var playersCopy = new List<AudioPlayer>(activePlayers);
         // stop all current audio
-        foreach (AudioPlayer ap in playersCopy)
-        {
-            ap.MarkRemovable();
-        }
+        foreach (AudioPlayer ap in playersCopy) ap.MarkRemovable();
 
         // send out all remaning messages and subtitles
         foreach (MessageQueueItem mqi in conversationQueue)
@@ -165,22 +158,16 @@ public class ConversationPlayer
             SubtitlesManager.ShowSubtitle(1f, mqi.message.source.name, mqi.message.subtitle);
 
             // send out messages
-            if (onMessageStartListener != null)
-            {
-                onMessageStartListener.Invoke(mqi.index);
-            }
-            if (onMessageEndListener != null)
-            {
-                onMessageEndListener.Invoke(mqi.index);
-            }
+            if (onMessageStart != null) onMessageStart(self, mqi.index);
+
+            if (onMessageEnd != null) onMessageEnd(self, mqi.index);
         }
 
-        if (onConversationEndListener != null)
-        {
-            onConversationEndListener.Invoke();
-        }
+        if (onConversationEnd != null) onConversationEnd(self);
 
         // empty the queue
         conversationQueue = new List<MessageQueueItem>();
+
+        SetLucyBellEnabled(true);
     }
 }

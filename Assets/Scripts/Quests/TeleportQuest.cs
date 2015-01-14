@@ -17,11 +17,12 @@ public class TeleportQuest : Quest<TeleportQuest, TeleportQuestDefinition>
         start = new PositionRotation(definition.ObjectToTeleport);
         target = new PositionRotation(definition.TargetLocation);
         time = 0;
+        base._Start();
     }
 
     public override void Update()
     {
-        if (this.state == State.COMPLETED)
+        if (this.state != State.STARTED)
             return;
         time += Time.deltaTime;
         var progress = time / definition.TeleportTime;

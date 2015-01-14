@@ -11,13 +11,12 @@ public class LevelSwitchQuest : Quest<LevelSwitchQuest, LevelSwitchQuestDefiniti
 
     protected override void _Start()
     {
-        Complete();
         base._Start();
+        LevelSwitcher.ActivateLevel(definition.Level);
     }
 
-    protected override void _Complete()
+    public override void Update()
     {
-        LevelSwitcher.ActivateLevel(definition.Level);
-        base._Complete();
+        Complete();
     }
 }

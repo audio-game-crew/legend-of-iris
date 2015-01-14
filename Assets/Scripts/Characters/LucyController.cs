@@ -5,16 +5,30 @@ public class LucyController : MonoBehaviour {
     [Tooltip("Time it takes lucy to fly to a new location")]
     public float LucyFlyTime = 5f;
 
+    public AudioClip LucyBell;
+
     private float flyingTime;
     private PositionRotation lucyStart;
     private PositionRotation targetLocation;
     private bool moving;
 
+    private AudioPlayer bellPlayer;
+    private BaseIndicator bellIndicator;
+    private int playing = 0;
 
 	// Use this for initialization
 	void Start () {
-	
+        InitBell();
 	}
+
+    private void InitBell()
+    {
+        if (LucyBell == null)
+            return;
+        var audio = new AudioObject(this.gameObject, LucyBell, 1, 0, true, true);
+        bellPlayer = AudioManager.PlayAudio(audio);
+        StartBell();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -39,6 +53,37 @@ public class LucyController : MonoBehaviour {
             this.gameObject.transform.position = targetLocation.Position;
             this.gameObject.transform.rotation = targetLocation.Rotation;
             moving = false;
+        }
+    }
+
+    public void StartBell()
+    {
+        playing++;
+        if (playing > 0)
+        {
+            if (bellPlayer != null)
+            {
+                bellPlayer.ContinuePlaying();
+                bellPlayer.SetVolume(1);
+            }
+            if (bellIndicator != null)
+                bellIndicator.Stop();
+            bellIndicator = IndicatorManager.ShowAudioIndicator(this.gameObject, float.MaxValue, 0.5f);
+        }
+    }
+
+    public void StopBell()
+    {
+        playing--;
+        if (playing <= 0)
+        {
+            if (bellIndicator != null)
+                bellIndicator.Stop();
+            if (bellPlayer != null)
+            {
+                bellPlayer.PausePlaying();
+                bellPlayer.SetVolume(0);
+            }
         }
     }
 

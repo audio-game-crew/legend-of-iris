@@ -14,19 +14,22 @@ public class MineFieldScript : MonoBehaviour {
     public GameObject Mine;
     public GameObject MineProximitySensor;
     public AudioClip MineSound;
+    public float SoundMaxDistance = 20;
     public bool OnlyProximity  = false;
     public bool CheckPath = true;
     public bool MarkAll = false;
-    public GameObject DragBackLocation;
+    public Checkpoint DragBackCheckpoint;
+    public List<string> FailConversations = new List<string> { "T6.2" };
 
     public GameObject[] Mines { get { return mines.ToArray(); } }
 
     private bool[,] grid;
     private List<GameObject> mines = new List<GameObject>();
-    Dictionary<GameObject, GameObject> mineProximitySensors = new Dictionary<GameObject, GameObject>();
+    private Dictionary<GameObject, GameObject> mineProximitySensors = new Dictionary<GameObject, GameObject>();
     private Dictionary<GameObject, AudioPlayer> minePlayers = new Dictionary<GameObject, AudioPlayer>();
     private Dictionary<GameObject, Point2> minePositions = new Dictionary<GameObject, Point2>();
     private int placementTries = 0;
+    private bool initialized = false;
 
 	// Use this for initialization
 	void Start () 
@@ -35,15 +38,27 @@ public class MineFieldScript : MonoBehaviour {
             Debug.LogWarning("Start Position is outside the grid");
         if (OutsideGrid(EndPos))
             Debug.LogWarning("End Position is outside the grid");
+        initialized = false;
+	}
+
+    private void Init()
+    {
         grid = new bool[SizeX, SizeY];
         placementTries = 0;
         PlaceMines();
         AddMines();
-
-	}
+        if (CheckpointManager.instance != null)
+            CheckpointManager.instance.SetLastCheckpoint(DragBackCheckpoint);
+    }
 
     void OnEnable()
     {
+        if (!initialized)
+        {
+            Init();
+            initialized = true;
+        }
+
         // Register collider events
         var player = Characters.instance.Beorn.GetComponent<PlayerController>();
         player.TriggerEntered += player_TriggerEntered;
@@ -79,7 +94,7 @@ public class MineFieldScript : MonoBehaviour {
         if (!MarkAll)
         {
             int placedMines = 0;
-            while (placedMines <= MineCount)
+            while (placedMines < MineCount)
             {
                 int x = Random.Range(0, SizeX);
                 int y = Random.Range(0, SizeY);
@@ -145,7 +160,7 @@ public class MineFieldScript : MonoBehaviour {
         var mine = (GameObject)GameObject.Instantiate(Mine, minePosition, new Quaternion());
         mine.transform.parent = this.transform;
         var delay = Randomg.Range(0f, MineSound.length);
-        var minePlayer = AudioManager.PlayAudio(new AudioObject(mine, MineSound, OnlyProximity ? 0 : 1, delay, true));
+        var minePlayer = AudioManager.PlayAudio(new AudioObject(mine, MineSound, OnlyProximity ? 0 : 1, delay, true) { maxDistance = SoundMaxDistance });
         if (MineProximitySensor != null)
         {
             var mineProximitySensor = (GameObject)GameObject.Instantiate(MineProximitySensor, minePosition, new Quaternion());
@@ -172,7 +187,7 @@ public class MineFieldScript : MonoBehaviour {
     {
         var collider = e.Trigger;
         var collisionType = GetCollisionType(collider);
-        if (collisionType != MineCollisionType.None) // player collided with a mine
+        if (collisionType != MineCollisionType.None) // player collided with a mine or proximity sensor
         {
             var collidedMine = GetCollidingMine(collider);
             if (collisionType == MineCollisionType.Proximity)
@@ -180,11 +195,19 @@ public class MineFieldScript : MonoBehaviour {
                 TriggerProximitySensor(collidedMine, true);
             }
             else
-            {
-                var player = Characters.instance.Beorn.GetComponent<PlayerController>();
-                player.MoveToLocation(new PositionRotation(DragBackLocation));
+            { // Player collided with a mine.
+                var failPlayer = ConversationManager.GetConversationPlayer(FailConversations[Random.Range(0, FailConversations.Count)]);
+                failPlayer.onConversationEnd += failPlayer_onConversationEnd;
+                failPlayer.Start();
+                RemoveMine(collidedMine);
             }
         }
+    }
+
+    void failPlayer_onConversationEnd(ConversationPlayer player)
+    {
+        player.onConversationEnd -= failPlayer_onConversationEnd;
+        CheckpointManager.instance.GotoLastCheckpoint(this);
     }
 
     public MineCollisionType GetCollisionType(Collider col)
@@ -220,6 +243,7 @@ public class MineFieldScript : MonoBehaviour {
 
     public void RemoveMine(GameObject mineToRemove)
     {
+        Debug.Log("Removing mine " + mineToRemove.name, mineToRemove);
         foreach (var mine in mines)
         {
             if (mine == mineToRemove)

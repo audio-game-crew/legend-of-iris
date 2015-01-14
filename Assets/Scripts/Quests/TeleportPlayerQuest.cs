@@ -12,17 +12,15 @@ public class TeleportPlayerQuest : TeleportQuest
 
     protected override void _Start()
     {
-        var walkScript = this.definition.ObjectToTeleport.GetComponent<WalkScript>();
-        if (walkScript != null)
-            walkScript.enabled = false;
         base._Start();
+        var walkScript = this.definition.ObjectToTeleport.GetComponent<WalkScript>();
+        if (walkScript != null) walkScript.enabled = false;
     }
 
     protected override void _Complete()
     {
         var walkScript = this.definition.ObjectToTeleport.GetComponent<WalkScript>();
-        if (walkScript != null)
-            walkScript.enabled = true;
+        if (walkScript != null) walkScript.enabled = true;
         base._Complete();
     }
 }

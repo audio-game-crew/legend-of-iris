@@ -37,7 +37,7 @@ public abstract class RecursiveQuest<QuestSC, DefinitionSC> : Quest<QuestSC, Def
     {
         foreach (var quest in children)
         {
-            quest.Update();
+            if (quest.state == Quest.State.STARTED) quest.Update();
         }
         base.Update();
     }

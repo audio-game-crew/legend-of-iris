@@ -32,7 +32,7 @@ public class AudioPlayer
 
         // create audio source with clip
         audioGO = (GameObject)GameObject.Instantiate(AudioManager.instance.audioSourcePrefab);
-        Debug.Log(audio.parent);
+        //Debug.Log(audio.parent);
         audioGO.transform.parent = audio.parent.transform;
         audioGO.transform.localPosition = Vector3.zero;
 
@@ -43,6 +43,9 @@ public class AudioPlayer
         audioAS.clip = audio.clip;
         audioAS.volume = audio.volume;
         audioAS.loop = audio.loop;
+        if (audio.maxDistance.HasValue)
+            audioAS.maxDistance = audio.maxDistance.Value;
+
         playAtTime = Time.time + audio.delay;
         audioAS.PlayDelayed(audio.delay);
     }

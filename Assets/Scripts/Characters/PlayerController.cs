@@ -19,7 +19,12 @@ public class PlayerController : MonoBehaviour {
     public event EventHandler<TriggerEventArgs> TriggerExit;
 
     public bool LockMovement = false;
-	
+
+    void Start()
+    {
+        EdgeManager.instance.PlayerEnterEdge += (s, e) => Debug.LogWarning("You are close to an edge! TODO: play warning sound!");
+    }
+
 	// Update is called once per frame
 	void FixedUpdate ()
     {
