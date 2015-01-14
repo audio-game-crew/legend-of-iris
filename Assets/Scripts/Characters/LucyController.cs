@@ -58,6 +58,7 @@ public class LucyController : MonoBehaviour {
 
     public void StartBell()
     {
+        //Debug.Log("startBell called");
         playing++;
         if (playing > 0)
         {
@@ -74,6 +75,7 @@ public class LucyController : MonoBehaviour {
 
     public void StopBell()
     {
+        //Debug.Log("StopBell called");
         playing--;
         if (playing <= 0)
         {

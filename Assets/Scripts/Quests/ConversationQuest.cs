@@ -5,24 +5,19 @@ public class ConversationQuest : Quest<ConversationQuest, ConversationQuestDefin
 
 	public ConversationQuest(ConversationQuestDefinition definition) : base(definition) {}
 
-	
 	public Boolean LucyQuiet;
-
-
 
     protected override void _Start() {
 		base._Start();
 		// Conversation conversation = ConversationManager.create(definition.conversationId);
 		// conversation.onConversationEnd += OnConversationEnd;
 		// conversation.Play();
-		if (LucyQuiet == true) {
-			var lucyControler = Characters.instance.Lucy.GetComponent<LucyController>();
-			lucyControler.StopBell ();
+		if (LucyQuiet == true) 
+        {
+			var lucyController = Characters.instance.Lucy.GetComponent<LucyController>();
+            lucyController.StopBell();
 			//lucyControler.StopAudio ();
-			} else {
-			var lucyControler = Characters.instance.Lucy.GetComponent<LucyController>();
-			lucyControler.StartBell();
-		}
+        }
 
 		var player = ConversationManager.GetConversationPlayer(definition.conversationId);
         if (player != null)
@@ -39,6 +34,12 @@ public class ConversationQuest : Quest<ConversationQuest, ConversationQuestDefin
         if (player != null)
             player.onConversationEnd -= OnConversationEnd;
 		Complete();
+        if (LucyQuiet)
+        {
+            var lucyController = Characters.instance.Lucy.GetComponent<LucyController>();
+            lucyController.StartBell();
+        }
+            
 	}
 
 }

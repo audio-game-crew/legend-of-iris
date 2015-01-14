@@ -24,6 +24,10 @@ public class ConversationPlayer
     private List<SubtitleElement> activeSubtitles = new List<SubtitleElement>();
     private List<BaseIndicator> activeIndicators = new List<BaseIndicator>();
 
+    // Make sure the script only disables and enables the bell once
+    private bool bellStopped = false;
+    private bool bellStarted = false;
+
     public int MessagesCount
     {
         get { return conversation.messageSequence.Count; }
@@ -71,19 +75,29 @@ public class ConversationPlayer
 
         // Pause Lucy's bell
         SetLucyBellEnabled(false);
+        this.onConversationEnd += s => SetLucyBellEnabled(true);
     }
 
     private void SetLucyBellEnabled(bool enabled)
     {
+        //Debug.Log((enabled ? "Enabling" : "Disabling") + " Lucy's bell from " + conversation.name + " " + enabledCount + "," + disabledCount);
         var lucy = Characters.instance.Lucy;
         if (lucy != null)
         {
             var lucyController = lucy.GetComponent<LucyController>();
             if (lucyController != null)
-                if (enabled)
+            {
+                if (enabled && !bellStarted)
+                {
                     lucyController.StartBell();
-                else
+                    bellStarted = true;
+                }
+                if (!enabled && !bellStopped)
+                {
                     lucyController.StopBell();
+                    bellStopped = true;
+                }
+            }
         }
     }
 
@@ -135,7 +149,6 @@ public class ConversationPlayer
             if (IsFinished())
             {
                 if (onConversationEnd != null) onConversationEnd(self);
-                SetLucyBellEnabled(true);
             }
         });
 
@@ -167,7 +180,5 @@ public class ConversationPlayer
 
         // empty the queue
         conversationQueue = new List<MessageQueueItem>();
-
-        SetLucyBellEnabled(true);
     }
 }
