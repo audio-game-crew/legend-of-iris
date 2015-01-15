@@ -81,7 +81,7 @@ public class ConversationManager : MonoBehaviour {
         {
             if (maxOneConversationActive)
             {
-                foreach (ConversationPlayer c in playingConversations)
+                foreach (ConversationPlayer c in playingConversations.ToArray())
                 {
                     c.Skip();
                 }
