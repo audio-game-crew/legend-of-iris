@@ -406,7 +406,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 161902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2de0e2f547b58f948909ddbac515f4e9, type: 3}
+  m_Script: {fileID: 11500000, guid: f93a0bfa97a5a4b49b445cb8c6d119e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TargetLocation: {fileID: 0}
@@ -419,13 +419,13 @@ MonoBehaviour:
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: .497816622
-      value: 1
+    - time: .499272227
+      value: .997560978
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: .998544335
-      value: .00243902416
+    - time: 1.00145555
+      value: -.00243902416
       inSlope: 0
       outSlope: 0
       tangentMode: 0

@@ -20,3 +20,8 @@ public static class EnumUtils
         return Enum.GetValues(typeof(T));
     }
 }
+
+public enum Direction
+{
+    Forward, Backward, Left, Right
+}
