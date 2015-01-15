@@ -360,6 +360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.1
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!114 &11433986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -377,6 +378,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  SuccesSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
   TimeoutConversationID: 
   Timeout: 10
   WrongWayConversationID: T4.3
@@ -399,7 +401,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  WaypointPrefab: {fileID: 0}
+  WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  SuccesSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
   TimeoutConversationID: 
   Timeout: 10
   WrongWayConversationID: T4.3
@@ -430,6 +433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.13
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!114 &11433994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -443,6 +447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.10
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!114 &11433996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -456,6 +461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.6
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!114 &11433998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -469,6 +475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.12
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!114 &11434000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -482,6 +489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.5
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!114 &11434002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -499,6 +507,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  SuccesSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
   TimeoutConversationID: 
   Timeout: 10
   WrongWayConversationID: T4.3
@@ -530,6 +539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.9
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

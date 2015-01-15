@@ -99,11 +99,16 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
 
 	private void OnPlayerEnter(Waypoint waypoint, GameObject player) {
 		waypoint.onPlayerEnter -= OnPlayerEnter;
+        if (definition.SuccesSound != null)
+        {
+            AudioManager.PlayAudio(new AudioObject(player, definition.SuccesSound));
+        }
         if (addedWaypoints.Contains(waypoint))
         {
             addedWaypoints.Remove(waypoint);
             GameObject.Destroy(waypoint.gameObject);
         }
+
 		Next();
 	}
 
