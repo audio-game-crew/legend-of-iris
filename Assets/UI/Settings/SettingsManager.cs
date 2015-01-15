@@ -79,10 +79,12 @@ public class SettingsManager : MonoBehaviour
         {
             PauseManager.Pause();
             //Screen.showCursor = true;
+            audio.volume += (0.25f - audio.volume) * Timeg.safeDeltaUnscaled(1f);
         }
         else
         {
             PauseManager.Resume();
+            audio.volume += (0 - audio.volume) * Timeg.safeDeltaUnscaled(1f);
             //Screen.showCursor = false;
         }
 

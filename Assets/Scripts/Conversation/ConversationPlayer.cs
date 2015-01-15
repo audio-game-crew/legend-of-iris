@@ -117,6 +117,7 @@ public class ConversationPlayer
         AudioPlayer ap = AudioManager.PlayAudio(new AudioObject(msg.source, msg.audioClip, msg.settings.volume));
         activePlayers.Add(ap);
         ap.SetPitch(msg.settings.pitch);
+        ap.SetMinDistance(ConversationManager.instance.minAudioDistance);
 
         // show indicator
         BaseIndicator ind = null;

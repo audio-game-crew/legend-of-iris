@@ -741,6 +741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T2.7
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &37307202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,33 +1906,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1237055000}
   m_GameObject: {fileID: 121169281}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &124562908
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 124562909}
-  m_Layer: 0
-  m_Name: 'Science Bird #2'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &124562909
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 124562908}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 987026983}
-  m_RootOrder: 1
 --- !u!1 &137444664
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,6 +2134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T3.5
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &149159595
 GameObject:
   m_ObjectHideFlags: 0
@@ -2202,6 +2177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T1.1
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &150254265
 GameObject:
   m_ObjectHideFlags: 0
@@ -3095,6 +3071,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 200486822}
   - 114: {fileID: 200486823}
+  - 82: {fileID: 200486824}
   m_Layer: 0
   m_Name: Settings Manager
   m_TagString: Untagged
@@ -3136,6 +3113,64 @@ MonoBehaviour:
   pressedDown: 0
   latestClip: {fileID: 0}
   mute: 0
+--- !u!82 &200486824
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 200486821}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 1ba4b879c920e154691bd7505f1a802c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &201950567
 GameObject:
   m_ObjectHideFlags: 0
@@ -3319,6 +3354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.1
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &210410659
 GameObject:
   m_ObjectHideFlags: 0
@@ -4749,6 +4785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T5.5
   LucyQuiet: 1
+  LockPlayerMovement: 1
 --- !u!1 &273177294
 GameObject:
   m_ObjectHideFlags: 0
@@ -6739,6 +6776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T2.1
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &409057595
 GameObject:
   m_ObjectHideFlags: 0
@@ -8794,6 +8832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T6.4
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &504368044
 GameObject:
   m_ObjectHideFlags: 0
@@ -9739,6 +9778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T1.3
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &561850450
 GameObject:
   m_ObjectHideFlags: 0
@@ -14577,7 +14617,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 582f3ecc4257fd943a66be2f73c47271, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 582f3ecc4257fd943a66be2f73c47271, type: 2}
       propertyPath: m_Icon
@@ -15507,6 +15547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T3.1
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &832755371
 GameObject:
   m_ObjectHideFlags: 0
@@ -16915,6 +16956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T2.6
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &888531067
 GameObject:
   m_ObjectHideFlags: 0
@@ -18469,6 +18511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T5.1
   LucyQuiet: 1
+  LockPlayerMovement: 1
 --- !u!1 &987026982
 GameObject:
   m_ObjectHideFlags: 0
@@ -18478,7 +18521,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 987026983}
   m_Layer: 0
-  m_Name: Science Birds
+  m_Name: Bird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18493,14 +18536,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1545846373}
-  - {fileID: 124562909}
-  - {fileID: 1588277270}
-  - {fileID: 1961227576}
-  - {fileID: 1079653808}
-  m_Father: {fileID: 1420068389}
-  m_RootOrder: 1
+  m_Children: []
+  m_Father: {fileID: 1527040402}
+  m_RootOrder: 3
 --- !u!1 &993829826
 GameObject:
   m_ObjectHideFlags: 0
@@ -19197,6 +19235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T2.3
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &1048173404
 GameObject:
   m_ObjectHideFlags: 0
@@ -19415,6 +19454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.13
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &1051212807
 GameObject:
   m_ObjectHideFlags: 0
@@ -19617,6 +19657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T5.6
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &1063822811
 GameObject:
   m_ObjectHideFlags: 0
@@ -19747,6 +19788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.10
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &1071609382
 GameObject:
   m_ObjectHideFlags: 0
@@ -19896,33 +19938,6 @@ MonoBehaviour:
   DragBackCheckpoint: {fileID: 0}
   FailConversations:
   - T6.2
---- !u!1 &1079653807
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1079653808}
-  m_Layer: 0
-  m_Name: 'Science Bird #5'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1079653808
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1079653807}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 987026983}
-  m_RootOrder: 4
 --- !u!1 &1082759370
 GameObject:
   m_ObjectHideFlags: 0
@@ -23853,6 +23868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.6
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &1316189951
 GameObject:
   m_ObjectHideFlags: 0
@@ -24000,6 +24016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T0.1
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &1334374440
 GameObject:
   m_ObjectHideFlags: 0
@@ -25567,7 +25584,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1527040402}
-  - {fileID: 987026983}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!114 &1420068390
@@ -26895,6 +26911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.12
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &1507388369
 GameObject:
   m_ObjectHideFlags: 0
@@ -27461,6 +27478,7 @@ Transform:
   - {fileID: 2076031668}
   - {fileID: 219113811}
   - {fileID: 1766996851}
+  - {fileID: 987026983}
   m_Father: {fileID: 1420068389}
   m_RootOrder: 0
 --- !u!1001 &1533454387
@@ -27961,33 +27979,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1237055000}
   m_GameObject: {fileID: 1543432158}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1545846372
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1545846373}
-  m_Layer: 0
-  m_Name: 'Science Bird #1'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1545846373
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1545846372}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 987026983}
-  m_RootOrder: 0
 --- !u!1 &1550552606
 GameObject:
   m_ObjectHideFlags: 0
@@ -28803,33 +28794,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1587924457}
---- !u!1 &1588277269
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1588277270}
-  m_Layer: 0
-  m_Name: 'Science Bird #3'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1588277270
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1588277269}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 987026983}
-  m_RootOrder: 2
 --- !u!1 &1613604674
 GameObject:
   m_ObjectHideFlags: 0
@@ -31972,6 +31936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T3.7
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &1790353099
 GameObject:
   m_ObjectHideFlags: 0
@@ -32046,6 +32011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.5
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1001 &1801301022
 Prefab:
   m_ObjectHideFlags: 0
@@ -33663,6 +33629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxOneConversationActive: 1
+  minAudioDistance: 10
   conversations:
   - name: T0.1
     nameID: T0.1
@@ -33729,13 +33696,13 @@ MonoBehaviour:
     nameID: T1.3
     hint: 
     messageSequence:
-    - name: 'Iris: Checking response from spirit world Connection in perfectly ...'
+    - name: 'Iris: Checking response from spirit world... Connection in perfect...'
       source: {fileID: 689019606}
       sourceName: Iris
       audioClip: {fileID: 8300000, guid: 50cb33f721f12ff469ebbaaf32a70546, type: 3}
-      subtitle: "Checking response from spirit world Connection in perfectly stable
+      subtitle: "Checking response from spirit world... Connection in perfectly stable
         condition. You are now ready to connect to a spirit bear. Disconnecting because
-        of reason, in 5 4...\r\n"
+        of reasons, in... 5... 4...\r\n"
       settings:
         screenAsSource: 1
         timeOffset: 0
@@ -33852,7 +33819,7 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T1.6'
+  - name: T1.6
     nameID: T1.6
     hint: 
     messageSequence:
@@ -33883,17 +33850,17 @@ MonoBehaviour:
       sourceName: Iris
       audioClip: {fileID: 8300000, guid: 20cd795e3b3e1434dad9057fc54afdff, type: 3}
       subtitle: "You are wrong. Whoever said technology would replace all paper obviously
-        hasn't tried wiping their butt with an IPadha. ha. ha. Starting connection
-        in 3 2 1\r\n"
+        hasn't tried wiping their butt with an IPad...ha. ha. ha.... Starting connection
+        in 3... 2... 1...\r\n"
       settings:
         screenAsSource: 1
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Iris: *connection sounds*\r\n"
+    - name: "Iris: *connection sounds*\r\n"
       source: {fileID: 689019606}
       sourceName: Iris
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: bd65b8eebeae51347a68914f9b6cdc2f, type: 3}
       subtitle: "*connection sounds*\r\n"
       settings:
         screenAsSource: 1
@@ -34133,10 +34100,10 @@ MonoBehaviour:
       audioClip: {fileID: 8300000, guid: a82bfdce0e29a0b488042b19babf0a30, type: 3}
       subtitle: "Alright, you are ready to try walking around! Before we can get to
         the spirit village, we should get Beorn ready to move out. First he needs
-        his shoes, and second well he needs to unplug his belly rubbing machine. He
-        doesnt like it when devices are on stand-by when he leaves the house. It may
-        start a fire, you know?Lets first walk Beorn to his shoes. Ill fly over to
-        their location, so you may follow the sound of my wings.\r\n"
+        his shoes, and second... well... he needs to unplug his belly rubbing machine.
+        He doesnt like it when devices are on stand-by when he leaves the house. It
+        may start a fire, you know?Lets first walk Beorn to his shoes. Ill fly over
+        to their location, so you may follow the sound of my wings.\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
@@ -34240,14 +34207,14 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T3.5'
+  - name: T3.5
     nameID: T3.5
     hint: 
     messageSequence:
-    - name: "!Err! Other: *belly rubbing machine turns on*\r\n"
+    - name: "Other: *belly rubbing machine turns on*\r\n"
       source: {fileID: 1459252793}
       sourceName: Other
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 2e7436b2b636fd44a9f44aacf79ba682, type: 3}
       subtitle: "*belly rubbing machine turns on*\r\n"
       settings:
         screenAsSource: 0
@@ -34275,10 +34242,10 @@ MonoBehaviour:
         timeOffset: -3.4000001
         volume: 1
         pitch: 1
-    - name: "!Err! Beorn: *disappointed* muhhh.\r\n"
+    - name: "Beorn: *disappointed* muhhh.\r\n"
       source: {fileID: 2076031667}
       sourceName: Beorn
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 86e0c0f92ac9fe3429c81ac291b2ceae, type: 3}
       subtitle: "*disappointed* muhhh.\r\n"
       settings:
         screenAsSource: 0
@@ -34339,11 +34306,11 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: 'Lucy: Yes!! You made it! You now know how to control Beorn and how...'
+    - name: 'Lucy: Yes!! You made it! You know how to control Beorn and how to ...'
       source: {fileID: 1766996850}
       sourceName: Lucy
       audioClip: {fileID: 8300000, guid: a4974b6c6e1f81d4bb0fa9dc80c07823, type: 3}
-      subtitle: "Yes!! You made it! You now know how to control Beorn and how to follow
+      subtitle: "Yes!! You made it! You know how to control Beorn and how to follow
         the sound of my wings. This will come in handy!\r\n"
       settings:
         screenAsSource: 0
@@ -34360,7 +34327,7 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.1'
+  - name: T4.1
     nameID: T4.1
     hint: 
     messageSequence:
@@ -34416,14 +34383,14 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Other: *teleportation sounds*\r\n"
+    - name: "Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
       sourceName: Other
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: cd29af9954b86154db16c232f71191fb, type: 3}
       subtitle: "*teleportation sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -1.5
         volume: 1
         pitch: 1
     - name: "Beorn: *relieved* muu!!\r\n"
@@ -34494,7 +34461,7 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.2~1'
+  - name: T4.2~1
     nameID: T4.2~1
     hint: 
     messageSequence:
@@ -34518,14 +34485,14 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Other: *teleportation sounds*\r\n"
+    - name: "Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
       sourceName: Other
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: cd29af9954b86154db16c232f71191fb, type: 3}
       subtitle: "*teleportation sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -1.5
         volume: 1
         pitch: 1
     - name: "Lucy: Good! You are safe now. Lets try again. Follow me!\r\n"
@@ -34538,7 +34505,7 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.2~2'
+  - name: T4.2~2
     nameID: T4.2~2
     hint: 
     messageSequence:
@@ -34562,14 +34529,14 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Other: *teleportation sounds*\r\n"
+    - name: "Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
       sourceName: Other
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: cd29af9954b86154db16c232f71191fb, type: 3}
       subtitle: "*teleportation sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -1.5
         volume: 1
         pitch: 1
     - name: "Lucy: Okay! You are safe. Lets try again. Follow me!\r\n"
@@ -34582,7 +34549,7 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.2~3'
+  - name: T4.2~3
     nameID: T4.2~3
     hint: 
     messageSequence:
@@ -34606,14 +34573,14 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Other: *teleportation sounds*\r\n"
+    - name: "Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
       sourceName: Other
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: cd29af9954b86154db16c232f71191fb, type: 3}
       subtitle: "*teleportation sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -1.5
         volume: 1
         pitch: 1
     - name: "Lucy: Phew!! That was close. Lets try again. Follow me!\r\n"
@@ -34778,9 +34745,9 @@ MonoBehaviour:
       audioClip: {fileID: 8300000, guid: 2805709c97d06ce48b8dfd1eb316919e, type: 3}
       subtitle: "Hmmm, human, you have to watch out now. Some spirits are crossing
         the bridge sideways. They appear very scared because of the giant in our village.
-        I am afriad they might push Beorn off the bridge if he touches them So you
-        have to listen carefully in order to avoid them. But I believe you can do
-        it. Follow me, human! :)\r\n"
+        I am afriad they might push Beorn off the bridge if he touches them... So
+        you have to listen carefully in order to avoid them. But I believe you can
+        do it. Follow me, human! :)\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
@@ -34793,7 +34760,7 @@ MonoBehaviour:
     - name: "!Err! : Out of the way!! There is a giant in the village!!\r\n"
       source: {fileID: 0}
       sourceName: Spirit
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 163aee52b79f85142974a121decc7de8, type: 3}
       subtitle: "Out of the way!! There is a giant in the village!!\r\n"
       settings:
         screenAsSource: 0
@@ -34820,14 +34787,14 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Other: *teleportation sounds*\r\n"
+    - name: "Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
       sourceName: Other
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: cd29af9954b86154db16c232f71191fb, type: 3}
       subtitle: "*teleportation sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -1.5
         volume: 1
         pitch: 1
     - name: "Lucy: Good! You are safe now. Lets try again. Follow me!\r\n"
@@ -34847,7 +34814,7 @@ MonoBehaviour:
     - name: "!Err! : Ahhh! A giant in the village!!\r\n"
       source: {fileID: 0}
       sourceName: Spirit
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: bed722ff738c1224c92d21b43e0c42f0, type: 3}
       subtitle: "Ahhh! A giant in the village!!\r\n"
       settings:
         screenAsSource: 0
@@ -34874,14 +34841,14 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Other: *teleportation sounds*\r\n"
+    - name: "Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
       sourceName: Other
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: cd29af9954b86154db16c232f71191fb, type: 3}
       subtitle: "*teleportation sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -1.5
         volume: 1
         pitch: 1
     - name: "Lucy: Okay! You are safe. Lets try again. Follow me!\r\n"
@@ -34901,7 +34868,7 @@ MonoBehaviour:
     - name: "!Err! : Oh no, oh no! Out of the way!\r\n"
       source: {fileID: 0}
       sourceName: Spirit
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 0410ad54a518ade498fce9c740042d61, type: 3}
       subtitle: "Oh no, oh no! Out of the way!\r\n"
       settings:
         screenAsSource: 0
@@ -34928,14 +34895,14 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Other: *teleportation sounds*\r\n"
+    - name: "Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
       sourceName: Other
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: cd29af9954b86154db16c232f71191fb, type: 3}
       subtitle: "*teleportation sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -1.5
         volume: 1
         pitch: 1
     - name: "Lucy: Phew!! That was close. Lets try again. Follow me!\r\n"
@@ -35038,7 +35005,7 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.11'
+  - name: T4.11
     nameID: T4.11
     hint: 
     messageSequence:
@@ -35062,14 +35029,14 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Other: *teleportation sounds*\r\n"
+    - name: "Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
       sourceName: Other
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: cd29af9954b86154db16c232f71191fb, type: 3}
       subtitle: "*teleportation sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -1.5
         volume: 1
         pitch: 1
     - name: 'Lucy: Okay! You are safe. Lets try again. Follow the sound of the ...'
@@ -35131,7 +35098,7 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T4.13'
+  - name: T4.13
     nameID: T4.13
     hint: 
     messageSequence:
@@ -35157,36 +35124,36 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Other: *awesome teleportation sounds*\r\n"
+    - name: "Other: *awesome teleportation sounds*\r\n"
       source: {fileID: 1459252793}
       sourceName: Other
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: cd29af9954b86154db16c232f71191fb, type: 3}
       subtitle: "*awesome teleportation sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -1.5
         volume: 1
         pitch: 1
   - name: '!Err! T5.1'
     nameID: T5.1
     hint: 
     messageSequence:
-    - name: "!Err! Other: *teleportation sounds end*\r\n"
+    - name: "Other: *teleportation sounds end*\r\n"
       source: {fileID: 1459252793}
       sourceName: Other
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 2e7436b2b636fd44a9f44aacf79ba682, type: 3}
       subtitle: "*teleportation sounds end*\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: 'Lucy: *whispers* uhoh. we arrived at my village but we are standin...'
+    - name: 'Lucy: *whispers* uhoh.... we arrived at my village but we are stan...'
       source: {fileID: 1766996850}
       sourceName: Lucy
       audioClip: {fileID: 8300000, guid: 9264e57e82963f84da8ed0525c9eaae6, type: 3}
-      subtitle: "*whispers* uhoh. we arrived at my village but we are standing right
-        next to the giant... Lets hope he doesnt see us. Stay still!\r\n"
+      subtitle: "*whispers* uhoh.... we arrived at my village but we are standing
+        right next to the giant... Lets hope he doesnt see us. Stay still!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
@@ -35224,12 +35191,12 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: 'Lucy: Uh uhm OH!! Of course! Giants hate science!! But, why are th...'
+    - name: 'Lucy: Uh... uhm... OH!! Of course! Giants hate science!! But, why ...'
       source: {fileID: 1766996850}
       sourceName: Lucy
       audioClip: {fileID: 8300000, guid: 813b74f77b11cb74d824d87065779fa6, type: 3}
-      subtitle: "Uh uhm OH!! Of course! Giants hate science!! But, why are there science
-        birds in our forest?\r\n"
+      subtitle: "Uh... uhm... OH!! Of course! Giants hate science!! But, why are there
+        science birds in our forest?\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
@@ -35239,7 +35206,7 @@ MonoBehaviour:
       source: {fileID: 2013512893}
       sourceName: Giant
       audioClip: {fileID: 8300000, guid: 3e994bc6c8825d849bc2a699e27f2e87, type: 3}
-      subtitle: "They are studying and copying the sounds of the animals in the forest
+      subtitle: "They are studying and copying the sounds of the animals in the forest...
         Fairy, what if they will start copying my voice as well? Can you imagine a
         bird, saying things like my butt itches, or mom!! I dont like vegetables??
         That would be embarrassing.\r\n"
@@ -35743,14 +35710,14 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Other: *teleportation sounds*\r\n"
+    - name: "Other: *teleportation sounds*\r\n"
       source: {fileID: 1459252793}
       sourceName: Other
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: cd29af9954b86154db16c232f71191fb, type: 3}
       subtitle: "*teleportation sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -1.5
         volume: 1
         pitch: 1
     - name: "Lucy: Okay! You are safe. Lets try again.\r\n"
@@ -36149,7 +36116,7 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T7.4'
+  - name: T7.4
     nameID: T7.4
     hint: 
     messageSequence:
@@ -36164,10 +36131,10 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : *whistle* Sound is a vibration, or wave, that can be heard a...'
-      source: {fileID: 0}
+    - name: 'Bird: *whistle* Sound is a vibration, or wave, that can be heard a...'
+      source: {fileID: 987026982}
       sourceName: 'Bird #1'
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 8ee66522f6597514daa6b10548400018, type: 3}
       subtitle: "*whistle* Sound is a vibration, or wave, that can be heard as it
         reaches our ears by traveling through matter, such as air, wood or water.
         *whistles*\r\n"
@@ -36176,20 +36143,20 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Boris: *hoot* yes! I am convinced. How many more of you are there?\r..."
+    - name: "Boris: *hoot* yes! I am convinced. How many more of you are there?\r..."
       source: {fileID: 219113810}
       sourceName: Boris
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 71c01d62892ec0d46bc71d2d79ae1245, type: 3}
       subtitle: "*hoot* yes! I am convinced. How many more of you are there?\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : *whistle* there are still 3 others! I can call them out with...'
-      source: {fileID: 0}
+    - name: 'Bird: *whistle* there are still 3 others! I can call them out with...'
+      source: {fileID: 987026982}
       sourceName: 'Bird #1'
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: cf0046f636834244e9deed4249cfa738, type: 3}
       subtitle: "*whistle* there are still 3 others! I can call them out with our
         secret emergency question, but then one of you has to catch them. \r\n"
       settings:
@@ -36197,22 +36164,22 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! Boris: OK, do it!\r\n"
+    - name: "Boris: OK, do it!\r\n"
       source: {fileID: 219113810}
       sourceName: Boris
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: 5f703c1c84dd4d74ebb52d166a03caa0, type: 3}
       subtitle: "OK, do it!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T8.1'
+  - name: T8.1
     nameID: T8.1
     hint: 
     messageSequence:
-    - name: "!Err! : *whistle* Why do seagulls fly over the sea? *whistle*\r\n"
-      source: {fileID: 0}
+    - name: "Bird: *whistle* Why do seagulls fly over the sea? *whistle*\r\n"
+      source: {fileID: 987026982}
       sourceName: 'Bird #1'
       audioClip: {fileID: 8300000, guid: 42b43c45db0dbd246b64d4c7717a4030, type: 3}
       subtitle: "*whistle* Why do seagulls fly over the sea? *whistle*\r\n"
@@ -36221,8 +36188,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *from a distance* Because if the flew over the bay\r\n"
-      source: {fileID: 0}
+    - name: "Bird: *from a distance* Because if the flew over the bay\r\n"
+      source: {fileID: 987026982}
       sourceName: 'Bird #2'
       audioClip: {fileID: 8300000, guid: a318e9ffb5350b74b8fcf9fb3031fe20, type: 3}
       subtitle: "*from a distance* Because if the flew over the bay\r\n"
@@ -36231,8 +36198,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *from another distance* they would be called\r\n"
-      source: {fileID: 0}
+    - name: "Bird: *from another distance* they would be called\r\n"
+      source: {fileID: 987026982}
       sourceName: 'Bird #3'
       audioClip: {fileID: 8300000, guid: 34c8992f0b9bb154096fa0b518ff7a0c, type: 3}
       subtitle: "*from another distance* they would be called\r\n"
@@ -36241,8 +36208,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *from another distance* baygulls! \r\n"
-      source: {fileID: 0}
+    - name: "Bird: *from another distance* baygulls! \r\n"
+      source: {fileID: 987026982}
       sourceName: 'Bird #4'
       audioClip: {fileID: 8300000, guid: 049ec174ae4bcdd47b9f8403a78b807a, type: 3}
       subtitle: "*from another distance* baygulls! \r\n"
@@ -36251,8 +36218,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : *from another distance* oooooooh!!\r\n"
-      source: {fileID: 0}
+    - name: "Bird: *from another distance* oooooooh!!\r\n"
+      source: {fileID: 987026982}
       sourceName: 'Bird #1'
       audioClip: {fileID: 8300000, guid: 8265ad3561e9aa747aa091e16db7caf3, type: 3}
       subtitle: "*from another distance* oooooooh!!\r\n"
@@ -36271,8 +36238,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : *whistle* Oh did I forget to mention, that crows also respon...'
-      source: {fileID: 0}
+    - name: 'Bird: *whistle* Oh did I forget to mention, that crows also respon...'
+      source: {fileID: 987026982}
       sourceName: 'Bird #1'
       audioClip: {fileID: 8300000, guid: b7791a053c6db7b4fbfdf996c9695034, type: 3}
       subtitle: "*whistle* Oh did I forget to mention, that crows also respond our
@@ -36299,11 +36266,11 @@ MonoBehaviour:
     nameID: T8.2~1
     hint: 
     messageSequence:
-    - name: "Beorn: *disappointed* muuu\r\n"
+    - name: "Beorn: *disappointed* muuu...\r\n"
       source: {fileID: 2076031667}
       sourceName: Beorn
       audioClip: {fileID: 8300000, guid: a6691206c32f2c440ab0edaa49000558, type: 3}
-      subtitle: "*disappointed* muuu\r\n"
+      subtitle: "*disappointed* muuu...\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
@@ -36454,8 +36421,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Well, 1 kilometer is a 1000 meters and sound travels roughly...'
-      source: {fileID: 0}
+    - name: 'Bird: Well, 1 kilometer is a 1000 meters and sound travels roughly...'
+      source: {fileID: 987026982}
       sourceName: 'Bird #2'
       audioClip: {fileID: 8300000, guid: adb53ac1635bf074980742388ce6ec14, type: 3}
       subtitle: "Well, 1 kilometer is a 1000 meters and sound travels roughly 335
@@ -36480,11 +36447,11 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "Lucy: 1 2 3\r\n"
+    - name: "Lucy: 1... 2... 3...\r\n"
       source: {fileID: 1766996850}
       sourceName: Lucy
       audioClip: {fileID: 8300000, guid: c8415cf4bc32c5541b400c676111da7e, type: 3}
-      subtitle: "1 2 3\r\n"
+      subtitle: "1... 2... 3...\r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
@@ -36521,7 +36488,7 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T8.5'
+  - name: T8.5
     nameID: T8.5
     hint: 
     messageSequence:
@@ -36536,8 +36503,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : That is called the Doppler effect. Whenever an object comes ...'
-      source: {fileID: 0}
+    - name: 'Bird: That is called the Doppler effect. Whenever an object comes ...'
+      source: {fileID: 987026982}
       sourceName: 'Bird #3'
       audioClip: {fileID: 8300000, guid: 0f319fb8a50654d43ad6693df76a0755, type: 3}
       subtitle: "That is called the Doppler effect. Whenever an object comes towards
@@ -36619,7 +36586,7 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T8.6'
+  - name: T8.6
     nameID: T8.6
     hint: 
     messageSequence:
@@ -36634,8 +36601,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Easy! That is called an echo! Sound waves are partially abso...'
-      source: {fileID: 0}
+    - name: 'Bird: Easy! That is called an echo! Sound waves are partially abso...'
+      source: {fileID: 987026982}
       sourceName: 'Bird #4'
       audioClip: {fileID: 8300000, guid: 96503aca51dba6f438ba418461215fdd, type: 3}
       subtitle: "Easy! That is called an echo! Sound waves are partially absorbed
@@ -36712,7 +36679,7 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-  - name: '!Err! T9.1'
+  - name: T9.1
     nameID: T9.1
     hint: 
     messageSequence:
@@ -36738,8 +36705,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : NO!! *whistle* Wait! You can take my friends, but let me sta...'
-      source: {fileID: 0}
+    - name: 'Bird: NO!! *whistle* Wait! You can take my friends, but let me sta...'
+      source: {fileID: 987026982}
       sourceName: 'Bird #3'
       audioClip: {fileID: 8300000, guid: 65cffbfe67c9ac14293538121925da6d, type: 3}
       subtitle: "NO!! *whistle* Wait! You can take my friends, but let me stay here!!
@@ -36762,8 +36729,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : But, *whistle* I scare away the giant! Isnt that enough?\r\n"
-      source: {fileID: 0}
+    - name: "Bird: But, *whistle* I scare away the giant! Isnt that enough?\r\n"
+      source: {fileID: 987026982}
       sourceName: 'Bird #3'
       audioClip: {fileID: 8300000, guid: 06dd5e633cbb8fa48afad580c9b6b007, type: 3}
       subtitle: "But, *whistle* I scare away the giant! Isnt that enough?\r\n"
@@ -36782,8 +36749,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: "!Err! : Haha ah! *whistle* Thank you, Boris!\r\n\r\nHuman, you seem very..."
-      source: {fileID: 0}
+    - name: "Bird: Haha ah! *whistle* Thank you, Boris!\r\n\r\nHuman, you seem very..."
+      source: {fileID: 987026982}
       sourceName: 'Bird #3'
       audioClip: {fileID: 8300000, guid: b57b1b67d056dc041b619e9c6cf1a2b6, type: 3}
       subtitle: "Haha ah! *whistle* Thank you, Boris!\r\n\r\nHuman, you seem very
@@ -36804,8 +36771,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : If you listen well and practise enough, you can roughly dete...'
-      source: {fileID: 0}
+    - name: 'Bird: If you listen well and practise enough, you can roughly dete...'
+      source: {fileID: 987026982}
       sourceName: 'Bird #3'
       audioClip: {fileID: 8300000, guid: 13e680f8847019b46a53b310a236071a, type: 3}
       subtitle: "If you listen well and practise enough, you can roughly determine
@@ -36830,8 +36797,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : Some humans can distinguish these responses, just by making ...'
-      source: {fileID: 0}
+    - name: 'Bird: Some humans can distinguish these responses, just by making ...'
+      source: {fileID: 987026982}
       sourceName: 'Bird #3'
       audioClip: {fileID: 8300000, guid: c2168c80d4ed9584d8c59bfc60494052, type: 3}
       subtitle: "Some humans can distinguish these responses, just by making clicking
@@ -36852,8 +36819,8 @@ MonoBehaviour:
         timeOffset: 0
         volume: 1
         pitch: 1
-    - name: '!Err! : I hope this helps! Be safe in your human world, human! *whis...'
-      source: {fileID: 0}
+    - name: 'Bird: I hope this helps! Be safe in your human world, human! *whis...'
+      source: {fileID: 987026982}
       sourceName: 'Bird #3'
       audioClip: {fileID: 8300000, guid: 82972ceed92b0f144af35f274a349683, type: 3}
       subtitle: "I hope this helps! Be safe in your human world, human! *whistle*
@@ -36892,8 +36859,8 @@ MonoBehaviour:
       audioClip: {fileID: 8300000, guid: 64ba2fdca48400543885d312fd67e670, type: 3}
       subtitle: "Thanks, little one, for clearing the forest. Now that the science
         birds have finally stopped their experiments, I can go home and think what
-        to do with my life. Maybe, accountancy, or banking or lion taming! Yes that
-        sounds great. \r\n"
+        to do with my life. Maybe, accountancy, or banking... or lion taming! Yes...
+        that sounds great. \r\n"
       settings:
         screenAsSource: 0
         timeOffset: 0
@@ -37311,6 +37278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T3.3
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &1918919917
 GameObject:
   m_ObjectHideFlags: 0
@@ -37529,6 +37497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T7.1
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &1930409549
 GameObject:
   m_ObjectHideFlags: 0
@@ -37976,33 +37945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T5.4
   LucyQuiet: 1
---- !u!1 &1961227575
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1961227576}
-  m_Layer: 0
-  m_Name: 'Science Bird #4'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1961227576
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1961227575}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 987026983}
-  m_RootOrder: 3
+  LockPlayerMovement: 1
 --- !u!1 &1962996035
 GameObject:
   m_ObjectHideFlags: 0
@@ -40051,6 +39994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T6.1
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &2070661525
 GameObject:
   m_ObjectHideFlags: 0
@@ -40754,6 +40698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.9
   LucyQuiet: 0
+  LockPlayerMovement: 1
 --- !u!1 &2123905976
 GameObject:
   m_ObjectHideFlags: 0
