@@ -23,7 +23,7 @@ T1.6;Iris;Iris;0;0;;Question confirmed.
 ;Lucy;Lucy*;0;1;;Yaaay! That is so great to hear. We are going on an adventure together. It is going to be awesome! Let’s start connecting you to a spirit bear now. Amazing what technology can do nowadays.
 ;Iris;Iris;0;1;;You are wrong. Whoever said technology would replace all paper obviously hasn't tried wiping their butt with an IPad...ha. ha. ha.... Starting connection in 3... 2... 1...
 ;Iris;Iris;0;1;Connect;*connection sounds*
-;Lucy;Lucy*;0;1;;*during connection sounds* Here we go!
+;Lucy;Lucy*;-3,5;1;;*during connection sounds* Here we go!
 T2.1;Iris;Iris;0;1;;Connection established. Good luck.
 ;Lucy;Lucy;0;0;;Alright, human. You are now in connection with a fluffy spirit bear, called Beorn. Right now he is waking up.
 ;Beorn;Beorn;0;0;;muhehue *sleepy*
