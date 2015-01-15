@@ -96,32 +96,74 @@ public class ConversationManager : MonoBehaviour {
         return null;
     }
 
-    void AddConversation(List<Conversation> newconversations, string nameID, List<string> sources, List<string> names, List<string> texts, List<float> delays, List<bool> screen)
+    void AddConversation(List<Conversation> newconversations, ConversationImport obj)
     {
         List<ConversationMessage> messages = new List<ConversationMessage>();
         Conversation c = new Conversation();
-        c.nameID = nameID;
+        c.nameID = obj.nameID;
         c.messageSequence = messages;
         c.hint = "";
 
-        for (int i = 0; i < sources.Count; i++ )
+        for (int i = 0; i < obj.sources.Count; i++)
         {
             var m = new ConversationMessage();
-            m.audioClip = Resources.Load(sources[i] + "/" + sources[i] + " - " + c.nameID + "_" + (i + 1), typeof(AudioClip)) as AudioClip;
-            m.source = GameObject.Find(sources[i]);
-            m.sourceName = names[i];
+            m.audioClip = Resources.Load(obj.getAudioClip(i), typeof(AudioClip)) as AudioClip;
+            m.source = GameObject.Find(obj.sources[i]);
+            m.sourceName = obj.names[i];
             if (m.source == null)
-                Debug.LogWarning("Source \"" + sources[i] + "\" not found");
+                Debug.LogWarning("Source \"" + obj.sources[i] + "\" not found");
             if (m.audioClip == null)
-                Debug.LogError("Audio Clip \"" + sources[i] + "/" + sources[i] + " - " + c.nameID + "_" + (i + 1) + "\" not found. With text: \n" + texts[i]);
-            m.subtitle = texts[i];
-            m.settings.screenAsSource = screen[i];
-            m.settings.timeOffset = delays[i];
+                Debug.LogError("Audio Clip \"" + obj.getAudioClip(i) + "\" not found. With text: \n" + obj.texts[i]);
+            m.subtitle = obj.texts[i];
+            m.settings.screenAsSource = obj.screen[i];
+            m.settings.timeOffset = obj.delays[i];
             messages.Add(m);
         }
 
         newconversations.Add(c);
     }
+
+    private class ConversationImport
+    {
+        public string nameID = "";
+        public List<string> sources = new List<string>();
+        public List<string> names = new List<string>();
+        public List<float> delays = new List<float>();
+        public List<bool> screen = new List<bool>();
+        public List<string> texts = new List<string>();
+
+        public ConversationImport(string[] items)
+        {
+            this.nameID = items[C_NameID];
+        }
+
+        public string getAudioClip(int i)
+        {
+            return sources[i] + "/" + sources[i] + " - " + nameID + "_" + (i + 1);
+        }
+
+        public void read(string[] items)
+        {
+            sources.Add(items[C_GameObject]);
+            names.Add(items[C_Name]);
+            delays.Add(float.Parse(items[C_Delay].Replace(",", ".")));
+            screen.Add(items[C_ScreenAsSource].Equals("1"));
+            texts.Add("");
+        }
+
+        public void addText(string[] items)
+        {
+            texts[texts.Count - 1] += items[C_Subtitle] + "\n";
+        }
+    }
+
+    private const int COLUMNS = 6;
+    private const int C_NameID = 0;
+    private const int C_GameObject = C_NameID + 1;
+    private const int C_Name = C_GameObject + 1;
+    private const int C_Delay = C_Name + 1;
+    private const int C_ScreenAsSource = C_Delay + 1;
+    private const int C_Subtitle = C_ScreenAsSource + 1;
 
 	// Use this for initialization
 	void FillConversations () {
@@ -130,12 +172,7 @@ public class ConversationManager : MonoBehaviour {
         string[] lines = t.Split('\n');
 
         bool started = false;
-        string nameID = "";
-        List<string> sources = null;
-        List<string> names = null;
-        List<float> delays = null;
-        List<bool> screen = null;
-        List<string> texts = null;
+        ConversationImport conversationObject = null;
 
         bool skippedFirst = false;
 
@@ -147,38 +184,29 @@ public class ConversationManager : MonoBehaviour {
             }
 
             string[] items = line.Split(';');
-            if (items.Length != 6) continue;
-            if (items[0].Length > 0)
+            if (items.Length != COLUMNS) continue;
+            if (items[C_NameID].Length > 0)
             {
                 if (started)
                 {
-                    AddConversation(newconversations, nameID, sources, names, texts, delays, screen);
+                    AddConversation(newconversations, conversationObject);
                 }
                 started = true;
-                nameID = items[0];
-                sources = new List<string>();
-                names = new List<string>();
-                delays = new List<float>();
-                screen = new List<bool>();
-                texts = new List<string>();
+                conversationObject = new ConversationImport(items);
             }
             if (items[1].Length > 0)
             {
-                sources.Add(items[1]);
-                names.Add(items[2]);
-                delays.Add(float.Parse(items[3].Replace(",",".")));
-                screen.Add(items[4].Equals("1"));
-                texts.Add("");
+                conversationObject.read(items);
             }
-            if (items[5].Length > 0)
+            if (items[C_Subtitle].Length > 0)
             {
-                texts[texts.Count - 1] += items[5] + "\n";
+                conversationObject.addText(items);
             }
         }
 
         if (started)
         {
-            AddConversation(newconversations, nameID, sources, names, texts, delays, screen);
+            AddConversation(newconversations, conversationObject);
         }
 
         conversations = newconversations;
