@@ -7,6 +7,7 @@ public class StepwiseWaypointQuestDefinition : QuestDefinition
     public float maxStepDistance = 20f;
 	public List<Waypoint> waypoints;
     public GameObject WaypointPrefab;
+    public AudioClip SuccesSound;
 
     [Header("Conversation when the player takes too long.")]
     public string TimeoutConversationID = null;

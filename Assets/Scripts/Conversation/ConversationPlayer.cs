@@ -24,6 +24,10 @@ public class ConversationPlayer
     private List<SubtitleElement> activeSubtitles = new List<SubtitleElement>();
     private List<BaseIndicator> activeIndicators = new List<BaseIndicator>();
 
+    // Make sure the script only disables and enables the bell once
+    private bool bellStopped = false;
+    private bool bellStarted = false;
+
     public int MessagesCount
     {
         get { return conversation.messageSequence.Count; }
@@ -71,19 +75,29 @@ public class ConversationPlayer
 
         // Pause Lucy's bell
         SetLucyBellEnabled(false);
+        this.onConversationEnd += s => SetLucyBellEnabled(true);
     }
 
     private void SetLucyBellEnabled(bool enabled)
     {
+        //Debug.Log((enabled ? "Enabling" : "Disabling") + " Lucy's bell from " + conversation.name + " " + enabledCount + "," + disabledCount);
         var lucy = Characters.instance.Lucy;
         if (lucy != null)
         {
             var lucyController = lucy.GetComponent<LucyController>();
             if (lucyController != null)
-                if (enabled)
+            {
+                if (enabled && !bellStarted)
+                {
                     lucyController.StartBell();
-                else
+                    bellStarted = true;
+                }
+                if (!enabled && !bellStopped)
+                {
                     lucyController.StopBell();
+                    bellStopped = true;
+                }
+            }
         }
     }
 
@@ -103,6 +117,7 @@ public class ConversationPlayer
         AudioPlayer ap = AudioManager.PlayAudio(new AudioObject(msg.source, msg.audioClip, msg.settings.volume));
         activePlayers.Add(ap);
         ap.SetPitch(msg.settings.pitch);
+        ap.SetMinDistance(ConversationManager.instance.minAudioDistance);
 
         // show indicator
         BaseIndicator ind = null;
@@ -113,7 +128,7 @@ public class ConversationPlayer
         activeIndicators.Add(ind);
 
         // set subtitles
-        var se = SubtitlesManager.ShowSubtitle(timer, msg.source.name, msg.subtitle);
+        var se = SubtitlesManager.ShowSubtitle(timer, msg.sourceName, msg.subtitle);
         activeSubtitles.Add(se);
 
         // on remove
@@ -135,7 +150,6 @@ public class ConversationPlayer
             if (IsFinished())
             {
                 if (onConversationEnd != null) onConversationEnd(self);
-                SetLucyBellEnabled(true);
             }
         });
 
@@ -155,7 +169,7 @@ public class ConversationPlayer
         foreach (MessageQueueItem mqi in conversationQueue)
         {
             // set subtitles
-            SubtitlesManager.ShowSubtitle(1f, mqi.message.source.name, mqi.message.subtitle);
+            SubtitlesManager.ShowSubtitle(1f, mqi.message.sourceName, mqi.message.subtitle);
 
             // send out messages
             if (onMessageStart != null) onMessageStart(self, mqi.index);
@@ -167,7 +181,5 @@ public class ConversationPlayer
 
         // empty the queue
         conversationQueue = new List<MessageQueueItem>();
-
-        SetLucyBellEnabled(true);
     }
 }

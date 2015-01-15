@@ -27,7 +27,8 @@ public class LucyController : MonoBehaviour {
             return;
         var audio = new AudioObject(this.gameObject, LucyBell, 1, 0, true, true);
         bellPlayer = AudioManager.PlayAudio(audio);
-        StartBell();
+        playing = 1;
+        StopBell();
     }
 	
 	// Update is called once per frame
@@ -58,6 +59,7 @@ public class LucyController : MonoBehaviour {
 
     public void StartBell()
     {
+        //Debug.Log("startBell called");
         playing++;
         if (playing > 0)
         {
@@ -74,6 +76,7 @@ public class LucyController : MonoBehaviour {
 
     public void StopBell()
     {
+        //Debug.Log("StopBell called");
         playing--;
         if (playing <= 0)
         {

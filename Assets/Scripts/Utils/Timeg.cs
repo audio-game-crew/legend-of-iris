@@ -38,4 +38,22 @@
         {
             return Mathf.Min(1f, Time.fixedDeltaTime);
         }
+        /// <summary>
+        /// Maximum can only be 1
+        /// </summary>
+        /// <param name="speed"></param>
+        /// <returns></returns>
+        public static float safeDeltaUnscaled(float speed)
+        {
+            return Mathf.Min(1f, Time.unscaledDeltaTime * speed);
+        }
+        /// <summary>
+        /// Maximum can only be 1
+        /// </summary>
+        /// <param name="speed"></param>
+        /// <returns></returns>
+        public static float safeDeltaUnscaled()
+        {
+            return Mathf.Min(1f, Time.unscaledDeltaTime);
+        }
     }
