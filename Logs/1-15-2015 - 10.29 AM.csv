@@ -1,0 +1,15 @@
+0.8061296;00h:00m:00s:806ms;Quest started: T0.1
+0.8061296;00h:00m:00s:806ms;Quest started: Start [Getting Ready]
+1.316753;00h:00m:01s:317ms;Quest started: T1.1
+3.269317;00h:00m:03s:269ms;Quest started: ConfirmKeyPress
+4.519414;00h:00m:04s:519ms;Quest started: T1.3
+6.281405;00h:00m:06s:281ms;Quest started: PressForwardToConfirm
+6.898026;00h:00m:06s:898ms;Quest started: T1.6
+6.898026;00h:00m:06s:898ms;Quest started: 1. Controls #1 [Connection]
+7.761046;00h:00m:07s:761ms;Quest started: T2.1
+10.54892;00h:00m:10s:549ms;Quest started: MoveForward
+19.60813;00h:00m:19s:608ms;Quest started: MoveBackward
+27.11969;00h:00m:27s:120ms;Quest started: T2.3
+38.61382;00h:00m:38s:614ms;Quest started: RotateLeft
+43.3373;00h:00m:43s:337ms;Quest started: T2.6
+45.81176;00h:00m:45s:812ms;Quest started: RotateRight

@@ -657,7 +657,7 @@ MonoBehaviour:
   distanceToGround: {x: 0, y: -3, z: 0}
   feetReachForward: .699999988
   feetGapWidth: .600000024
-  distancePerStep: 2.20000005
+  distancePerStep: 2.79999995
   randomness: .00999999978
   sounds:
   - ground: 0
