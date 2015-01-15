@@ -13,7 +13,12 @@ public class PlayerController : MonoBehaviour {
 	public AudioClip growlSound;
 	private AudioPlayer growlPlayer;
 
+    public string EdgeConversation;
+    public string EdgeSaveConversation;
+
 	private bool onFire = false;
+    private ConversationPlayer edgeConversationPlayer;
+    public bool InEdge = false;
 
     public event EventHandler<TriggerEventArgs> TriggerEntered;
     public event EventHandler<TriggerEventArgs> TriggerExit;
@@ -22,7 +27,36 @@ public class PlayerController : MonoBehaviour {
 
     void Start()
     {
-        EdgeManager.instance.PlayerEnterEdge += (s, e) => Debug.LogWarning("You are close to an edge! TODO: play warning sound!");
+        EdgeManager.instance.PlayerEnterEdge += instance_PlayerEnterEdge;
+        EdgeManager.instance.PlayerExitEdge += instance_PlayerExitEdge;
+    }
+
+    void instance_PlayerExitEdge(object sender, TriggerEventArgs e)
+    {
+        InEdge = false;
+        if (edgeConversationPlayer != null)
+            edgeConversationPlayer.Skip();
+    }
+
+    void instance_PlayerEnterEdge(object sender, TriggerEventArgs e)
+    {
+        InEdge = true;
+        StartEdgeConversation();
+    }
+
+    private void StartEdgeConversation()
+    {
+        if (!string.IsNullOrEmpty(EdgeConversation) && (edgeConversationPlayer == null || edgeConversationPlayer.IsFinished()))
+        {
+            edgeConversationPlayer = ConversationManager.GetConversationPlayer(EdgeConversation);
+            edgeConversationPlayer.Start();
+        }
+    }
+
+    void Update()
+    {
+        if (InEdge && edgeConversationPlayer != null && edgeConversationPlayer.IsFinished())
+            StartEdgeConversation();
     }
 
 	// Update is called once per frame

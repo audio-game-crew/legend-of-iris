@@ -41599,6 +41599,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camerasContainer: {fileID: 1900926692}
   growlSound: {fileID: 0}
+  EdgeConversation: T4.4A
+  EdgeSaveConversation: T4.4B
+  InEdge: 0
   LockMovement: 0
 --- !u!54 &2076031672
 Rigidbody:
