@@ -13,6 +13,8 @@ public class KeyOrderQuest : Quest<KeyOrderQuest, KeyOrderQuestDefinition> {
     protected override void _Start() {
         base._Start();
         Reset();
+        if (definition.StartConversationImmediately)
+            StartConversation();
     }
 
     private void Reset()
