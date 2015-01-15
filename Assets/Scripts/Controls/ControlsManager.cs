@@ -7,9 +7,27 @@ public class ControlsManager : MonoBehaviour {
     {
         instance = this;
     }
-
-    public static BaseControls current;
+    private static BaseControls _current;
+    public static BaseControls current
+    {
+        get
+        {
+            if (CameraManager.instance.oculusRiftActivated)
+            {
+                return instance.oculusRiftControls;
+            }
+            else
+            {
+                return _current;
+            }
+        }
+        set
+        {
+            _current = value;
+        }
+    }
     public SingleAxisControls singleAxisControls;
+    public OculusRiftControls oculusRiftControls;
     public FirstPersonShooterControls firstPersonShooterControls;
     public FixedDirectionControls fixedDirectionControls;
     public ControllerOption DefaultControls = ControllerOption.SingleAxisControls;

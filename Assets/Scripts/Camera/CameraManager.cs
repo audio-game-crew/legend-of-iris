@@ -16,6 +16,7 @@ public class CameraManager : MonoBehaviour {
     public CameraSetting setting;
     public static Camera currentFirstPersonCamera;
     public static Camera currentViewingCamera;
+    public bool oculusRiftActivated;
 
     public enum CameraSetting
     {
@@ -67,6 +68,7 @@ public class CameraManager : MonoBehaviour {
         currentFirstPersonCamera = normalCamera;
         currentViewingCamera = visualAidsCamera.camera;
         visualAidsGroup.alpha = 1f;
+        oculusRiftActivated = false;
     }
 
     public void SetHeadTrackingMode()
@@ -83,6 +85,7 @@ public class CameraManager : MonoBehaviour {
         currentFirstPersonCamera = oculusRiftRightCamera;
         currentViewingCamera = visualAidsCamera.camera;
         visualAidsGroup.alpha = 1f;
+        oculusRiftActivated = true;
     }
 
     public void SetOculusRiftMode()
@@ -99,6 +102,7 @@ public class CameraManager : MonoBehaviour {
         currentFirstPersonCamera = oculusRiftRightCamera;
         currentViewingCamera = oculusRiftRightCamera;
         visualAidsGroup.alpha = 0f;
+        oculusRiftActivated = true;
     }
 
     private void setNormalCameraEnabled(bool enabled)

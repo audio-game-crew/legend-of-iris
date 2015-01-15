@@ -10334,6 +10334,9 @@ MonoBehaviour:
   singleAxisControls:
     walkSpeed: 10
     turnSpeed: 180
+  oculusRiftControls:
+    walkSpeed: 0
+    turnSpeed: 0
   firstPersonShooterControls:
     walkSpeed: 4
     turnSpeed: 180
@@ -29496,6 +29499,7 @@ MonoBehaviour:
   normalCamera: {fileID: 37307206}
   visualAidsGroup: {fileID: 809600080}
   setting: 0
+  oculusRiftActivated: 0
 --- !u!1 &1584970426
 GameObject:
   m_ObjectHideFlags: 0
@@ -34611,7 +34615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1887429366
 MonoBehaviour:
   m_ObjectHideFlags: 0
