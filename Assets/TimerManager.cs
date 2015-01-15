@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 public class TimerManager : MonoBehaviour {
 
@@ -13,7 +14,7 @@ public class TimerManager : MonoBehaviour {
     }
     public Text text;
     public float startTime;
-    public List<TimedEvent> events;
+    public List<TimedEvent> events = new List<TimedEvent>();
     public string fileName;
 
     public class TimedEvent
@@ -38,7 +39,18 @@ public class TimerManager : MonoBehaviour {
         foreach (TimedEvent t in instance.events) {
             output += t + "\n";
         }
-        System.IO.File.WriteAllText(instance.fileName + ".csv", output);
+        var dirName = Path.GetDirectoryName(instance.fileName);
+        if (!Directory.Exists(dirName))
+            Directory.CreateDirectory(dirName);
+        try
+        {
+            if (!System.IO.File.Exists(instance.fileName + ".csv"))
+                System.IO.File.Create(instance.fileName + ".csv");
+            System.IO.File.WriteAllText(instance.fileName + ".csv", output);
+        } catch
+        {
+            // Too bad
+        }
 
     }
 
@@ -46,7 +58,7 @@ public class TimerManager : MonoBehaviour {
 	void Start () {
         startTime = Time.time;
 
-        fileName = new DateTime().ToShortDateString() + " - " + new DateTime().ToShortTimeString();
+        fileName = "Logs/" + DateTime.Now.ToShortDateString().Replace('/', '-') + " - " + DateTime.Now.ToShortTimeString().Replace(':', '.');
 	}
 
     string GetTimerString() {

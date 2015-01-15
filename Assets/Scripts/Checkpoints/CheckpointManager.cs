@@ -80,6 +80,7 @@ public class CheckpointManager : MonoBehaviour {
 
     public void GotoLastCheckpoint(object sender, string conversation = null)
     {
+        TimerManager.RegisterEvent("Dieded");
         start = new PositionRotation(Characters.instance.Beorn);
         target = new PositionRotation(lastCheckpoint.gameObject);
         teleporting = true;
