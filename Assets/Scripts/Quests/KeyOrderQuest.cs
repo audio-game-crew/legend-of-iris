@@ -12,7 +12,6 @@ public class KeyOrderQuest : Quest<KeyOrderQuest, KeyOrderQuestDefinition> {
 
     protected override void _Start() {
         base._Start();
-        StartConversation();
         Reset();
     }
 
@@ -34,7 +33,7 @@ public class KeyOrderQuest : Quest<KeyOrderQuest, KeyOrderQuestDefinition> {
         }
         
 
-        if (Time.time > lastConversationEnd + definition.repeatDelay)
+        if (!string.IsNullOrEmpty(definition.conversationId) && Time.time > lastConversationEnd + definition.repeatDelay)
             StartConversation();
     }
 
