@@ -13,9 +13,4 @@ public class MoveQuestDefinition : QuestDefinition {
 	override public Quest Create() {
 		return new MoveQuest(this);
 	}
-	
-    public enum Direction
-    {
-        Forward, Backward, Left, Right
-    }
 }

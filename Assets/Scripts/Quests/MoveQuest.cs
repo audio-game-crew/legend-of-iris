@@ -79,28 +79,28 @@ public class MoveQuest : Quest<MoveQuest, MoveQuestDefinition> {
             Complete();
     }
 
-    private bool PlayerHasMovedIntoDirection(MoveQuestDefinition.Direction direction, float amount)
+    private bool PlayerHasMovedIntoDirection(Direction direction, float amount)
     {
         bool sufficientMovement = false;
         switch (direction)
         {
-            case MoveQuestDefinition.Direction.Forward: sufficientMovement = totalMovement.y > 0 && Math.Abs(totalMovement.y) > amount; break;
-            case MoveQuestDefinition.Direction.Backward: sufficientMovement = totalMovement.y < 0 && Math.Abs(totalMovement.y) > amount; break;
-            case MoveQuestDefinition.Direction.Left: sufficientMovement = totalRotation < 0 && Math.Abs(totalRotation) > amount; break;
-            case MoveQuestDefinition.Direction.Right: sufficientMovement = totalRotation > 0 && Math.Abs(totalRotation) > amount; break;
+            case Direction.Forward: sufficientMovement = totalMovement.y > 0 && Math.Abs(totalMovement.y) > amount; break;
+            case Direction.Backward: sufficientMovement = totalMovement.y < 0 && Math.Abs(totalMovement.y) > amount; break;
+            case Direction.Left: sufficientMovement = totalRotation < 0 && Math.Abs(totalRotation) > amount; break;
+            case Direction.Right: sufficientMovement = totalRotation > 0 && Math.Abs(totalRotation) > amount; break;
         }
         return sufficientMovement;
     }
 
-    private MoveQuestDefinition.Direction OppositeDirection(MoveQuestDefinition.Direction dir)
+    private Direction OppositeDirection(Direction dir)
     {
         switch(dir)
         {
-            case MoveQuestDefinition.Direction.Backward: return MoveQuestDefinition.Direction.Forward;
-            case MoveQuestDefinition.Direction.Forward: return MoveQuestDefinition.Direction.Backward;
-            case MoveQuestDefinition.Direction.Left: return MoveQuestDefinition.Direction.Right;
-            case MoveQuestDefinition.Direction.Right: return MoveQuestDefinition.Direction.Left;
+            case Direction.Backward: return Direction.Forward;
+            case Direction.Forward: return Direction.Backward;
+            case Direction.Left: return Direction.Right;
+            case Direction.Right: return Direction.Left;
         }
-        return MoveQuestDefinition.Direction.Backward;
+        return Direction.Backward;
     }
 }
