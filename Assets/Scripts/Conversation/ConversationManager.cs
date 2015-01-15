@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using System.Linq;
 
 [ExecuteInEditMode]
@@ -38,7 +37,7 @@ public class ConversationManager : MonoBehaviour {
         // check if player wants to skip
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            foreach (var cp in playingConversations)
+            foreach (var cp in playingConversations.ToArray())
             {
                 cp.Skip();
             }
