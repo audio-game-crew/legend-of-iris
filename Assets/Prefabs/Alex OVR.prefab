@@ -689,11 +689,13 @@ MonoBehaviour:
   randomness: .00999999978
   sounds:
   - ground: 0
-    sounds: {fileID: 11400000, guid: 83c42e6a21646d54796ebbc28cf77c86, type: 2}
+    sounds: {fileID: 11400000, guid: 19bc52b83fab0c04280c958fd21ac67b, type: 2}
   - ground: 1
-    sounds: {fileID: 11400000, guid: 17d09329dd275b44c92a070fdb609347, type: 2}
+    sounds: {fileID: 11400000, guid: 3557599ce66285e4ead68b4fc6eaf6b2, type: 2}
   - ground: 2
-    sounds: {fileID: 11400000, guid: 4282fb713ac9ac3449584844d1b60b4b, type: 2}
+    sounds: {fileID: 11400000, guid: 4390bbf5b5dac2a4c80e1a78bbbb0835, type: 2}
+  - ground: 3
+    sounds: {fileID: 11400000, guid: 4c20a5fab71350f48ad05b2a6fe1b522, type: 2}
   currentGroundType: 0
   currentFootsteps: {fileID: 0}
   enabled: 1
