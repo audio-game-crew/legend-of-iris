@@ -563,9 +563,8 @@ MonoBehaviour:
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
   TimeoutConversationID: T6.5
-  Timeout: 10
+  Timeout: 20
   WrongWayConversationID: T6.6
   WrongWayThreshold: 2
   WrongWayTimeout: 5
