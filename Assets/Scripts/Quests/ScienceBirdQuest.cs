@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ScienceBirdQuest : Quest<ScienceBirdQuest, ScienceBirdQuestDefinition> {
 
@@ -13,7 +14,7 @@ public class ScienceBirdQuest : Quest<ScienceBirdQuest, ScienceBirdQuestDefiniti
 
 	float nextSpawnTime;
 
-	enum State { COLLECTING, RETURNING };
+	enum State { COLLECTING, RETURNING, COMPLETING };
 
 	new State state = State.COLLECTING;
 
@@ -26,6 +27,8 @@ public class ScienceBirdQuest : Quest<ScienceBirdQuest, ScienceBirdQuestDefiniti
 
 		nextSpawnTime = Time.time;
 
+		definition.cageWaypoint.onPlayerEnter += OnPlayerEnterCage;
+
 		base._Start();
 	}
 
@@ -35,34 +38,54 @@ public class ScienceBirdQuest : Quest<ScienceBirdQuest, ScienceBirdQuestDefiniti
 			if (f == null) continue;
 			GameObject.Destroy(f);
 		}
-		
+
+		definition.cageWaypoint.onPlayerEnter -= OnPlayerEnterCage;
+
 		base._Complete();
+	}
+
+	private float RandomCrossDistance() {
+		var sign = Random.value < .5f ? -1 : 1;
+		var dist = definition.crossSpawnOffset + Random.Range(-definition.crossSpawnVariation, definition.crossSpawnVariation);
+		return sign * dist;
 	}
 
 	private GameObject RandomSpawn(GameObject prefab) {
 		Vector3 spawnBase = Characters.instance.Beorn.transform.position;
-		Vector3 spawnOffset = new Vector3(
-			UnityEngine.Random.Range(-definition.crossSpawnDistance, +definition.crossSpawnDistance),
-			0,
-			definition.mainSpawnDistance
-		);
-		Quaternion spawnRotation = Quaternion.AngleAxis(UnityEngine.Random.Range(0, 360), Vector3.up);
+		Vector3 spawnOffset = new Vector3(RandomCrossDistance(), 0, definition.mainSpawnDistance);
+		Quaternion spawnRotation = Quaternion.AngleAxis(Random.Range(0, 360), Vector3.up);
 		Vector3 spawnLocation = spawnBase - spawnRotation * spawnOffset;
 		return UnityEngine.Object.Instantiate(prefab, spawnLocation, spawnRotation) as GameObject;
 	}
 
-	// Science Bird
-
-	private void SpawnScienceBird() {
-		var bird = RandomSpawn(definition.scienceBirdPrefab);
-		var waypoint = bird.GetComponent<Waypoint>();
-		waypoint.onPlayerEnter += OnPlayerEnterScienceBird;
-		prefabs.Add(bird);
+	private GameObject SpawnRandomBird() {
+		int sum = 0;
+		foreach (var setting in definition.spawnSettings) sum += setting.weight;
+		int index = Random.Range(0, sum);
+		foreach (var setting in definition.spawnSettings) {
+			if (index >= setting.weight) {
+				index -= setting.weight;
+				continue;
+			}
+			var bird = RandomSpawn(setting.prefab);
+			prefabs.Add(bird);
+			var waypoint = bird.GetComponent<Waypoint>();
+			if (setting.prefab.name == "Science Bird")
+				waypoint.onPlayerEnter += OnPlayerEnterScienceBird;
+			else
+				waypoint.onPlayerEnter += OnPlayerEnterCrapBird;
+			return bird;
+		}
+		return null;
 	}
 
+	// Science Bird
+
 	private void OnPlayerEnterScienceBird(Waypoint waypoint, GameObject _) {
+		if (state != State.COLLECTING) return;
 		waypoint.onPlayerEnter -= OnPlayerEnterScienceBird;
 		GameObject.Destroy(waypoint.gameObject);
+		state = State.COMPLETING;
 		var player = ConversationManager.GetConversationPlayer(definition.successConversationId);
 		player.onConversationEnd += OnScienceBirdConversationEnd;
 		player.Start();
@@ -75,62 +98,68 @@ public class ScienceBirdQuest : Quest<ScienceBirdQuest, ScienceBirdQuestDefiniti
 
 	// Crap bird
 
-	private void SpawnCrapBird() {
-		var bird = RandomSpawn(definition.crapBirdPrefab);
-		var waypoint = bird.GetComponent<Waypoint>();
-		waypoint.onPlayerEnter += OnPlayerEnterCrapBird;
-		prefabs.Add(bird);
-	}
-
 	private void OnPlayerEnterCrapBird(Waypoint waypoint, GameObject _) {
+		if (state != State.COLLECTING) return;
 		waypoint.onPlayerEnter -= OnPlayerEnterCrapBird;
 		GameObject.Destroy(waypoint.gameObject);
-		var player = ConversationManager.GetConversationPlayer("T7.3");
+
+		state = State.RETURNING;
+        var lucy = Characters.instance.Lucy.GetComponent<LucyController>();
+        if (lucy != null)
+        	lucy.GotoObject(definition.cageWaypoint.gameObject);
+
+		var player = ConversationManager.GetConversationPlayer("T8.2");
 		player.Start();
+	}
+
+	private void OnPlayerEnterCage(Waypoint waypoint, GameObject _) {
+		if (state != State.RETURNING) return;
+
+		var player = ConversationManager.GetConversationPlayer("T8.3");
+		player.onConversationEnd += OnReturnConversationEnd;
+		player.Start();
+	}
+
+	private void OnReturnConversationEnd(ConversationPlayer player) {
+		player.onConversationEnd -= OnReturnConversationEnd;
+		state = State.COLLECTING;
 	}
 
 	public override void Update() {
 		base.Update();
-		if (state == State.COLLECTING) {
-			if (explanationPlayer == null) {
-				if (Input.anyKey) {
-					nextExplanationTime = Math.Min(
-						Time.time + definition.explanationDelay, 
-						lastExplanationTime + definition.maxExplanationDelay
-					);
-				}
 
-				if (Time.time > nextExplanationTime) {
-					explanationPlayer = ConversationManager.GetConversationPlayer(definition.explanationConversationId);
-					explanationPlayer.onConversationEnd += OnExplanationEnd;
-					explanationPlayer.Start();
-				}
+		if (explanationPlayer == null && state == State.COLLECTING) {
+			if (Input.anyKey) {
+				nextExplanationTime = Math.Min(
+					Time.time + definition.explanationDelay, 
+					lastExplanationTime + definition.maxExplanationDelay
+				);
 			}
 
-			if (Time.time > nextSpawnTime) {
-				nextSpawnTime = Time.time + definition.spawnInterval;
-				if (UnityEngine.Random.Range(0f, 1f) < definition.scienceBirdProbability) {
-					SpawnScienceBird();
-				} else {
-					SpawnCrapBird();
-				}
+			if (Time.time > nextExplanationTime) {
+				explanationPlayer = ConversationManager.GetConversationPlayer(definition.explanationConversationId);
+				explanationPlayer.onConversationEnd += OnExplanationEnd;
+				explanationPlayer.Start();
 			}
-
-			var remaining = new List<GameObject>();
-			foreach (var f in prefabs) {
-				if (f == null) continue;
-				f.transform.Translate(Vector3.forward * Time.deltaTime * definition.birdSpeed);
-				if (Vector3.Distance(Characters.instance.Beorn.transform.position, f.transform.position) < definition.despawnDistance) {
-					remaining.Add(f);
-				} else {
-					GameObject.Destroy(f);
-				}
-			}
-			prefabs = remaining;
-		} else if (state == State.RETURNING) {
-
 		}
 
+		if (Time.time > nextSpawnTime) {
+			nextSpawnTime = Time.time + definition.spawnInterval;
+			SpawnRandomBird();
+		}
+
+		// Update bird positions
+		var remaining = new List<GameObject>();
+		foreach (var f in prefabs) {
+			if (f == null) continue;
+			f.transform.Translate(Vector3.forward * Time.deltaTime * definition.birdSpeed);
+			if (Vector3.Distance(Characters.instance.Beorn.transform.position, f.transform.position) < definition.despawnDistance) {
+				remaining.Add(f);
+			} else {
+				GameObject.Destroy(f);
+			}
+		}
+		prefabs = remaining;
 
 	}
 
