@@ -19,6 +19,7 @@ public class AudioPlayer
     protected AstoundSoundRTIFilter filterAS;
     protected bool paused = false;
     protected float playAtTime = 0f;
+    protected bool pausedDueToInactivity = false;
 
     public delegate void OnRemoveListener();
     protected OnRemoveListener onRemoveListener;
@@ -62,18 +63,18 @@ public class AudioPlayer
         return null;
     }
 
-    public void PausePlaying()
+    public void PausePlaying(bool forcePausing = false)
     {
-        if (audioAS != null && !paused && audio.pausable)
+        if (audioAS != null && !paused && (forcePausing || audio.pausable))
         {
             paused = true;
             audioAS.Stop();
         }
     }
 
-    public void ContinuePlaying()
+    public void ContinuePlaying(bool forcePausing = false)
     {
-        if (audioAS != null && paused && audio.pausable)
+        if (audioAS != null && paused && (forcePausing || audio.pausable))
         {
             paused = false;
 
@@ -144,6 +145,17 @@ public class AudioPlayer
     public virtual void Update(float deltaTime)
     {
         if (finished) return;
+
+        if (audioGO != null && !audioGO.activeInHierarchy)
+        {
+            pausedDueToInactivity = true;
+            PausePlaying(true);
+        }
+        else if (paused && pausedDueToInactivity)
+        {
+            pausedDueToInactivity = false;
+            ContinuePlaying(true);
+        }
 
         if (audio.pausable)
         {
