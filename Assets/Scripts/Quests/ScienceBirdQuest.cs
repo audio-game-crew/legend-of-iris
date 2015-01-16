@@ -27,6 +27,8 @@ public class ScienceBirdQuest : Quest<ScienceBirdQuest, ScienceBirdQuestDefiniti
 
 		nextSpawnTime = Time.time;
 
+		definition.cageWaypoint.onPlayerEnter += OnPlayerEnterCage;
+
 		base._Start();
 	}
 
@@ -36,7 +38,9 @@ public class ScienceBirdQuest : Quest<ScienceBirdQuest, ScienceBirdQuestDefiniti
 			if (f == null) continue;
 			GameObject.Destroy(f);
 		}
-		
+
+		definition.cageWaypoint.onPlayerEnter -= OnPlayerEnterCage;
+
 		base._Complete();
 	}
 
@@ -98,9 +102,27 @@ public class ScienceBirdQuest : Quest<ScienceBirdQuest, ScienceBirdQuestDefiniti
 		if (state != State.COLLECTING) return;
 		waypoint.onPlayerEnter -= OnPlayerEnterCrapBird;
 		GameObject.Destroy(waypoint.gameObject);
+
 		state = State.RETURNING;
-		var player = ConversationManager.GetConversationPlayer("T7.3");
+        var lucy = Characters.instance.Lucy.GetComponent<LucyController>();
+        if (lucy != null)
+        	lucy.GotoObject(definition.cageWaypoint.gameObject);
+
+		var player = ConversationManager.GetConversationPlayer("T8.2");
 		player.Start();
+	}
+
+	private void OnPlayerEnterCage(Waypoint waypoint, GameObject _) {
+		if (state != State.RETURNING) return;
+
+		var player = ConversationManager.GetConversationPlayer("T8.3");
+		player.onConversationEnd += OnReturnConversationEnd;
+		player.Start();
+	}
+
+	private void OnReturnConversationEnd(ConversationPlayer player) {
+		player.onConversationEnd -= OnReturnConversationEnd;
+		state = State.COLLECTING;
 	}
 
 	public override void Update() {

@@ -21,6 +21,9 @@ public class ScienceBirdQuestDefinition : QuestDefinition {
 	[Header("Bird")]
 	public float birdSpeed = 8f;
 
+	[Header("Returning")]
+	public Waypoint cageWaypoint = null;
+
 	[Header("Explanation")]
 	public float explanationDelay = 10f;
 	public float maxExplanationDelay = 30f;

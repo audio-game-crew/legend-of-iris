@@ -104,4 +104,8 @@ public class LucyController : MonoBehaviour {
         moving = true;
     }
 
+    public void GotoObject(GameObject targetObject) {
+        GotoLocation(new PositionRotation(targetObject));
+    }
+
 }

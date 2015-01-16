@@ -591,13 +591,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 272755ee7acfc2140af90e5385253b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnSettings: []
+  spawnSettings:
+  - weight: 1
+    prefab: {fileID: 100004, guid: 546dde179e733164ebbb94a77727afe4, type: 2}
+  - weight: 1
+    prefab: {fileID: 100002, guid: 64bfde3a871db064b87931f11ab5ccd2, type: 2}
+  - weight: 1
+    prefab: {fileID: 100002, guid: 4111eff7ef0879e4da3cffcb0a2de14c, type: 2}
+  - weight: 1
+    prefab: {fileID: 100000, guid: 3e7001295f5006d489476352eeca72fe, type: 2}
   mainSpawnDistance: 30
   crossSpawnOffset: 5
   crossSpawnVariation: 2.5
   despawnDistance: 50
-  spawnInterval: 5
+  spawnInterval: 3
   birdSpeed: 5
+  cageWaypoint: {fileID: 0}
   explanationDelay: 10
   maxExplanationDelay: 30
   explanationConversationId: T7.2
@@ -624,8 +633,9 @@ MonoBehaviour:
   crossSpawnOffset: 5
   crossSpawnVariation: 2.5
   despawnDistance: 50
-  spawnInterval: 5
+  spawnInterval: 3
   birdSpeed: 5
+  cageWaypoint: {fileID: 0}
   explanationDelay: 10
   maxExplanationDelay: 30
   explanationConversationId: T7.2
@@ -650,8 +660,9 @@ MonoBehaviour:
   crossSpawnOffset: 5
   crossSpawnVariation: 2.5
   despawnDistance: 50
-  spawnInterval: 5
+  spawnInterval: 3
   birdSpeed: 5
+  cageWaypoint: {fileID: 0}
   explanationDelay: 10
   maxExplanationDelay: 30
   explanationConversationId: T7.2
@@ -667,13 +678,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 272755ee7acfc2140af90e5385253b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnSettings: []
+  spawnSettings:
+  - weight: 2
+    prefab: {fileID: 100004, guid: 546dde179e733164ebbb94a77727afe4, type: 2}
+  - weight: 1
+    prefab: {fileID: 100002, guid: 64bfde3a871db064b87931f11ab5ccd2, type: 2}
+  - weight: 1
+    prefab: {fileID: 100002, guid: 4111eff7ef0879e4da3cffcb0a2de14c, type: 2}
+  - weight: 1
+    prefab: {fileID: 100000, guid: 3e7001295f5006d489476352eeca72fe, type: 2}
   mainSpawnDistance: 30
   crossSpawnOffset: 5
   crossSpawnVariation: 2.5
   despawnDistance: 50
-  spawnInterval: 5
+  spawnInterval: 3
   birdSpeed: 5
+  cageWaypoint: {fileID: 0}
   explanationDelay: 10
   maxExplanationDelay: 30
   explanationConversationId: T7.2
@@ -706,11 +726,11 @@ MonoBehaviour:
   spawnSettings:
   - count: 1
     prefab: {fileID: 100002, guid: 4111eff7ef0879e4da3cffcb0a2de14c, type: 2}
-  - count: 2
+  - count: 1
     prefab: {fileID: 100004, guid: 546dde179e733164ebbb94a77727afe4, type: 2}
-  - count: 2
+  - count: 1
     prefab: {fileID: 100002, guid: 64bfde3a871db064b87931f11ab5ccd2, type: 2}
-  - count: 2
+  - count: 1
     prefab: {fileID: 100000, guid: 3e7001295f5006d489476352eeca72fe, type: 2}
   spawnDistance: 20
   explanationDelay: 15
