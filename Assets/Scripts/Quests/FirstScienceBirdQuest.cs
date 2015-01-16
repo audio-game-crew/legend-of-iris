@@ -26,6 +26,16 @@ public class FirstScienceBirdQuest : Quest<FirstScienceBirdQuest, FirstScienceBi
 		base._Start();
 	}
 
+	protected override void _Complete() {
+
+		foreach (var f in prefabs) {
+			if (f == null) continue;
+			GameObject.Destroy(f);
+		}
+		
+		base._Complete();
+	}
+
 	private GameObject RandomSpawn(GameObject prefab) {
 		Vector3 spawnBase = Characters.instance.Beorn.transform.position;
 		Vector2 spawnOffset = UnityEngine.Random.insideUnitCircle * definition.spawnDistance;

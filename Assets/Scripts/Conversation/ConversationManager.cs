@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using System.Linq;
 
 [ExecuteInEditMode]
 public class ConversationManager : MonoBehaviour {
 
-    private static ConversationManager instance;
+    public static ConversationManager instance;
     void Awake()
     {
         instance = this;
@@ -15,6 +14,7 @@ public class ConversationManager : MonoBehaviour {
 
     [Header("Settings")]
     public bool maxOneConversationActive = true;
+    public float minAudioDistance = 10;
     public List<Conversation> conversations;
 
     [Header("Story script importer")]
@@ -38,7 +38,7 @@ public class ConversationManager : MonoBehaviour {
         // check if player wants to skip
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            foreach (var cp in playingConversations)
+            foreach (var cp in playingConversations.ToArray())
             {
                 cp.Skip();
             }
@@ -81,7 +81,7 @@ public class ConversationManager : MonoBehaviour {
         {
             if (maxOneConversationActive)
             {
-                foreach (ConversationPlayer c in playingConversations)
+                foreach (ConversationPlayer c in playingConversations.ToArray())
                 {
                     c.Skip();
                 }
@@ -97,26 +97,78 @@ public class ConversationManager : MonoBehaviour {
         return null;
     }
 
-    void AddConversation(List<Conversation> newconversations, string nameID, List<string> sources, List<string> texts)
+    void AddConversation(List<Conversation> newconversations, ConversationImport obj)
     {
         List<ConversationMessage> messages = new List<ConversationMessage>();
         Conversation c = new Conversation();
-        c.nameID = nameID;
+        c.nameID = obj.nameID;
         c.messageSequence = messages;
         c.hint = "";
 
-        for (int i = 0; i < sources.Count; i++ )
+        for (int i = 0; i < obj.sources.Count; i++)
         {
             var m = new ConversationMessage();
-            m.audioClip = Resources.Load(c.nameID + "_" + i, typeof(AudioClip)) as AudioClip;
-            m.source = GameObject.Find(sources[i]);
+            m.audioClip = Resources.Load(obj.files[i], typeof(AudioClip)) as AudioClip;
+            m.source = GameObject.Find(obj.sources[i]);
+            m.sourceName = obj.names[i];
             if (m.source == null)
-                Debug.LogWarning("Source \"" + sources[i] + "\" not found");
-            m.subtitle = texts[i];
+                Debug.LogWarning("Source \"" + obj.sources[i] + "\" not found");
+            if (m.audioClip == null)
+                Debug.LogError("Audio Clip \"" + obj.files[i] + "\" not found. With text: \n" + obj.texts[i]);
+            m.subtitle = obj.texts[i];
+            m.settings.screenAsSource = obj.screen[i];
+            m.settings.timeOffset = obj.delays[i];
             messages.Add(m);
         }
 
         newconversations.Add(c);
+    }
+
+    private const int C_NameID = 0;
+    private const int C_GameObject = C_NameID + 1;
+    private const int C_Name = C_GameObject + 1;
+    private const int C_Delay = C_Name + 1;
+    private const int C_ScreenAsSource = C_Delay + 1;
+    private const int C_File = C_ScreenAsSource + 1;
+    private const int C_Subtitle = C_File + 1;
+
+    private const int COLUMNS = C_Subtitle + 1;
+
+    private class ConversationImport
+    {
+        public string nameID = "";
+        public List<string> sources = new List<string>();
+        public List<string> names = new List<string>();
+        public List<float> delays = new List<float>();
+        public List<bool> screen = new List<bool>();
+        public List<string> texts = new List<string>();
+        public List<string> files = new List<string>();
+
+        public ConversationImport(string[] items)
+        {
+            this.nameID = items[C_NameID];
+        }
+
+        public void read(string[] items)
+        {
+            int i = sources.Count;
+            sources.Add(items[C_GameObject]);
+            names.Add(items[C_Name]);
+            delays.Add(float.Parse(items[C_Delay].Replace(",", ".")));
+            screen.Add(items[C_ScreenAsSource].Equals("1"));
+            texts.Add("");
+            
+            if (items[C_File].Length > 0) {
+                files.Add(items[C_File]);
+            } else {
+                files.Add(sources[i] + "/" + sources[i] + " - " + nameID + "_" + (i + 1));
+            }
+        }
+
+        public void addText(string[] items)
+        {
+            texts[texts.Count - 1] += items[C_Subtitle] + "\n";
+        }
     }
 
 	// Use this for initialization
@@ -126,38 +178,41 @@ public class ConversationManager : MonoBehaviour {
         string[] lines = t.Split('\n');
 
         bool started = false;
-        string nameID = "";
-        List<string> sources = null;
-        List<string> texts = null;
+        ConversationImport conversationObject = null;
+
+        bool skippedFirst = false;
 
         foreach (string line in lines) {
+            if (!skippedFirst)
+            {
+                skippedFirst = true;
+                continue;
+            }
+
             string[] items = line.Split(';');
-            if (items.Length != 3) continue;
-            if (items[0].Length > 0)
+            if (items.Length != COLUMNS) continue;
+            if (items[C_NameID].Length > 0)
             {
                 if (started)
                 {
-                    AddConversation(newconversations, nameID, sources, texts);
+                    AddConversation(newconversations, conversationObject);
                 }
                 started = true;
-                nameID = items[0];
-                sources = new List<string>();
-                texts = new List<string>();
+                conversationObject = new ConversationImport(items);
             }
             if (items[1].Length > 0)
             {
-                sources.Add(items[1]);
-                texts.Add("");
+                conversationObject.read(items);
             }
-            if (items[2].Length > 0)
+            if (items[C_Subtitle].Length > 0)
             {
-                texts[texts.Count - 1] += items[2] + "\n";
+                conversationObject.addText(items);
             }
         }
 
         if (started)
         {
-            AddConversation(newconversations, nameID, sources, texts);
+            AddConversation(newconversations, conversationObject);
         }
 
         conversations = newconversations;

@@ -51,7 +51,7 @@ public class MineFieldScript : MonoBehaviour {
             CheckpointManager.instance.SetLastCheckpoint(DragBackCheckpoint);
     }
 
-    void OnEnable()
+    void Update()
     {
         if (!initialized)
         {
@@ -59,6 +59,10 @@ public class MineFieldScript : MonoBehaviour {
             initialized = true;
         }
 
+    }
+
+    void OnEnable()
+    {
         // Register collider events
         var player = Characters.instance.Beorn.GetComponent<PlayerController>();
         player.TriggerEntered += player_TriggerEntered;

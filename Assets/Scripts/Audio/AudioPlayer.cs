@@ -104,6 +104,18 @@ public class AudioPlayer
             audioAS.volume = volume;
     }
 
+    public void SetMinDistance(float distance)
+    {
+        if (audioAS != null)
+            audioAS.minDistance = distance;
+    }
+
+    public void SetMaxDistance(float distance)
+    {
+        if (audioAS != null)
+            audioAS.maxDistance = distance;
+    }
+
     public void SetPitch(float pitch)
     {
         if (audioAS != null)

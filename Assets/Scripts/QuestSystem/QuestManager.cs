@@ -27,6 +27,10 @@ public class QuestManager : MonoBehaviour {
 		}
         Quest.onAnyQuestStart += s => activeQuests.Add(s);
         Quest.onAnyQuestComplete += s => activeQuests.Remove(s);
+        Quest.onAnyQuestComplete += delegate(Quest q)
+        {
+            TimerManager.RegisterEvent("Quest started: " + q.definition.gameObject.name);
+        };
 	}
 
     void Update()

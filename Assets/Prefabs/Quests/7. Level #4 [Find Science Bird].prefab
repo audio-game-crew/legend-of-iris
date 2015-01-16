@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &101564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 401564}
+  - 114: {fileID: 11401564}
+  m_Layer: 0
+  m_Name: Walk to middle of forest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &114852
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,6 +48,114 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &136550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 436550}
+  - 114: {fileID: 11436550}
+  m_Layer: 0
+  m_Name: 'Science Bird #4'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &136552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 436552}
+  - 114: {fileID: 11436552}
+  m_Layer: 0
+  m_Name: 'Science Bird #3'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &136554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 436554}
+  - 114: {fileID: 11436554}
+  m_Layer: 0
+  m_Name: 'Science Bird #2'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &197620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 497620}
+  - 114: {fileID: 11497620}
+  m_Layer: 0
+  m_Name: 'Science Bird #5'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &197622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 497622}
+  - 114: {fileID: 11497622}
+  m_Layer: 0
+  m_Name: Conversation T7.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &197624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 497624}
+  - 114: {fileID: 11497624}
+  m_Layer: 0
+  m_Name: FirstBirdQuest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &401564
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101564}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 414852}
+  m_RootOrder: 1
 --- !u!4 &414852
 Transform:
   m_ObjectHideFlags: 1
@@ -43,6 +167,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 414854}
+  - {fileID: 401564}
+  - {fileID: 497622}
+  - {fileID: 497624}
+  - {fileID: 436554}
+  - {fileID: 436552}
+  - {fileID: 436550}
+  - {fileID: 497620}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &414854
@@ -57,6 +188,96 @@ Transform:
   m_Children: []
   m_Father: {fileID: 414852}
   m_RootOrder: 0
+--- !u!4 &436550
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 414852}
+  m_RootOrder: 6
+--- !u!4 &436552
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 414852}
+  m_RootOrder: 5
+--- !u!4 &436554
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136554}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 414852}
+  m_RootOrder: 4
+--- !u!4 &497620
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197620}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 414852}
+  m_RootOrder: 7
+--- !u!4 &497622
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197622}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 414852}
+  m_RootOrder: 2
+--- !u!4 &497624
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197624}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 414852}
+  m_RootOrder: 3
+--- !u!114 &11401564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcd68f54570bf1b42b2974a8c8b4cae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 0}
+  TimeoutConversationID: T6.5
+  Timeout: 10
+  WrongWayConversationID: T6.6
+  WrongWayThreshold: 2
+  WrongWayTimeout: 5
 --- !u!114 &11414852
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,6 +301,129 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: 7
+--- !u!114 &11436550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 272755ee7acfc2140af90e5385253b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scienceBirdPrefab: {fileID: 100002, guid: 4111eff7ef0879e4da3cffcb0a2de14c, type: 2}
+  crapBirdPrefab: {fileID: 100002, guid: 64bfde3a871db064b87931f11ab5ccd2, type: 2}
+  scienceBirdProbability: .400000006
+  birdSpeed: 5
+  mainSpawnDistance: 30
+  crossSpawnDistance: 8
+  despawnDistance: 50
+  spawnInterval: 5
+  explanationDelay: 10
+  maxExplanationDelay: 30
+  explanationConversationId: T7.2
+  successConversationId: T8.5
+--- !u!114 &11436552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 272755ee7acfc2140af90e5385253b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scienceBirdPrefab: {fileID: 100002, guid: 4111eff7ef0879e4da3cffcb0a2de14c, type: 2}
+  crapBirdPrefab: {fileID: 100002, guid: 64bfde3a871db064b87931f11ab5ccd2, type: 2}
+  scienceBirdProbability: .400000006
+  birdSpeed: 5
+  mainSpawnDistance: 30
+  crossSpawnDistance: 8
+  despawnDistance: 50
+  spawnInterval: 5
+  explanationDelay: 10
+  maxExplanationDelay: 30
+  explanationConversationId: T7.2
+  successConversationId: T8.4
+--- !u!114 &11436554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 272755ee7acfc2140af90e5385253b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scienceBirdPrefab: {fileID: 100002, guid: 4111eff7ef0879e4da3cffcb0a2de14c, type: 2}
+  crapBirdPrefab: {fileID: 100002, guid: 64bfde3a871db064b87931f11ab5ccd2, type: 2}
+  scienceBirdProbability: .400000006
+  birdSpeed: 5
+  mainSpawnDistance: 30
+  crossSpawnDistance: 8
+  despawnDistance: 50
+  spawnInterval: 5
+  explanationDelay: 10
+  maxExplanationDelay: 30
+  explanationConversationId: T7.2
+  successConversationId: T8.1
+--- !u!114 &11497620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 272755ee7acfc2140af90e5385253b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scienceBirdPrefab: {fileID: 100002, guid: 4111eff7ef0879e4da3cffcb0a2de14c, type: 2}
+  crapBirdPrefab: {fileID: 100002, guid: 64bfde3a871db064b87931f11ab5ccd2, type: 2}
+  scienceBirdProbability: .400000006
+  birdSpeed: 5
+  mainSpawnDistance: 30
+  crossSpawnDistance: 8
+  despawnDistance: 50
+  spawnInterval: 5
+  explanationDelay: 10
+  maxExplanationDelay: 30
+  explanationConversationId: T7.2
+  successConversationId: T8.6
+--- !u!114 &11497622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationId: T7.1
+  LucyQuiet: 0
+--- !u!114 &11497624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14bc52c39aabd1947901ea58231005c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDistance: 20
+  scienceBirdPrefab: {fileID: 100002, guid: 4111eff7ef0879e4da3cffcb0a2de14c, type: 2}
+  scienceBirdCount: 1
+  crapBirdPrefab: {fileID: 100002, guid: 64bfde3a871db064b87931f11ab5ccd2, type: 2}
+  crapBirdCount: 3
+  explanationDelay: 10
+  maxExplanationDelay: 30
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
