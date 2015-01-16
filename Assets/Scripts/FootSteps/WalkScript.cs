@@ -44,7 +44,7 @@ public class WalkScript : MonoBehaviour {
 
 	void Start () 
     {
-        previousPosition = transform.position;
+        previousPosition = transform.position.sety(0);
         direction = transform.TransformDirection(localWalkingDirection).normalized;
         toStep = distancePerStep / 0.5f;
         currentGroundType = DEFAULT_GROUND_TYPE;
@@ -57,7 +57,7 @@ public class WalkScript : MonoBehaviour {
 
         DetermineGroundType();
 
-        Vector3 positionNow = transform.position;
+        Vector3 positionNow = transform.position.sety(0);
         Vector3 moved = positionNow - previousPosition;
         float distanceMoved = moved.magnitude;
         toStep -= distanceMoved;

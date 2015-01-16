@@ -6,297 +6,297 @@ T0.1;Screen Audio;Iris;Iris;0;1;1;;Welcome to Iris, the most immersive all-in-on
 ;;;;;;;;*wait 10s*
 ;;;;;;;;When you are ready, press forward.
 ;;;;;;;;*wait 10s*
-T1.1;Screen Audio;Iris;Iris;0;1;1;;*tuuuut*tuuuut* You have 1 incoming call from *“Lucy”*. Connecting you through now.
-;Screen Audio;Lucy;*Lucy*;0;1;1;;Hello? Human? I need your help!! Are you there? Please press up/down/left/right in that order to confirm you can hear me and that the connection is properly working.
-T1.2;Screen Audio;Lucy;*Lucy*;0;1;1;;Human, please press up/down/left/right in that order. You can do it! If you are not sure about how your controls work, you can press escape to check the settings of Iris.
-T1.3;Screen Audio;Iris;Iris;0;1;1;;Checking response from spirit world... Connection in perfectly stable condition. You are now ready to connect to a spirit bear. Disconnecting because of reasons, in... 5... 4...
-;Screen Audio;Lucy;*Lucy*;0;1;1;;What?! NO stop!
-;Screen Audio;Iris;Iris;0;1;1;;*monotone* Ha. ha. ha. just kidding.
-;Screen Audio;Lucy;*Lucy*;0;1;1;;Ah phew! haha! Iris is a bit silly sometimes. Anyway, we will start the connection in a moment. But first, let me explain what is going on. I am Lucy, a fairy from the spirit world. We have a huge giant roaming the streets of my spirit village. We have no idea how he got there, and why, but all the spirits of the village are scared and have been hiding in their little houses. No one dares to talk to the giant because we are all so scared! We need an intelligent human who is a good listener. We will connect you with a fluffy spirit bear. You will be able to control his movements, and you will hear everything that he hears. It is quite the experience, really! So, will you help us, human?
-;Screen Audio;Iris;Iris;0;1;1;;Turn off your computer to confirm
-;Screen Audio;Lucy;*Lucy*;0;1;1;;No, human, don’t! Iris is kidding... again. 
-;Screen Audio;Iris;Iris;0;1;1;;Ha.ha.ha.
-;Screen Audio;Lucy;*Lucy*;0;1;1;;Don’t listen to iris! Just press forward to confirm. Will you help us, human?
-T1.4;Screen Audio;Lucy;*Lucy*;0;1;1;;Oh... you don't.. want to help us? If you make up your mind, please press forward to confirm that you want to help us. We can really use the help of a talented human like you! Press forward to confirm!
-T1.5;Screen Audio;Lucy;*Lucy*;0;1;1;;Human, would you like to help us? We can really use the help of a talented human like you! Press forward to confirm!
-T1.6;Screen Audio;Iris;Iris;0;0;1;;Question confirmed.
-;Screen Audio;Lucy;*Lucy*;0;1;1;;Yaaay! That is so great to hear. We are going on an adventure together. It is going to be awesome! Let’s start connecting you to a spirit bear now. Amazing what technology can do nowadays.
-;Screen Audio;Iris;Iris;0;1;1;;Whoever said technology would replace all paper obviously hasn't tried wiping their butt with an IPad...ha. ha. ha.... Starting connection in 3... 2... 1...
-;Screen Audio;Iris;Iris;0;1;1;Connect;*connection sounds*
-;Screen Audio;Lucy;*Lucy*;-3,5;1;1;;*during connection sounds* Here we go!
-T2.1;Screen Audio;Iris;Iris;0;1;1;;Connection established. Good luck.
-;Lucy;Lucy;Lucy;0;0;1;;Alright, human. You are now in connection with a fluffy spirit bear, called Beorn. Right now he is waking up.
-;Screen Audio;Beorn;Beorn;0;0;0,8;;muhehue *sleepy*
-;Lucy;Lucy;Lucy;0;0;1;;Alright, he got up. 
-;Screen Audio;Iris;Iris;0;1;1;;Forward and backward movement enabled.
-;Lucy;Lucy;Lucy;0;0;1;;Now, let’s see if you can move him. Press forward and backward to move Beorn. 
-T2.2;Screen Audio;Beorn;Beorn;0;0;0,8;;*impatiently* muuuuuuu
-;Lucy;Lucy;Lucy;0;0;1;;Human, press forward and backward to move Beorn. If you don’t understand your controls, you can press escape to check or change the controls settings of Iris.
-T2.3;Screen Audio;Beorn;Beorn;0;0;0,8;;mumUmUUU *thud* (falling)
-;Lucy;Lucy;Lucy;0;0;1;;Haha, aww poor Beorn. He fell down, but that's okay. He is quite strong and has a lot of fur to break his fall. He is a bit clumsy sometimes though. At least he is fully awake now! 
-;Screen Audio;Iris;Iris;0;1;1;;Rotations enabled.
-;Lucy;Lucy;Lucy;0;0;1;;Let’s try and see if you can turn Beorn around. First, do a full rotation to the left.
-T2.5;Screen Audio;Beorn;Beorn;0;0;0,8;;*disapprovingly* muuuuuuu
-;Lucy;Lucy;Lucy;0;0;1;;Human, you are turning into the wrong direction.
-T2.6;Screen Audio;Beorn;Beorn;0;0;0,8;;*happy* muuuuuuu
-;Lucy;Lucy;Lucy;0;0;1;;Well done!! Now let’s turn back around.
-T2.7;Screen Audio;Beorn;Beorn;0;0;0,8;;*happy* muumumuuuu!!
-;Lucy;Lucy;Lucy;0;0;1;;Well done, human!! Notice how the sound changes when you turn? You should pay close attention to the changes of audio in order to orientate yourself. 
-T3.1;Lucy;Lucy;Lucy;0;0;1;;Alright, you are ready to try walking around! Before we can get to the spirit village, we should get Beorn ready to move out. First he needs his shoes, and second... well... he needs to unplug his belly rubbing machine. He doesn’t like it when devices are on stand-by when he leaves the house. It may start a fire, you know?Let’s first walk Beorn to his shoes. I’ll fly over to their location, so you may follow the sound of my wings.
-T3.2;Screen Audio;Beorn;Beorn;0;0;0,8;;*impatiently* muuuuuuu
-;Lucy;Lucy;Lucy;0;0;1;;Human! Try to focus on the sound of my wings and walk towards me! Listen carefully to where my sound comes from, turn towards it and walk into my direction. You can do it, I believe in you.
-T3.3;Screen Audio;Beorn;Beorn;0;0;0,8;;*making effort, putting on shoes* muuuuuuumumuu
-;Lucy;Lucy;Lucy;0;0;1;;Good job, human!... haha, Beorn! Your shoes are even bigger than your belly is.
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*my belly?* muumuu?
-;Lucy;Lucy;Lucy;0;0;1;;Okay, human. Let’s now head towards his belly rubbing machine. Follow me!
-T3.4;Screen Audio;Beorn;Beorn;0;0;0,8;;*impatiently* muuuuuuu
-;Lucy;Lucy;Lucy;0;0;1;;Human! Try to focus on the sound of my wings and walk towards me! Listen carefully to where my sound comes from, turn towards it and walk into my direction. You can do it, I believe in you.
-T3.5;Other;Other;Other;0;0;1;Silence20ms;*belly rubbing machine turns on*
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*very satisfied, being rubbed* mu! mu! mu! mu! *burp* mu! mu! mu! mu!
+T1.1;Screen Audio;Iris;Iris;-0,2;1;1;;*tuuuut*tuuuut* You have 1 incoming call from *“Lucy”*. Connecting you through now.
+;Screen Audio;Lucy;*Lucy*;-0,2;1;1;;Hello? Human? I need your help!! Are you there? Please press up/down/left/right in that order to confirm you can hear me and that the connection is properly working.
+T1.2;Screen Audio;Lucy;*Lucy*;-0,2;1;1;;Human, please press up/down/left/right in that order. You can do it! If you are not sure about how your controls work, you can press escape to check the settings of Iris.
+T1.3;Screen Audio;Iris;Iris;-0,2;1;1;;Checking response from spirit world... Connection in perfectly stable condition. You are now ready to connect to a spirit bear. Disconnecting because of reasons, in... 5... 4...
+;Screen Audio;Lucy;*Lucy*;-0,2;1;1;;What?! NO stop!
+;Screen Audio;Iris;Iris;-0,2;1;1;;*monotone* Ha. ha. ha. just kidding.
+;Screen Audio;Lucy;*Lucy*;-0,2;1;1;;Ah phew! haha! Iris is a bit silly sometimes. Anyway, we will start the connection in a moment. But first, let me explain what is going on. I am Lucy, a fairy from the spirit world. We have a huge giant roaming the streets of my spirit village. We have no idea how he got there, and why, but all the spirits of the village are scared and have been hiding in their little houses. No one dares to talk to the giant because we are all so scared! We need an intelligent human who is a good listener. We will connect you with a fluffy spirit bear. You will be able to control his movements, and you will hear everything that he hears. It is quite the experience, really! So, will you help us, human?
+;Screen Audio;Iris;Iris;-0,2;1;1;;Turn off your computer to confirm
+;Screen Audio;Lucy;*Lucy*;-0,2;1;1;;No, human, don’t! Iris is kidding... again. 
+;Screen Audio;Iris;Iris;-0,2;1;1;;Ha.ha.ha.
+;Screen Audio;Lucy;*Lucy*;-0,2;1;1;;Don’t listen to iris! Just press forward to confirm. Will you help us, human?
+T1.4;Screen Audio;Lucy;*Lucy*;-0,2;1;1;;Oh... you don't.. want to help us? If you make up your mind, please press forward to confirm that you want to help us. We can really use the help of a talented human like you! Press forward to confirm!
+T1.5;Screen Audio;Lucy;*Lucy*;-0,2;1;1;;Human, would you like to help us? We can really use the help of a talented human like you! Press forward to confirm!
+T1.6;Screen Audio;Iris;Iris;-0,2;0;1;;Question confirmed.
+;Screen Audio;Lucy;*Lucy*;-0,2;1;1;;Yaaay! That is so great to hear. We are going on an adventure together. It is going to be awesome! Let’s start connecting you to a spirit bear now. Amazing what technology can do nowadays.
+;Screen Audio;Iris;Iris;-0,2;1;1;;Whoever said technology would replace all paper obviously hasn't tried wiping their butt with an IPad...ha. ha. ha.... Starting connection in 3... 2... 1...
+;Screen Audio;Iris;Iris;-0,2;1;1;Connect;*connection sounds*
+;Screen Audio;Lucy;*Lucy*;-7,5;1;1;;*during connection sounds* Here we go!
+T2.1;Screen Audio;Iris;Iris;-0,2;1;1;;Connection established. Good luck.
+;Lucy;Lucy;Lucy;-0,2;0;1;;Alright, human. You are now in connection with a fluffy spirit bear, called Beorn. Right now he is waking up.
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;muhehue *sleepy*
+;Lucy;Lucy;Lucy;-0,2;0;1;;Alright, he got up. 
+;Screen Audio;Iris;Iris;-0,2;1;1;;Forward and backward movement enabled.
+;Lucy;Lucy;Lucy;-0,2;0;1;;Now, let’s see if you can move him. Press forward and backward to move Beorn. 
+T2.2;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*impatiently* muuuuuuu
+;Lucy;Lucy;Lucy;-0,2;0;1;;Human, press forward and backward to move Beorn. If you don’t understand your controls, you can press escape to check or change the controls settings of Iris.
+T2.3;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;mumUmUUU *thud* (falling)
+;Lucy;Lucy;Lucy;-0,2;0;1;;Haha, aww poor Beorn. He fell down, but that's okay. He is quite strong and has a lot of fur to break his fall. He is a bit clumsy sometimes though. At least he is fully awake now! 
+;Screen Audio;Iris;Iris;-0,2;1;1;;Rotations enabled.
+;Lucy;Lucy;Lucy;-0,2;0;1;;Let’s try and see if you can turn Beorn around. First, do a full rotation to the left.
+T2.5;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*disapprovingly* muuuuuuu
+;Lucy;Lucy;Lucy;-0,2;0;1;;Human, you are turning into the wrong direction.
+T2.6;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*happy* muuuuuuu
+;Lucy;Lucy;Lucy;-0,2;0;1;;Well done!! Now let’s turn back around.
+T2.7;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*happy* muumumuuuu!!
+;Lucy;Lucy;Lucy;-0,2;0;1;;Well done, human!! Notice how the sound changes when you turn? You should pay close attention to the changes of audio in order to orientate yourself. 
+T3.1;Lucy;Lucy;Lucy;-0,2;0;1;;Alright, you are ready to try walking around! Before we can get to the spirit village, we should get Beorn ready to move out. First he needs his shoes, and second... well... he needs to unplug his belly rubbing machine. He doesn’t like it when devices are on stand-by when he leaves the house. It may start a fire, you know?Let’s first walk Beorn to his shoes. I’ll fly over to their location, so you may follow the sound of my wings.
+T3.2;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*impatiently* muuuuuuu
+;Lucy;Lucy;Lucy;-0,2;0;1;;Human! Try to focus on the sound of my wings and walk towards me! Listen carefully to where my sound comes from, turn towards it and walk into my direction. You can do it, I believe in you.
+T3.3;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*making effort, putting on shoes* muuuuuuumumuu
+;Lucy;Lucy;Lucy;-2,2;0;1;;Good job, human!... haha, Beorn! Your shoes are even bigger than your belly is.
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*my belly?* muumuu?
+;Lucy;Lucy;Lucy;-0,2;0;1;;Okay, human. Let’s now head towards his belly rubbing machine. Follow me!
+T3.4;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*impatiently* muuuuuuu
+;Lucy;Lucy;Lucy;-0,2;0;1;;Human! Try to focus on the sound of my wings and walk towards me! Listen carefully to where my sound comes from, turn towards it and walk into my direction. You can do it, I believe in you.
+T3.5;Other;Other;Other;-0,2;0;1;Silence20ms;*belly rubbing machine turns on*
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*very satisfied, being rubbed* mu! mu! mu! mu! *burp* mu! mu! mu! mu!
 ;Lucy;Lucy;Lucy;-3,4;0;1;;Beorn!! No! Get out and turn it off!
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*disappointed* muhhh.
-;Lucy;Lucy;Lucy;0;0;1;;Good, Beorn! You can get a belly rub later, when you come back home.. 
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*disappointed* muhhh.
+;Lucy;Lucy;Lucy;-0,2;0;1;;Good, Beorn! You can get a belly rub later, when you come back home.. 
 ;;;;;;;;
 ;;;;;;;;Alright, human! Let’s head to the door so we can get out of this place. It smells funky in here. You should be glad you are not connected to Beorn by smell! It smells like my grandma’s feet, when she doesn’t shower for a month. 
 ;;;;;;;;
 ;;;;;;;;Quickly, follow me!
-T3.6;Screen Audio;Beorn;Beorn;0;0;0,8;;*impatiently* muuuuuuu
-;Lucy;Lucy;Lucy;0;0;1;;Human! Try to focus on the sound of my wings and walk towards me! Listen carefully to where my sound comes from, turn towards it and walk into my direction. You can do it, I believe in you.
-T3.7;Screen Audio;Beorn;Beorn;0;0;0,8;;*happy* muuuuu!
-;Lucy;Lucy;Lucy;0;0;1;;Yes!! You made it! You know how to control Beorn and how to follow the sound of my wings. This will come in handy!
-;Other;Other;Other;0;0;1;;*door opens*
-T4.1;Lucy;Lucy;Lucy;0;0;1;;Ahhhh fresh air
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*very much liking the air too* muuuuuuu
-;Lucy;Lucy;Lucy;0;0;1;;We are now on a very lengthy bridge that goes to my village. The bridge is a bit narrow, and has a lot of turns. That’s because the bridge is built over a river that runs through a few high mountains. However, I...
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*running, panting* hu hu hu hu hu hu 
-;Lucy;Lucy;Lucy;0;0;1;;*while Beorn is running* Beorn!!!
+T3.6;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*impatiently* muuuuuuu
+;Lucy;Lucy;Lucy;-0,2;0;1;;Human! Try to focus on the sound of my wings and walk towards me! Listen carefully to where my sound comes from, turn towards it and walk into my direction. You can do it, I believe in you.
+T3.7;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*happy* muuuuu!
+;Lucy;Lucy;Lucy;-0,2;0;1;;Yes!! You made it! You know how to control Beorn and how to follow the sound of my wings. This will come in handy!
+;Other;Other;Other;-0,2;0;1;;*door opens*
+T4.1;Lucy;Lucy;Lucy;-0,2;0;1;;Ahhhh fresh air
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*very much liking the air too* muuuuuuu
+;Lucy;Lucy;Lucy;-0,2;0;1;;We are now on a very lengthy bridge that goes to my village. The bridge is a bit narrow, and has a lot of turns. That’s because the bridge is built over a river that runs through a few high mountains. However, I...
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*running, panting* hu hu hu hu hu hu 
+;Lucy;Lucy;Lucy;-0,2;0;1;;*while Beorn is running* Beorn!!!
 ;Other;Other;Other;-1,5;0;1;Teleportation;*teleportation sounds*
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*relieved* muu!!
-;Lucy;Lucy;Lucy;0;0;1;;Beorn!! Wh... why..?? Oh wait... I see. Below us is not just a regular river, it is a river of... honey! I actually have some for you, Beorn! Here! Just save some f...
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*drinking like crazy* 
-;Lucy;Lucy;Lucy;0;0;1;;WOW! He drank it all in one go!! Oh Beorn...
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*happy* muuu!
-;Lucy;Lucy;Lucy;0;0;1;;Haha!
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*relieved* muu!!
+;Lucy;Lucy;Lucy;-0,2;0;1;;Beorn!! Wh... why..?? Oh wait... I see. Below us is not just a regular river, it is a river of... honey! I actually have some for you, Beorn! Here! Just save some f...
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*drinking like crazy* 
+;Lucy;Lucy;Lucy;-0,2;0;1;;WOW! He drank it all in one go!! Oh Beorn...
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*happy* muuu!
+;Lucy;Lucy;Lucy;-0,2;0;1;;Haha!
 ;;;;;;;;
 ;;;;;;;;By the way, human, as you noticed I have magical powers! If something significant happens, I get my spirit juices flowing through my magnificent body! The spirit world then opens up spirit locations with highly concentrated Wibbly Wobbly Timey Wimey spirit magic stuff where I can  teleport Beorn to. Whenever he falls off, I will teleport him back to the beginning of the bridge section he fell off from. 
 ;;;;;;;;
 ;;;;;;;;Alright! Let’s cross this bridge! Follow me!
-T4.2~1;Screen Audio;Beorn;Beorn;0;0;0,8;;huuuuuUUu *falls*
-;Lucy;Lucy;Lucy;0;0;1;;Uh oh!
+T4.2~1;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;huuuuuUUu *falls*
+;Lucy;Lucy;Lucy;-0,2;0;1;;Uh oh!
 ;Other;Other;Other;-1,5;0;1;Teleportation;*teleportation sounds*
-;Lucy;Lucy;Lucy;0;0;1;;Good! You are safe now. Let’s try again. Follow me!
-T4.2~2;Screen Audio;Beorn;Beorn;0;0;0,8;;huuuuUU *falls*
-;Lucy;Lucy;Lucy;0;0;1;;Woops! 
+;Lucy;Lucy;Lucy;-0,2;0;1;;Good! You are safe now. Let’s try again. Follow me!
+T4.2~2;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;huuuuUU *falls*
+;Lucy;Lucy;Lucy;-0,2;0;1;;Woops! 
 ;Other;Other;Other;-1,5;0;1;Teleportation;*teleportation sounds*
-;Lucy;Lucy;Lucy;0;0;1;;Okay! You are safe. Let’s try again. Follow me!
-T4.2~3;Screen Audio;Beorn;Beorn;0;0;0,8;;hu hu HUUUU *falls*
-;Lucy;Lucy;Lucy;0;0;1;;Oh nooo!
+;Lucy;Lucy;Lucy;-0,2;0;1;;Okay! You are safe. Let’s try again. Follow me!
+T4.2~3;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;hu hu HUUUU *falls*
+;Lucy;Lucy;Lucy;-0,2;0;1;;Oh nooo!
 ;Other;Other;Other;-1,5;0;1;Teleportation;*teleportation sounds*
-;Lucy;Lucy;Lucy;0;0;1;;Phew!! That was close. Let’s try again. Follow me!
-T4.3;Screen Audio;Beorn;Beorn;0;0;0,8;;*silly* muu
-;Lucy;Lucy;Lucy;0;0;1;;Hey come back! You are going the wrong direction!
-T4.4~1;Lucy;Lucy;Lucy;0;0;1;;Watch out for the edge, human!
-T4.4~2;Lucy;Lucy;Lucy;0;0;1;;Ohhh watch out for the edge!
-T4.4~3;Lucy;Lucy;Lucy;0;0;1;;Human! Watch out, Beorn is standing really close to the edge.
-T4.4A;Screen Audio;Beorn;Beorn;0;0;0,3;;*scared panting*
-T4.4B;Screen Audio;Beorn;Beorn;0;0;0,8;;*relieved* muuhh
-T4.5~1;Screen Audio;Beorn;Beorn;0;0;0,8;;*glad* muu!
-;Lucy;Lucy;Lucy;0;0;1;;Well done! Now the next section. Follow me!
-T4.5~2;Screen Audio;Beorn;Beorn;0;0;0,8;;*glad* muuuuu!
-;Lucy;Lucy;Lucy;0;0;1;;Yes! Very good. Ok, next one!
-T4.6;Lucy;Lucy;Lucy;0;0;1;;Hmmm, human, you have to watch out now. Some spirits are crossing the bridge sideways. They appear very scared because of the giant in our village. I am afriad they might push Beorn off the bridge if he touches them... So you have to listen carefully in order to avoid them. But I believe you can do it. Follow me, human! :)
-T4.7~1;Spirit;Spirit;Spirit;0;0;1;;Out of the way!! There is a giant in the village!!
-;Screen Audio;Beorn;Beorn;0;0;0,8;;huuuuuUUu *falls*
-;Lucy;Lucy;Lucy;0;0;1;;Uh oh!
+;Lucy;Lucy;Lucy;-0,2;0;1;;Phew!! That was close. Let’s try again. Follow me!
+T4.3;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*silly* muu
+;Lucy;Lucy;Lucy;-0,2;0;1;;Hey come back! You are going the wrong direction!
+T4.4~1;Lucy;Lucy;Lucy;-0,2;0;1;;Watch out for the edge, human!
+T4.4~2;Lucy;Lucy;Lucy;-0,2;0;1;;Ohhh watch out for the edge!
+T4.4~3;Lucy;Lucy;Lucy;-0,2;0;1;;Human! Watch out, Beorn is standing really close to the edge.
+T4.4A;Screen Audio;Beorn;Beorn;-0,2;0;0,3;;*scared panting*
+T4.4B;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*relieved* muuhh
+T4.5~1;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*glad* muu!
+;Lucy;Lucy;Lucy;-0,2;0;1;;Well done! Now the next section. Follow me!
+T4.5~2;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*glad* muuuuu!
+;Lucy;Lucy;Lucy;-0,2;0;1;;Yes! Very good. Ok, next one!
+T4.6;Lucy;Lucy;Lucy;-0,2;0;1;;Hmmm, human, you have to watch out now. Some spirits are crossing the bridge sideways. They appear very scared because of the giant in our village. I am afriad they might push Beorn off the bridge if he touches them... So you have to listen carefully in order to avoid them. But I believe you can do it. Follow me, human! :)
+T4.7~1;Spirit;Spirit;Spirit;-0,2;0;1;;Out of the way!! There is a giant in the village!!
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;huuuuuUUu *falls*
+;Lucy;Lucy;Lucy;-0,2;0;1;;Uh oh!
 ;Other;Other;Other;-1,5;0;1;Teleportation;*teleportation sounds*
-;Lucy;Lucy;Lucy;0;0;1;;Good! You are safe now. Let’s try again. Follow me!
-T4.7~2;Spirit;Spirit;Spirit;0;0;1;;Ahhh! A giant in the village!!
-;Screen Audio;Beorn;Beorn;0;0;0,8;;huuuuUU *falls*
-;Lucy;Lucy;Lucy;0;0;1;;Woops! 
+;Lucy;Lucy;Lucy;-0,2;0;1;;Good! You are safe now. Let’s try again. Follow me!
+T4.7~2;Spirit;Spirit;Spirit;-0,2;0;1;;Ahhh! A giant in the village!!
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;huuuuUU *falls*
+;Lucy;Lucy;Lucy;-0,2;0;1;;Woops! 
 ;Other;Other;Other;-1,5;0;1;Teleportation;*teleportation sounds*
-;Lucy;Lucy;Lucy;0;0;1;;Okay! You are safe. Let’s try again. Follow me!
-T4.7~3;Spirit;Spirit;Spirit;0;0;1;;Oh no, oh no! Out of the way!
-;Screen Audio;Beorn;Beorn;0;0;0,8;;hu hu HUUUU *falls*
-;Lucy;Lucy;Lucy;0;0;1;;Oh nooo!
+;Lucy;Lucy;Lucy;-0,2;0;1;;Okay! You are safe. Let’s try again. Follow me!
+T4.7~3;Spirit;Spirit;Spirit;-0,2;0;1;;Oh no, oh no! Out of the way!
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;hu hu HUUUU *falls*
+;Lucy;Lucy;Lucy;-0,2;0;1;;Oh nooo!
 ;Other;Other;Other;-1,5;0;1;Teleportation;*teleportation sounds*
-;Lucy;Lucy;Lucy;0;0;1;;Phew!! That was close. Let’s try again. Follow me!
-T4.8;Screen Audio;Beorn;Beorn;0;0;0,8;;*scared* MU!
-;Lucy;Lucy;Lucy;0;0;1;;Phew! Close call, Beorn almost touched a spirit.
-T4.9~1;Screen Audio;Beorn;Beorn;0;0;0,8;;*happy* mu muuu
-;Lucy;Lucy;Lucy;0;0;1;;Awesome!! Well done. Okay, let’s continue over to the next section.
-T4.9~2;Screen Audio;Beorn;Beorn;0;0;0,8;;*happy* muuu
-;Lucy;Lucy;Lucy;0;0;1;;You are very good at this! Let's tackle the next section too!
-T4.10;Lucy;Lucy;Lucy;0;0;1;;Alright, the next few sections are a bit more difficult. I can’t fly over them, because the bridge is kept in the air by machines. The energy they send off damages my wings so I can’t guide you over of these parts. You are going to have to orient using the sound of these machines. Good luck, human! You can do it!!
-T4.11;Screen Audio;Beorn;Beorn;0;0;0,8;;huuuuUU *falls*
-;Lucy;Lucy;Lucy;0;0;1;;Woops! Watch out, the bridge turns here.
+;Lucy;Lucy;Lucy;-0,2;0;1;;Phew!! That was close. Let’s try again. Follow me!
+T4.8;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*scared* MU!
+;Lucy;Lucy;Lucy;-0,2;0;1;;Phew! Close call, Beorn almost touched a spirit.
+T4.9~1;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*happy* mu muuu
+;Lucy;Lucy;Lucy;-0,2;0;1;;Awesome!! Well done. Okay, let’s continue over to the next section.
+T4.9~2;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*happy* muuu
+;Lucy;Lucy;Lucy;-0,2;0;1;;You are very good at this! Let's tackle the next section too!
+T4.10;Lucy;Lucy;Lucy;-0,2;0;1;;Alright, the next few sections are a bit more difficult. I can’t fly over them, because the bridge is kept in the air by machines. The energy they send off damages my wings so I can’t guide you over of these parts. You are going to have to orient using the sound of these machines. Good luck, human! You can do it!!
+T4.11;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;huuuuUU *falls*
+;Lucy;Lucy;Lucy;-0,2;0;1;;Woops! Watch out, the bridge turns here.
 ;Other;Other;Other;-1,5;0;1;Teleportation;*teleportation sounds*
-;Lucy;Lucy;Lucy;0;0;1;;Okay! You are safe. Let’s try again. Follow the sound of the machines.
-T4.12~1;Screen Audio;Beorn;Beorn;0;0;0,8;;*relief* muuu! 
-;Lucy;Lucy;Lucy;0;0;1;;Well done! That was tough, wasn’it it? You did great though. You are a great listener! Let’s continue over the next section with machines. 
-T4.12~2;Screen Audio;Beorn;Beorn;0;0;0,8;;*glad* uuuuuggg! 
-;Lucy;Lucy;Lucy;0;0;1;; You are the master of listening! Let's tackle the next section too!
-T4.13;Screen Audio;Beorn;Beorn;0;0;0,8;;*very happy* muu muu muuuuuu!
-;Lucy;Lucy;Lucy;0;0;1;;Very goood!! We have reached the end of the bridge. Here we will now take the portal to my village. Beorn, don’t be scared, you might feel a bit dizzy, but that is normal. Here we go!! woooop!
+;Lucy;Lucy;Lucy;-0,2;0;1;;Okay! You are safe. Let’s try again. Follow the sound of the machines.
+T4.12~1;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*relief* muuu! 
+;Lucy;Lucy;Lucy;-0,2;0;1;;Well done! That was tough, wasn’it it? You did great though. You are a great listener! Let’s continue over the next section with machines. 
+T4.12~2;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*glad* uuuuuggg! 
+;Lucy;Lucy;Lucy;-0,2;0;1;; You are the master of listening! Let's tackle the next section too!
+T4.13;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*very happy* muu muu muuuuuu!
+;Lucy;Lucy;Lucy;-0,2;0;1;;Very goood!! We have reached the end of the bridge. Here we will now take the portal to my village. Beorn, don’t be scared, you might feel a bit dizzy, but that is normal. Here we go!! woooop!
 ;Other;Other;Other;-1,5;0;1;Teleportation;*awesome teleportation sounds*
-T5.1;Other;Other;Other;0;0;1;Silence20ms;*teleportation sounds end*
-;Lucy;Lucy;Lucy;0;0;1;;*whispers* uhoh.... we arrived at my village but we are standing right next to the giant... Let’s hope he doesn’t see us. Stay still!
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*GIANT!?* MUHUH?! muuuuu!!
-;Lucy;Lucy;Lucy;0;0;1;;*whispers* Beorn! SSSST!
-;Giant;Giant;Giant;0;0;1;;*slow low voice* Huuuhhh? Who is there? A fairy!! Wait! I don’t mean any harm. I am only here because I am hiding from the science birds in the forest! I just want shelter. I am scared! Can you help me please?
-;Lucy;Lucy;Lucy;0;0;1;;Uh... uhm... OH!! Of course! Giants hate science!! But, why are there science birds in our forest?
-;Giant;Giant;Giant;0;0;1;;They are studying and copying the sounds of the animals in the forest... Fairy, what if they will start copying my voice as well? Can you imagine a bird, saying things like “my butt itches”, or “mom!! I don’t like vegetables”?? That would be embarrassing.
-;Lucy;Lucy;Lucy;0;0;1;;Haha it would. We will help you, but if we get the science birds out of the forest, will you go back there and leave us alone?
-;Giant;Giant;Giant;0;0;1;;I promise. This is no place for me!
-;Other;Other;Other;0;0;1;;*Approaching flapping wings*
-;Lucy;Lucy;Lucy;0;0;1;;Oh here comes Boris the 77th, the great owl of Gahoot, the king of our village, and protector of all that is spirit. He is not THAT great though, he has a depressing Candy Crush highscore... I am guessing he wants to speak to you, human! 
-;Boris;Boris;Boris;0;0;1;;Hi there, *hooot* I couldn’t help but overhearing the conversation. Lucy, are you sure you picked the right human for the task at hand?
-;Lucy;Lucy;Lucy;0;0;1;;Yes, 100% sure.
-;Boris;Boris;Boris;0;0;1;;Well, to be sure, human, I am going to test you. *hooot* I will fly towards some location closeby and you have to remember where that was so that you can come and find me. 
-;Lucy;Lucy;Lucy;0;0;1;;OK human, stand still when he takes off, and listen closely to the sounds he makes. Use the sounds of the village around you to orient yourself and to remember Boris’ location!
-;Other;Other;Other;0;0;1;;*flapping wings of boris flying to some random location*
-;Boris;Boris;Boris;0;0;1;;*hoot at location*
-;Lucy;Lucy;Lucy;0;0;1;;OK, go find him!
-T5.2~1;Boris;Boris;Boris;0;0;1;;*hooot*
-T5.2~2;Boris;Boris;Boris;0;0;1;;*hooot*
-T5.2~3;Boris;Boris;Boris;0;0;1;;*hooot*
-T5.3;Screen Audio;Beorn;Beorn;0;0;0,8;;*annoyed* muuuu
-;Lucy;Lucy;Lucy;0;0;1;;Try to focus on the sounds of the environment in comparison to Boris. If you forget where he is, he might make some noises once in a while.
-;Boris;Boris;Boris;0;0;1;;*hooot*
-T5.4;Boris;Boris;Boris;0;0;1;;Hmmm.. You got me! *hooot* But you got lucky human! Let's tr... AAAH
-;Screen Audio;Beorn;Beorn;0;0;0,8;;MUHH HAWHAW
-;Lucy;Lucy;Lucy;0;0;1;;Beorn!! Don't bite our king you idiot!
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*disappointed* muhhhh
-;Boris;Boris;Boris;0;0;1;;*hOOOt* Oh fudge, now my feathers are all messy. Ah, well.  I needed a feathercut anyway. Right, where was I. *hooot* Oh yes: let's try again and see if you got lucky!!
-;Other;Other;Other;0;0;1;;*flapping wings of boris flying to some random location*
-;Boris;Boris;Boris;0;0;1;;*hoot at location*
-;Lucy;Lucy;Lucy;0;0;1;;OK, let’s go find him again!
-T5.5;Boris;Boris;Boris;0;0;1;;Great! *hooot* You are doing well. Perhaps you are indeed as talented as lucy said. *hooot* One more to be sure!
-;Other;Other;Other;0;0;1;;*flapping wings of boris flying to some random location*
-;Boris;Boris;Boris;0;0;1;;*hoot at location*
-;Lucy;Lucy;Lucy;0;0;1;;OK, let’s go find him again, one last time!
-T5.6;Boris;Boris;Boris;0;0;1;;Awesome! *hooot* I see you are indeed very talented!
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*happy* muhhhhh
-;Lucy;Lucy;Lucy;0;0;1;;Yaay! I told you!
-;Boris;Boris;Boris;0;0;1;;Yes! *hooot* Very well. *hooot* I’ll fly you to the forest where you can find the science birds. I think I know where they are. Here we go! hold on tight, Beorn! *hooot*
-;Other;Other;Other;0;0;1;;*wings start flapping around player*
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*happy* muuhh buhuhbuhhh
-;Lucy;Lucy;Lucy;0;0;1;;*happy* Wiiiiiii
-T6.1;Other;Other;Other;0;0;1;;*wings stop flapping, landed*
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*disappointed* muhhhhhh
-;Lucy;Lucy;Lucy;0;0;1;;It smells here, IEEUW. Even worse than Beorn’s house. Where ARE we??
-;Boris;Boris;Boris;0;0;1;;Well, we arrived at the swamp! *hooot* I was only able to land here. The birds are further ahead, beyond the swamp, *hooot* so you are going to have to cross it. However, there are frogs that really like biting fluffy spirit bears. *hooot*
-;Lucy;Lucy;Lucy;0;0;1;;Hmm, alright. Human, I will fly to the end of the swamp. Again, follow the sound of my wings, but avoid the frogs!
-T6.2;Other;Other;Other;0;0;1;;*frog bite*
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*pain* MUU!
-;Lucy;Lucy;Lucy;0;0;1;;Woops! 
+T5.1;Other;Other;Other;-0,2;0;1;Silence20ms;*teleportation sounds end*
+;Lucy;Lucy;Lucy;-0,2;0;1;;*whispers* uhoh.... we arrived at my village but we are standing right next to the giant... Let’s hope he doesn’t see us. Stay still!
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*GIANT!?* MUHUH?! muuuuu!!
+;Lucy;Lucy;Lucy;-0,2;0;1;;*whispers* Beorn! SSSST!
+;Giant;Giant;Giant;-0,2;0;1;;*slow low voice* Huuuhhh? Who is there? A fairy!! Wait! I don’t mean any harm. I am only here because I am hiding from the science birds in the forest! I just want shelter. I am scared! Can you help me please?
+;Lucy;Lucy;Lucy;-0,2;0;1;;Uh... uhm... OH!! Of course! Giants hate science!! But, why are there science birds in our forest?
+;Giant;Giant;Giant;-0,2;0;1;;They are studying and copying the sounds of the animals in the forest... Fairy, what if they will start copying my voice as well? Can you imagine a bird, saying things like “my butt itches”, or “mom!! I don’t like vegetables”?? That would be embarrassing.
+;Lucy;Lucy;Lucy;-0,2;0;1;;Haha it would. We will help you, but if we get the science birds out of the forest, will you go back there and leave us alone?
+;Giant;Giant;Giant;-0,2;0;1;;I promise. This is no place for me!
+;Other;Other;Other;-0,2;0;1;;*Approaching flapping wings*
+;Lucy;Lucy;Lucy;-0,2;0;1;;Oh here comes Boris the 77th, the great owl of Gahoot, the king of our village, and protector of all that is spirit. He is not THAT great though, he has a depressing Candy Crush highscore... I am guessing he wants to speak to you, human! 
+;Boris;Boris;Boris;-0,2;0;1;;Hi there, *hooot* I couldn’t help but overhearing the conversation. Lucy, are you sure you picked the right human for the task at hand?
+;Lucy;Lucy;Lucy;-0,2;0;1;;Yes, 100% sure.
+;Boris;Boris;Boris;-0,2;0;1;;Well, to be sure, human, I am going to test you. *hooot* I will fly towards some location closeby and you have to remember where that was so that you can come and find me. 
+;Lucy;Lucy;Lucy;-0,2;0;1;;OK human, stand still when he takes off, and listen closely to the sounds he makes. Use the sounds of the village around you to orient yourself and to remember Boris’ location!
+;Other;Other;Other;-0,2;0;1;;*flapping wings of boris flying to some random location*
+;Boris;Boris;Boris;-0,2;0;1;;*hoot at location*
+;Lucy;Lucy;Lucy;-0,2;0;1;;OK, go find him!
+T5.2~1;Boris;Boris;Boris;-0,2;0;1;;*hooot*
+T5.2~2;Boris;Boris;Boris;-0,2;0;1;;*hooot*
+T5.2~3;Boris;Boris;Boris;-0,2;0;1;;*hooot*
+T5.3;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*annoyed* muuuu
+;Lucy;Lucy;Lucy;-0,2;0;1;;Try to focus on the sounds of the environment in comparison to Boris. If you forget where he is, he might make some noises once in a while.
+;Boris;Boris;Boris;-0,2;0;1;;*hooot*
+T5.4;Boris;Boris;Boris;-0,2;0;1;;Hmmm.. You got me! *hooot* But you got lucky human! Let's tr... AAAH
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;MUHH HAWHAW
+;Lucy;Lucy;Lucy;-0,2;0;1;;Beorn!! Don't bite our king you idiot!
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*disappointed* muhhhh
+;Boris;Boris;Boris;-0,2;0;1;;*hOOOt* Oh fudge, now my feathers are all messy. Ah, well.  I needed a feathercut anyway. Right, where was I. *hooot* Oh yes: let's try again and see if you got lucky!!
+;Other;Other;Other;-0,2;0;1;;*flapping wings of boris flying to some random location*
+;Boris;Boris;Boris;-0,2;0;1;;*hoot at location*
+;Lucy;Lucy;Lucy;-0,2;0;1;;OK, let’s go find him again!
+T5.5;Boris;Boris;Boris;-0,2;0;1;;Great! *hooot* You are doing well. Perhaps you are indeed as talented as lucy said. *hooot* One more to be sure!
+;Other;Other;Other;-0,2;0;1;;*flapping wings of boris flying to some random location*
+;Boris;Boris;Boris;-0,2;0;1;;*hoot at location*
+;Lucy;Lucy;Lucy;-0,2;0;1;;OK, let’s go find him again, one last time!
+T5.6;Boris;Boris;Boris;-0,2;0;1;;Awesome! *hooot* I see you are indeed very talented!
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*happy* muhhhhh
+;Lucy;Lucy;Lucy;-0,2;0;1;;Yaay! I told you!
+;Boris;Boris;Boris;-0,2;0;1;;Yes! *hooot* Very well. *hooot* I’ll fly you to the forest where you can find the science birds. I think I know where they are. Here we go! hold on tight, Beorn! *hooot*
+;Other;Other;Other;-0,2;0;1;;*wings start flapping around player*
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*happy* muuhh buhuhbuhhh
+;Lucy;Lucy;Lucy;-0,2;0;1;;*happy* Wiiiiiii
+T6.1;Other;Other;Other;-0,2;0;1;;*wings stop flapping, landed*
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*disappointed* muhhhhhh
+;Lucy;Lucy;Lucy;-0,2;0;1;;It smells here, IEEUW. Even worse than Beorn’s house. Where ARE we??
+;Boris;Boris;Boris;-0,2;0;1;;Well, we arrived at the swamp! *hooot* I was only able to land here. The birds are further ahead, beyond the swamp, *hooot* so you are going to have to cross it. However, there are frogs that really like biting fluffy spirit bears. *hooot*
+;Lucy;Lucy;Lucy;-0,2;0;1;;Hmm, alright. Human, I will fly to the end of the swamp. Again, follow the sound of my wings, but avoid the frogs!
+T6.2;Other;Other;Other;-0,2;0;1;;*frog bite*
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*pain* MUU!
+;Lucy;Lucy;Lucy;-0,2;0;1;;Woops! 
 ;Other;Other;Other;-1,5;0;1;Teleportation;*teleportation sounds*
-;Lucy;Lucy;Lucy;0;0;1;;Okay! You are safe. Let’s try again.
-T6.3;Screen Audio;Beorn;Beorn;0;0;0,8;;*impatiently* Muuuu
-;Lucy;Lucy;Lucy;0;0;1;;Try to focus on the sound of my wings and avoid those slimy frogs on the way! You can do it, human!
-T6.4;Lucy;Lucy;Lucy;0;0;1;;Hooray! You made it! Well done! Those frogs were sooo smelly, and slimey. Ughhh!! I am super glad we passed the swamp.
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*agrees* muu!! mu muu
-;Lucy;Lucy;Lucy;0;0;1;;Let's continue quickly
-;Boris;Boris;Boris;0;0;1;;Perhaps I will install a frog shower at the swamp one day. *hooot* For now, let’s move on! We'll move to the clearing where the birds are supposed to be. Follow me and Lucy, Human! *hooot*
-T6.5;Screen Audio;Beorn;Beorn;0;0;0,8;;*impatiently* muhhhh
-;Boris;Boris;Boris;0;0;1;;Focus on the sound of lucy's wings or my hooting! You can do it. *hooot*
-T6.6;Screen Audio;Beorn;Beorn;0;0;0,8;;*silly* muu
-;Lucy;Lucy;Lucy;0;0;1;;Hey come back! You are going the wrong direction!
-T6.7;Screen Audio;Beorn;Beorn;0;0;0,8;;*playing with flies* muhhh muhuheuhe muhe HUH huheu
-;Lucy;Lucy;Lucy;0;0;1;;Beorn! Leave those poor flies alone!
-;Boris;Boris;Boris;0;0;1;;Human, what is the difference between a fly and a bird? A bird can fly but a fly can't bird! *hoot* HUAHUAHUAH
-;Screen Audio;Beorn;Beorn;0;0;0,8;;huehuehue
-;Lucy;Lucy;Lucy;0;0;1;;hihihi
-T6.8;Boris;Boris;Boris;0;0;1;;Oh oh oh! Another one! *hooot!* What do you call a fly without wings? A walk. HUAHUAHUAH
-;Screen Audio;Beorn;Beorn;0;0;0,8;;huehuehue
-;Lucy;Lucy;Lucy;0;0;1;;hihihi
-T6.9;Boris;Boris;Boris;0;0;1;;Lucy *hoot* someone said you sound like an owl.
-;Lucy;Lucy;Lucy;0;0;1;;Who??
-;Boris;Boris;Boris;0;0;1;;haha! *hoot* 
-;Lucy;Lucy;Lucy;0;0;1;;OH! hihi, fooled me!
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*mimics the joke in mumbles, laughs* muu?? huehuehue
-T6.10;Boris;Boris;Boris;0;0;1;;Ahhh! yes! here we are. The science bird must be around here somewhere!
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*glad* muuuu!
-;Lucy;Lucy;Lucy;0;0;1;;OK! What’s next, Boris?
-T7.1;Boris;Boris;Boris;0;0;1;;Well, if you listen carefully, you may hear many bird callings. However, there is one that mimics all the others. That is the science bird! Humans call them Lyre Birds!
-;Lucy;Lucy;Lucy;0;0;1;;Ok, human, you are a great listener! Why don’t you go find him. Good luck!
-;Boris;Boris;Boris;0;0;1;;*hooot*
-T7.2;Screen Audio;Beorn;Beorn;0;0;0,8;;*impatiently* muhhhh
-;Lucy;Lucy;Lucy;0;0;1;;Human, the bird you are looking for mimics the sounds of the forest, including those of other birds. Listen carefully!
-T7.3;Boris;Boris;Boris;0;0;1;;I don't think that is the bird we are looking for! That is just a regular bird.
-;Screen Audio;Beorn;Beorn;0;0;0,8;;*disappointed* muhhhh
-T7.4;Boris;Boris;Boris;0;0;1;;YESSS!! *hoothoot* That’s the one! But to be sure, let’s test him. 
-;;;;0;0;1;;"Bird, what is ""sound""?"
-;Bird;Bird;Bird #1;0;0;1;;*whistle* Sound is a vibration, or wave, that can be heard as it reaches our ears by traveling through matter, such as air, wood or water. *whistles*
-;Boris;Boris;Boris;0;0;1;;*hoot* yes! I am convinced. How many more of you are there?
-;Bird;Bird;Bird #1;0;0;1;;*whistle* there are still 3 others! I can call them out with our secret emergency question, but then one of you has to catch them. 
-;Boris;Boris;Boris;0;0;1;;OK, do it!
-T8.1;Bird;Bird;Bird #1;0;0;1;;*whistle* Why do seagulls fly over the sea? *whistle*
-;Bird;Bird;Bird #2;0;0;1;;*from a distance* Because if the flew over the bay
-;Bird;Bird;Bird #3;0;0;1;;*from another distance* they would be called
-;Bird;Bird;Bird #4;0;0;1;;*from another distance* baygulls! 
-;Bird;Bird;Bird #1;0;0;1;;*from another distance* oooooooh!!
-;Boris;Boris;Boris;0;0;1;;Oh oh *hoot*, I can see spirit crows approaching
-;Bird;Bird;Bird #1;0;0;1;;*whistle* Oh did I forget to mention, that crows also respond our emergency calls? Yeahhh, it is a problem we still haven't figured out.
-;Boris;Boris;Boris;0;0;1;;Ok, human, birds will be flying passed you. Only grab the science birds *hoot*, so listen carefully to their calls. Whenever you do catch a crow, you have to bring it to Lucy. She will then keep it in a cage for now. Good luck! *hoot*
-T8.2~1;Screen Audio;Beorn;Beorn;0;0;0,8;;*disappointed* muuu...
-;Lucy;Lucy;Lucy;0;0;1;;You caught a crow. You can bring him to me.
-;Crow;Crow;Crow;0;0;1;;*kaaaa*
-T8.2~2;Screen Audio;Beorn;Beorn;0;0;0,8;;*disappointed* muuuu
-;Lucy;Lucy;Lucy;0;0;1;;Oops! That was a crow. Please, bring him to me.
-;Crow;Crow;Crow;0;0;1;;*kaaaa*
-T8.2~3;Screen Audio;Beorn;Beorn;0;0;0,8;;*disappointed* muuu
-;Lucy;Lucy;Lucy;0;0;1;;Oh! That is a crow, human! Can you bring him here?
-;Crow;Crow;Crow;0;0;1;;*kaaaa*
-T8.3~1;Lucy;Lucy;Lucy;0;0;1;;OK! I have got the crow. Now go get that science bird!
-T8.3~2;Lucy;Lucy;Lucy;0;0;1;;OK! Thanks. Now try to get that science bird!
-T8.3~3;Lucy;Lucy;Lucy;0;0;1;;Alright. He is taken care of. Give it another go, human!
-T8.4;Boris;Boris;Boris;0;0;1;;Yes! You have one! *hoot* Let's test it. Bird, if I make noise a kilometer away from you, how long does it take for you to hear it? 
-;Bird;Bird;Bird #2;0;0;1;;Well, 1 kilometer is a 1000 meters and sound travels roughly 335 meters per second through air. 1000 divided by 335 is about 3. Therefore, if you were to make a loud noise 1 kilometer away, we would hear it 3 seconds later.
-;Boris;Boris;Boris;0;0;1;;Let's test this!! Luckily, I have a friend who is currently 1 kilometer away from us. Let’s call him and ask if he can make some noise. *dial tones, ringing* yooo bro! I am conducting an experiment and I need you to do the thing!
-;Lucy;Lucy;Lucy;0;0;1;;1... 2... 3...
-;Other;Other;Other;0;0;1;;*distant fart sound*
-;Lucy;Lucy;Lucy;0;0;1;;IEEEUW, seriously??
-;Boris;Boris;Boris;0;0;1;;Thanks! Smell ya later! *hangs up* Well, that worked! Now let’s get the next science bird!
-T8.5;Boris;Boris;Boris;0;0;1;;YAY! Another one! Let's test him too.  Bird, when something passes by quickly, why does the tone change?
-;Bird;Bird;Bird #3;0;0;1;;That is called the Doppler effect. Whenever an object comes towards you, the sound waves coming from that object, are more compressed! Therefore, the sound sounds higher pitched. If the object moves away from you, the sound waves are stretched so it sounds... can you guess it?.... yes! lower!!
-;Boris;Boris;Boris;0;0;1;;Okay.. Let me fly by you a few times. Tell me if he's right.
-;Boris;Boris;Boris;0;0;1;;wiiiiiiiiiiiiiiiiiiii
-;Boris;Boris;Boris;0;0;1;;wiiiiiiiiiiiiiiiiiiii
-;Boris;Boris;Boris;0;0;1;;wiiiiiiiiiiiiiiiiiiii
-;Boris;Boris;Boris;0;0;1;;*CRASH* uhhhhhgggggg, im okay! im okay...
-;Lucy;Lucy;Lucy;0;0;1;;Be careful, boris!! But, the bird is right!
-;Boris;Boris;Boris;0;0;1;;Perfect, *hoot* let's get the final science bird.
-T8.6;Boris;Boris;Boris;0;0;1;;Aha! *hoothoot* The final one. Let's test it to be sure. Bird, if I make noise in a big empty hall, why do I hear it repeated?
-;Bird;Bird;Bird #4;0;0;1;;Easy! That is called an echo! Sound waves are partially absorbed and partially reflected by objects in your environment, such as a cup, a wall, or a MOUNTAIN. So before reaching your ears, some sound waves have bounced on other objects, while other waves reach your ears directly. Since it takes time for sound to travel from the source to your ear, it takes even longer for reflected sound waves, so you hear that sound a bit later.
-;Boris;Boris;Boris;0;0;1;;Lucy! *hoot* Teleport us into a big empty hall!!
-;Lucy;Lucy;Lucy;0;0;1;;Okidoki!! Here we go *teleport sounds*
-;Boris;Boris;Boris;0;0;1;;Awesome!! Ok, *grumbles of stomach* here goes nothing....  *difficult hoot* *pfffff*...fff*..ff*..f*
-;Lucy;Lucy;Lucy;0;0;1;;OK! ENOUGH! Ugh, who gives our king beans for dinner??
-;Boris;Boris;Boris;0;0;1;;The royal cook, Beany Jean Beany. If it wasn’t clear from his name, his speciality is: beans.
-;Lucy;Lucy;Lucy;0;0;1;;Sounds like he is the the master of gasses himself. Let’s get back to the village. *teleport sounds*
-T9.1;Boris;Boris;Boris;0;0;1;;Ahhh *hoooot* home sweet home. Thank you human, for your exceptional help. You are very talented, and will achieve many great things!! I'll soon bring these science birds back to science land.
-;Giant;Giant;Giant;0;0;1;;blegh science birds
-;Bird;Bird;Bird #3;0;0;1;;NO!! *whistle* Wait! You can take my friends, but let me stay here!! Our study hasn’t been completed, I’d like to finish it. Plus, I like it here. It smells so good, and the air feels so nice and soft. Everyone here seems so friendly too.
-;Boris;Boris;Boris;0;0;1;;Yes, *hoot* you are welcome to live here! As long as you pay your taxes!
-;Bird;Bird;Bird #3;0;0;1;;But, *whistle* I scare away the giant! Isn’t that enough?
-;Boris;Boris;Boris;0;0;1;;I was just kidding, *hoot* we don’t have taxes in the spirit world!
-;Bird;Bird;Bird #3;0;0;1;;Haha ah! *whistle* Thank you, Boris!
+;Lucy;Lucy;Lucy;-0,2;0;1;;Okay! You are safe. Let’s try again.
+T6.3;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*impatiently* Muuuu
+;Lucy;Lucy;Lucy;-0,2;0;1;;Try to focus on the sound of my wings and avoid those slimy frogs on the way! You can do it, human!
+T6.4;Lucy;Lucy;Lucy;-0,2;0;1;;Hooray! You made it! Well done! Those frogs were sooo smelly, and slimey. Ughhh!! I am super glad we passed the swamp.
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*agrees* muu!! mu muu
+;Lucy;Lucy;Lucy;-0,2;0;1;;Let's continue quickly
+;Boris;Boris;Boris;-0,2;0;1;;Perhaps I will install a frog shower at the swamp one day. *hooot* For now, let’s move on! We'll move to the clearing where the birds are supposed to be. Follow me and Lucy, Human! *hooot*
+T6.5;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*impatiently* muhhhh
+;Boris;Boris;Boris;-0,2;0;1;;Focus on the sound of lucy's wings or my hooting! You can do it. *hooot*
+T6.6;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*silly* muu
+;Lucy;Lucy;Lucy;-0,2;0;1;;Hey come back! You are going the wrong direction!
+T6.7;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*playing with flies* muhhh muhuheuhe muhe HUH huheu
+;Lucy;Lucy;Lucy;-0,2;0;1;;Beorn! Leave those poor flies alone!
+;Boris;Boris;Boris;-0,2;0;1;;Human, what is the difference between a fly and a bird? A bird can fly but a fly can't bird! *hoot* HUAHUAHUAH
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;huehuehue
+;Lucy;Lucy;Lucy;-0,2;0;1;;hihihi
+T6.8;Boris;Boris;Boris;-0,2;0;1;;Oh oh oh! Another one! *hooot!* What do you call a fly without wings? A walk. HUAHUAHUAH
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;huehuehue
+;Lucy;Lucy;Lucy;-0,2;0;1;;hihihi
+T6.9;Boris;Boris;Boris;-0,2;0;1;;Lucy *hoot* someone said you sound like an owl.
+;Lucy;Lucy;Lucy;-0,2;0;1;;Who??
+;Boris;Boris;Boris;-0,2;0;1;;haha! *hoot* 
+;Lucy;Lucy;Lucy;-0,2;0;1;;OH! hihi, fooled me!
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*mimics the joke in mumbles, laughs* muu?? huehuehue
+T6.10;Boris;Boris;Boris;-0,2;0;1;;Ahhh! yes! here we are. The science bird must be around here somewhere!
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*glad* muuuu!
+;Lucy;Lucy;Lucy;-0,2;0;1;;OK! What’s next, Boris?
+T7.1;Boris;Boris;Boris;-0,2;0;1;;Well, if you listen carefully, you may hear many bird callings. However, there is one that mimics all the others. That is the science bird! Humans call them Lyre Birds!
+;Lucy;Lucy;Lucy;-0,2;0;1;;Ok, human, you are a great listener! Why don’t you go find him. Good luck!
+;Boris;Boris;Boris;-0,2;0;1;;*hooot*
+T7.2;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*impatiently* muhhhh
+;Lucy;Lucy;Lucy;-0,2;0;1;;Human, the bird you are looking for mimics the sounds of the forest, including those of other birds. Listen carefully!
+T7.3;Boris;Boris;Boris;-0,2;0;1;;I don't think that is the bird we are looking for! That is just a regular bird.
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*disappointed* muhhhh
+T7.4;Boris;Boris;Boris;-0,2;0;1;;YESSS!! *hoothoot* That’s the one! But to be sure, let’s test him. 
+;;;;-0,2;0;1;;"Bird, what is ""sound""?"
+;Bird;Bird;Bird #1;-0,2;0;1;;*whistle* Sound is a vibration, or wave, that can be heard as it reaches our ears by traveling through matter, such as air, wood or water. *whistles*
+;Boris;Boris;Boris;-0,2;0;1;;*hoot* yes! I am convinced. How many more of you are there?
+;Bird;Bird;Bird #1;-0,2;0;1;;*whistle* there are still 3 others! I can call them out with our secret emergency question, but then one of you has to catch them. 
+;Boris;Boris;Boris;-0,2;0;1;;OK, do it!
+T8.1;Bird;Bird;Bird #1;-0,2;0;1;;*whistle* Why do seagulls fly over the sea? *whistle*
+;Bird;Bird;Bird #2;-0,2;0;1;;*from a distance* Because if the flew over the bay
+;Bird;Bird;Bird #3;-0,2;0;1;;*from another distance* they would be called
+;Bird;Bird;Bird #4;-0,2;0;1;;*from another distance* baygulls! 
+;Bird;Bird;Bird #1;-0,2;0;1;;*from another distance* oooooooh!!
+;Boris;Boris;Boris;-0,2;0;1;;Oh oh *hoot*, I can see spirit crows approaching
+;Bird;Bird;Bird #1;-0,2;0;1;;*whistle* Oh did I forget to mention, that crows also respond our emergency calls? Yeahhh, it is a problem we still haven't figured out.
+;Boris;Boris;Boris;-0,2;0;1;;Ok, human, birds will be flying passed you. Only grab the science birds *hoot*, so listen carefully to their calls. Whenever you do catch a crow, you have to bring it to Lucy. She will then keep it in a cage for now. Good luck! *hoot*
+T8.2~1;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*disappointed* muuu...
+;Lucy;Lucy;Lucy;-0,2;0;1;;You caught a crow. You can bring him to me.
+;Crow;Crow;Crow;-0,2;0;1;;*kaaaa*
+T8.2~2;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*disappointed* muuuu
+;Lucy;Lucy;Lucy;-0,2;0;1;;Oops! That was a crow. Please, bring him to me.
+;Crow;Crow;Crow;-0,2;0;1;;*kaaaa*
+T8.2~3;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*disappointed* muuu
+;Lucy;Lucy;Lucy;-0,2;0;1;;Oh! That is a crow, human! Can you bring him here?
+;Crow;Crow;Crow;-0,2;0;1;;*kaaaa*
+T8.3~1;Lucy;Lucy;Lucy;-0,2;0;1;;OK! I have got the crow. Now go get that science bird!
+T8.3~2;Lucy;Lucy;Lucy;-0,2;0;1;;OK! Thanks. Now try to get that science bird!
+T8.3~3;Lucy;Lucy;Lucy;-0,2;0;1;;Alright. He is taken care of. Give it another go, human!
+T8.4;Boris;Boris;Boris;-0,2;0;1;;Yes! You have one! *hoot* Let's test it. Bird, if I make noise a kilometer away from you, how long does it take for you to hear it? 
+;Bird;Bird;Bird #2;-0,2;0;1;;Well, 1 kilometer is a 1000 meters and sound travels roughly 335 meters per second through air. 1000 divided by 335 is about 3. Therefore, if you were to make a loud noise 1 kilometer away, we would hear it 3 seconds later.
+;Boris;Boris;Boris;-0,2;0;1;;Let's test this!! Luckily, I have a friend who is currently 1 kilometer away from us. Let’s call him and ask if he can make some noise. *dial tones, ringing* yooo bro! I am conducting an experiment and I need you to do the thing!
+;Lucy;Lucy;Lucy;-0,2;0;1;;1... 2... 3...
+;Other;Other;Other;-0,2;0;1;;*distant fart sound*
+;Lucy;Lucy;Lucy;-0,2;0;1;;IEEEUW, seriously??
+;Boris;Boris;Boris;-0,2;0;1;;Thanks! Smell ya later! *hangs up* Well, that worked! Now let’s get the next science bird!
+T8.5;Boris;Boris;Boris;-0,2;0;1;;YAY! Another one! Let's test him too.  Bird, when something passes by quickly, why does the tone change?
+;Bird;Bird;Bird #3;-0,2;0;1;;That is called the Doppler effect. Whenever an object comes towards you, the sound waves coming from that object, are more compressed! Therefore, the sound sounds higher pitched. If the object moves away from you, the sound waves are stretched so it sounds... can you guess it?.... yes! lower!!
+;Boris;Boris;Boris;-0,2;0;1;;Okay.. Let me fly by you a few times. Tell me if he's right.
+;Boris;Boris;Boris;-0,2;0;1;;wiiiiiiiiiiiiiiiiiiii
+;Boris;Boris;Boris;-0,2;0;1;;wiiiiiiiiiiiiiiiiiiii
+;Boris;Boris;Boris;-0,2;0;1;;wiiiiiiiiiiiiiiiiiiii
+;Boris;Boris;Boris;-0,2;0;1;;*CRASH* uhhhhhgggggg, im okay! im okay...
+;Lucy;Lucy;Lucy;-0,2;0;1;;Be careful, boris!! But, the bird is right!
+;Boris;Boris;Boris;-0,2;0;1;;Perfect, *hoot* let's get the final science bird.
+T8.6;Boris;Boris;Boris;-0,2;0;1;;Aha! *hoothoot* The final one. Let's test it to be sure. Bird, if I make noise in a big empty hall, why do I hear it repeated?
+;Bird;Bird;Bird #4;-0,2;0;1;;Easy! That is called an echo! Sound waves are partially absorbed and partially reflected by objects in your environment, such as a cup, a wall, or a MOUNTAIN. So before reaching your ears, some sound waves have bounced on other objects, while other waves reach your ears directly. Since it takes time for sound to travel from the source to your ear, it takes even longer for reflected sound waves, so you hear that sound a bit later.
+;Boris;Boris;Boris;-0,2;0;1;;Lucy! *hoot* Teleport us into a big empty hall!!
+;Lucy;Lucy;Lucy;-0,2;0;1;;Okidoki!! Here we go *teleport sounds*
+;Boris;Boris;Boris;-0,2;0;1;;Awesome!! Ok, *grumbles of stomach* here goes nothing....  *difficult hoot* *pfffff*...fff*..ff*..f*
+;Lucy;Lucy;Lucy;-0,2;0;1;;OK! ENOUGH! Ugh, who gives our king beans for dinner??
+;Boris;Boris;Boris;-0,2;0;1;;The royal cook, Beany Jean Beany. If it wasn’t clear from his name, his speciality is: beans.
+;Lucy;Lucy;Lucy;-0,2;0;1;;Sounds like he is the the master of gasses himself. Let’s get back to the village. *teleport sounds*
+T9.1;Boris;Boris;Boris;-0,2;0;1;;Ahhh *hoooot* home sweet home. Thank you human, for your exceptional help. You are very talented, and will achieve many great things!! I'll soon bring these science birds back to science land.
+;Giant;Giant;Giant;-0,2;0;1;;blegh science birds
+;Bird;Bird;Bird #3;-0,2;0;1;;NO!! *whistle* Wait! You can take my friends, but let me stay here!! Our study hasn’t been completed, I’d like to finish it. Plus, I like it here. It smells so good, and the air feels so nice and soft. Everyone here seems so friendly too.
+;Boris;Boris;Boris;-0,2;0;1;;Yes, *hoot* you are welcome to live here! As long as you pay your taxes!
+;Bird;Bird;Bird #3;-0,2;0;1;;But, *whistle* I scare away the giant! Isn’t that enough?
+;Boris;Boris;Boris;-0,2;0;1;;I was just kidding, *hoot* we don’t have taxes in the spirit world!
+;Bird;Bird;Bird #3;-0,2;0;1;;Haha ah! *whistle* Thank you, Boris!
 ;;;;;;;;
 ;;;;;;;;Human, you seem very talented! I see you are motivated to learn how to orientate yourself even better by the use of sound. So, let me tell you a secret. *whistle*
-;Giant;Giant;Giant;0;0;1;;noooo not science!
-;Bird;Bird;Bird #3;0;0;1;;If you listen well and practise enough, you can roughly determine the dimensions and type of environment you are in, just by the sound. You can even learn to hear if there is a wall in front of you. The key here, is the effect that sound has in an environment. Sound waves travel and bounce around, and since each environment is different, the bounced sound waves are also different. Let’s call this the response of an environment. Even your position in relation to your surroundings influences the response. *whistle*
-;Giant;Giant;Giant;0;0;1;;Ahh!! Science!! 
-;Bird;Bird;Bird #3;0;0;1;;Some humans can distinguish these responses, just by making clicking sounds. They listen to the response in the environment just like bats do. *whistle*
-;Giant;Giant;Giant;0;0;1;;Ahh!! Science!! 
-;Bird;Bird;Bird #3;0;0;1;;I hope this helps! Be safe in your human world, human! *whistle* Farewell! 
-;Lucy;Lucy;Lucy;0;0;1;;It is time to disconnect you. Thank you sooo much for your help!! The village is now happy again. All because of you. You are awesome! Perhaps see you soon again! *kisses human* 
-;Boris;Boris;Boris;0;0;1;;Hopefully we'll see you again. *hoot* It was nice working with you! Byeeee!
-;Giant;Giant;Giant;0;0;1;;Thanks, little one, for clearing the forest. Now that the science birds have finally stopped their experiments, I can go home and think what to do with my life. Maybe, accountancy, or banking... or lion taming! Yes... that sounds great. 
-;Lucy;Lucy;Lucy;0;0;1;;byeeee
-;Screen Audio;Beorn;Beorn;0;0;0,8;;byeehhhh byehhhh muhh!!
-;Giant;Giant;Giant;0;0;1;;*in the distance* Mom!! I'm coming back home!! From now on I will eat my greens like a good boy
-;Screen Audio;Iris;Iris;0;1;1;;Disconnected. 
-T10.1;Screen Audio;Iris;Iris;0;1;1;;Credits:
+;Giant;Giant;Giant;-0,2;0;1;;noooo not science!
+;Bird;Bird;Bird #3;-0,2;0;1;;If you listen well and practise enough, you can roughly determine the dimensions and type of environment you are in, just by the sound. You can even learn to hear if there is a wall in front of you. The key here, is the effect that sound has in an environment. Sound waves travel and bounce around, and since each environment is different, the bounced sound waves are also different. Let’s call this the response of an environment. Even your position in relation to your surroundings influences the response. *whistle*
+;Giant;Giant;Giant;-0,2;0;1;;Ahh!! Science!! 
+;Bird;Bird;Bird #3;-0,2;0;1;;Some humans can distinguish these responses, just by making clicking sounds. They listen to the response in the environment just like bats do. *whistle*
+;Giant;Giant;Giant;-0,2;0;1;;Ahh!! Science!! 
+;Bird;Bird;Bird #3;-0,2;0;1;;I hope this helps! Be safe in your human world, human! *whistle* Farewell! 
+;Lucy;Lucy;Lucy;-0,2;0;1;;It is time to disconnect you. Thank you sooo much for your help!! The village is now happy again. All because of you. You are awesome! Perhaps see you soon again! *kisses human* 
+;Boris;Boris;Boris;-0,2;0;1;;Hopefully we'll see you again. *hoot* It was nice working with you! Byeeee!
+;Giant;Giant;Giant;-0,2;0;1;;Thanks, little one, for clearing the forest. Now that the science birds have finally stopped their experiments, I can go home and think what to do with my life. Maybe, accountancy, or banking... or lion taming! Yes... that sounds great. 
+;Lucy;Lucy;Lucy;-0,2;0;1;;byeeee
+;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;byeehhhh byehhhh muhh!!
+;Giant;Giant;Giant;-0,2;0;1;;*in the distance* Mom!! I'm coming back home!! From now on I will eat my greens like a good boy
+;Screen Audio;Iris;Iris;-0,2;1;1;;Disconnected. 
+T10.1;Screen Audio;Iris;Iris;-0,2;1;1;;Credits:
 ;;;;;;;;Names & roles
 ;;;;;;;;Thanks
 ;;;;;;;;Sources

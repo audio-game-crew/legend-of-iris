@@ -9,7 +9,7 @@ public class ScreenAudioIndicator : BaseIndicator
     public float activeTimer;
     private float timer;
 
-    public void Stop()
+    public override void Stop()
     {
         activeTimer = 0f;
     }

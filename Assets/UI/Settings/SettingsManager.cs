@@ -45,7 +45,8 @@ public class SettingsManager : MonoBehaviour
         settingsBackground.SetActive(!settingsBackground.activeInHierarchy);
         if (!IsSettingsShown())
         {
-            activePlayer.MarkRemovable();
+            if (activePlayer != null)
+                activePlayer.MarkRemovable();
             activeSettingType = 0;
         }
     }

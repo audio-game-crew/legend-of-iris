@@ -3684,7 +3684,7 @@ Transform:
   m_PrefabInternal: {fileID: 1444340461}
   m_GameObject: {fileID: 192233537}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: -49.4499969, y: 1, z: -57.6400032}
+  m_LocalPosition: {x: -48.9000015, y: 1, z: -59.9000015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1497828296}
@@ -3748,7 +3748,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 471202, guid: 22364a6d81376214783ac3547a730a6c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10.2399998
       objectReference: {fileID: 0}
     - target: {fileID: 471202, guid: 22364a6d81376214783ac3547a730a6c, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6169,7 +6169,7 @@ Transform:
   m_PrefabInternal: {fileID: 1444340461}
   m_GameObject: {fileID: 273177294}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: 49.75, y: 1, z: -58.2400017}
+  m_LocalPosition: {x: 50.3199997, y: 1, z: -59.1199989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 561850451}
@@ -6559,7 +6559,7 @@ Transform:
   m_PrefabInternal: {fileID: 1444340461}
   m_GameObject: {fileID: 299535760}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: -4.07000017, y: 1, z: -57.6399994}
+  m_LocalPosition: {x: -2, y: 1, z: -59.4000015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 571021718}
@@ -8788,7 +8788,7 @@ Transform:
   m_PrefabInternal: {fileID: 1444340461}
   m_GameObject: {fileID: 436424788}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: 32.9500008, y: 1, z: -158.440002}
+  m_LocalPosition: {x: 31.2000008, y: 1, z: -158.399994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1570189277}
@@ -9529,6 +9529,26 @@ Prefab:
     - target: {fileID: 400000, guid: 0fdb553835ff8414594abb09c337c1a3, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 433706, guid: 0fdb553835ff8414594abb09c337c1a3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 13.6999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 433706, guid: 0fdb553835ff8414594abb09c337c1a3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.20000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 433706, guid: 0fdb553835ff8414594abb09c337c1a3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 11.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400158, guid: 0fdb553835ff8414594abb09c337c1a3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -6.8499999
+      objectReference: {fileID: 0}
+    - target: {fileID: 400158, guid: 0fdb553835ff8414594abb09c337c1a3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 20.2900009
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdb553835ff8414594abb09c337c1a3, type: 2}
@@ -11938,7 +11958,7 @@ Transform:
   m_PrefabInternal: {fileID: 1444340461}
   m_GameObject: {fileID: 587303993}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: -49.4499969, y: 1, z: -137.840012}
+  m_LocalPosition: {x: -48.5999985, y: 1, z: -138.899994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 504663016}
@@ -15421,7 +15441,7 @@ Transform:
   m_PrefabInternal: {fileID: 1444340461}
   m_GameObject: {fileID: 759969491}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: 49.75, y: 1, z: -27.5400047}
+  m_LocalPosition: {x: 51.0200005, y: 1, z: -29.4500008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 476106494}
@@ -15806,7 +15826,7 @@ Transform:
   m_PrefabInternal: {fileID: 464096742}
   m_GameObject: {fileID: 773411162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.93000031, y: 2.18000007, z: 13.8900003}
+  m_LocalPosition: {x: -6.8499999, y: 2.18000007, z: 20.2900009}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1092412823}
@@ -19159,7 +19179,7 @@ Transform:
   m_PrefabInternal: {fileID: 464096742}
   m_GameObject: {fileID: 896155795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.0500002, y: 2.18000007, z: 2.86999989}
+  m_LocalPosition: {x: 13.6999998, y: 2.20000005, z: 11.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1993323335}
@@ -19522,7 +19542,7 @@ Transform:
   m_PrefabInternal: {fileID: 1187997587}
   m_GameObject: {fileID: 921443682}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: -10.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2054794561}
@@ -20358,7 +20378,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 949530674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: -10.2399998}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 2112304529}
@@ -24538,7 +24558,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 582f3ecc4257fd943a66be2f73c47271, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 2.44000006
+      value: -7.80000019
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 582f3ecc4257fd943a66be2f73c47271, type: 2}
       propertyPath: m_LocalRotation.x
@@ -25137,7 +25157,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10.25
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
       propertyPath: m_LocalRotation.x
@@ -25663,7 +25683,7 @@ Transform:
   m_PrefabInternal: {fileID: 1444340461}
   m_GameObject: {fileID: 1235372138}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: 71.6500015, y: 1, z: -98.3400116}
+  m_LocalPosition: {x: 70.4100037, y: 1, z: -99.2799988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 41565896}
@@ -29225,6 +29245,62 @@ Prefab:
     - target: {fileID: 400162, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400078, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 51.0200005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400078, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -29.4500008
+      objectReference: {fileID: 0}
+    - target: {fileID: 400026, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 50.3199997
+      objectReference: {fileID: 0}
+    - target: {fileID: 400026, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -59.1199989
+      objectReference: {fileID: 0}
+    - target: {fileID: 400030, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400030, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -59.4000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 400018, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -48.9000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 400018, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -59.9000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 400058, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -48.5999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 400058, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -138.899994
+      objectReference: {fileID: 0}
+    - target: {fileID: 400038, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 31.2000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 400038, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -158.399994
+      objectReference: {fileID: 0}
+    - target: {fileID: 400112, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 70.4100037
+      objectReference: {fileID: 0}
+    - target: {fileID: 400112, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -99.2799988
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
@@ -36122,7 +36198,7 @@ Transform:
   m_PrefabInternal: {fileID: 1148399849}
   m_GameObject: {fileID: 1766996850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.32999992, y: 2, z: 2.44000006}
+  m_LocalPosition: {x: 2.32999992, y: 2, z: -7.80000019}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1246900291}
@@ -38850,7 +38926,7 @@ MonoBehaviour:
         you through now.\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Screen Audio: Hello? Human? I need your help!! Are you there? Please
@@ -38863,7 +38939,7 @@ MonoBehaviour:
         working.\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T1.2
@@ -38880,7 +38956,7 @@ MonoBehaviour:
         to check the settings of Iris.\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T1.3
@@ -38896,7 +38972,7 @@ MonoBehaviour:
         of reasons, in... 5... 4...\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: What?! NO stop!\r\n"
@@ -38906,7 +38982,7 @@ MonoBehaviour:
       subtitle: "What?! NO stop!\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: *monotone* Ha. ha. ha. just kidding.\r\n"
@@ -38916,7 +38992,7 @@ MonoBehaviour:
       subtitle: "*monotone* Ha. ha. ha. just kidding.\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Screen Audio: Ah phew! haha! Iris is a bit silly sometimes. Anyway, we
@@ -38936,7 +39012,7 @@ MonoBehaviour:
         help us, human?\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: Turn off your computer to confirm\r\n"
@@ -38946,7 +39022,7 @@ MonoBehaviour:
       subtitle: "Turn off your computer to confirm\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: No, human, dont! Iris is kidding... again. \r\n"
@@ -38956,7 +39032,7 @@ MonoBehaviour:
       subtitle: "No, human, dont! Iris is kidding... again. \r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: Ha.ha.ha.\r\n"
@@ -38966,7 +39042,7 @@ MonoBehaviour:
       subtitle: "Ha.ha.ha.\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Screen Audio: Dont listen to iris! Just press forward to confirm. Will
@@ -38978,7 +39054,7 @@ MonoBehaviour:
         us, human?\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T1.4
@@ -38995,7 +39071,7 @@ MonoBehaviour:
         of a talented human like you! Press forward to confirm!\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T1.5
@@ -39011,7 +39087,7 @@ MonoBehaviour:
         talented human like you! Press forward to confirm!\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T1.6
@@ -39025,7 +39101,7 @@ MonoBehaviour:
       subtitle: "Question confirmed.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Screen Audio: Yaaay! That is so great to hear. We are going on an adventur...'
@@ -39037,7 +39113,7 @@ MonoBehaviour:
         Amazing what technology can do nowadays.\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Screen Audio: Whoever said technology would replace all paper obviously
@@ -39050,7 +39126,7 @@ MonoBehaviour:
         in 3... 2... 1...\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: *connection sounds*\r\n"
@@ -39060,7 +39136,7 @@ MonoBehaviour:
       subtitle: "*connection sounds*\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: *during connection sounds* Here we go!\r\n"
@@ -39070,7 +39146,7 @@ MonoBehaviour:
       subtitle: "*during connection sounds* Here we go!\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: -3.5
+        timeOffset: -7.5
         volume: 1
         pitch: 1
   - name: T2.1
@@ -39084,7 +39160,7 @@ MonoBehaviour:
       subtitle: "Connection established. Good luck.\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Lucy: Alright, human. You are now in connection with a fluffy spir...'
@@ -39095,7 +39171,7 @@ MonoBehaviour:
         called Beorn. Right now he is waking up.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: muhehue *sleepy*\r\n"
@@ -39105,7 +39181,7 @@ MonoBehaviour:
       subtitle: "muhehue *sleepy*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Alright, he got up. \r\n"
@@ -39115,7 +39191,7 @@ MonoBehaviour:
       subtitle: "Alright, he got up. \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: Forward and backward movement enabled.\r\n"
@@ -39125,7 +39201,7 @@ MonoBehaviour:
       subtitle: "Forward and backward movement enabled.\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Lucy: Now, lets see if you can move him. Press forward and backwar...'
@@ -39136,7 +39212,7 @@ MonoBehaviour:
         move Beorn. \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T2.2
@@ -39150,7 +39226,7 @@ MonoBehaviour:
       subtitle: "*impatiently* muuuuuuu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Human, press forward and backward to move Beorn. If you dont...'
@@ -39162,7 +39238,7 @@ MonoBehaviour:
         of Iris.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T2.3
@@ -39176,7 +39252,7 @@ MonoBehaviour:
       subtitle: "mumUmUUU *thud* (falling)\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Haha, aww poor Beorn. He fell down, but that''s okay. He is q...'
@@ -39188,7 +39264,7 @@ MonoBehaviour:
         though. At least he is fully awake now! \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: Rotations enabled.\r\n"
@@ -39198,7 +39274,7 @@ MonoBehaviour:
       subtitle: "Rotations enabled.\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Lucy: Lets try and see if you can turn Beorn around. First, do a f...'
@@ -39209,7 +39285,7 @@ MonoBehaviour:
         to the left.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T2.5
@@ -39223,7 +39299,7 @@ MonoBehaviour:
       subtitle: "*disapprovingly* muuuuuuu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Human, you are turning into the wrong direction.\r\n"
@@ -39233,7 +39309,7 @@ MonoBehaviour:
       subtitle: "Human, you are turning into the wrong direction.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T2.6
@@ -39247,7 +39323,7 @@ MonoBehaviour:
       subtitle: "*happy* muuuuuuu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Well done!! Now lets turn back around.\r\n"
@@ -39257,7 +39333,7 @@ MonoBehaviour:
       subtitle: "Well done!! Now lets turn back around.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T2.7
@@ -39271,7 +39347,7 @@ MonoBehaviour:
       subtitle: "*happy* muumumuuuu!!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Well done, human!! Notice how the sound changes when you tur...'
@@ -39283,7 +39359,7 @@ MonoBehaviour:
         \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T3.1
@@ -39302,7 +39378,7 @@ MonoBehaviour:
         to their location, so you may follow the sound of my wings.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T3.2
@@ -39316,7 +39392,7 @@ MonoBehaviour:
       subtitle: "*impatiently* muuuuuuu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Human! Try to focus on the sound of my wings and walk toward...'
@@ -39328,7 +39404,7 @@ MonoBehaviour:
         my direction. You can do it, I believe in you.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T3.3
@@ -39342,7 +39418,7 @@ MonoBehaviour:
       subtitle: "*making effort, putting on shoes* muuuuuuumumuu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Good job, human!... haha, Beorn! Your shoes are even bigger ...'
@@ -39353,7 +39429,7 @@ MonoBehaviour:
         your belly is.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -2.20000005
         volume: 1
         pitch: 1
     - name: "Screen Audio: *my belly?* muumuu?\r\n"
@@ -39363,7 +39439,7 @@ MonoBehaviour:
       subtitle: "*my belly?* muumuu?\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Okay, human. Lets now head towards his belly rubbing machine...'
@@ -39374,7 +39450,7 @@ MonoBehaviour:
         me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T3.4
@@ -39388,7 +39464,7 @@ MonoBehaviour:
       subtitle: "*impatiently* muuuuuuu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Human! Try to focus on the sound of my wings and walk toward...'
@@ -39400,7 +39476,7 @@ MonoBehaviour:
         my direction. You can do it, I believe in you.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T3.5
@@ -39414,7 +39490,7 @@ MonoBehaviour:
       subtitle: "*belly rubbing machine turns on*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Screen Audio: *very satisfied, being rubbed* mu! mu! mu! mu! *burp* mu!
@@ -39426,7 +39502,7 @@ MonoBehaviour:
         mu!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Beorn!! No! Get out and turn it off!\r\n"
@@ -39446,7 +39522,7 @@ MonoBehaviour:
       subtitle: "*disappointed* muhhh.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Good, Beorn! You can get a belly rub later, when you come ba...'
@@ -39460,7 +39536,7 @@ MonoBehaviour:
         \r\n\r\nQuickly, follow me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T3.6
@@ -39474,7 +39550,7 @@ MonoBehaviour:
       subtitle: "*impatiently* muuuuuuu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Human! Try to focus on the sound of my wings and walk toward...'
@@ -39486,7 +39562,7 @@ MonoBehaviour:
         my direction. You can do it, I believe in you.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: '!Err! T3.7'
@@ -39500,7 +39576,7 @@ MonoBehaviour:
       subtitle: "*happy* muuuuu!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Yes!! You made it! You know how to control Beorn and how to ...'
@@ -39511,7 +39587,7 @@ MonoBehaviour:
         the sound of my wings. This will come in handy!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "!Err! Other: *door opens*\r\n"
@@ -39521,7 +39597,7 @@ MonoBehaviour:
       subtitle: "*door opens*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.1
@@ -39535,7 +39611,7 @@ MonoBehaviour:
       subtitle: "Ahhhh fresh air\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: *very much liking the air too* muuuuuuu\r\n"
@@ -39545,7 +39621,7 @@ MonoBehaviour:
       subtitle: "*very much liking the air too* muuuuuuu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: We are now on a very lengthy bridge that goes to my village....'
@@ -39557,7 +39633,7 @@ MonoBehaviour:
         built over a river that runs through a few high mountains. However, I...\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: *running, panting* hu hu hu hu hu hu \r\n"
@@ -39567,7 +39643,7 @@ MonoBehaviour:
       subtitle: "*running, panting* hu hu hu hu hu hu \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: *while Beorn is running* Beorn!!!\r\n"
@@ -39577,7 +39653,7 @@ MonoBehaviour:
       subtitle: "*while Beorn is running* Beorn!!!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Other: *teleportation sounds*\r\n"
@@ -39597,7 +39673,7 @@ MonoBehaviour:
       subtitle: "*relieved* muu!!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Beorn!! Wh... why..?? Oh wait... I see. Below us is not just...'
@@ -39609,7 +39685,7 @@ MonoBehaviour:
         Just save some f...\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: *drinking like crazy* \r\n"
@@ -39619,7 +39695,7 @@ MonoBehaviour:
       subtitle: "*drinking like crazy* \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: WOW! He drank it all in one go!! Oh Beorn...\r\n"
@@ -39629,7 +39705,7 @@ MonoBehaviour:
       subtitle: "WOW! He drank it all in one go!! Oh Beorn...\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: *happy* muuu!\r\n"
@@ -39639,7 +39715,7 @@ MonoBehaviour:
       subtitle: "*happy* muuu!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Haha!\r\n\r\nBy the way, human, as you noticed I have magical po..."
@@ -39655,7 +39731,7 @@ MonoBehaviour:
         Follow me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.2~1
@@ -39669,7 +39745,7 @@ MonoBehaviour:
       subtitle: "huuuuuUUu *falls*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Uh oh!\r\n"
@@ -39679,7 +39755,7 @@ MonoBehaviour:
       subtitle: "Uh oh!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Other: *teleportation sounds*\r\n"
@@ -39699,7 +39775,7 @@ MonoBehaviour:
       subtitle: "Good! You are safe now. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.2~2
@@ -39713,7 +39789,7 @@ MonoBehaviour:
       subtitle: "huuuuUU *falls*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Woops! \r\n"
@@ -39723,7 +39799,7 @@ MonoBehaviour:
       subtitle: "Woops! \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Other: *teleportation sounds*\r\n"
@@ -39743,7 +39819,7 @@ MonoBehaviour:
       subtitle: "Okay! You are safe. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.2~3
@@ -39757,7 +39833,7 @@ MonoBehaviour:
       subtitle: "hu hu HUUUU *falls*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Oh nooo!\r\n"
@@ -39767,7 +39843,7 @@ MonoBehaviour:
       subtitle: "Oh nooo!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Other: *teleportation sounds*\r\n"
@@ -39787,7 +39863,7 @@ MonoBehaviour:
       subtitle: "Phew!! That was close. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.3
@@ -39801,7 +39877,7 @@ MonoBehaviour:
       subtitle: "*silly* muu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Hey come back! You are going the wrong direction!\r\n"
@@ -39811,7 +39887,7 @@ MonoBehaviour:
       subtitle: "Hey come back! You are going the wrong direction!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.4~1
@@ -39825,7 +39901,7 @@ MonoBehaviour:
       subtitle: "Watch out for the edge, human!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.4~2
@@ -39839,7 +39915,7 @@ MonoBehaviour:
       subtitle: "Ohhh watch out for the edge!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.4~3
@@ -39853,7 +39929,7 @@ MonoBehaviour:
       subtitle: "Human! Watch out, Beorn is standing really close to the edge.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.4A
@@ -39867,7 +39943,7 @@ MonoBehaviour:
       subtitle: "*scared panting*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .300000012
         pitch: 1
   - name: T4.4B
@@ -39881,7 +39957,7 @@ MonoBehaviour:
       subtitle: "*relieved* muuhh\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
   - name: T4.5~1
@@ -39895,7 +39971,7 @@ MonoBehaviour:
       subtitle: "*glad* muu!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Well done! Now the next section. Follow me!\r\n"
@@ -39905,7 +39981,7 @@ MonoBehaviour:
       subtitle: "Well done! Now the next section. Follow me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.5~2
@@ -39919,7 +39995,7 @@ MonoBehaviour:
       subtitle: "*glad* muuuuu!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Yes! Very good. Ok, next one!\r\n"
@@ -39929,7 +40005,7 @@ MonoBehaviour:
       subtitle: "Yes! Very good. Ok, next one!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.6
@@ -39947,7 +40023,7 @@ MonoBehaviour:
         do it. Follow me, human! :)\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: '!Err! T4.7~1'
@@ -39961,7 +40037,7 @@ MonoBehaviour:
       subtitle: "Out of the way!! There is a giant in the village!!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: huuuuuUUu *falls*\r\n"
@@ -39971,7 +40047,7 @@ MonoBehaviour:
       subtitle: "huuuuuUUu *falls*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Uh oh!\r\n"
@@ -39981,7 +40057,7 @@ MonoBehaviour:
       subtitle: "Uh oh!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Other: *teleportation sounds*\r\n"
@@ -40001,7 +40077,7 @@ MonoBehaviour:
       subtitle: "Good! You are safe now. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: '!Err! T4.7~2'
@@ -40015,7 +40091,7 @@ MonoBehaviour:
       subtitle: "Ahhh! A giant in the village!!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: huuuuUU *falls*\r\n"
@@ -40025,7 +40101,7 @@ MonoBehaviour:
       subtitle: "huuuuUU *falls*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Woops! \r\n"
@@ -40035,7 +40111,7 @@ MonoBehaviour:
       subtitle: "Woops! \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Other: *teleportation sounds*\r\n"
@@ -40055,7 +40131,7 @@ MonoBehaviour:
       subtitle: "Okay! You are safe. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: '!Err! T4.7~3'
@@ -40069,7 +40145,7 @@ MonoBehaviour:
       subtitle: "Oh no, oh no! Out of the way!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: hu hu HUUUU *falls*\r\n"
@@ -40079,7 +40155,7 @@ MonoBehaviour:
       subtitle: "hu hu HUUUU *falls*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Oh nooo!\r\n"
@@ -40089,7 +40165,7 @@ MonoBehaviour:
       subtitle: "Oh nooo!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Other: *teleportation sounds*\r\n"
@@ -40109,7 +40185,7 @@ MonoBehaviour:
       subtitle: "Phew!! That was close. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.8
@@ -40123,7 +40199,7 @@ MonoBehaviour:
       subtitle: "*scared* MU!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Phew! Close call, Beorn almost touched a spirit.\r\n"
@@ -40133,7 +40209,7 @@ MonoBehaviour:
       subtitle: "Phew! Close call, Beorn almost touched a spirit.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.9~1
@@ -40147,7 +40223,7 @@ MonoBehaviour:
       subtitle: "*happy* mu muuu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Awesome!! Well done. Okay, lets continue over to the next se...'
@@ -40157,7 +40233,7 @@ MonoBehaviour:
       subtitle: "Awesome!! Well done. Okay, lets continue over to the next section.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.9~2
@@ -40171,7 +40247,7 @@ MonoBehaviour:
       subtitle: "*happy* muuu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: You are very good at this! Let''s tackle the next section too...'
@@ -40181,7 +40257,7 @@ MonoBehaviour:
       subtitle: "You are very good at this! Let's tackle the next section too!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.10
@@ -40199,7 +40275,7 @@ MonoBehaviour:
         You can do it!!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.11
@@ -40213,7 +40289,7 @@ MonoBehaviour:
       subtitle: "huuuuUU *falls*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Woops! Watch out, the bridge turns here.\r\n"
@@ -40223,7 +40299,7 @@ MonoBehaviour:
       subtitle: "Woops! Watch out, the bridge turns here.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Other: *teleportation sounds*\r\n"
@@ -40243,7 +40319,7 @@ MonoBehaviour:
       subtitle: "Okay! You are safe. Lets try again. Follow the sound of the machines.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.12~1
@@ -40257,7 +40333,7 @@ MonoBehaviour:
       subtitle: "*relief* muuu! \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Well done! That was tough, wasnit it? You did great though. ...'
@@ -40268,7 +40344,7 @@ MonoBehaviour:
         a great listener! Lets continue over the next section with machines. \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.12~2
@@ -40282,7 +40358,7 @@ MonoBehaviour:
       subtitle: "*glad* uuuuuggg! \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy:  You are the master of listening! Let''s tackle the next sect...'
@@ -40292,7 +40368,7 @@ MonoBehaviour:
       subtitle: " You are the master of listening! Let's tackle the next section too!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T4.13
@@ -40306,7 +40382,7 @@ MonoBehaviour:
       subtitle: "*very happy* muu muu muuuuuu!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Very goood!! We have reached the end of the bridge. Here we ...'
@@ -40318,7 +40394,7 @@ MonoBehaviour:
         bit dizzy, but that is normal. Here we go!! woooop!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Other: *awesome teleportation sounds*\r\n"
@@ -40342,7 +40418,7 @@ MonoBehaviour:
       subtitle: "*teleportation sounds end*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Lucy: *whispers* uhoh.... we arrived at my village but we are stan...'
@@ -40353,7 +40429,7 @@ MonoBehaviour:
         right next to the giant... Lets hope he doesnt see us. Stay still!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: *GIANT!?* MUHUH?! muuuuu!!\r\n"
@@ -40363,7 +40439,7 @@ MonoBehaviour:
       subtitle: "*GIANT!?* MUHUH?! muuuuu!!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: *whispers* Beorn! SSSST!\r\n"
@@ -40373,7 +40449,7 @@ MonoBehaviour:
       subtitle: "*whispers* Beorn! SSSST!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Giant: *slow low voice* Huuuhhh? Who is there? A fairy!! Wait! I do...'
@@ -40385,7 +40461,7 @@ MonoBehaviour:
         forest! I just want shelter. I am scared! Can you help me please?\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Lucy: Uh... uhm... OH!! Of course! Giants hate science!! But, why ...'
@@ -40396,7 +40472,7 @@ MonoBehaviour:
         science birds in our forest?\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Giant: They are studying and copying the sounds of the animals in t...'
@@ -40409,7 +40485,7 @@ MonoBehaviour:
         That would be embarrassing.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Lucy: Haha it would. We will help you, but if we get the science b...'
@@ -40420,7 +40496,7 @@ MonoBehaviour:
         out of the forest, will you go back there and leave us alone?\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Giant: I promise. This is no place for me!\r\n"
@@ -40430,7 +40506,7 @@ MonoBehaviour:
       subtitle: "I promise. This is no place for me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "!Err! Other: *Approaching flapping wings*\r\n"
@@ -40440,7 +40516,7 @@ MonoBehaviour:
       subtitle: "*Approaching flapping wings*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Lucy: Oh here comes Boris the 77th, the great owl of Gahoot, the k...'
@@ -40453,7 +40529,7 @@ MonoBehaviour:
         to you, human! \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Boris: Hi there, *hooot* I couldnt help but overhearing the convers...'
@@ -40464,7 +40540,7 @@ MonoBehaviour:
         Lucy, are you sure you picked the right human for the task at hand?\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Lucy: Yes, 100% sure.\r\n"
@@ -40474,7 +40550,7 @@ MonoBehaviour:
       subtitle: "Yes, 100% sure.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Boris: Well, to be sure, human, I am going to test you. *hooot* I w...'
@@ -40486,7 +40562,7 @@ MonoBehaviour:
         you can come and find me. \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Lucy: OK human, stand still when he takes off, and listen closely ...'
@@ -40498,7 +40574,7 @@ MonoBehaviour:
         and to remember Boris location!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "!Err! Other: *flapping wings of boris flying to some random location*\r\n"
@@ -40508,7 +40584,7 @@ MonoBehaviour:
       subtitle: "*flapping wings of boris flying to some random location*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Boris: *hoot at location*\r\n"
@@ -40518,7 +40594,7 @@ MonoBehaviour:
       subtitle: "*hoot at location*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Lucy: OK, go find him!\r\n"
@@ -40528,7 +40604,7 @@ MonoBehaviour:
       subtitle: "OK, go find him!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T5.2~1
@@ -40542,7 +40618,7 @@ MonoBehaviour:
       subtitle: "*hooot*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T5.2~2
@@ -40556,7 +40632,7 @@ MonoBehaviour:
       subtitle: "*hooot*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T5.2~3
@@ -40570,7 +40646,7 @@ MonoBehaviour:
       subtitle: "*hooot*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T5.3
@@ -40584,7 +40660,7 @@ MonoBehaviour:
       subtitle: "*annoyed* muuuu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Try to focus on the sounds of the environment in comparison ...'
@@ -40595,7 +40671,7 @@ MonoBehaviour:
         If you forget where he is, he might make some noises once in a while.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Boris: *hooot*\r\n"
@@ -40605,7 +40681,7 @@ MonoBehaviour:
       subtitle: "*hooot*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: '!Err! T5.4'
@@ -40619,7 +40695,7 @@ MonoBehaviour:
       subtitle: "Hmmm.. You got me! *hooot* But you got lucky human! Let's tr... AAAH\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: MUHH HAWHAW\r\n"
@@ -40629,7 +40705,7 @@ MonoBehaviour:
       subtitle: "MUHH HAWHAW\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Beorn!! Don't bite our king you idiot!\r\n"
@@ -40639,7 +40715,7 @@ MonoBehaviour:
       subtitle: "Beorn!! Don't bite our king you idiot!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: *disappointed* muhhhh\r\n"
@@ -40649,7 +40725,7 @@ MonoBehaviour:
       subtitle: "*disappointed* muhhhh\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Boris: *hOOOt* Oh fudge, now my feathers are all messy. Ah, well. I...'
@@ -40661,7 +40737,7 @@ MonoBehaviour:
         see if you got lucky!!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "!Err! Other: *flapping wings of boris flying to some random location*\r\n"
@@ -40671,7 +40747,7 @@ MonoBehaviour:
       subtitle: "*flapping wings of boris flying to some random location*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Boris: *hoot at location*\r\n"
@@ -40681,7 +40757,7 @@ MonoBehaviour:
       subtitle: "*hoot at location*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Lucy: OK, lets go find him again!\r\n"
@@ -40691,7 +40767,7 @@ MonoBehaviour:
       subtitle: "OK, lets go find him again!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: '!Err! T5.5'
@@ -40706,7 +40782,7 @@ MonoBehaviour:
         as lucy said. *hooot* One more to be sure!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "!Err! Other: *flapping wings of boris flying to some random location*\r\n"
@@ -40716,7 +40792,7 @@ MonoBehaviour:
       subtitle: "*flapping wings of boris flying to some random location*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Boris: *hoot at location*\r\n"
@@ -40726,7 +40802,7 @@ MonoBehaviour:
       subtitle: "*hoot at location*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Lucy: OK, lets go find him again, one last time!\r\n"
@@ -40736,7 +40812,7 @@ MonoBehaviour:
       subtitle: "OK, lets go find him again, one last time!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: '!Err! T5.6'
@@ -40750,7 +40826,7 @@ MonoBehaviour:
       subtitle: "Awesome! *hooot* I see you are indeed very talented!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: *happy* muhhhhh\r\n"
@@ -40760,7 +40836,7 @@ MonoBehaviour:
       subtitle: "*happy* muhhhhh\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Yaay! I told you!\r\n"
@@ -40770,7 +40846,7 @@ MonoBehaviour:
       subtitle: "Yaay! I told you!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Boris: Yes! *hooot* Very well. *hooot* Ill fly you to the forest wh...'
@@ -40782,7 +40858,7 @@ MonoBehaviour:
         on tight, Beorn! *hooot*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "!Err! Other: *wings start flapping around player*\r\n"
@@ -40792,7 +40868,7 @@ MonoBehaviour:
       subtitle: "*wings start flapping around player*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: *happy* muuhh buhuhbuhhh\r\n"
@@ -40802,7 +40878,7 @@ MonoBehaviour:
       subtitle: "*happy* muuhh buhuhbuhhh\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: *happy* Wiiiiiii\r\n"
@@ -40812,7 +40888,7 @@ MonoBehaviour:
       subtitle: "*happy* Wiiiiiii\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: '!Err! T6.1'
@@ -40826,7 +40902,7 @@ MonoBehaviour:
       subtitle: "*wings stop flapping, landed*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: *disappointed* muhhhhhh\r\n"
@@ -40836,7 +40912,7 @@ MonoBehaviour:
       subtitle: "*disappointed* muhhhhhh\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: It smells here, IEEUW. Even worse than Beorns house. Where A...'
@@ -40846,7 +40922,7 @@ MonoBehaviour:
       subtitle: "It smells here, IEEUW. Even worse than Beorns house. Where ARE we??\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Boris: Well, we arrived at the swamp! *hooot* I was only able to la...'
@@ -40859,7 +40935,7 @@ MonoBehaviour:
         spirit bears. *hooot*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Lucy: Hmm, alright. Human, I will fly to the end of the swamp. Aga...'
@@ -40870,7 +40946,7 @@ MonoBehaviour:
         the sound of my wings, but avoid the frogs!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: '!Err! T6.2'
@@ -40884,7 +40960,7 @@ MonoBehaviour:
       subtitle: "*frog bite*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: *pain* MUU!\r\n"
@@ -40894,7 +40970,7 @@ MonoBehaviour:
       subtitle: "*pain* MUU!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Woops! \r\n"
@@ -40904,7 +40980,7 @@ MonoBehaviour:
       subtitle: "Woops! \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Other: *teleportation sounds*\r\n"
@@ -40924,7 +41000,7 @@ MonoBehaviour:
       subtitle: "Okay! You are safe. Lets try again.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T6.3
@@ -40938,7 +41014,7 @@ MonoBehaviour:
       subtitle: "*impatiently* Muuuu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Try to focus on the sound of my wings and avoid those slimy ...'
@@ -40949,7 +41025,7 @@ MonoBehaviour:
         on the way! You can do it, human!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T6.4
@@ -40964,7 +41040,7 @@ MonoBehaviour:
         slimey. Ughhh!! I am super glad we passed the swamp.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: *agrees* muu!! mu muu\r\n"
@@ -40974,7 +41050,7 @@ MonoBehaviour:
       subtitle: "*agrees* muu!! mu muu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Let's continue quickly\r\n"
@@ -40984,7 +41060,7 @@ MonoBehaviour:
       subtitle: "Let's continue quickly\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Boris: Perhaps I will install a frog shower at the swamp one day. *...'
@@ -40996,7 +41072,7 @@ MonoBehaviour:
         to be. Follow me and Lucy, Human! *hooot*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T6.5
@@ -41010,7 +41086,7 @@ MonoBehaviour:
       subtitle: "*impatiently* muhhhh\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Boris: Focus on the sound of lucy''s wings or my hooting! You can do...'
@@ -41021,7 +41097,7 @@ MonoBehaviour:
         *hooot*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T6.6
@@ -41035,7 +41111,7 @@ MonoBehaviour:
       subtitle: "*silly* muu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Hey come back! You are going the wrong direction!\r\n"
@@ -41045,7 +41121,7 @@ MonoBehaviour:
       subtitle: "Hey come back! You are going the wrong direction!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T6.7
@@ -41059,7 +41135,7 @@ MonoBehaviour:
       subtitle: "*playing with flies* muhhh muhuheuhe muhe HUH huheu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Beorn! Leave those poor flies alone!\r\n"
@@ -41069,7 +41145,7 @@ MonoBehaviour:
       subtitle: "Beorn! Leave those poor flies alone!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Boris: Human, what is the difference between a fly and a bird? A bi...'
@@ -41080,7 +41156,7 @@ MonoBehaviour:
         fly but a fly can't bird! *hoot* HUAHUAHUAH\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: huehuehue\r\n"
@@ -41090,7 +41166,7 @@ MonoBehaviour:
       subtitle: "huehuehue\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: hihihi\r\n"
@@ -41100,7 +41176,7 @@ MonoBehaviour:
       subtitle: "hihihi\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T6.8
@@ -41115,7 +41191,7 @@ MonoBehaviour:
         A walk. HUAHUAHUAH\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: huehuehue\r\n"
@@ -41125,7 +41201,7 @@ MonoBehaviour:
       subtitle: "huehuehue\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: hihihi\r\n"
@@ -41135,7 +41211,7 @@ MonoBehaviour:
       subtitle: "hihihi\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T6.9
@@ -41149,7 +41225,7 @@ MonoBehaviour:
       subtitle: "Lucy *hoot* someone said you sound like an owl.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Lucy: Who??\r\n"
@@ -41159,7 +41235,7 @@ MonoBehaviour:
       subtitle: "Who??\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Boris: haha! *hoot* \r\n"
@@ -41169,7 +41245,7 @@ MonoBehaviour:
       subtitle: "haha! *hoot* \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Lucy: OH! hihi, fooled me!\r\n"
@@ -41179,7 +41255,7 @@ MonoBehaviour:
       subtitle: "OH! hihi, fooled me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: *mimics the joke in mumbles, laughs* muu?? huehuehue\r\n"
@@ -41189,7 +41265,7 @@ MonoBehaviour:
       subtitle: "*mimics the joke in mumbles, laughs* muu?? huehuehue\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
   - name: T6.10
@@ -41203,7 +41279,7 @@ MonoBehaviour:
       subtitle: "Ahhh! yes! here we are. The science bird must be around here somewhere!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: *glad* muuuu!\r\n"
@@ -41213,7 +41289,7 @@ MonoBehaviour:
       subtitle: "*glad* muuuu!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: OK! Whats next, Boris?\r\n"
@@ -41223,7 +41299,7 @@ MonoBehaviour:
       subtitle: "OK! Whats next, Boris?\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T7.1
@@ -41239,7 +41315,7 @@ MonoBehaviour:
         call them Lyre Birds!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Lucy: Ok, human, you are a great listener! Why dont you go find hi...'
@@ -41250,7 +41326,7 @@ MonoBehaviour:
         luck!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Boris: *hooot*\r\n"
@@ -41260,7 +41336,7 @@ MonoBehaviour:
       subtitle: "*hooot*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T7.2
@@ -41274,7 +41350,7 @@ MonoBehaviour:
       subtitle: "*impatiently* muhhhh\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Human, the bird you are looking for mimics the sounds of the...'
@@ -41285,7 +41361,7 @@ MonoBehaviour:
         including those of other birds. Listen carefully!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T7.3
@@ -41300,7 +41376,7 @@ MonoBehaviour:
         regular bird.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: *disappointed* muhhhh\r\n"
@@ -41310,7 +41386,7 @@ MonoBehaviour:
       subtitle: "*disappointed* muhhhh\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
   - name: T7.4
@@ -41325,7 +41401,7 @@ MonoBehaviour:
         \r\n\"Bird, what is \"\"sound\"\"?\"\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Bird: *whistle* Sound is a vibration, or wave, that can be heard a...'
@@ -41337,7 +41413,7 @@ MonoBehaviour:
         *whistles*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Boris: *hoot* yes! I am convinced. How many more of you are there?\r..."
@@ -41347,7 +41423,7 @@ MonoBehaviour:
       subtitle: "*hoot* yes! I am convinced. How many more of you are there?\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Bird: *whistle* there are still 3 others! I can call them out with...'
@@ -41358,7 +41434,7 @@ MonoBehaviour:
         secret emergency question, but then one of you has to catch them. \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Boris: OK, do it!\r\n"
@@ -41368,7 +41444,7 @@ MonoBehaviour:
       subtitle: "OK, do it!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T8.1
@@ -41382,7 +41458,7 @@ MonoBehaviour:
       subtitle: "*whistle* Why do seagulls fly over the sea? *whistle*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Bird: *from a distance* Because if the flew over the bay\r\n"
@@ -41392,7 +41468,7 @@ MonoBehaviour:
       subtitle: "*from a distance* Because if the flew over the bay\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Bird: *from another distance* they would be called\r\n"
@@ -41402,7 +41478,7 @@ MonoBehaviour:
       subtitle: "*from another distance* they would be called\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Bird: *from another distance* baygulls! \r\n"
@@ -41412,7 +41488,7 @@ MonoBehaviour:
       subtitle: "*from another distance* baygulls! \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Bird: *from another distance* oooooooh!!\r\n"
@@ -41422,7 +41498,7 @@ MonoBehaviour:
       subtitle: "*from another distance* oooooooh!!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Boris: Oh oh *hoot*, I can see spirit crows approaching\r\n"
@@ -41432,7 +41508,7 @@ MonoBehaviour:
       subtitle: "Oh oh *hoot*, I can see spirit crows approaching\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Bird: *whistle* Oh did I forget to mention, that crows also respon...'
@@ -41443,7 +41519,7 @@ MonoBehaviour:
         emergency calls? Yeahhh, it is a problem we still haven't figured out.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Boris: Ok, human, birds will be flying passed you. Only grab the sc...'
@@ -41456,7 +41532,7 @@ MonoBehaviour:
         Good luck! *hoot*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: '!Err! T8.2~1'
@@ -41470,7 +41546,7 @@ MonoBehaviour:
       subtitle: "*disappointed* muuu...\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: You caught a crow. You can bring him to me.\r\n"
@@ -41480,7 +41556,7 @@ MonoBehaviour:
       subtitle: "You caught a crow. You can bring him to me.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "!Err! : *kaaaa*\r\n"
@@ -41490,7 +41566,7 @@ MonoBehaviour:
       subtitle: "*kaaaa*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: '!Err! T8.2~2'
@@ -41504,7 +41580,7 @@ MonoBehaviour:
       subtitle: "*disappointed* muuuu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Oops! That was a crow. Please, bring him to me.\r\n"
@@ -41514,7 +41590,7 @@ MonoBehaviour:
       subtitle: "Oops! That was a crow. Please, bring him to me.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "!Err! : *kaaaa*\r\n"
@@ -41524,7 +41600,7 @@ MonoBehaviour:
       subtitle: "*kaaaa*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: '!Err! T8.2~3'
@@ -41538,7 +41614,7 @@ MonoBehaviour:
       subtitle: "*disappointed* muuu\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: "Lucy: Oh! That is a crow, human! Can you bring him here?\r\n"
@@ -41548,7 +41624,7 @@ MonoBehaviour:
       subtitle: "Oh! That is a crow, human! Can you bring him here?\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "!Err! : *kaaaa*\r\n"
@@ -41558,7 +41634,7 @@ MonoBehaviour:
       subtitle: "*kaaaa*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T8.3~1
@@ -41572,7 +41648,7 @@ MonoBehaviour:
       subtitle: "OK! I have got the crow. Now go get that science bird!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T8.3~2
@@ -41586,7 +41662,7 @@ MonoBehaviour:
       subtitle: "OK! Thanks. Now try to get that science bird!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T8.3~3
@@ -41600,7 +41676,7 @@ MonoBehaviour:
       subtitle: "Alright. He is taken care of. Give it another go, human!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: '!Err! T8.4'
@@ -41615,7 +41691,7 @@ MonoBehaviour:
         kilometer away from you, how long does it take for you to hear it? \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Bird: Well, 1 kilometer is a 1000 meters and sound travels roughly...'
@@ -41628,7 +41704,7 @@ MonoBehaviour:
         later.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Boris: Let''s test this!! Luckily, I have a friend who is currently ...'
@@ -41641,7 +41717,7 @@ MonoBehaviour:
         thing!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Lucy: 1... 2... 3...\r\n"
@@ -41651,7 +41727,7 @@ MonoBehaviour:
       subtitle: "1... 2... 3...\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "!Err! Other: *distant fart sound*\r\n"
@@ -41661,7 +41737,7 @@ MonoBehaviour:
       subtitle: "*distant fart sound*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Lucy: IEEEUW, seriously??\r\n"
@@ -41671,7 +41747,7 @@ MonoBehaviour:
       subtitle: "IEEEUW, seriously??\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Boris: Thanks! Smell ya later! *hangs up* Well, that worked! Now le...'
@@ -41682,7 +41758,7 @@ MonoBehaviour:
         the next science bird!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T8.5
@@ -41697,7 +41773,7 @@ MonoBehaviour:
         by quickly, why does the tone change?\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Bird: That is called the Doppler effect. Whenever an object comes ...'
@@ -41710,7 +41786,7 @@ MonoBehaviour:
         waves are stretched so it sounds... can you guess it?.... yes! lower!!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Boris: Okay.. Let me fly by you a few times. Tell me if he''s right....'
@@ -41720,7 +41796,7 @@ MonoBehaviour:
       subtitle: "Okay.. Let me fly by you a few times. Tell me if he's right.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Boris: wiiiiiiiiiiiiiiiiiiii\r\n"
@@ -41730,7 +41806,7 @@ MonoBehaviour:
       subtitle: "wiiiiiiiiiiiiiiiiiiii\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Boris: wiiiiiiiiiiiiiiiiiiii\r\n"
@@ -41740,7 +41816,7 @@ MonoBehaviour:
       subtitle: "wiiiiiiiiiiiiiiiiiiii\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Boris: wiiiiiiiiiiiiiiiiiiii\r\n"
@@ -41750,7 +41826,7 @@ MonoBehaviour:
       subtitle: "wiiiiiiiiiiiiiiiiiiii\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Boris: *CRASH* uhhhhhgggggg, im okay! im okay...\r\n"
@@ -41760,7 +41836,7 @@ MonoBehaviour:
       subtitle: "*CRASH* uhhhhhgggggg, im okay! im okay...\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Lucy: Be careful, boris!! But, the bird is right!\r\n"
@@ -41770,7 +41846,7 @@ MonoBehaviour:
       subtitle: "Be careful, boris!! But, the bird is right!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Boris: Perfect, *hoot* let's get the final science bird.\r\n"
@@ -41780,7 +41856,7 @@ MonoBehaviour:
       subtitle: "Perfect, *hoot* let's get the final science bird.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T8.6
@@ -41795,7 +41871,7 @@ MonoBehaviour:
         I make noise in a big empty hall, why do I hear it repeated?\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Bird: Easy! That is called an echo! Sound waves are partially abso...'
@@ -41810,7 +41886,7 @@ MonoBehaviour:
         for reflected sound waves, so you hear that sound a bit later.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Boris: Lucy! *hoot* Teleport us into a big empty hall!!\r\n"
@@ -41820,7 +41896,7 @@ MonoBehaviour:
       subtitle: "Lucy! *hoot* Teleport us into a big empty hall!!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Lucy: Okidoki!! Here we go *teleport sounds*\r\n"
@@ -41830,7 +41906,7 @@ MonoBehaviour:
       subtitle: "Okidoki!! Here we go *teleport sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Boris: Awesome!! Ok, *grumbles of stomach* here goes nothing.... *d...'
@@ -41841,7 +41917,7 @@ MonoBehaviour:
         hoot* *pfffff*...fff*..ff*..f*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Lucy: OK! ENOUGH! Ugh, who gives our king beans for dinner??\r\n"
@@ -41851,7 +41927,7 @@ MonoBehaviour:
       subtitle: "OK! ENOUGH! Ugh, who gives our king beans for dinner??\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Boris: The royal cook, Beany Jean Beany. If it wasnt clear from his...'
@@ -41862,7 +41938,7 @@ MonoBehaviour:
         his speciality is: beans.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Lucy: Sounds like he is the the master of gasses himself. Lets get...'
@@ -41873,7 +41949,7 @@ MonoBehaviour:
         to the village. *teleport sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: T9.1
@@ -41889,7 +41965,7 @@ MonoBehaviour:
         bring these science birds back to science land.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Giant: blegh science birds\r\n"
@@ -41899,7 +41975,7 @@ MonoBehaviour:
       subtitle: "blegh science birds\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Bird: NO!! *whistle* Wait! You can take my friends, but let me sta...'
@@ -41912,7 +41988,7 @@ MonoBehaviour:
         so friendly too.\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Boris: Yes, *hoot* you are welcome to live here! As long as you pay...'
@@ -41923,7 +41999,7 @@ MonoBehaviour:
         taxes!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Bird: But, *whistle* I scare away the giant! Isnt that enough?\r\n"
@@ -41933,7 +42009,7 @@ MonoBehaviour:
       subtitle: "But, *whistle* I scare away the giant! Isnt that enough?\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Boris: I was just kidding, *hoot* we dont have taxes in the spirit ...'
@@ -41943,7 +42019,7 @@ MonoBehaviour:
       subtitle: "I was just kidding, *hoot* we dont have taxes in the spirit world!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Bird: Haha ah! *whistle* Thank you, Boris!\r\n\r\nHuman, you seem very..."
@@ -41955,7 +42031,7 @@ MonoBehaviour:
         better by the use of sound. So, let me tell you a secret. *whistle*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Giant: noooo not science!\r\n"
@@ -41965,7 +42041,7 @@ MonoBehaviour:
       subtitle: "noooo not science!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Bird: If you listen well and practise enough, you can roughly dete...'
@@ -41981,7 +42057,7 @@ MonoBehaviour:
         in relation to your surroundings influences the response. *whistle*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Giant: Ahh!! Science!! \r\n"
@@ -41991,7 +42067,7 @@ MonoBehaviour:
       subtitle: "Ahh!! Science!! \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Bird: Some humans can distinguish these responses, just by making ...'
@@ -42003,7 +42079,7 @@ MonoBehaviour:
         *whistle*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Giant: Ahh!! Science!! \r\n"
@@ -42013,7 +42089,7 @@ MonoBehaviour:
       subtitle: "Ahh!! Science!! \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Bird: I hope this helps! Be safe in your human world, human! *whis...'
@@ -42024,7 +42100,7 @@ MonoBehaviour:
         Farewell! \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Lucy: It is time to disconnect you. Thank you sooo much for your h...'
@@ -42036,7 +42112,7 @@ MonoBehaviour:
         see you soon again! *kisses human* \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Boris: Hopefully we''ll see you again. *hoot* It was nice working wi...'
@@ -42047,7 +42123,7 @@ MonoBehaviour:
         Byeeee!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: 'Giant: Thanks, little one, for clearing the forest. Now that the sc...'
@@ -42060,7 +42136,7 @@ MonoBehaviour:
         that sounds great. \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Lucy: byeeee\r\n"
@@ -42070,7 +42146,7 @@ MonoBehaviour:
       subtitle: "byeeee\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: byeehhhh byehhhh muhh!!\r\n"
@@ -42080,7 +42156,7 @@ MonoBehaviour:
       subtitle: "byeehhhh byehhhh muhh!!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: .800000012
         pitch: 1
     - name: 'Giant: *in the distance* Mom!! I''m coming back home!! From now on I...'
@@ -42091,7 +42167,7 @@ MonoBehaviour:
         eat my greens like a good boy\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
     - name: "Screen Audio: Disconnected. \r\n"
@@ -42101,7 +42177,7 @@ MonoBehaviour:
       subtitle: "Disconnected. \r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   - name: '!Err! T10.1'
@@ -42116,7 +42192,7 @@ MonoBehaviour:
         for playing\r\n\r\nIris shutting down. Goodbye! \r\n"
       settings:
         screenAsSource: 1
-        timeOffset: 0
+        timeOffset: -.200000003
         volume: 1
         pitch: 1
   storyScript: {fileID: 4900000, guid: dd97009b129a71d4d84f6e858cf7a686, type: 3}
@@ -45695,7 +45771,7 @@ Transform:
   m_PrefabInternal: {fileID: 196965908}
   m_GameObject: {fileID: 2076031667}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: -10.2399998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1900926692}
