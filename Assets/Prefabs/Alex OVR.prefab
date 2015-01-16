@@ -227,6 +227,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &193422
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 493422}
+  - 114: {fileID: 11493422}
+  m_Layer: 0
+  m_Name: Indicator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &439704
 Transform:
   m_ObjectHideFlags: 1
@@ -313,7 +329,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 493422}
   m_Father: {fileID: 471194}
   m_RootOrder: 0
 --- !u!4 &471192
@@ -394,6 +411,18 @@ Transform:
   - {fileID: 459798}
   - {fileID: 459796}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &493422
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193422}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: -4.37113883e-08}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461912}
   m_RootOrder: 0
 --- !u!20 &2071198
 Camera:
@@ -689,11 +718,13 @@ MonoBehaviour:
   randomness: .00999999978
   sounds:
   - ground: 0
-    sounds: {fileID: 11400000, guid: 83c42e6a21646d54796ebbc28cf77c86, type: 2}
+    sounds: {fileID: 11400000, guid: 19bc52b83fab0c04280c958fd21ac67b, type: 2}
   - ground: 1
-    sounds: {fileID: 11400000, guid: 17d09329dd275b44c92a070fdb609347, type: 2}
+    sounds: {fileID: 11400000, guid: 3557599ce66285e4ead68b4fc6eaf6b2, type: 2}
   - ground: 2
-    sounds: {fileID: 11400000, guid: 4282fb713ac9ac3449584844d1b60b4b, type: 2}
+    sounds: {fileID: 11400000, guid: 4390bbf5b5dac2a4c80e1a78bbbb0835, type: 2}
+  - ground: 3
+    sounds: {fileID: 11400000, guid: 4c20a5fab71350f48ad05b2a6fe1b522, type: 2}
   currentGroundType: 0
   currentFootsteps: {fileID: 0}
   enabled: 1
@@ -876,6 +907,17 @@ MonoBehaviour:
   _HmdWarpParam: {x: 1, y: 0, z: 0, w: 0}
   material_CA: {fileID: 2100000, guid: 700ec7db7ac6ff24f9f4a3d4cd157910, type: 2}
   _ChromaticAberration: {x: .995999992, y: .991999984, z: 1.01400006, w: 1.01400006}
+--- !u!114 &11493422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a569ea3800c66174394bdcc277378704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!124 &12471198
 Behaviour:
   m_ObjectHideFlags: 1

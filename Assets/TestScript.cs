@@ -20,11 +20,22 @@ public class TestScript : MonoBehaviour {
 	// Use this for initialization
     void Start()
     {
-        AudioObject ao = new AudioObject(gameObject, clip, 1f, 2f);
-        AudioManager.PlayAudio(ao);
-        ao = new AudioObject(gameObject, clip, 1f);
+        //AudioObject ao = new AudioObject(gameObject, clip, 1f, 2f);
         //AudioManager.PlayAudio(ao);
-        // PlayConversation();
+        //ao = new AudioObject(gameObject, clip, 1f);
+        ////AudioManager.PlayAudio(ao);
+        //// PlayConversation();
+
+        //if (SettingsManager.instance.IsSettingsShown())
+        //{
+        //    SettingsManager.instance.ToggleSettings();
+        //}
+
+        //AudioObject ao2 = new AudioObject(gameObject, clip, 1, 0, false, true);
+        //for (int i = 0; i < 5000; i++)
+        //{
+        //    AudioManager.PlayAudio(ao2);
+        //}
 	}
 
     // void PlayConversation()

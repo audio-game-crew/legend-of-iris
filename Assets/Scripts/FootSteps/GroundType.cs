@@ -1,4 +1,4 @@
 ﻿
 public enum GroundType {
-    WOOD, PAVEMENT, CONCRETE
+    WOOD, GRAVEL, CONCRETE, LEAVES
 }

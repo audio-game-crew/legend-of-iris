@@ -44,6 +44,9 @@ public class SourceAudioIndicator : BaseIndicator
             Destroy(gameObject);
         }
 
+        var ailo = source.GetComponentInChildren<AudioIndicatorLocationOverride>();
+        if (ailo != null) offset = ailo.transform.position - source.transform.position;
+
         // set position on camera
         Vector3 pos = CameraManager.currentViewingCamera.WorldToScreenPoint(offset + source.transform.position);
         GetComponent<RectTransform>().anchoredPosition = pos;
