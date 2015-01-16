@@ -31,7 +31,7 @@ public class AmbientArea : MonoBehaviour {
         [HideInInspector]
         public float currentTimer;
         [HideInInspector]
-        public AudioPlayer player;
+        public List<AudioPlayer> players = new List<AudioPlayer>();
         [HideInInspector]
         public bool turnedOff = false;
     }
@@ -71,11 +71,16 @@ public class AmbientArea : MonoBehaviour {
         foreach (var s in ambientSources)
         {
             if (s.constantLoop)
-                foreach (var location in s.locations) {
+            {
+                foreach (var location in s.locations)
+                {
                     PlaceAmbientSound(s, location);
                 }
+            }
             else
+            {
                 SetTimer(s);
+            }
         }
 	}
 
@@ -86,18 +91,22 @@ public class AmbientArea : MonoBehaviour {
 
     void PlaceAmbientSound(AmbientSource s, GameObject location)
     {
-        s.player = AmbientManager.PlaceAmbientSound(location, s.clips.GetRandom(), s.constantLoop, false);
-        s.player.SetMinDistance(s.minAudioDistance);
-        s.player.SetMaxDistance(s.maxAudioDistance);
-        s.player.SetPitch(Randomg.Range(s.minPitch, s.maxPitch));
-        s.player.SetOnRemoveListener(delegate()
+        AudioPlayer ap = AmbientManager.PlaceAmbientSound(location, s.clips.GetRandom(), s.constantLoop, false);
+        ap.SetMinDistance(s.minAudioDistance);
+        ap.SetMaxDistance(s.maxAudioDistance);
+        ap.SetPitch(Randomg.Range(s.minPitch, s.maxPitch));
+        ap.SetOnRemoveListener(delegate()
         {
             AmbientSource a = s;
-            a.player = null;
+            AudioPlayer myself = ap;
+            s.players.Remove(myself);
         });
 
         if (s.randomClipTime)
-            s.player.SetTimePercentage(Randomg.Range01());
+        {
+            ap.SetTimePercentage(Randomg.Range01());
+        }
+        s.players.Add(ap);
     }
 	
 	// Update is called once per frame
@@ -130,13 +139,9 @@ public class AmbientArea : MonoBehaviour {
             foreach (var s in ambientSources)
             {
                 s.turnedOff = false;
-                // if it has a player, modify its volume
-                if (s.player != null)
-                {
-                    // let's converge to target volume
-                    ConvergeVolume(s, volume);
-                }
-                else if (s.spawnRandom)
+                ConvergeVolume(s, volume);
+                
+                if (s.spawnRandom)
                 {
                     // has no player, and requires random spawns, so let's wait until we can
                     s.currentTimer -= Time.deltaTime;
@@ -153,16 +158,19 @@ public class AmbientArea : MonoBehaviour {
         {
             foreach (var s in ambientSources)
             {
-                if (s.player != null && !s.turnedOff)
+                foreach (var ap in s.players)
                 {
-                    if (s.player.GetVolume() > 0.0001f)
+                    if (ap != null && !s.turnedOff)
                     {
-                        ConvergeVolume(s, 0f);
-                    }
-                    else
-                    {
-                        s.player.SetVolume(0f);
-                        s.turnedOff = true;
+                        if (ap.GetVolume() > 0.0001f)
+                        {
+                            ConvergeVolume(s, 0f);
+                        }
+                        else
+                        {
+                            ap.SetVolume(0f);
+                            s.turnedOff = true;
+                        }
                     }
                 }
             }
@@ -171,8 +179,11 @@ public class AmbientArea : MonoBehaviour {
 
     void ConvergeVolume(AmbientSource s, float targetVolume)
     {
-        targetVolume *= s.volumeModifier;
-        float currentVolume = s.player.GetVolume();
-        s.player.SetVolume(currentVolume + (targetVolume - currentVolume) * Timeg.safeDeltaUnscaled(convergeVolumeSpeed));
+        foreach (var ap in s.players)
+        {
+            targetVolume *= s.volumeModifier;
+            float currentVolume = ap.GetVolume();
+            ap.SetVolume(currentVolume + (targetVolume - currentVolume) * Timeg.safeDeltaUnscaled(convergeVolumeSpeed));
+        }
     }
 }
