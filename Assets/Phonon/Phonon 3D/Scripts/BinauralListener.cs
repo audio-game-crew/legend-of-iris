@@ -19,6 +19,12 @@ public class BinauralListener : MonoBehaviour
     //
     void Awake()
     {
+#if UNITY_EDITOR
+        if (!UnityEditorInternal.InternalEditorUtility.HasPro())
+        {
+            return;
+        }
+#endif
         PhononRuntime.Start();
         IntPtr hrtfLoaded = HRTF();
     }
