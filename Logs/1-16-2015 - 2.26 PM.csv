@@ -1,0 +1,31 @@
+0.7380589;00h:00m:00s:738ms;Quest started: T0.1
+0.7380589;00h:00m:00s:738ms;Quest started: Start [Getting Ready]
+1.823473;00h:00m:01s:823ms;Quest started: T1.1
+5.340452;00h:00m:05s:340ms;Quest started: ConfirmKeyPress
+6.043179;00h:00m:06s:043ms;Quest started: T1.3
+6.945176;00h:00m:06s:945ms;Quest started: PressForwardToConfirm
+7.45243;00h:00m:07s:452ms;Quest started: T1.6
+7.45243;00h:00m:07s:452ms;Quest started: 1. Controls #1 [Connection]
+7.45243;00h:00m:07s:452ms;Quest started: Ambient Switcher
+7.709166;00h:00m:07s:709ms;Quest started: T2.1
+9.596653;00h:00m:09s:597ms;Quest started: MoveForward
+11.42255;00h:00m:11s:423ms;Quest started: MoveBackward
+12.22815;00h:00m:12s:228ms;Quest started: T2.3
+16.07041;00h:00m:16s:070ms;Quest started: RotateLeft
+20.79097;00h:00m:20s:791ms;Quest started: T2.6
+22.80075;00h:00m:22s:801ms;Quest started: RotateRight
+25.95465;00h:00m:25s:955ms;Quest started: T2.7
+25.95465;00h:00m:25s:955ms;Quest started: 2. Controls #2 [Try Controls]
+26.09209;00h:00m:26s:092ms;Quest started: T3.1
+29.6;00h:00m:29s:600ms;Quest started: MoveToShoeEvent
+32.70951;00h:00m:32s:710ms;Quest started: T3.3
+37.94;00h:00m:37s:940ms;Quest started: MoveToBellyMachine
+38.87682;00h:00m:38s:877ms;Quest started: T3.5
+42.72;00h:00m:42s:720ms;Quest started: MoveToDoor
+43.51086;00h:00m:43s:511ms;Quest started: T3.7
+43.51086;00h:00m:43s:511ms;Quest started: 3. Controls #3 [Walk Around]
+43.8247;00h:00m:43s:825ms;Quest started: StartLevel1
+44.03413;00h:00m:44s:034ms;Quest started: T4.1
+70.92;00h:01m:10s:920ms;Quest started: CrossBridge1
+72.15169;00h:01m:12s:152ms;Quest started: T4.5
+72.97067;00h:01m:12s:971ms;Quest started: T4.6

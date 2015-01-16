@@ -6,7 +6,7 @@
          Lighting Off
          ZWrite On
          Cull Front
-		 ZTest LEqual
+		 //ZTest LEqual
          Blend SrcAlpha OneMinusSrcAlpha
          Tags {"Queue" = "Transparent"}
          Color[_Color]

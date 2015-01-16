@@ -68,7 +68,7 @@ public class SettingsManager : MonoBehaviour
         {
             activePlayer.MarkRemovable();
         }
-        AudioObject ao = new AudioObject(PlayerController.instance.gameObject, ac, mute ? 0f : 0.6f, 0f, false, false);
+        AudioObject ao = new AudioObject(ScreenAudioManager.GetScreenAudioObject(), ac, mute ? 0f : 0.6f, 0f, false, false);
         activePlayer = AudioManager.PlayAudio(ao);
         latestClip = ac;
     }
@@ -79,13 +79,10 @@ public class SettingsManager : MonoBehaviour
         {
             PauseManager.Pause();
             //Screen.showCursor = true;
-            audio.volume += (0.25f - audio.volume) * Timeg.safeDeltaUnscaled(1f);
         }
         else
         {
             PauseManager.Resume();
-            audio.volume += (0 - audio.volume) * Timeg.safeDeltaUnscaled(1f);
-            //Screen.showCursor = false;
         }
 
         if (IsSettingsShown() && Input.GetKeyDown(KeyCode.M))

@@ -105,19 +105,20 @@ public class ConversationManager : MonoBehaviour {
         c.messageSequence = messages;
         c.hint = "";
 
-        for (int i = 0; i < obj.sources.Count; i++)
+        for (int i = 0; i < obj.gameObjects.Count; i++)
         {
             var m = new ConversationMessage();
             m.audioClip = Resources.Load(obj.files[i], typeof(AudioClip)) as AudioClip;
-            m.source = GameObject.Find(obj.sources[i]);
+            m.source = GameObject.Find(obj.gameObjects[i]);
             m.sourceName = obj.names[i];
             if (m.source == null)
-                Debug.LogWarning("Source \"" + obj.sources[i] + "\" not found");
+                Debug.LogWarning("Source \"" + obj.gameObjects[i] + "\" not found");
             if (m.audioClip == null)
                 Debug.LogError("Audio Clip \"" + obj.files[i] + "\" not found. With text: \n" + obj.texts[i]);
             m.subtitle = obj.texts[i];
             m.settings.screenAsSource = obj.screen[i];
             m.settings.timeOffset = obj.delays[i];
+            m.settings.volume = obj.volumes[i];
             messages.Add(m);
         }
 
@@ -126,10 +127,12 @@ public class ConversationManager : MonoBehaviour {
 
     private const int C_NameID = 0;
     private const int C_GameObject = C_NameID + 1;
-    private const int C_Name = C_GameObject + 1;
+    private const int C_Folder = C_GameObject + 1;
+    private const int C_Name = C_Folder + 1;
     private const int C_Delay = C_Name + 1;
     private const int C_ScreenAsSource = C_Delay + 1;
-    private const int C_File = C_ScreenAsSource + 1;
+    private const int C_Volume = C_ScreenAsSource + 1;
+    private const int C_File = C_Volume + 1;
     private const int C_Subtitle = C_File + 1;
 
     private const int COLUMNS = C_Subtitle + 1;
@@ -137,9 +140,11 @@ public class ConversationManager : MonoBehaviour {
     private class ConversationImport
     {
         public string nameID = "";
-        public List<string> sources = new List<string>();
+        public List<string> gameObjects = new List<string>();
+        public List<string> folders = new List<string>();
         public List<string> names = new List<string>();
         public List<float> delays = new List<float>();
+        public List<float> volumes = new List<float>();
         public List<bool> screen = new List<bool>();
         public List<string> texts = new List<string>();
         public List<string> files = new List<string>();
@@ -151,17 +156,19 @@ public class ConversationManager : MonoBehaviour {
 
         public void read(string[] items)
         {
-            int i = sources.Count;
-            sources.Add(items[C_GameObject]);
+            int i = gameObjects.Count;
+            gameObjects.Add(items[C_GameObject]);
             names.Add(items[C_Name]);
+            folders.Add(items[C_Folder]);
             delays.Add(float.Parse(items[C_Delay].Replace(",", ".")));
+            volumes.Add(float.Parse(items[C_Volume].Replace(",", ".")));
             screen.Add(items[C_ScreenAsSource].Equals("1"));
             texts.Add("");
             
             if (items[C_File].Length > 0) {
                 files.Add(items[C_File]);
             } else {
-                files.Add(sources[i] + "/" + sources[i] + " - " + nameID + "_" + (i + 1));
+                files.Add(folders[i] + "/" + folders[i] + " - " + nameID + "_" + (i + 1));
             }
         }
 

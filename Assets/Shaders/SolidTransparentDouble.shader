@@ -1,16 +1,32 @@
-﻿Shader "Custom/TranspUnlit_2Faced" {
-     Properties {
-         _Color("Color & Transparency", Color) = (0, 0, 0, 0.5)
+﻿Shader "Custom/TranspUnlit_2Faced" 
+{
+     Properties
+     {
+         _Color ("Color Tint", Color) = (1,1,1,1)   
+         _MainTex ("Base (RGB) Alpha (A)", 2D) = "white"
      }
-     SubShader {
+ 
+     Category
+     {
          Lighting Off
          ZWrite On
-         Cull Off
+                 //ZWrite On  // uncomment if you have problems like the sprite disappear in some rotations.
+		 Cull Off
          Blend SrcAlpha OneMinusSrcAlpha
-         Tags {"Queue" = "Transparent"}
-         Color[_Color]
-         Pass {
+                 //AlphaTest Greater 0.001  // uncomment if you have problems like the sprites or 3d text have white quads instead of alpha pixels.
+         Tags {Queue=Transparent}
+ 
+         SubShader
+         {
+ 
+              Pass
+              {
+                         SetTexture [_MainTex]
+                         {
+                     ConstantColor [_Color]
+                    Combine Texture * constant
+                 }
+             }
          }
-     } 
-     FallBack "Unlit/Transparent"
+     }
  }
