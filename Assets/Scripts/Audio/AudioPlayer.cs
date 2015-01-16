@@ -129,6 +129,18 @@ public class AudioPlayer
             audioAS.pitch = pitch;
     }
 
+    public void SetTime(float time)
+    {
+        if (audioAS != null)
+            audioAS.time = time;
+    }
+
+    public void SetTimePercentage(float percentage)
+    {
+        if (audioAS != null)
+            audioAS.time = GetAudioClip().length * percentage;
+    }
+
     public virtual void Update(float deltaTime)
     {
         if (finished) return;

@@ -10,15 +10,20 @@ public class AmbientArea : MonoBehaviour {
         [HideInInspector]
         public bool initialized;
         [Header("Definition")]
-        public GameObject location;
+        public List<GameObject> locations;
         public List<AudioClip> clips;
         public float minAudioDistance;
         public float maxAudioDistance;
+        [Range(0.5f, 1.5f)]
+        public float minPitch;
+        [Range(0.5f, 1.5f)]
+        public float maxPitch;
         [Range(0, 1)]
         public float volumeModifier = 1f;
 
         [Header("Spawning")]
         public bool constantLoop;
+        public bool randomClipTime = false;
         public bool spawnRandom;
         public float minInterval;
         public float maxInterval;
@@ -40,6 +45,8 @@ public class AmbientArea : MonoBehaviour {
                 s.initialized = true;
                 s.minAudioDistance = 1f;
                 s.maxAudioDistance = 500f;
+                s.minPitch = 1f;
+                s.maxPitch = 1f;
                 s.minInterval = 4f;
                 s.maxInterval = 30f;
                 s.volumeModifier = 1f;
@@ -64,7 +71,9 @@ public class AmbientArea : MonoBehaviour {
         foreach (var s in ambientSources)
         {
             if (s.constantLoop)
-                PlaceAmbientSound(s);
+                foreach (var location in s.locations) {
+                    PlaceAmbientSound(s, location);
+                }
             else
                 SetTimer(s);
         }
@@ -75,16 +84,20 @@ public class AmbientArea : MonoBehaviour {
         s.currentTimer = Randomg.Range(s.minInterval, s.maxInterval);
     }
 
-    void PlaceAmbientSound(AmbientSource s)
+    void PlaceAmbientSound(AmbientSource s, GameObject location)
     {
-        s.player = AmbientManager.PlaceAmbientSound(s.location, s.clips.GetRandom(), s.constantLoop, false);
+        s.player = AmbientManager.PlaceAmbientSound(location, s.clips.GetRandom(), s.constantLoop, false);
         s.player.SetMinDistance(s.minAudioDistance);
         s.player.SetMaxDistance(s.maxAudioDistance);
+        s.player.SetPitch(Randomg.Range(s.minPitch, s.maxPitch));
         s.player.SetOnRemoveListener(delegate()
         {
             AmbientSource a = s;
             a.player = null;
         });
+
+        if (s.randomClipTime)
+            s.player.SetTimePercentage(Randomg.Range01());
     }
 	
 	// Update is called once per frame
@@ -130,7 +143,7 @@ public class AmbientArea : MonoBehaviour {
                     if (s.currentTimer < 0f)
                     {
                         SetTimer(s);
-                        PlaceAmbientSound(s);
+                        PlaceAmbientSound(s, s.locations.GetRandom());
                     }
                 }
             }

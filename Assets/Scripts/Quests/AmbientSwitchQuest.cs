@@ -7,8 +7,14 @@ public class AmbientSwitchQuest : Quest<AmbientSwitchQuest, AmbientSwitchQuestDe
 
     protected override void _Start()
     {
-        definition.turnOff.ambientEnabled = false;
-        definition.turnOn.ambientEnabled = true;
+        foreach (var v in definition.turnOff)
+        {
+            v.ambientEnabled = false;
+        }
+        foreach (var v in definition.turnOn)
+        {
+            v.ambientEnabled = true;
+        }
         Complete();
 	}
 }
