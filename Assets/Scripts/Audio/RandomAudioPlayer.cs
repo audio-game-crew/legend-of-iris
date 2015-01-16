@@ -2,23 +2,27 @@ using UnityEngine;
 using System.Collections.Generic;
 
 [RequireComponent (typeof (AudioSource))]
+[RequireComponent (typeof (BinauralSource))]
 
 public class RandomAudioPlayer : MonoBehaviour {
 
     public enum State { STOPPING, WAITING, PLAYING };
 
     public List<AudioClip> clips = new List<AudioClip>();
-    public float minInterval = 1f;
-    public float maxInterval = 3f;
+    public float interval = 2f;
+    public float intervalVariation = 0f;
+    public float pitchVariation = 0f;
     public bool silent = false;
 
     private State state = State.STOPPING;
-    private float targetVolume;
+    private float originalVolume;
+    private float originalPitch;
     private float volume;
     private float nextClipStart;
 
     public void Awake() {
-        targetVolume = audio.volume;
+        originalVolume = audio.volume;
+        originalPitch = audio.pitch;
         clips.RemoveAll(clip => clip == null);
     }
 
@@ -38,7 +42,7 @@ public class RandomAudioPlayer : MonoBehaviour {
         case State.STOPPING:
             if (audio.isPlaying) LerpVolumeTo(0f);
             else if (silent == false) {
-                nextClipStart = Time.time + Random.Range(minInterval, maxInterval);
+                nextClipStart = Time.time + interval + Random.Range(-intervalVariation, intervalVariation);
                 state = State.WAITING;
             }
             break;
@@ -46,13 +50,14 @@ public class RandomAudioPlayer : MonoBehaviour {
             if (silent) state = State.STOPPING;
             if (Time.time > nextClipStart) {
                 audio.clip = GetRandomClip();
+                audio.pitch = originalPitch + Random.Range(-pitchVariation, pitchVariation);
                 audio.Play();
                 state = State.PLAYING;
             }
             break;
         case State.PLAYING:
             if (silent || audio.isPlaying == false) state = State.STOPPING;
-            else LerpVolumeTo(targetVolume);
+            else LerpVolumeTo(originalVolume);
             break;
         }
     }
