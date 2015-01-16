@@ -98,7 +98,7 @@ T4.3;Screen Audio;Beorn;Beorn;0;0;0,8;;*silly* muu
 T4.4~1;Lucy;Lucy;Lucy;0;0;1;;Watch out for the edge, human!
 T4.4~2;Lucy;Lucy;Lucy;0;0;1;;Ohhh watch out for the edge!
 T4.4~3;Lucy;Lucy;Lucy;0;0;1;;Human! Watch out, Beorn is standing really close to the edge.
-T4.4A;Screen Audio;Beorn;Beorn;0;0;0,8;;*scared panting*
+T4.4A;Screen Audio;Beorn;Beorn;0;0;0,3;;*scared panting*
 T4.4B;Screen Audio;Beorn;Beorn;0;0;0,8;;*relieved* muuhh
 T4.5~1;Screen Audio;Beorn;Beorn;0;0;0,8;;*glad* muu!
 ;Lucy;Lucy;Lucy;0;0;1;;Well done! Now the next section. Follow me!
