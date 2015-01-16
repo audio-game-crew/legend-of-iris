@@ -104,6 +104,13 @@ public class AudioPlayer
             audioAS.volume = volume;
     }
 
+    public float GetVolume()
+    {
+        if (audioAS != null)
+            return audioAS.volume;
+        return 1f;
+    }
+
     public void SetMinDistance(float distance)
     {
         if (audioAS != null)
