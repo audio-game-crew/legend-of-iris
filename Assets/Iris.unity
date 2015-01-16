@@ -25986,11 +25986,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400148, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.29999995
+      value: 11.4099998
       objectReference: {fileID: 0}
     - target: {fileID: 400148, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -.400000006
+      value: -99.0699997
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d1a53fd7a725458384cc72ae9573b11, type: 2}
@@ -30697,7 +30697,7 @@ Transform:
   m_PrefabInternal: {fileID: 1444340461}
   m_GameObject: {fileID: 1648835795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.29999995, y: 4.5, z: -.400000006}
+  m_LocalPosition: {x: 11.4099998, y: 4.5, z: -99.0699997}
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 2104364661}
@@ -30789,7 +30789,7 @@ MonoBehaviour:
     - {fileID: 466639462}
     clips:
     - {fileID: 8300000, guid: 034ddbf9d1a736d439c3b73b0bc5342f, type: 3}
-    minAudioDistance: 5
+    minAudioDistance: 4
     maxAudioDistance: 500
     minPitch: 1
     maxPitch: 1
@@ -30819,7 +30819,7 @@ MonoBehaviour:
     - {fileID: 21225818}
     clips:
     - {fileID: 8300000, guid: 1c33dd92f071d2f459ee14dfe1005321, type: 3}
-    minAudioDistance: 1
+    minAudioDistance: 5
     maxAudioDistance: 500
     minPitch: .980000019
     maxPitch: 1.01999998
