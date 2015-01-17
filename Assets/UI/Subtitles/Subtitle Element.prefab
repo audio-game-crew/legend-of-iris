@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d1e81448a196942aa297ac143e3c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inactiveTimerLength: 10
+  inactiveTimerLength: 1
   activeTimer: 10
   inactiveTimer: 10
   heightDefiner: {fileID: 22451530}

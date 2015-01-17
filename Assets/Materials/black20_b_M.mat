@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: blue70_f_M
-  m_Shader: {fileID: 4800000, guid: 40c600541d119d6428731a712352fc5d, type: 3}
+  m_Name: black20_b_M
+  m_Shader: {fileID: 4800000, guid: 1028a7b384b66e047b15650cf6eeac16, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -25,8 +25,16 @@ Material:
         first:
           name: PixelSnap
         second: 0
+      data:
+        first:
+          name: _InvFade
+        second: 1
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: .272058845, g: .668661356, b: 1, a: .701960802}
+        second: {r: 0, g: 0, b: 0, a: .227450982}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .214100316, g: .68886143, b: .970588207, a: .117647059}
