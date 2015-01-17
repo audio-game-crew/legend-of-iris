@@ -185,7 +185,7 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
     private void checkpointManager_EndLastCheckpointTeleport(object sender, EventArgs e)
     {
         if (state != State.STARTED)
-            return
+            return;
         teleporting = false;
         var player = Characters.instance.Beorn;
         if (player == null)
