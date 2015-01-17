@@ -31,7 +31,15 @@ public class FollowBorisQuest : Quest<FollowBorisQuest, FollowBorisQuestDefiniti
 			checkpointManager.StartLastCheckpointTeleport += checkpointManager_StartLastCheckpointTeleport;
 			checkpointManager.EndLastCheckpointTeleport += checkpointManager_EndLastCheckpointTeleport;
 		}
+
+        var Boris = Characters.instance.Boris.GetComponent<BorisController>();
+        Boris.ArrivedAtLocation += Boris_ArrivedAtLocation;
 	}
+
+    void Boris_ArrivedAtLocation(object sender, EventArgs e)
+    {
+        ConversationManager.GetConversationPlayer(definition.arrivedAtLocationConversationID).Start();
+    }
 	
 	private void FillSteps()
 	{

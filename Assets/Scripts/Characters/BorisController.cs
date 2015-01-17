@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class BorisController : MonoBehaviour {
 	[Tooltip("Time it takes Boris to fly to a new location")]
@@ -15,6 +16,8 @@ public class BorisController : MonoBehaviour {
 	private AudioPlayer SoundPlayer;
 	private BaseIndicator SoundIndicator;
 	private int playing = 0;
+
+    public event EventHandler ArrivedAtLocation;
 	
 	// Use this for initialization
 	void Start () {
@@ -53,6 +56,11 @@ public class BorisController : MonoBehaviour {
 			this.gameObject.transform.position = targetLocation.Position;
 			this.gameObject.transform.rotation = targetLocation.Rotation;
 			moving = false;
+
+            if (ArrivedAtLocation != null)
+            {
+                ArrivedAtLocation(this, EventArgs.Empty);
+            }
 		}
 	}
 	

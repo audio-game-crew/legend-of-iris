@@ -229,6 +229,7 @@ public class ConversationManager : MonoBehaviour {
     {
         if (importConversationsFromStory)
         {
+            Debug.ClearDeveloperConsole();
             FillConversations();
             importConversationsFromStory = false;
         }
