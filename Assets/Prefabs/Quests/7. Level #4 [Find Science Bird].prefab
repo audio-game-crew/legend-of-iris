@@ -112,6 +112,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &128308
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 428308}
+  - 114: {fileID: 11428308}
+  m_Layer: 0
+  m_Name: BirdFollowEnable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &136550
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,17 +176,49 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &197620
+--- !u!1 &142810
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 497620}
-  - 114: {fileID: 11497620}
+  - 4: {fileID: 442810}
+  - 114: {fileID: 11442810}
   m_Layer: 0
-  m_Name: 'Science Bird #5'
+  m_Name: Conversation T8.7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &149994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 449994}
+  - 114: {fileID: 11449994}
+  m_Layer: 0
+  m_Name: Conversation T8.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &166548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 466548}
+  - 114: {fileID: 11466548}
+  m_Layer: 0
+  m_Name: Conversation T7.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,7 +234,7 @@ GameObject:
   - 4: {fileID: 497622}
   - 114: {fileID: 11497622}
   m_Layer: 0
-  m_Name: Conversation T7.1
+  m_Name: Conversation T8.7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,12 +328,14 @@ Transform:
   m_Children:
   - {fileID: 414854}
   - {fileID: 401564}
-  - {fileID: 497622}
+  - {fileID: 466548}
   - {fileID: 497624}
+  - {fileID: 449994}
   - {fileID: 436554}
   - {fileID: 436552}
   - {fileID: 436550}
-  - {fileID: 497620}
+  - {fileID: 442810}
+  - {fileID: 497622}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &414854
@@ -302,8 +352,21 @@ Transform:
   - {fileID: 400006}
   - {fileID: 400004}
   - {fileID: 400002}
+  - {fileID: 428308}
   m_Father: {fileID: 414852}
   m_RootOrder: 0
+--- !u!4 &428308
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128308}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 414854}
+  m_RootOrder: 4
 --- !u!4 &436550
 Transform:
   m_ObjectHideFlags: 1
@@ -315,7 +378,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 414852}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!4 &436552
 Transform:
   m_ObjectHideFlags: 1
@@ -327,7 +390,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 414852}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!4 &436554
 Transform:
   m_ObjectHideFlags: 1
@@ -339,19 +402,43 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 414852}
-  m_RootOrder: 4
---- !u!4 &497620
+  m_RootOrder: 5
+--- !u!4 &442810
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197620}
+  m_GameObject: {fileID: 142810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 414852}
-  m_RootOrder: 7
+  m_RootOrder: 8
+--- !u!4 &449994
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149994}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 414852}
+  m_RootOrder: 4
+--- !u!4 &466548
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166548}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 414852}
+  m_RootOrder: 2
 --- !u!4 &497622
 Transform:
   m_ObjectHideFlags: 1
@@ -363,7 +450,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 414852}
-  m_RootOrder: 2
+  m_RootOrder: 9
 --- !u!4 &497624
 Transform:
   m_ObjectHideFlags: 1
@@ -579,6 +666,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb6a24c109c99c4999c3e902bfda986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11428308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adccdbca5410094ea7ad4348f97b53d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnOff: []
+  turnOn:
+  - followerToEnable: {fileID: 0}
+    followeeToFollow: {fileID: 0}
 --- !u!114 &11436550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -609,7 +711,7 @@ MonoBehaviour:
   explanationDelay: 10
   maxExplanationDelay: 30
   explanationConversationId: T7.2
-  successConversationId: T8.5
+  successConversationId: T8.6
 --- !u!114 &11436552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -638,7 +740,7 @@ MonoBehaviour:
   explanationDelay: 10
   maxExplanationDelay: 30
   explanationConversationId: T7.2
-  successConversationId: T8.4
+  successConversationId: T8.5
 --- !u!114 &11436554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -665,38 +767,52 @@ MonoBehaviour:
   explanationDelay: 10
   maxExplanationDelay: 30
   explanationConversationId: T7.2
-  successConversationId: T8.1
---- !u!114 &11497620
+  successConversationId: T8.4
+--- !u!114 &11442810
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197620}
+  m_GameObject: {fileID: 142810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 272755ee7acfc2140af90e5385253b0a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnSettings:
-  - weight: 2
-    prefab: {fileID: 100004, guid: 546dde179e733164ebbb94a77727afe4, type: 2}
-  - weight: 1
-    prefab: {fileID: 100002, guid: 64bfde3a871db064b87931f11ab5ccd2, type: 2}
-  - weight: 1
-    prefab: {fileID: 100002, guid: 4111eff7ef0879e4da3cffcb0a2de14c, type: 2}
-  - weight: 1
-    prefab: {fileID: 100000, guid: 3e7001295f5006d489476352eeca72fe, type: 2}
-  mainSpawnDistance: 30
-  crossSpawnOffset: 5
-  crossSpawnVariation: 2.5
-  despawnDistance: 50
-  spawnInterval: 3
-  birdSpeed: 5
-  cageWaypoint: {fileID: 0}
-  explanationDelay: 10
-  maxExplanationDelay: 30
-  explanationConversationId: T7.2
-  successConversationId: T8.6
+  conversationId: T8.7
+  LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
+--- !u!114 &11449994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationId: T8.1
+  LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
+--- !u!114 &11466548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationId: T7.1
+  LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11497622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -708,9 +824,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversationId: T7.1
-  LucyQuiet: 0
+  conversationId: T8.8
   LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11497624
 MonoBehaviour:
   m_ObjectHideFlags: 1

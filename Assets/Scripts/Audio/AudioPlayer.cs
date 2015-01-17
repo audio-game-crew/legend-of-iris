@@ -26,7 +26,7 @@ public class AudioPlayer
 
     public AudioPlayer(AudioObject audio)
     {
-        if (audio == null)
+        if (audio == null || audio.parent == null)
         {
             removable = true;
             return;

@@ -26,7 +26,7 @@ GameObject:
   - 4: {fileID: 405010}
   - 114: {fileID: 11405010}
   m_Layer: 0
-  m_Name: CrossBridge3
+  m_Name: CrossBridge3A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ GameObject:
   - 4: {fileID: 405012}
   - 114: {fileID: 11405012}
   m_Layer: 0
-  m_Name: CrossBridge3
+  m_Name: CrossBridge3B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,7 +122,7 @@ GameObject:
   - 4: {fileID: 433988}
   - 114: {fileID: 11433988}
   m_Layer: 0
-  m_Name: CrossBridge3
+  m_Name: CrossBridge3C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
