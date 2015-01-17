@@ -460,8 +460,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T4.1
-  LucyQuiet: 0
   LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11433986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -533,8 +534,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T4.13
-  LucyQuiet: 0
   LockPlayerMovement: 1
+  completeAtMessage: 1
+  completeAtMessageIndex: 1
 --- !u!114 &11433994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -547,8 +549,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T4.10
-  LucyQuiet: 0
   LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11433996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -561,8 +564,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T4.6
-  LucyQuiet: 0
   LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11433998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -575,8 +579,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T4.12
-  LucyQuiet: 0
   LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11434000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -589,8 +594,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T4.5
-  LucyQuiet: 0
   LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11434002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -639,8 +645,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T4.9
-  LucyQuiet: 0
   LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11481056
 MonoBehaviour:
   m_ObjectHideFlags: 1

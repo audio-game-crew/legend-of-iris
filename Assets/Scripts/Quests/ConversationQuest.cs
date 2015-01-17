@@ -14,12 +14,24 @@ public class ConversationQuest : Quest<ConversationQuest, ConversationQuestDefin
         {
             SetPlayerMovementLocked(true);
             player.onConversationEnd += OnConversationEnd;
+            player.onMessageEnd += player_onMessageEnd;
             player.Start();
         } else
         {
             Complete();
         }
 	}
+
+    void player_onMessageEnd(ConversationPlayer player, int index)
+    {
+        if (definition.completeAtMessage)
+        {
+            if (index == definition.completeAtMessageIndex)
+            {
+                Complete();
+            }
+        }
+    }
 
     private void SetPlayerMovementLocked(bool locked)
     {

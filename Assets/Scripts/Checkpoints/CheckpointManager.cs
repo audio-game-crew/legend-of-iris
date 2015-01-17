@@ -58,7 +58,7 @@ public class CheckpointManager : MonoBehaviour {
         }
 	}
 
-    private void SetWalkScriptEnabled(bool enabled)
+    private void SetMovementRelatedComponentsEnabled(bool enabled)
     {
         var player = Characters.instance.Beorn;
         if (player == null)
@@ -66,6 +66,9 @@ public class CheckpointManager : MonoBehaviour {
 
         var walkScript = Characters.instance.Beorn.GetComponent<WalkScript>();
         if (walkScript != null) walkScript.enabled = enabled;
+
+        //var col = Characters.instance.Beorn.collider;
+        //if (col != null) col.enabled = enabled;
     }
 
     private void LockMovement(bool enabled)
@@ -80,11 +83,12 @@ public class CheckpointManager : MonoBehaviour {
 
     public void GotoLastCheckpoint(object sender, string conversation = null)
     {
+
         TimerManager.RegisterEvent("Dieded");
         start = new PositionRotation(Characters.instance.Beorn);
         target = new PositionRotation(lastCheckpoint.gameObject);
         teleporting = true;
-        SetWalkScriptEnabled(false);
+        SetMovementRelatedComponentsEnabled(false);
         time = 0;
         OnStartLastCheckpointTeleport(sender, conversation);
         if (conversation != null)
@@ -102,7 +106,7 @@ public class CheckpointManager : MonoBehaviour {
 
     public void OnStartLastCheckpointTeleport(object sender, string conversation)
     {
-        SetWalkScriptEnabled(false);
+        SetMovementRelatedComponentsEnabled(false);
         LockMovement(true);
         if (StartLastCheckpointTeleport != null)
             StartLastCheckpointTeleport(sender, new GotoCheckpointEventArgs(conversation));
@@ -110,7 +114,7 @@ public class CheckpointManager : MonoBehaviour {
 
     public void OnEndLastCheckpointTeleport()
     {
-        SetWalkScriptEnabled(true);
+        SetMovementRelatedComponentsEnabled(true);
         LockMovement(false);
         if (EndLastCheckpointTeleport != null)
             EndLastCheckpointTeleport(lastCheckpoint, new GotoCheckpointEventArgs());
