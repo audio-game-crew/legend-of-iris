@@ -20,6 +20,8 @@ public class WaypointQuest : Quest<WaypointQuest, WaypointQuestDefinition> {
 		lucyController.StartBell();
 		base._Start();
 		Next();
+
+        Characters.instance.Lucy.GetComponent<WalkingFollowerScript>().follow = false;
 	}
 
 	private void Next() {
@@ -46,6 +48,7 @@ public class WaypointQuest : Quest<WaypointQuest, WaypointQuestDefinition> {
 
     protected override void _Complete()
     {
+        Characters.instance.Lucy.GetComponent<WalkingFollowerScript>().follow = true;
 		var lucyController = Characters.instance.Lucy.GetComponent<LucyController>();
 		lucyController.StopBell();
 		active = false;

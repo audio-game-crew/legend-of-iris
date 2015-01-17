@@ -23,7 +23,8 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
 		base._Start();
 
 		var lucyController = Characters.instance.Lucy.GetComponent<LucyController>();
-		lucyController.StartBell();
+        lucyController.StartBell();
+        Characters.instance.Lucy.GetComponent<WalkingFollowerScript>().follow = false;
 
 
         FillSteps();
@@ -193,7 +194,9 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         Next();
     }
 
-	protected override void _Complete(){
+    protected override void _Complete()
+    {
+        Characters.instance.Lucy.GetComponent<WalkingFollowerScript>().follow = true;
 		var lucyController = Characters.instance.Lucy.GetComponent<LucyController>();
 		lucyController.StopBell();
 		base._Complete ();

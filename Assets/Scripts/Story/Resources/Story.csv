@@ -167,18 +167,18 @@ T5.4;Boris;Boris;Boris;-0,2;0;1;;Hmmm.. You got me! *hooot* But you got lucky hu
 ;Lucy;Lucy;Lucy;-0,2;0;1;;Beorn!! Don't bite our king you idiot!
 ;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*disappointed* muhhhh
 ;Boris;Boris;Boris;-0,2;0;1;;*hOOOt* Oh fudge, now my feathers are all messy. Ah, well.  I needed a feathercut anyway. Right, where was I. *hooot* Oh yes: let's try again and see if you got lucky!!
-;Other;Other;Other;-0,2;0;1;FlappingWings;*flapping wings of boris flying to some random location*
+;Boris;Other;Other;-0,2;0;1;FlappingWings;*flapping wings of boris flying to some random location*
 T5.4B;Boris;Boris;Boris;-0,2;0;1;;*hoot at location*
 ;Lucy;Lucy;Lucy;-0,2;0;1;;OK, let’s go find him again!
 T5.5;Boris;Boris;Boris;-0,2;0;1;;Great! *hooot* You are doing well. Perhaps you are indeed as talented as lucy said. *hooot* One more to be sure!
-;Other;Other;Other;-0,2;0;1;FlappingWings;*flapping wings of boris flying to some random location*
+;Boris;Other;Other;-0,2;0;1;FlappingWings;*flapping wings of boris flying to some random location*
 T5.5B;Boris;Boris;Boris;-0,2;0;1;;*hoot at location*
 ;Lucy;Lucy;Lucy;-0,2;0;1;;OK, let’s go find him again, one last time!
 T5.6;Boris;Boris;Boris;-0,2;0;1;;Awesome! *hooot* I see you are indeed very talented!
 ;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*happy* muhhhhh
 ;Lucy;Lucy;Lucy;-0,2;0;1;;Yaay! I told you!
 ;Boris;Boris;Boris;-0,2;0;1;;Yes! *hooot* Very well. *hooot* I’ll fly you to the forest where you can find the science birds. I think I know where they are. Here we go! hold on tight, Beorn! *hooot*
-;Other;Other;Other;-0,2;0;1;FlappingWings;*wings start flapping around player*
+;Boris;Other;Other;-0,2;0;1;FlappingWings;*wings start flapping around player*
 ;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*happy* muuhh buhuhbuhhh
 ;Lucy;Lucy;Lucy;-0,2;0;1;;*happy* Wiiiiiii
 T6.1;Other;Other;Other;-0,2;0;1;Silence20ms;*wings stop flapping, landed*

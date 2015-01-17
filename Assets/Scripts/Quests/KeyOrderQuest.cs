@@ -13,6 +13,7 @@ public class KeyOrderQuest : Quest<KeyOrderQuest, KeyOrderQuestDefinition> {
     protected override void _Start() {
         base._Start();
         Reset();
+        lastConversationEnd = Time.time;
         if (definition.StartConversationImmediately)
             StartConversation();
     }
