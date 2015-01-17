@@ -3485,14 +3485,14 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 2311703691461154cac5cb55f7dc1dad, type: 3}
     minAudioDistance: 100
     maxAudioDistance: 500
-    minPitch: .899999976
-    maxPitch: 1.10000002
-    volumeModifier: .0500000007
+    minPitch: .665000021
+    maxPitch: 1.07700002
+    volumeModifier: .0820000023
     constantLoop: 0
     randomClipTime: 0
     spawnRandom: 1
-    minInterval: 1
-    maxInterval: 8
+    minInterval: .5
+    maxInterval: 1
     currentTimer: .768893778
     turnedOff: 0
 --- !u!65 &184187858
@@ -14444,7 +14444,7 @@ Prefab:
     - target: {fileID: 11461908, guid: 5816a662eadc7b542981a7d513caecf4, type: 2}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 859342463}
+      objectReference: {fileID: 1116095402}
     - target: {fileID: 11461902, guid: 5816a662eadc7b542981a7d513caecf4, type: 2}
       propertyPath: TargetLocation
       value: 
@@ -14461,6 +14461,22 @@ Prefab:
       propertyPath: ObjectToTeleport
       value: 
       objectReference: {fileID: 1766996850}
+    - target: {fileID: 11495406, guid: 5816a662eadc7b542981a7d513caecf4, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 859342463}
+    - target: {fileID: 11495406, guid: 5816a662eadc7b542981a7d513caecf4, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1822278513}
+    - target: {fileID: 11430830, guid: 5816a662eadc7b542981a7d513caecf4, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 823081975}
+    - target: {fileID: 11430834, guid: 5816a662eadc7b542981a7d513caecf4, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 18988760}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5816a662eadc7b542981a7d513caecf4, type: 2}
   m_RootGameObject: {fileID: 1939155744}
@@ -16615,8 +16631,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxStepDistance: 20
   waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 859342463}
+  - {fileID: 1822278513}
   WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
   SuccesSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
   TimeoutConversationID: T6.5
@@ -18987,7 +19003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxStepDistance: 20
   waypoints:
-  - {fileID: 859342463}
+  - {fileID: 1116095402}
   WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
   SuccesSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
   TimeoutConversationID: T6.5
@@ -25568,7 +25584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxStepDistance: 20
   waypoints:
-  - {fileID: 0}
+  - {fileID: 18988760}
   WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
   SuccesSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
   TimeoutConversationID: T6.5
@@ -27243,7 +27259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxStepDistance: 20
   waypoints:
-  - {fileID: 0}
+  - {fileID: 823081975}
   WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
   SuccesSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
   TimeoutConversationID: T6.5
