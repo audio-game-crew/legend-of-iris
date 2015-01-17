@@ -27,7 +27,7 @@ public class ShowUIQuest : Quest<ShowUIQuest, ShowUIQuestDefinition> {
     {
         base._Complete();
         definition.EndScreen.SetActive(false);
-        Application.Quit();
+        Application.LoadLevel(Application.loadedLevel);
     }
 
 }

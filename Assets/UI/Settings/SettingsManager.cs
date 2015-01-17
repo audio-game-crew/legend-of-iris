@@ -101,5 +101,10 @@ public class SettingsManager : MonoBehaviour
             pressedDown = false;
             pressedUp = false;
         }
+
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.Q))
+        {
+            Application.Quit();
+        }
     }
 }
