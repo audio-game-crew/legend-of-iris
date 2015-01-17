@@ -174,6 +174,8 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
 
     private void checkpointManager_StartLastCheckpointTeleport(object sender, GotoCheckpointEventArgs e)
     {
+        if (state != State.STARTED)
+            return;
         teleporting = true;
         if (!string.IsNullOrEmpty(e.ConversationID)) // Suppress quest conversation if checkpoint reset already has a conversation
             return;
@@ -182,6 +184,8 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
 
     private void checkpointManager_EndLastCheckpointTeleport(object sender, EventArgs e)
     {
+        if (state != State.STARTED)
+            return;
         teleporting = false;
         var player = Characters.instance.Beorn;
         if (player == null)
