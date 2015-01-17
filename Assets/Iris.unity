@@ -9540,7 +9540,6 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 456855224}
-  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -9945,16 +9944,12 @@ MonoBehaviour:
     prefab: {fileID: 100004, guid: 546dde179e733164ebbb94a77727afe4, type: 2}
   - weight: 1
     prefab: {fileID: 100002, guid: 64bfde3a871db064b87931f11ab5ccd2, type: 2}
-  - weight: 1
-    prefab: {fileID: 100002, guid: 4111eff7ef0879e4da3cffcb0a2de14c, type: 2}
-  - weight: 1
-    prefab: {fileID: 100000, guid: 3e7001295f5006d489476352eeca72fe, type: 2}
   mainSpawnDistance: 30
   crossSpawnOffset: 5
   crossSpawnVariation: 2.5
   despawnDistance: 50
-  spawnInterval: 3
-  birdSpeed: 5
+  spawnInterval: 6
+  birdSpeed: 3
   cageWaypoint: {fileID: 178968844}
   explanationDelay: 10
   maxExplanationDelay: 30
@@ -12486,7 +12481,6 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 591589451}
-  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -16176,7 +16170,6 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 771070050}
-  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -16776,7 +16769,6 @@ CanvasGroup:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 809600078}
-  m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -18578,6 +18570,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 159651634}
     m_Modifications:
+    - target: {fileID: 11436550, guid: 1f411b312b69e264ea452e4b876a84fa, type: 2}
+      propertyPath: spawnSettings.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11497620, guid: 1f411b312b69e264ea452e4b876a84fa, type: 2}
+      propertyPath: spawnSettings.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 414852, guid: 1f411b312b69e264ea452e4b876a84fa, type: 2}
       propertyPath: m_LocalPosition.x
       value: -9.4767046
@@ -18658,6 +18658,46 @@ Prefab:
       propertyPath: ObjectToTeleport
       value: 
       objectReference: {fileID: 1766996850}
+    - target: {fileID: 11436554, guid: 1f411b312b69e264ea452e4b876a84fa, type: 2}
+      propertyPath: spawnSettings.Array.data[0].weight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436554, guid: 1f411b312b69e264ea452e4b876a84fa, type: 2}
+      propertyPath: spawnInterval
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436554, guid: 1f411b312b69e264ea452e4b876a84fa, type: 2}
+      propertyPath: birdSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436552, guid: 1f411b312b69e264ea452e4b876a84fa, type: 2}
+      propertyPath: spawnInterval
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436552, guid: 1f411b312b69e264ea452e4b876a84fa, type: 2}
+      propertyPath: birdSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436550, guid: 1f411b312b69e264ea452e4b876a84fa, type: 2}
+      propertyPath: spawnInterval
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436550, guid: 1f411b312b69e264ea452e4b876a84fa, type: 2}
+      propertyPath: birdSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11497620, guid: 1f411b312b69e264ea452e4b876a84fa, type: 2}
+      propertyPath: spawnInterval
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11497620, guid: 1f411b312b69e264ea452e4b876a84fa, type: 2}
+      propertyPath: birdSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11497620, guid: 1f411b312b69e264ea452e4b876a84fa, type: 2}
+      propertyPath: spawnSettings.Array.data[0].weight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f411b312b69e264ea452e4b876a84fa, type: 2}
   m_RootGameObject: {fileID: 1049568035}
@@ -23632,7 +23672,6 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1086999017}
-  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -24649,7 +24688,6 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1118669527}
-  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -25049,8 +25087,8 @@ MonoBehaviour:
   crossSpawnOffset: 5
   crossSpawnVariation: 2.5
   despawnDistance: 50
-  spawnInterval: 3
-  birdSpeed: 5
+  spawnInterval: 6
+  birdSpeed: 3
   cageWaypoint: {fileID: 178968844}
   explanationDelay: 10
   maxExplanationDelay: 30
@@ -27618,7 +27656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnSettings:
-  - weight: 2
+  - weight: 1
     prefab: {fileID: 100004, guid: 546dde179e733164ebbb94a77727afe4, type: 2}
   - weight: 1
     prefab: {fileID: 100002, guid: 4111eff7ef0879e4da3cffcb0a2de14c, type: 2}
@@ -27626,8 +27664,8 @@ MonoBehaviour:
   crossSpawnOffset: 5
   crossSpawnVariation: 2.5
   despawnDistance: 50
-  spawnInterval: 3
-  birdSpeed: 5
+  spawnInterval: 6
+  birdSpeed: 3
   cageWaypoint: {fileID: 178968844}
   explanationDelay: 10
   maxExplanationDelay: 30
@@ -33549,20 +33587,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnSettings:
-  - weight: 2
+  - weight: 1
     prefab: {fileID: 100004, guid: 546dde179e733164ebbb94a77727afe4, type: 2}
   - weight: 1
     prefab: {fileID: 100002, guid: 64bfde3a871db064b87931f11ab5ccd2, type: 2}
-  - weight: 1
-    prefab: {fileID: 100002, guid: 4111eff7ef0879e4da3cffcb0a2de14c, type: 2}
-  - weight: 1
-    prefab: {fileID: 100000, guid: 3e7001295f5006d489476352eeca72fe, type: 2}
   mainSpawnDistance: 30
   crossSpawnOffset: 5
   crossSpawnVariation: 2.5
   despawnDistance: 50
-  spawnInterval: 3
-  birdSpeed: 5
+  spawnInterval: 6
+  birdSpeed: 3
   cageWaypoint: {fileID: 178968844}
   explanationDelay: 10
   maxExplanationDelay: 30
@@ -34100,6 +34134,7 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
