@@ -24,6 +24,7 @@ public class FollowBorisQuest : Quest<FollowBorisQuest, FollowBorisQuestDefiniti
 
 		FillSteps();
 		Next();
+        timeoutTimer -= definition.InitialTimeout;
 
 		var checkpointManager = CheckpointManager.instance;
 		if (checkpointManager != null)

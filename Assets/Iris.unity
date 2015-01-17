@@ -3277,8 +3277,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 174441049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.8999996, y: -0, z: -69.5}
-  m_LocalScale: {x: 4, y: 1, z: 1}
+  m_LocalPosition: {x: 24.8999996, y: 0, z: -69.5}
+  m_LocalScale: {x: 4.04507494, y: 1, z: 1}
   m_Children:
   - {fileID: 211747317}
   - {fileID: 767337525}
@@ -9540,6 +9540,7 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 456855224}
+  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -12481,6 +12482,7 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 591589451}
+  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -16170,6 +16172,7 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 771070050}
+  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -16769,6 +16772,7 @@ CanvasGroup:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 809600078}
+  m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -22882,8 +22886,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T5.6
   LockPlayerMovement: 1
-  completeAtMessage: 0
-  completeAtMessageIndex: 0
+  completeAtMessage: 1
+  completeAtMessageIndex: 3
 --- !u!1 &1063822811
 GameObject:
   m_ObjectHideFlags: 0
@@ -23672,6 +23676,7 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1086999017}
+  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -24688,6 +24693,7 @@ CanvasGroup:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1118669527}
+  m_Enabled: 1
   m_Alpha: .200000003
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -34134,7 +34140,6 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -41751,8 +41756,8 @@ MonoBehaviour:
         timeOffset: -.200000003
         volume: 1
         pitch: 1
-    - name: "Other: *flapping wings of boris flying to some random location*\r\n"
-      source: {fileID: 1459252793}
+    - name: "Boris: *flapping wings of boris flying to some random location*\r\n"
+      source: {fileID: 219113810}
       sourceName: Other
       audioClip: {fileID: 8300000, guid: 5a925bbdb50cf4546a37437063206300, type: 3}
       subtitle: "*flapping wings of boris flying to some random location*\r\n"
@@ -41800,8 +41805,8 @@ MonoBehaviour:
         timeOffset: -.200000003
         volume: 1
         pitch: 1
-    - name: "Other: *flapping wings of boris flying to some random location*\r\n"
-      source: {fileID: 1459252793}
+    - name: "Boris: *flapping wings of boris flying to some random location*\r\n"
+      source: {fileID: 219113810}
       sourceName: Other
       audioClip: {fileID: 8300000, guid: 5a925bbdb50cf4546a37437063206300, type: 3}
       subtitle: "*flapping wings of boris flying to some random location*\r\n"
@@ -41880,8 +41885,8 @@ MonoBehaviour:
         timeOffset: -.200000003
         volume: 1
         pitch: 1
-    - name: "Other: *wings start flapping around player*\r\n"
-      source: {fileID: 1459252793}
+    - name: "Boris: *wings start flapping around player*\r\n"
+      source: {fileID: 219113810}
       sourceName: Other
       audioClip: {fileID: 8300000, guid: 5a925bbdb50cf4546a37437063206300, type: 3}
       subtitle: "*wings start flapping around player*\r\n"
@@ -41897,7 +41902,7 @@ MonoBehaviour:
       subtitle: "*happy* muuhh buhuhbuhhh\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -4.19999981
         volume: .800000012
         pitch: 1
     - name: "Lucy: *happy* Wiiiiiii\r\n"
@@ -41907,7 +41912,7 @@ MonoBehaviour:
       subtitle: "*happy* Wiiiiiii\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -3.20000005
         volume: 1
         pitch: 1
   - name: T6.1
@@ -45843,6 +45848,14 @@ Prefab:
     - target: {fileID: 11468522, guid: f1eef9c1c30164c4dae9ef7f45072e2c, type: 2}
       propertyPath: TeleportAnimationVerticalDisplacementValue.m_Curve.Array.data[2].outSlope
       value: -5.79859161
+      objectReference: {fileID: 0}
+    - target: {fileID: 11468516, guid: f1eef9c1c30164c4dae9ef7f45072e2c, type: 2}
+      propertyPath: completeAtMessage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11468516, guid: f1eef9c1c30164c4dae9ef7f45072e2c, type: 2}
+      propertyPath: completeAtMessageIndex
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1eef9c1c30164c4dae9ef7f45072e2c, type: 2}

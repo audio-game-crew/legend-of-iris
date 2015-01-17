@@ -12,8 +12,9 @@ public class FollowBorisQuestDefinition : QuestDefinition
     public string arrivedAtLocationConversationID = null;
 	
 	[Header("Conversation when the player takes too long.")]
-	public string TimeoutConversationID = null;
-	public float Timeout = 10;
+    public string TimeoutConversationID = null;
+    public float Timeout = 10;
+    public float InitialTimeout = 10;
 	[Header("Conversation when the player moves the wrong way.")]
 	public string WrongWayConversationID = null;
 	public float WrongWayThreshold = 2;
