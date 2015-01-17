@@ -5,19 +5,9 @@ public class ConversationQuest : Quest<ConversationQuest, ConversationQuestDefin
 
 	public ConversationQuest(ConversationQuestDefinition definition) : base(definition) {}
 
-	public Boolean LucyQuiet;
 
     protected override void _Start() {
 		base._Start();
-		// Conversation conversation = ConversationManager.create(definition.conversationId);
-		// conversation.onConversationEnd += OnConversationEnd;
-		// conversation.Play();
-		if (LucyQuiet == true) 
-        {
-			var lucyController = Characters.instance.Lucy.GetComponent<LucyController>();
-            lucyController.StopBell();
-			//lucyControler.StopAudio ();
-        }
 
 		var player = ConversationManager.GetConversationPlayer(definition.conversationId);
         if (player != null)
@@ -47,11 +37,6 @@ public class ConversationQuest : Quest<ConversationQuest, ConversationQuestDefin
             player.onConversationEnd -= OnConversationEnd;
         SetPlayerMovementLocked(false);
 		Complete();
-        if (LucyQuiet)
-        {
-            var lucyController = Characters.instance.Lucy.GetComponent<LucyController>();
-            lucyController.StartBell();
-        }
             
 	}
 

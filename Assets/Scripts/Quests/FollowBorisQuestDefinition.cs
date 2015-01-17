@@ -7,6 +7,9 @@ public class FollowBorisQuestDefinition : QuestDefinition
 	public float maxStepDistance = 20f;
 	public List<Waypoint> waypoints;
 	public GameObject WaypointPrefab;
+
+    [Header("Conversation when boris arrives at location.")]
+    public string arrivedAtLocationConversationID = null;
 	
 	[Header("Conversation when the player takes too long.")]
 	public string TimeoutConversationID = null;

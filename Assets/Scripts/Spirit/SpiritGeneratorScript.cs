@@ -29,7 +29,7 @@ public class SpiritGeneratorScript : MonoBehaviour {
 		get { return listSpiritsActive.Select(c => c.Key.GetComponent<SpiritController>()).ToArray(); }
 	}
 	
-	private const float MIN_RANDOM_DELAY = 1.0f;
+	private const float MIN_RANDOM_DELAY = 1.5f;
 	private const float MAX_RANDOM_DELAY = 7.0f;
 	private float timeUntilNextSpirit;
 	

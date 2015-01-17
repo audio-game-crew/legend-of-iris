@@ -52,6 +52,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &188378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 488378}
+  m_Layer: 0
+  m_Name: Fart 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &446478
 Transform:
   m_ObjectHideFlags: 1
@@ -71,11 +86,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 179.899994, y: -4.0999999, z: -187.050003}
+  m_LocalPosition: {x: 179.899994, y: 1.20000005, z: -187.100006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 446482}
   - {fileID: 446478}
+  - {fileID: 488378}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &446482
@@ -90,6 +106,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 446480}
   m_RootOrder: 0
+--- !u!4 &488378
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 446480}
+  m_RootOrder: 2
 --- !u!23 &2346478
 Renderer:
   m_ObjectHideFlags: 1
@@ -152,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19261e24149204a4ea65922ad82f8795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  follow: 1
+  follow: 0
   followee: {fileID: 0}
   minDistance: 4
   lockY: 1
