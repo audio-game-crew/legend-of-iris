@@ -1,5 +1,69 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &105008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 405008}
+  - 114: {fileID: 11405008}
+  m_Layer: 0
+  m_Name: T4.12A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &105010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 405010}
+  - 114: {fileID: 11405010}
+  m_Layer: 0
+  m_Name: CrossBridge3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &105012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 405012}
+  - 114: {fileID: 11405012}
+  m_Layer: 0
+  m_Name: CrossBridge3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &108310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 408310}
+  - 114: {fileID: 11408310}
+  m_Layer: 0
+  m_Name: T4.5A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &124410
 GameObject:
   m_ObjectHideFlags: 1
@@ -42,7 +106,7 @@ GameObject:
   - 4: {fileID: 433986}
   - 114: {fileID: 11433986}
   m_Layer: 0
-  m_Name: CrossBridge1
+  m_Name: CrossBridge1C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,7 +202,7 @@ GameObject:
   - 4: {fileID: 433998}
   - 114: {fileID: 11433998}
   m_Layer: 0
-  m_Name: T4.12
+  m_Name: T4.12B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,7 +218,7 @@ GameObject:
   - 4: {fileID: 434000}
   - 114: {fileID: 11434000}
   m_Layer: 0
-  m_Name: T4.5
+  m_Name: T4.5B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,7 +234,7 @@ GameObject:
   - 4: {fileID: 434002}
   - 114: {fileID: 11434002}
   m_Layer: 0
-  m_Name: CrossBridge2
+  m_Name: CrossBridge2C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,7 +266,39 @@ GameObject:
   - 4: {fileID: 434006}
   - 114: {fileID: 11434006}
   m_Layer: 0
-  m_Name: T4.9
+  m_Name: T4.9B
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &158712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 458712}
+  - 114: {fileID: 11458712}
+  m_Layer: 0
+  m_Name: CrossBridge2A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &158714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 458714}
+  - 114: {fileID: 11458714}
+  m_Layer: 0
+  m_Name: CrossBridge2B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -240,6 +336,102 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &187510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 487510}
+  - 114: {fileID: 11487510}
+  m_Layer: 0
+  m_Name: CrossBridge1B
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &187512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 487512}
+  - 114: {fileID: 11487512}
+  m_Layer: 0
+  m_Name: CrossBridge1A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &193508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 493508}
+  - 114: {fileID: 11493508}
+  m_Layer: 0
+  m_Name: T4.9A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &405008
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 433990}
+  m_RootOrder: 15
+--- !u!4 &405010
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105010}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 433990}
+  m_RootOrder: 14
+--- !u!4 &405012
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105012}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 433990}
+  m_RootOrder: 16
+--- !u!4 &408310
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 433990}
+  m_RootOrder: 3
 --- !u!4 &424410
 Transform:
   m_ObjectHideFlags: 1
@@ -275,7 +467,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 433990}
-  m_RootOrder: 2
+  m_RootOrder: 6
 --- !u!4 &433988
 Transform:
   m_ObjectHideFlags: 1
@@ -287,7 +479,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 433990}
-  m_RootOrder: 8
+  m_RootOrder: 18
 --- !u!4 &433990
 Transform:
   m_ObjectHideFlags: 1
@@ -300,14 +492,23 @@ Transform:
   m_Children:
   - {fileID: 482520}
   - {fileID: 433984}
-  - {fileID: 433986}
+  - {fileID: 487512}
+  - {fileID: 408310}
+  - {fileID: 487510}
   - {fileID: 434000}
+  - {fileID: 433986}
   - {fileID: 433996}
-  - {fileID: 434002}
+  - {fileID: 458712}
+  - {fileID: 493508}
+  - {fileID: 458714}
   - {fileID: 434006}
+  - {fileID: 434002}
   - {fileID: 433994}
-  - {fileID: 433988}
+  - {fileID: 405010}
+  - {fileID: 405008}
+  - {fileID: 405012}
   - {fileID: 433998}
+  - {fileID: 433988}
   - {fileID: 433992}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -322,7 +523,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 433990}
-  m_RootOrder: 10
+  m_RootOrder: 19
 --- !u!4 &433994
 Transform:
   m_ObjectHideFlags: 1
@@ -334,7 +535,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 433990}
-  m_RootOrder: 7
+  m_RootOrder: 13
 --- !u!4 &433996
 Transform:
   m_ObjectHideFlags: 1
@@ -346,7 +547,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 433990}
-  m_RootOrder: 4
+  m_RootOrder: 7
 --- !u!4 &433998
 Transform:
   m_ObjectHideFlags: 1
@@ -358,7 +559,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 433990}
-  m_RootOrder: 9
+  m_RootOrder: 17
 --- !u!4 &434000
 Transform:
   m_ObjectHideFlags: 1
@@ -370,7 +571,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 433990}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!4 &434002
 Transform:
   m_ObjectHideFlags: 1
@@ -382,7 +583,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 433990}
-  m_RootOrder: 5
+  m_RootOrder: 12
 --- !u!4 &434004
 Transform:
   m_ObjectHideFlags: 1
@@ -406,7 +607,31 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 433990}
-  m_RootOrder: 6
+  m_RootOrder: 11
+--- !u!4 &458712
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158712}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 433990}
+  m_RootOrder: 8
+--- !u!4 &458714
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 433990}
+  m_RootOrder: 10
 --- !u!4 &481056
 Transform:
   m_ObjectHideFlags: 1
@@ -434,6 +659,116 @@ Transform:
   - {fileID: 424410}
   m_Father: {fileID: 433990}
   m_RootOrder: 0
+--- !u!4 &487510
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187510}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 433990}
+  m_RootOrder: 4
+--- !u!4 &487512
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187512}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 433990}
+  m_RootOrder: 2
+--- !u!4 &493508
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193508}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 433990}
+  m_RootOrder: 9
+--- !u!114 &11405008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationId: T4.12~1
+  LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
+--- !u!114 &11405010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a898c1f13a60dfb4da87c3a524e2987f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStepDistance: 1000
+  waypoints:
+  - {fileID: 0}
+  WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  SuccesSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
+  TimeoutConversationID: 
+  Timeout: 10
+  WrongWayConversationID: T4.3
+  WrongWayThreshold: 5
+  WrongWayTimeout: 10
+  ResetConversationID: T4.2
+--- !u!114 &11405012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a898c1f13a60dfb4da87c3a524e2987f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStepDistance: 1000
+  waypoints:
+  - {fileID: 0}
+  WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  SuccesSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
+  TimeoutConversationID: 
+  Timeout: 10
+  WrongWayConversationID: T4.3
+  WrongWayThreshold: 5
+  WrongWayTimeout: 10
+  ResetConversationID: T4.2
+--- !u!114 &11408310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationId: T4.5~1
+  LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11424410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -477,8 +812,6 @@ MonoBehaviour:
   maxStepDistance: 20
   waypoints:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
   SuccesSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
   TimeoutConversationID: 
@@ -500,8 +833,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxStepDistance: 1000
   waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
   SuccesSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
@@ -578,7 +909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversationId: T4.12
+  conversationId: T4.12~2
   LockPlayerMovement: 1
   completeAtMessage: 0
   completeAtMessageIndex: 0
@@ -593,7 +924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversationId: T4.5
+  conversationId: T4.5~2
   LockPlayerMovement: 1
   completeAtMessage: 0
   completeAtMessageIndex: 0
@@ -610,8 +941,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxStepDistance: 20
   waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
   SuccesSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
@@ -644,10 +973,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversationId: T4.9
+  conversationId: T4.9~2
   LockPlayerMovement: 1
   completeAtMessage: 0
   completeAtMessageIndex: 0
+--- !u!114 &11458712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a898c1f13a60dfb4da87c3a524e2987f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStepDistance: 20
+  waypoints:
+  - {fileID: 0}
+  WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  SuccesSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
+  TimeoutConversationID: 
+  Timeout: 10
+  WrongWayConversationID: T4.3
+  WrongWayThreshold: 2
+  WrongWayTimeout: 5
+  ResetConversationID: T4.2
+--- !u!114 &11458714
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a898c1f13a60dfb4da87c3a524e2987f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStepDistance: 20
+  waypoints:
+  - {fileID: 0}
+  WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  SuccesSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
+  TimeoutConversationID: 
+  Timeout: 10
+  WrongWayConversationID: T4.3
+  WrongWayThreshold: 2
+  WrongWayTimeout: 5
+  ResetConversationID: T4.2
 --- !u!114 &11481056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -673,6 +1046,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27fc0a1a2d07a0e4a8df6c732a7efb97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11487510
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a898c1f13a60dfb4da87c3a524e2987f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStepDistance: 20
+  waypoints:
+  - {fileID: 0}
+  WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  SuccesSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
+  TimeoutConversationID: 
+  Timeout: 10
+  WrongWayConversationID: T4.3
+  WrongWayThreshold: 5
+  WrongWayTimeout: 5
+  ResetConversationID: T4.2
+--- !u!114 &11487512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a898c1f13a60dfb4da87c3a524e2987f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStepDistance: 20
+  waypoints:
+  - {fileID: 0}
+  WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
+  SuccesSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
+  TimeoutConversationID: 
+  Timeout: 10
+  WrongWayConversationID: T4.3
+  WrongWayThreshold: 5
+  WrongWayTimeout: 5
+  ResetConversationID: T4.2
+--- !u!114 &11493508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationId: T4.9~1
+  LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
