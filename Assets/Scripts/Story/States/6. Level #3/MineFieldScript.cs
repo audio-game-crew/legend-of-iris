@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class MineFieldScript : MonoBehaviour {
+    [Header("MineField grid properties")]
     public int SizeX = 10;
     public int SizeY = 10;
     public int MineCount = 7;
@@ -11,22 +12,31 @@ public class MineFieldScript : MonoBehaviour {
     public int MaxPlacementTries = 1000;
     public Point2 StartPos = new Point2();
     public Point2 EndPos = new Point2(10, 10);
+    [Header("Appeareance properties")]
     public GameObject Mine;
     public GameObject MineProximitySensor;
+    [Header("Sounds")]
     public AudioClip MineSound;
-    public float SoundMaxDistance = 20;
+    public AmbientArea MineSoundArea;
+    public float SoundMinDistance = 0.2f;
+
+    [Header("Minefield types")]
     public bool OnlyProximity  = false;
     public bool CheckPath = true;
     public bool MarkAll = false;
+
+    [Header("Gameplay details")]
     public Checkpoint DragBackCheckpoint;
     public List<string> FailConversations = new List<string> { "T6.2" };
 
     public GameObject[] Mines { get { return mines.ToArray(); } }
+    private bool UseAmbient { get { return !OnlyProximity && MineSoundArea != null; } }
 
     private bool[,] grid;
     private List<GameObject> mines = new List<GameObject>();
     private Dictionary<GameObject, GameObject> mineProximitySensors = new Dictionary<GameObject, GameObject>();
     private Dictionary<GameObject, AudioPlayer> minePlayers = new Dictionary<GameObject, AudioPlayer>();
+    private Dictionary<GameObject, AmbientArea> mineAmbientPlayers = new Dictionary<GameObject, AmbientArea>();
     private Dictionary<GameObject, Point2> minePositions = new Dictionary<GameObject, Point2>();
     private int placementTries = 0;
     private bool initialized = false;
@@ -164,7 +174,16 @@ public class MineFieldScript : MonoBehaviour {
         var mine = (GameObject)GameObject.Instantiate(Mine, minePosition, new Quaternion());
         mine.transform.parent = this.transform;
         var delay = Randomg.Range(0f, MineSound.length);
-        var minePlayer = AudioManager.PlayAudio(new AudioObject(mine, MineSound, OnlyProximity ? 0 : 1, delay, true) { maxDistance = SoundMaxDistance });
+        if (UseAmbient)
+        {
+            int selectedMineSound = Random.Range(0, MineSoundArea.ambientSources.Count);
+            
+        }
+        else
+        {
+            var minePlayer = AudioManager.PlayAudio(new AudioObject(mine, MineSound, OnlyProximity ? 0 : 1, delay, true) { minDistance = SoundMinDistance });
+            minePlayers.Add(mine, minePlayer);
+        }
         if (MineProximitySensor != null)
         {
             var mineProximitySensor = (GameObject)GameObject.Instantiate(MineProximitySensor, minePosition, new Quaternion());
@@ -172,7 +191,7 @@ public class MineFieldScript : MonoBehaviour {
             mineProximitySensors.Add(mine, mineProximitySensor);
         }
         mines.Add(mine);
-        minePlayers.Add(mine, minePlayer);
+        
         minePositions.Add(mine, new Point2(i, j));
     }
 
