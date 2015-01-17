@@ -16,6 +16,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &128988
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 428988}
+  - 114: {fileID: 11428988}
+  m_Layer: 0
+  m_Name: BorisFollowingLucy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &130830
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,6 +300,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 461904}
   m_RootOrder: 1
+--- !u!4 &428988
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461904}
+  m_RootOrder: 4
 --- !u!4 &430830
 Transform:
   m_ObjectHideFlags: 1
@@ -418,6 +446,7 @@ Transform:
   - {fileID: 407488}
   - {fileID: 495136}
   - {fileID: 461902}
+  - {fileID: 428988}
   m_Father: {fileID: 461896}
   m_RootOrder: 0
 --- !u!4 &461906
@@ -542,6 +571,21 @@ MonoBehaviour:
     m_PostInfinity: 2
   JumpHeight: 10
   TeleportTime: 2
+--- !u!114 &11428988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adccdbca5410094ea7ad4348f97b53d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnOff: []
+  turnOn:
+  - followerToEnable: {fileID: 0}
+    followeeToFollow: {fileID: 0}
 --- !u!114 &11430830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -578,7 +622,6 @@ MonoBehaviour:
   conversationId: 'T6.8
 
 '
-  LucyQuiet: 1
   LockPlayerMovement: 0
 --- !u!114 &11430834
 MonoBehaviour:
@@ -616,7 +659,6 @@ MonoBehaviour:
   conversationId: 'T6.9
 
 '
-  LucyQuiet: 1
   LockPlayerMovement: 0
 --- !u!114 &11461892
 MonoBehaviour:
@@ -632,7 +674,6 @@ MonoBehaviour:
   conversationId: 'T6.10
 
 '
-  LucyQuiet: 1
   LockPlayerMovement: 0
 --- !u!114 &11461894
 MonoBehaviour:
@@ -677,7 +718,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T6.1
-  LucyQuiet: 0
   LockPlayerMovement: 1
 --- !u!114 &11461902
 MonoBehaviour:
@@ -766,7 +806,7 @@ MonoBehaviour:
   maxStepDistance: 20
   waypoints:
   - {fileID: 0}
-  WaypointPrefab: {fileID: 0}
+  WaypointPrefab: {fileID: 100000, guid: 59739849dbde62748bd71d5a9dafc990, type: 2}
   SuccesSound: {fileID: 8300000, guid: 997adbf88afef864b827b1afa0aae3ae, type: 3}
   TimeoutConversationID: T6.5
   Timeout: 10
@@ -786,7 +826,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: "T6.7\r\n"
-  LucyQuiet: 1
   LockPlayerMovement: 0
 --- !u!114 &11495136
 MonoBehaviour:
@@ -850,7 +889,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T6.4
-  LucyQuiet: 0
   LockPlayerMovement: 1
 --- !u!114 &11495406
 MonoBehaviour:
