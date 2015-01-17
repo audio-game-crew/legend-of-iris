@@ -16,6 +16,8 @@ public class WaypointQuest : Quest<WaypointQuest, WaypointQuestDefinition> {
     protected override void _Start()
     {
         active = true;
+		var lucyController = Characters.instance.Lucy.GetComponent<LucyController>();
+		lucyController.StartBell();
 		base._Start();
 		Next();
 	}
@@ -44,7 +46,9 @@ public class WaypointQuest : Quest<WaypointQuest, WaypointQuestDefinition> {
 
     protected override void _Complete()
     {
-        active = false;
+		var lucyController = Characters.instance.Lucy.GetComponent<LucyController>();
+		lucyController.StopBell();
+		active = false;
         base._Complete();
     }
 
