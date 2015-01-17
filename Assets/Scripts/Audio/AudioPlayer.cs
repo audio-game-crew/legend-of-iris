@@ -26,6 +26,11 @@ public class AudioPlayer
 
     public AudioPlayer(AudioObject audio)
     {
+        if (audio == null)
+        {
+            removable = true;
+            return;
+        }
         this.finished = false;
         this.removable = false;
         this.paused = false;

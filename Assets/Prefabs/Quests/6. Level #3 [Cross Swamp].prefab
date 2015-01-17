@@ -604,10 +604,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversationId: 'T6.8
-
-'
+  conversationId: T6.8
   LockPlayerMovement: 0
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11430834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -641,10 +641,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversationId: 'T6.9
-
-'
+  conversationId: T6.9
   LockPlayerMovement: 0
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11461892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -656,10 +656,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversationId: 'T6.10
-
-'
+  conversationId: T6.10
   LockPlayerMovement: 0
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11461894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -704,6 +704,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T6.1
   LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11461902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -825,8 +827,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e65b2cc51b082741b9030e46081b000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversationId: "T6.7\r\n"
+  conversationId: T6.7
   LockPlayerMovement: 0
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11495136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -890,6 +894,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T6.4
   LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11495406
 MonoBehaviour:
   m_ObjectHideFlags: 1
