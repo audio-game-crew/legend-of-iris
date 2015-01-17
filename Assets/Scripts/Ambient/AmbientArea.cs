@@ -8,6 +8,8 @@ public class AmbientArea : MonoBehaviour {
     public class AmbientSource
     {
         [HideInInspector]
+        public string name;
+        [HideInInspector]
         public bool initialized;
         [Header("Definition")]
         public List<GameObject> locations;
@@ -52,6 +54,7 @@ public class AmbientArea : MonoBehaviour {
                 s.volumeModifier = 1f;
                 s.constantLoop = true;
             }
+            s.name = (s.locations.Count > 0 ? s.locations[0].name : "") + ": " + (s.clips.Count > 0 ? s.clips[0].name : "");
         }
     }
 

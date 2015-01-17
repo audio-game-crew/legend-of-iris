@@ -2083,10 +2083,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ambientEnabled: 1
   activeCondition: 1
-  maxColliderDistance: 15
+  maxColliderDistance: 10
   convergeVolumeSpeed: 2
   ambientSources:
-  - initialized: 1
+  - name: ': '
+    initialized: 1
     locations: []
     clips: []
     minAudioDistance: 1
@@ -2101,7 +2102,8 @@ MonoBehaviour:
     maxInterval: 30
     currentTimer: 0
     turnedOff: 0
-  - initialized: 1
+  - name: 'Fly: AmbientLoop_Fly'
+    initialized: 1
     locations:
     - {fileID: 1349470476}
     - {fileID: 1897506933}
@@ -3540,7 +3542,7 @@ Transform:
   - {fileID: 518062502}
   - {fileID: 1994323688}
   m_Father: {fileID: 205224287}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!114 &184187857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3557,7 +3559,8 @@ MonoBehaviour:
   maxColliderDistance: 15
   convergeVolumeSpeed: 2
   ambientSources:
-  - initialized: 1
+  - name: 'Bird 1: Bird8'
+    initialized: 1
     locations:
     - {fileID: 936379149}
     - {fileID: 237620596}
@@ -4329,6 +4332,7 @@ Transform:
   - {fileID: 1650389067}
   - {fileID: 1327360362}
   - {fileID: 103309657}
+  - {fileID: 1867359735}
   - {fileID: 184187856}
   m_Father: {fileID: 2112304529}
   m_RootOrder: 3
@@ -5236,6 +5240,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 888531068}
+  - {fileID: 557781269}
   m_Father: {fileID: 1858286747}
   m_RootOrder: 3
 --- !u!1 &239155459
@@ -11552,6 +11557,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &557781268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 557781269}
+  m_Layer: 0
+  m_Name: FrogDummy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &557781269
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 557781268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.4000001, y: 0, z: -9.60000038}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 237913283}
+  m_RootOrder: 1
 --- !u!1 &559084728
 GameObject:
   m_ObjectHideFlags: 0
@@ -20675,7 +20707,8 @@ MonoBehaviour:
   maxColliderDistance: 10
   convergeVolumeSpeed: 2
   ambientSources:
-  - initialized: 1
+  - name: 'Screen Audio: AmbientLoop_Settings'
+    initialized: 1
     locations:
     - {fileID: 466639462}
     clips:
@@ -21907,7 +21940,8 @@ MonoBehaviour:
   maxColliderDistance: 10
   convergeVolumeSpeed: 2
   ambientSources:
-  - initialized: 1
+  - name: 'Screen Audio: AmbientLoop_Start'
+    initialized: 1
     locations:
     - {fileID: 466639462}
     clips:
@@ -27236,7 +27270,8 @@ MonoBehaviour:
   maxColliderDistance: 10
   convergeVolumeSpeed: 2
   ambientSources:
-  - initialized: 1
+  - name: 'Screen Audio: AmbientLoop_ForestLeaves'
+    initialized: 1
     locations:
     - {fileID: 466639462}
     clips:
@@ -27253,7 +27288,8 @@ MonoBehaviour:
     maxInterval: 8
     currentTimer: .768893778
     turnedOff: 0
-  - initialized: 1
+  - name: 'Cows: AmbientLoop_CowBells'
+    initialized: 1
     locations:
     - {fileID: 920438565}
     clips:
@@ -27270,7 +27306,8 @@ MonoBehaviour:
     maxInterval: 8
     currentTimer: .768893778
     turnedOff: 0
-  - initialized: 1
+  - name: 'Cows: Cow1'
+    initialized: 1
     locations:
     - {fileID: 920438565}
     clips:
@@ -27291,7 +27328,8 @@ MonoBehaviour:
     maxInterval: 6
     currentTimer: .768893778
     turnedOff: 0
-  - initialized: 1
+  - name: 'Water: AmbientLoop_RustyWheel'
+    initialized: 1
     locations:
     - {fileID: 1612984175}
     clips:
@@ -27308,7 +27346,8 @@ MonoBehaviour:
     maxInterval: 6
     currentTimer: .768893778
     turnedOff: 0
-  - initialized: 1
+  - name: 'Water: AmbientLoop_WaterStream'
+    initialized: 1
     locations:
     - {fileID: 1612984175}
     clips:
@@ -27325,7 +27364,8 @@ MonoBehaviour:
     maxInterval: 6
     currentTimer: .768893778
     turnedOff: 0
-  - initialized: 1
+  - name: 'Dogs: AmbientLoop_Dogs'
+    initialized: 1
     locations:
     - {fileID: 1062463645}
     clips:
@@ -31276,7 +31316,8 @@ MonoBehaviour:
   maxColliderDistance: 10
   convergeVolumeSpeed: 2
   ambientSources:
-  - initialized: 1
+  - name: 'Screen Audio: AmbientLoop_Beek'
+    initialized: 1
     locations:
     - {fileID: 466639462}
     clips:
@@ -35064,7 +35105,8 @@ MonoBehaviour:
   maxColliderDistance: 10
   convergeVolumeSpeed: 2
   ambientSources:
-  - initialized: 1
+  - name: 'Screen Audio: AmbientLoop_Beek'
+    initialized: 1
     locations:
     - {fileID: 466639462}
     clips:
@@ -35081,7 +35123,8 @@ MonoBehaviour:
     maxInterval: 6
     currentTimer: 0
     turnedOff: 0
-  - initialized: 1
+  - name: 'MachineToListen: MachineNoise'
+    initialized: 1
     locations:
     - {fileID: 685198812}
     - {fileID: 303259369}
@@ -35111,7 +35154,8 @@ MonoBehaviour:
     maxInterval: 6
     currentTimer: 0
     turnedOff: 0
-  - initialized: 1
+  - name: 'Bird 1: Bird8'
+    initialized: 1
     locations:
     - {fileID: 1135488906}
     - {fileID: 1933269784}
@@ -38604,6 +38648,133 @@ MeshFilter:
   m_PrefabInternal: {fileID: 679423008}
   m_GameObject: {fileID: 1863153320}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1867359734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1867359735}
+  - 65: {fileID: 1867359737}
+  - 114: {fileID: 1867359736}
+  m_Layer: 0
+  m_Name: Frogs Ambient
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1867359735
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1867359734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 191.899994, y: 0, z: -297.5}
+  m_LocalScale: {x: 70.3705215, y: 9.08394718, z: 23.2994957}
+  m_Children: []
+  m_Father: {fileID: 205224287}
+  m_RootOrder: 5
+--- !u!114 &1867359736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1867359734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4135f487d7f10cf40934aa3ad1e94d97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientEnabled: 1
+  activeCondition: 1
+  maxColliderDistance: 10
+  convergeVolumeSpeed: 2
+  ambientSources:
+  - name: 'FrogDummy: FrogA3'
+    initialized: 1
+    locations:
+    - {fileID: 557781268}
+    clips:
+    - {fileID: 8300000, guid: 00dcd0109ca787b4aaf6d56627e5527d, type: 3}
+    - {fileID: 8300000, guid: 54c4e532599aa7747954b54a08c1f9e7, type: 3}
+    - {fileID: 8300000, guid: 686a31be267a8b2459fc4f390eba87d9, type: 3}
+    - {fileID: 8300000, guid: 77f470ab2e80d3a4e936fd3449427b1c, type: 3}
+    - {fileID: 8300000, guid: c7164ced0eb187b4eac76c9cb8fb9e2d, type: 3}
+    - {fileID: 8300000, guid: c7a08cc43222cb2468787cebeb1b5241, type: 3}
+    - {fileID: 8300000, guid: de1464f3a5b0ba3408573b69ef61d86b, type: 3}
+    minAudioDistance: 1
+    maxAudioDistance: 500
+    minPitch: .899999976
+    maxPitch: 1.10000002
+    volumeModifier: 1
+    constantLoop: 0
+    randomClipTime: 0
+    spawnRandom: 1
+    minInterval: .5
+    maxInterval: 1
+    currentTimer: 0
+    turnedOff: 0
+  - name: 'FrogDummy: FrogB6'
+    initialized: 1
+    locations:
+    - {fileID: 557781268}
+    clips:
+    - {fileID: 8300000, guid: 1ce01e78bfa379147aaf2c7d6eade9a8, type: 3}
+    - {fileID: 8300000, guid: 566c74c1f82d6eb4d9c23fc1c70d8743, type: 3}
+    - {fileID: 8300000, guid: 7eb5921d9c870b34e89f9f2482f8cb4d, type: 3}
+    - {fileID: 8300000, guid: 86f0ed4b2377cba499f32776c2f1edcf, type: 3}
+    - {fileID: 8300000, guid: b0f282c94bab3d04999aef0e7196e3d8, type: 3}
+    - {fileID: 8300000, guid: c54558df03fade44383bc1a485ccac38, type: 3}
+    - {fileID: 8300000, guid: c8bfa6a7ea4223e41b61b1aff39a9d86, type: 3}
+    minAudioDistance: 1
+    maxAudioDistance: 500
+    minPitch: .899999976
+    maxPitch: 1.10000002
+    volumeModifier: 1
+    constantLoop: 0
+    randomClipTime: 0
+    spawnRandom: 1
+    minInterval: .5
+    maxInterval: 1
+    currentTimer: 0
+    turnedOff: 0
+  - name: 'FrogDummy: FrogC1'
+    initialized: 1
+    locations:
+    - {fileID: 557781268}
+    clips:
+    - {fileID: 8300000, guid: 42c777fa3cf96a443b35d5871b25238a, type: 3}
+    - {fileID: 8300000, guid: 7635321365320a54285af11eee2c9769, type: 3}
+    - {fileID: 8300000, guid: 987fea92906d03a4db49e2c9cf95d28b, type: 3}
+    - {fileID: 8300000, guid: ca0ab797398cecd4499582398de57557, type: 3}
+    - {fileID: 8300000, guid: da93ae485db6fa74398440c90e18d61b, type: 3}
+    minAudioDistance: 1
+    maxAudioDistance: 500
+    minPitch: .899999976
+    maxPitch: 1.10000002
+    volumeModifier: 1
+    constantLoop: 0
+    randomClipTime: 0
+    spawnRandom: 1
+    minInterval: .5
+    maxInterval: 1
+    currentTimer: 0
+    turnedOff: 0
+--- !u!65 &1867359737
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1867359734}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1867972040
 GameObject:
   m_ObjectHideFlags: 0
