@@ -364,7 +364,8 @@ MonoBehaviour:
   WaypointPrefab: {fileID: 100000, guid: 338410c9d5312de4e9f2f5d1d5bd54cb, type: 2}
   arrivedAtLocationConversationID: T5.5B
   TimeoutConversationID: T5.2
-  Timeout: 15
+  Timeout: 20
+  InitialTimeout: 15
   WrongWayConversationID: T4.3
   WrongWayThreshold: 10
   WrongWayTimeout: 100
@@ -381,8 +382,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T5.4
-  LucyQuiet: 1
   LockPlayerMovement: 1
+  completeAtMessage: 1
+  completeAtMessageIndex: 4
 --- !u!114 &11468512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -417,8 +419,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T5.6
-  LucyQuiet: 0
   LockPlayerMovement: 1
+  completeAtMessage: 1
+  completeAtMessageIndex: 3
 --- !u!114 &11468518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -431,8 +434,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T5.1
-  LucyQuiet: 1
   LockPlayerMovement: 1
+  completeAtMessage: 1
+  completeAtMessageIndex: 14
 --- !u!114 &11468520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -450,7 +454,8 @@ MonoBehaviour:
   WaypointPrefab: {fileID: 100000, guid: 338410c9d5312de4e9f2f5d1d5bd54cb, type: 2}
   arrivedAtLocationConversationID: T5.4B
   TimeoutConversationID: T5.2
-  Timeout: 10
+  Timeout: 15
+  InitialTimeout: 15
   WrongWayConversationID: T4.3
   WrongWayThreshold: 10
   WrongWayTimeout: 100
@@ -473,8 +478,8 @@ MonoBehaviour:
     m_Curve:
     - time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 5.09621716
+      outSlope: 5.09621716
       tangentMode: 0
     - time: .499272227
       value: .997560978
@@ -483,8 +488,8 @@ MonoBehaviour:
       tangentMode: 0
     - time: .998544395
       value: -0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -5.79859161
+      outSlope: -5.79859161
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -522,7 +527,8 @@ MonoBehaviour:
   WaypointPrefab: {fileID: 100000, guid: 338410c9d5312de4e9f2f5d1d5bd54cb, type: 2}
   arrivedAtLocationConversationID: T5.1B
   TimeoutConversationID: T5.2
-  Timeout: 5
+  Timeout: 10
+  InitialTimeout: 15
   WrongWayConversationID: T5.3
   WrongWayThreshold: 10
   WrongWayTimeout: 100
@@ -551,8 +557,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T5.5
-  LucyQuiet: 1
   LockPlayerMovement: 1
+  completeAtMessage: 1
+  completeAtMessageIndex: 0
 --- !u!114 &11468530
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -327,8 +327,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T2.3
-  LucyQuiet: 0
   LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11483748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -341,8 +342,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T2.6
-  LucyQuiet: 0
   LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11483750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -354,10 +356,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fd5883d47c51a948baf9e999cffc6dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementThreshold: 360
+  MovementThreshold: 320
   direction: 2
   FailTimeoutConversation: T2.4
-  FailTimeout: 10
+  FailTimeout: 30
+  InitialFailTimeout: 10
   OppositeDirectionConversation: T2.5
   OppositeDirectionThreshold: 90
 --- !u!114 &11483752
@@ -372,8 +375,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T2.1
-  LucyQuiet: 0
   LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11483754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -385,10 +389,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fd5883d47c51a948baf9e999cffc6dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementThreshold: 360
+  MovementThreshold: 320
   direction: 3
   FailTimeoutConversation: T2.4
-  FailTimeout: 10
+  FailTimeout: 30
+  InitialFailTimeout: 10
   OppositeDirectionConversation: T2.5
   OppositeDirectionThreshold: 90
 --- !u!114 &11483756
@@ -405,7 +410,8 @@ MonoBehaviour:
   MovementThreshold: 1
   direction: 1
   FailTimeoutConversation: T2.2
-  FailTimeout: 10
+  FailTimeout: 30
+  InitialFailTimeout: 10
   OppositeDirectionConversation: 
   OppositeDirectionThreshold: .5
 --- !u!114 &11483758
@@ -422,7 +428,8 @@ MonoBehaviour:
   MovementThreshold: 1
   direction: 0
   FailTimeoutConversation: T2.2
-  FailTimeout: 10
+  FailTimeout: 30
+  InitialFailTimeout: 10
   OppositeDirectionConversation: 
   OppositeDirectionThreshold: .5
 --- !u!114 &11483760
@@ -437,8 +444,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T2.7
-  LucyQuiet: 0
   LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

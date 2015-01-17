@@ -243,8 +243,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T3.5
-  LucyQuiet: 0
   LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11455410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -259,7 +260,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 0}
   TimeoutConversationID: T3.6
-  Timeout: 10
+  Timeout: 30
   WrongWayConversationID: 
   WrongWayThreshold: 5
   WrongWayTimeout: 10
@@ -277,7 +278,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 0}
   TimeoutConversationID: T3.4
-  Timeout: 10
+  Timeout: 30
   WrongWayConversationID: 
   WrongWayThreshold: 5
   WrongWayTimeout: 10
@@ -295,7 +296,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 0}
   TimeoutConversationID: T3.2
-  Timeout: 10
+  Timeout: 30
   WrongWayConversationID: 
   WrongWayThreshold: 5
   WrongWayTimeout: 10
@@ -311,8 +312,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T3.1
-  LucyQuiet: 0
   LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11455418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -336,8 +338,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T3.7
-  LucyQuiet: 0
   LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!114 &11455422
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -350,8 +353,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T3.3
-  LucyQuiet: 0
   LockPlayerMovement: 1
+  completeAtMessage: 0
+  completeAtMessageIndex: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

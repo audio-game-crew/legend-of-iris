@@ -61,7 +61,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 488378}
   m_Layer: 0
-  m_Name: Fart 2
+  m_Name: Fart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

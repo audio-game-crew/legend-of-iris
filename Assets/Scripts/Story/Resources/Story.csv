@@ -163,10 +163,10 @@ T5.3;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*annoyed* muuuu
 ;Lucy;Lucy;Lucy;-0,2;0;1;;Try to focus on the sounds of the environment in comparison to Boris. If you forget where he is, he might make some noises once in a while.
 ;Boris;Boris;Boris;-0,2;0;1;;*hooot*
 T5.4;Boris;Boris;Boris;-0,2;0;1;;Hmmm.. You got me! *hooot* But you got lucky human! Let's tr... AAAH
-;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;MUHH HAWHAW
+;Screen Audio;Beorn;Beorn;-1,5;0;0,8;;MUHH HAWHAW
 ;Lucy;Lucy;Lucy;-0,2;0;1;;Beorn!! Don't bite our king you idiot!
 ;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*disappointed* muhhhh
-;Boris;Boris;Boris;-0,2;0;1;;*hOOOt* Oh fudge, now my feathers are all messy. Ah, well.  I needed a feathercut anyway. Right, where was I. *hooot* Oh yes: let's try again and see if you got lucky!!
+;Boris;Boris;Boris;0;0;1;;*hOOOt* Oh fudge, now my feathers are all messy. Ah, well.  I needed a feathercut anyway. Right, where was I. *hooot* Oh yes: let's try again and see if you got lucky!!
 ;Boris;Other;Other;-0,2;0;1;FlappingWings;*flapping wings of boris flying to some random location*
 T5.4B;Boris;Boris;Boris;1;0;1;;*hoot at location*
 ;Lucy;Lucy;Lucy;-0,2;0;1;;OK, let’s go find him again!
@@ -231,9 +231,9 @@ T7.4;Boris;Boris;Boris;-0,2;0;1;;YESSS!! *hoothoot* That’s the one! But to be su
 ;Bird;Bird;Bird #1;-0,2;0;1;;*whistle* there are still 3 others! I can call them out with our secret emergency question, but then one of you has to catch them. 
 ;Boris;Boris;Boris;-0,2;0;1;;OK, do it!
 T8.1;Bird;Bird;Bird #1;-0,2;0;1;;*whistle* Why do seagulls fly over the sea? *whistle*
-;Bird;Bird;Bird #2;-0,2;0;1;;*from a distance* Because if the flew over the bay
-;Bird;Bird;Bird #3;-0,2;0;1;;*from another distance* they would be called
-;Bird;Bird;Bird #4;-0,2;0;1;;*from another distance* baygulls! 
+;Distant 2;Bird;Bird #2;-0,2;0;1;;*from a distance* Because if the flew over the bay
+;Distant 3;Bird;Bird #3;-0,2;0;1;;*from another distance* they would be called
+;Distant 4;Bird;Bird #4;-0,2;0;1;;*from another distance* baygulls! 
 ;Bird;Bird;Bird #1;-0,2;0;1;;*from another distance* oooooooh!!
 ;Boris;Boris;Boris;-0,2;0;1;;Oh oh *hoot*, I can see spirit crows approaching
 ;Bird;Bird;Bird #1;-0,2;0;1;;*whistle* Oh did I forget to mention, that crows also respond our emergency calls? Yeahhh, it is a problem we still haven't figured out.
@@ -254,7 +254,7 @@ T8.4;Boris;Boris;Boris;-0,2;0;1;;Yes! You have one! *hoot* Let's test it. Bird, 
 ;Bird;Bird;Bird #2;-0,2;0;1;;Well, 1 kilometer is a 1000 meters and sound travels roughly 335 meters per second through air. 1000 divided by 335 is about 3. Therefore, if you were to make a loud noise 1 kilometer away, we would hear it 3 seconds later.
 ;Boris;Boris;Boris;-0,2;0;1;;Let's test this!! Luckily, I have a friend who is currently 1 kilometer away from us. Let’s call him and ask if he can make some noise. *dial tones, ringing* yooo bro! I am conducting an experiment and I need you to do the thing!
 ;Lucy;Lucy;Lucy;-0,2;0;1;;1... 2... 3...
-;Fart;Other;Other;-0,2;0;1;Fart1;*distant fart sound*
+;Distant 1;Other;Someone;-0,2;0;1;Fart1;*distant fart sound*
 ;Lucy;Lucy;Lucy;-0,2;0;1;;IEEEUW, seriously??
 ;Boris;Boris;Boris;-0,2;0;1;;Thanks! Smell ya later! *hangs up* Well, that worked! Now let’s get the next science bird!
 T8.5;Boris;Boris;Boris;-0,2;0;1;;YAY! Another one! Let's test him too.  Bird, when something passes by quickly, why does the tone change?
@@ -272,10 +272,10 @@ T8.6;Boris;Boris;Boris;-0,2;0;1;;Aha! *hoothoot* The final one. Let's test it to
 ;Lucy;Lucy;Lucy;-0,2;0;1;;Okidoki!! Here we go *teleport sounds*
 ;Boris;Boris;Boris;-0,2;0;1;;Awesome!! Ok, *grumbles of stomach* here goes nothing....  *difficult hoot*
 T8.7;Fart 2;Other;Boris;0;0;1;Fart2;*fart*
-;Fart Echo 1;Other;Boris;0,05;0;0,6;Fart2;*echoing fart*
-;Fart Echo 2;Other;Boris;0,05;0;0,3;Fart2;*echoing fart*
-;Fart Echo 3;Other;Boris;0,05;0;0,15;Fart2;*echoing fart*
-;Fart Echo 4;Other;Boris;0,05;0;0,05;Fart2;*echoing fart*
+;Distant 1;Other;Boris;0,05;0;0,6;Fart2;*echoing fart*
+;Distant 2;Other;Boris;0,05;0;0,3;Fart2;*echoing fart*
+;Distant 3;Other;Boris;0,05;0;0,15;Fart2;*echoing fart*
+;Distant 4;Other;Boris;0,05;0;0,05;Fart2;*echoing fart*
 T8.8;Lucy;Lucy;Lucy;-0,2;0;1;;OK! ENOUGH! Ugh, who gives our king beans for dinner??
 ;Boris;Boris;Boris;-0,2;0;1;;The royal cook, Beany Jean Beany. If it wasn’t clear from his name, his speciality is: beans.
 ;Lucy;Lucy;Lucy;-0,2;0;1;;Sounds like he is the the master of gasses himself. Let’s get back to the village. *teleport sounds*

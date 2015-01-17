@@ -7,6 +7,7 @@ public class MoveQuestDefinition : QuestDefinition {
     public Direction direction;
     public string FailTimeoutConversation;
     public float FailTimeout = 10;
+    public float InitialFailTimeout = 10;
     public string OppositeDirectionConversation;
     public float OppositeDirectionThreshold;
 	

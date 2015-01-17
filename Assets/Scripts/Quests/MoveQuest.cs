@@ -21,6 +21,7 @@ public class MoveQuest : Quest<MoveQuest, MoveQuestDefinition> {
     {
         base._Start();
         Reset();
+        timer -= definition.InitialFailTimeout;
 	}
 
     private void Reset()
