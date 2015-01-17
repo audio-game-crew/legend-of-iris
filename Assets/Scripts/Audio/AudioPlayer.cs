@@ -46,6 +46,8 @@ public class AudioPlayer
         audioAS.loop = audio.loop;
         if (audio.maxDistance.HasValue)
             audioAS.maxDistance = audio.maxDistance.Value;
+        if (audio.minDistance.HasValue)
+            audioAS.minDistance = audio.minDistance.Value;
 
         playAtTime = Time.time + audio.delay;
         audioAS.PlayDelayed(audio.delay);
