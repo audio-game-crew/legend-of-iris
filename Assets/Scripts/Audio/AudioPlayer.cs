@@ -74,7 +74,7 @@ public class AudioPlayer
 
     public void ContinuePlaying(bool forcePausing = false)
     {
-        if (audioAS != null && paused && (forcePausing || audio.pausable))
+        if (audioAS != null && paused && (forcePausing || audio.pausable) && audioAS.enabled)
         {
             paused = false;
 
