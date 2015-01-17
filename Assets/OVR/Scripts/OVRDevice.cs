@@ -209,8 +209,15 @@ public class OVRDevice : MonoBehaviour
 	// * * * * * * * * * * * * *
 
 	// Awake
-	void Awake () 
-	{	
+	void Awake ()
+    {
+#if UNITY_EDITOR
+        if (!UnityEditorInternal.InternalEditorUtility.HasPro())
+        {
+            return;
+        }
+#endif
+
 		// Initialize static Dictionary lists first
 		InitSensorList(false); 
 		InitOrientationSensorList();
@@ -676,7 +683,13 @@ public class OVRDevice : MonoBehaviour
 	
 	// RenderPortraitMode
 	public static bool RenderPortraitMode()
-	{
+    {
+#if UNITY_EDITOR
+        if (!UnityEditorInternal.InternalEditorUtility.HasPro())
+        {
+            return false;
+        }
+#endif
 		return OVR_RenderPortraitMode();
 	}
 	

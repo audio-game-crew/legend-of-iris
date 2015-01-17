@@ -16,6 +16,13 @@ public class BinauralSource : MonoBehaviour
     //
     void Awake()
     {
+#if UNITY_EDITOR
+        if (!UnityEditorInternal.InternalEditorUtility.HasPro())
+        {
+            return;
+        }
+#endif
+
         // If no AudioSource is attached to this GameObject,
         // disable binaural filtering.
         if (GetComponent<AudioSource>() == null)
