@@ -21,6 +21,11 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
     protected override void _Start()
     {
 		base._Start();
+
+		var lucyController = Characters.instance.Lucy.GetComponent<LucyController>();
+		lucyController.StartBell();
+
+
         FillSteps();
 		Next();
         var checkpointManager = CheckpointManager.instance;
@@ -188,6 +193,10 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         Next();
     }
 
-
+	protected override void _Complete(){
+		var lucyController = Characters.instance.Lucy.GetComponent<LucyController>();
+		lucyController.StopBell();
+		base._Complete ();
+	}
 
 }
