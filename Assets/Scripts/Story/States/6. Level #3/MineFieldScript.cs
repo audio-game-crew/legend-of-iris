@@ -17,7 +17,7 @@ public class MineFieldScript : MonoBehaviour {
     public GameObject MineProximitySensor;
     [Header("Sounds")]
     public AudioClip MineSound;
-    public AmbientArea MineSoundArea;
+    public AmbientArea MineSoundArea = null;
     public float SoundMinDistance = 0.2f;
 
     [Header("Minefield types")]
@@ -36,8 +36,9 @@ public class MineFieldScript : MonoBehaviour {
     private List<GameObject> mines = new List<GameObject>();
     private Dictionary<GameObject, GameObject> mineProximitySensors = new Dictionary<GameObject, GameObject>();
     private Dictionary<GameObject, AudioPlayer> minePlayers = new Dictionary<GameObject, AudioPlayer>();
-    private Dictionary<GameObject, AmbientArea> mineAmbientPlayers = new Dictionary<GameObject, AmbientArea>();
+    private Dictionary<GameObject, AmbientArea.AmbientSource> mineAmbientPlayers = new Dictionary<GameObject, AmbientArea.AmbientSource>();
     private Dictionary<GameObject, Point2> minePositions = new Dictionary<GameObject, Point2>();
+    private int AmbientSoundInitialCount = 0;
     private int placementTries = 0;
     private bool initialized = false;
 
@@ -49,6 +50,8 @@ public class MineFieldScript : MonoBehaviour {
         if (OutsideGrid(EndPos))
             Debug.LogWarning("End Position is outside the grid");
         initialized = false;
+        if (MineSoundArea != null)
+            AmbientSoundInitialCount = MineSoundArea.ambientSources.Count;
 	}
 
     private void Init()
@@ -65,7 +68,13 @@ public class MineFieldScript : MonoBehaviour {
     {
         if (!initialized)
         {
-            Init();
+            try
+            {
+                Init();
+            } catch
+            {
+                mines.ForEach(m => RemoveMine(m));
+            }
             initialized = true;
         }
 
@@ -153,8 +162,17 @@ public class MineFieldScript : MonoBehaviour {
     private void AddMines()
     {
         // Clear the old mines
+        foreach (var mineProximitySensor in mineProximitySensors.Values)
+            GameObject.Destroy(mineProximitySensor);
+        foreach (var minePlayer in minePlayers.Values)
+            minePlayer.MarkRemovable();
+        foreach (var mineAmbientPlayer in mineAmbientPlayers.Values)
+            MineSoundArea.ambientSources.Remove(mineAmbientPlayer);
         foreach (var mine in mines)
             GameObject.Destroy(mine);
+        mineProximitySensors.Clear();
+        minePlayers.Clear();
+        mineAmbientPlayers.Clear();
         mines.Clear();
 
         // Add the current mines
@@ -176,8 +194,11 @@ public class MineFieldScript : MonoBehaviour {
         var delay = Randomg.Range(0f, MineSound.length);
         if (UseAmbient)
         {
-            int selectedMineSound = Random.Range(0, MineSoundArea.ambientSources.Count);
-            
+            var selectedAmbientMineSound = MineSoundArea.ambientSources[Random.Range(0, AmbientSoundInitialCount)];
+            var copy = (AmbientArea.AmbientSource)selectedAmbientMineSound.Clone();
+            copy.locations[0] = mine;
+            MineSoundArea.ambientSources.Add(copy);
+            mineAmbientPlayers.Add(mine, copy);
         }
         else
         {
@@ -253,32 +274,34 @@ public class MineFieldScript : MonoBehaviour {
     public void TriggerProximitySensor(GameObject mine, bool trigger)
     {
         Debug.Log("Setting Proximity sensor to " + trigger);
-        if (!minePlayers.ContainsKey(mine))
+        if (minePlayers.ContainsKey(mine))
         {
-            Debug.LogError("Mine not found!");
-            return;
+            if (OnlyProximity)
+                minePlayers[mine].SetVolume(trigger ? 1 : 0);
+            minePlayers[mine].SetPitch(trigger ? 2 : 1);
+        } else if (mineAmbientPlayers.ContainsKey(mine))
+        {
+            mineAmbientPlayers[mine].minPitch = trigger ? 1.3f : 0.9f;
+            mineAmbientPlayers[mine].maxPitch = trigger ? 1.5f : 1.1f;
         }
-        if (OnlyProximity)
-            minePlayers[mine].SetVolume(trigger ? 1 : 0);
-        minePlayers[mine].SetPitch(trigger ? 2 : 1);
+
     }
     #endregion
 
     public void RemoveMine(GameObject mineToRemove)
     {
+        if (!mines.Contains(mineToRemove))
+            return;
         Debug.Log("Removing mine " + mineToRemove.name, mineToRemove);
-        foreach (var mine in mines)
-        {
-            if (mine == mineToRemove)
-            {
-                if (mineProximitySensors.ContainsKey(mineToRemove))
-                    mineProximitySensors[mineToRemove].SetActive(false);
-                minePlayers[mine].MarkRemovable();
-                mine.SetActive(false);
-                var minePosition = minePositions[mine];
-                grid[minePosition.x, minePosition.y] = false;
-            }
-        }
+        if (mineProximitySensors.ContainsKey(mineToRemove))
+            mineProximitySensors[mineToRemove].SetActive(false);
+        if (mineAmbientPlayers.ContainsKey(mineToRemove))
+            MineSoundArea.ambientSources.Remove(mineAmbientPlayers[mineToRemove]);
+        if (minePlayers.ContainsKey(mineToRemove))
+            minePlayers[mineToRemove].MarkRemovable();
+        mineToRemove.SetActive(false);
+        var minePosition = minePositions[mineToRemove];
+        grid[minePosition.x, minePosition.y] = false;
     }
 
     void OnDrawGizmos()

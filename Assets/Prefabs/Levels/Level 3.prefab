@@ -4977,7 +4977,8 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
-  SoundMaxDistance: 20
+  MineSoundArea: {fileID: 0}
+  SoundMinDistance: .200000003
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -5009,7 +5010,8 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
-  SoundMaxDistance: 20
+  MineSoundArea: {fileID: 0}
+  SoundMinDistance: .200000003
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -5091,7 +5093,8 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
-  SoundMaxDistance: 20
+  MineSoundArea: {fileID: 0}
+  SoundMinDistance: .200000003
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -5313,7 +5316,8 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
-  SoundMaxDistance: 20
+  MineSoundArea: {fileID: 0}
+  SoundMinDistance: .200000003
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -5367,7 +5371,8 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
-  SoundMaxDistance: 20
+  MineSoundArea: {fileID: 0}
+  SoundMinDistance: .200000003
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -5413,7 +5418,8 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
-  SoundMaxDistance: 20
+  MineSoundArea: {fileID: 0}
+  SoundMinDistance: .200000003
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -5635,7 +5641,8 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
-  SoundMaxDistance: 20
+  MineSoundArea: {fileID: 0}
+  SoundMinDistance: .200000003
   OnlyProximity: 0
   CheckPath: 1
   MarkAll: 0
@@ -5731,7 +5738,8 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
-  SoundMaxDistance: 20
+  MineSoundArea: {fileID: 0}
+  SoundMinDistance: .200000003
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -5833,7 +5841,8 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
-  SoundMaxDistance: 20
+  MineSoundArea: {fileID: 0}
+  SoundMinDistance: .200000003
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -5893,7 +5902,8 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
-  SoundMaxDistance: 20
+  MineSoundArea: {fileID: 0}
+  SoundMinDistance: .200000003
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -6131,7 +6141,8 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
-  SoundMaxDistance: 20
+  MineSoundArea: {fileID: 0}
+  SoundMinDistance: .200000003
   OnlyProximity: 0
   CheckPath: 1
   MarkAll: 0
@@ -6163,7 +6174,8 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
-  SoundMaxDistance: 20
+  MineSoundArea: {fileID: 0}
+  SoundMinDistance: .200000003
   OnlyProximity: 1
   CheckPath: 0
   MarkAll: 1
@@ -6195,7 +6207,8 @@ MonoBehaviour:
   Mine: {fileID: 136722, guid: c9844dfd143f84c468606a9fcfeda8f2, type: 2}
   MineProximitySensor: {fileID: 171862, guid: 03f807d9b1a15d64a8fa58a7ac36a1e2, type: 2}
   MineSound: {fileID: 8300000, guid: 66cf3fae466cf6745b84569c10683bd7, type: 3}
-  SoundMaxDistance: 20
+  MineSoundArea: {fileID: 0}
+  SoundMinDistance: .200000003
   OnlyProximity: 0
   CheckPath: 1
   MarkAll: 0

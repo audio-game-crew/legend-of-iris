@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class AmbientArea : MonoBehaviour {
 
@@ -36,6 +37,27 @@ public class AmbientArea : MonoBehaviour {
         public List<AudioPlayer> players = new List<AudioPlayer>();
         [HideInInspector]
         public bool turnedOff = false;
+
+        public AmbientSource Clone()
+        {
+            return new AmbientSource
+            {
+                name = this.name,
+                initialized = this.initialized,
+                locations = this.locations.ToList(),
+                clips = this.clips.ToList(),
+                minAudioDistance = this.minAudioDistance,
+                maxAudioDistance = this.maxAudioDistance,
+                minPitch = this.minPitch,
+                maxPitch = this.maxPitch,
+                volumeModifier = this.volumeModifier,
+                constantLoop = this.constantLoop,
+                randomClipTime = this.randomClipTime,
+                spawnRandom = this.spawnRandom,
+                minInterval = this.minInterval,
+                maxInterval = this.maxInterval,
+            };
+        }
     }
 
     void OnDrawGizmos() // hacky way to initialize ambient sources properly
