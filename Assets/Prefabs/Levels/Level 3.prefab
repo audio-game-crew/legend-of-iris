@@ -28,7 +28,7 @@ GameObject:
   - 33: {fileID: 3342766}
   - 23: {fileID: 2342766}
   - 65: {fileID: 6542776}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - 33: {fileID: 3342768}
   - 23: {fileID: 2342768}
   - 65: {fileID: 6542778}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - 33: {fileID: 3342774}
   - 23: {fileID: 2342774}
   - 65: {fileID: 6542780}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - 33: {fileID: 3342776}
   - 23: {fileID: 2342776}
   - 65: {fileID: 6542782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   - 33: {fileID: 3342782}
   - 23: {fileID: 2342782}
   - 65: {fileID: 6542784}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   - 33: {fileID: 3342784}
   - 23: {fileID: 2342784}
   - 65: {fileID: 6542786}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
