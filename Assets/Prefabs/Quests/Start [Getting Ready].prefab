@@ -65,11 +65,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 104714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7abd64aeefd48d14e8ee2cd2bce5ad06, type: 3}
+  m_Script: {fileID: 11500000, guid: d94283a1070b9ae438c79f4bf367d7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  repeatDelay: 10
+  repeatDelay: 0
   conversationId: T0.1
+  KeyOrder: 00000000
+  StartConversationImmediately: 1
 --- !u!114 &11404716
 MonoBehaviour:
   m_ObjectHideFlags: 1

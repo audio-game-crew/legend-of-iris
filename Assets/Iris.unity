@@ -12303,7 +12303,7 @@ BoxCollider:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 104716, guid: 29df6c252c9df5442b537d13d0e60066, type: 2}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 1541592189}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 579122306}
@@ -12319,7 +12319,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 404716, guid: 29df6c252c9df5442b537d13d0e60066, type: 2}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 1541592189}
   m_GameObject: {fileID: 579122305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.4767046, y: -.677689075, z: -.766357899}
@@ -12333,7 +12333,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11404716, guid: 29df6c252c9df5442b537d13d0e60066,
     type: 2}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 1541592189}
   m_GameObject: {fileID: 579122305}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -28017,7 +28017,7 @@ BoxCollider:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 104714, guid: 29df6c252c9df5442b537d13d0e60066, type: 2}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 1541592189}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1327881221}
@@ -28033,7 +28033,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 404714, guid: 29df6c252c9df5442b537d13d0e60066, type: 2}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 1541592189}
   m_GameObject: {fileID: 1327881220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -28046,14 +28046,14 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11404714, guid: 29df6c252c9df5442b537d13d0e60066,
     type: 2}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 1541592189}
   m_GameObject: {fileID: 1327881220}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d94283a1070b9ae438c79f4bf367d7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  repeatDelay: 10
+  repeatDelay: 0
   conversationId: T0.1
   KeyOrder: 00000000
   StartConversationImmediately: 1
@@ -32718,6 +32718,50 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1539557566}
+--- !u!1001 &1541592189
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 159651634}
+    m_Modifications:
+    - target: {fileID: 404716, guid: 29df6c252c9df5442b537d13d0e60066, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -9.4767046
+      objectReference: {fileID: 0}
+    - target: {fileID: 404716, guid: 29df6c252c9df5442b537d13d0e60066, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -.677689075
+      objectReference: {fileID: 0}
+    - target: {fileID: 404716, guid: 29df6c252c9df5442b537d13d0e60066, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -.766357899
+      objectReference: {fileID: 0}
+    - target: {fileID: 404716, guid: 29df6c252c9df5442b537d13d0e60066, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 404716, guid: 29df6c252c9df5442b537d13d0e60066, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 404716, guid: 29df6c252c9df5442b537d13d0e60066, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 404716, guid: 29df6c252c9df5442b537d13d0e60066, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 404716, guid: 29df6c252c9df5442b537d13d0e60066, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 29df6c252c9df5442b537d13d0e60066, type: 2}
+  m_RootGameObject: {fileID: 579122305}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1542339779
 GameObject:
   m_ObjectHideFlags: 0
@@ -35366,7 +35410,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1645063887}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: -.699999988, y: 30, z: .300000012}
+  m_LocalPosition: {x: -.699999988, y: 5.69999981, z: 31.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -41966,7 +42010,7 @@ MonoBehaviour:
       subtitle: "MUHH HAWHAW\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -1.20000005
+        timeOffset: -1.5
         volume: .800000012
         pitch: 1
     - name: "Lucy: Beorn!! Don't bite our king you idiot!\r\n"
@@ -41998,7 +42042,7 @@ MonoBehaviour:
         see if you got lucky!!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: 0
         volume: 1
         pitch: 1
     - name: "Boris: *flapping wings of boris flying to some random location*\r\n"
@@ -42435,7 +42479,7 @@ MonoBehaviour:
       subtitle: "huehuehue\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -1.89999998
         volume: .800000012
         pitch: 1
     - name: "Lucy: hihihi\r\n"
@@ -42445,7 +42489,7 @@ MonoBehaviour:
       subtitle: "hihihi\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -1.5
         volume: 1
         pitch: 1
   - name: T6.8
@@ -42470,7 +42514,7 @@ MonoBehaviour:
       subtitle: "huehuehue\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -1.89999998
         volume: .800000012
         pitch: 1
     - name: "Lucy: hihihi\r\n"
@@ -42480,7 +42524,7 @@ MonoBehaviour:
       subtitle: "hihihi\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -1.5
         volume: 1
         pitch: 1
   - name: T6.9
@@ -42730,8 +42774,8 @@ MonoBehaviour:
         timeOffset: -.200000003
         volume: 1
         pitch: 1
-    - name: "Bird: *from a distance* Because if the flew over the bay\r\n"
-      source: {fileID: 987026982}
+    - name: "Distant 2: *from a distance* Because if the flew over the bay\r\n"
+      source: {fileID: 1366062918}
       sourceName: 'Bird #2'
       audioClip: {fileID: 8300000, guid: a318e9ffb5350b74b8fcf9fb3031fe20, type: 3}
       subtitle: "*from a distance* Because if the flew over the bay\r\n"
@@ -42740,8 +42784,8 @@ MonoBehaviour:
         timeOffset: -.200000003
         volume: 1
         pitch: 1
-    - name: "Bird: *from another distance* they would be called\r\n"
-      source: {fileID: 987026982}
+    - name: "Distant 3: *from another distance* they would be called\r\n"
+      source: {fileID: 1212080076}
       sourceName: 'Bird #3'
       audioClip: {fileID: 8300000, guid: 34c8992f0b9bb154096fa0b518ff7a0c, type: 3}
       subtitle: "*from another distance* they would be called\r\n"
@@ -42750,8 +42794,8 @@ MonoBehaviour:
         timeOffset: -.200000003
         volume: 1
         pitch: 1
-    - name: "Bird: *from another distance* baygulls! \r\n"
-      source: {fileID: 987026982}
+    - name: "Distant 4: *from another distance* baygulls! \r\n"
+      source: {fileID: 17407343}
       sourceName: 'Bird #4'
       audioClip: {fileID: 8300000, guid: 049ec174ae4bcdd47b9f8403a78b807a, type: 3}
       subtitle: "*from another distance* baygulls! \r\n"
@@ -42948,7 +42992,7 @@ MonoBehaviour:
         timeOffset: -.200000003
         volume: 1
         pitch: 1
-  - name: '!Err! T8.4'
+  - name: T8.4
     nameID: T8.4
     hint: 
     messageSequence:
@@ -42999,9 +43043,9 @@ MonoBehaviour:
         timeOffset: -.200000003
         volume: 1
         pitch: 1
-    - name: "!Err! : *distant fart sound*\r\n"
-      source: {fileID: 0}
-      sourceName: Other
+    - name: "Distant 1: *distant fart sound*\r\n"
+      source: {fileID: 1905723435}
+      sourceName: Someone
       audioClip: {fileID: 8300000, guid: 1b32f45e1e520ba4c903d50b0fbd776b, type: 3}
       subtitle: "*distant fart sound*\r\n"
       settings:
@@ -43507,14 +43551,14 @@ MonoBehaviour:
         timeOffset: -.200000003
         volume: 1
         pitch: 1
-  - name: '!Err! T10.1'
+  - name: T10.1
     nameID: T10.1
     hint: 
     messageSequence:
-    - name: "!Err! Screen Audio: Credits:\r\nNames & roles\r\nThanks\r\nSources\r\nAstoundSound\r\nThan..."
+    - name: "Screen Audio: Credits:\r\nNames & roles\r\nThanks\r\nSources\r\nAstoundSound\r\nThan..."
       source: {fileID: 466639462}
       sourceName: Iris
-      audioClip: {fileID: 0}
+      audioClip: {fileID: 8300000, guid: a3eb8cf7ae4e37f4395b5871236d63a9, type: 3}
       subtitle: "Credits:\r\nNames & roles\r\nThanks\r\nSources\r\nAstoundSound\r\nThanks
         for playing\r\n\r\nIris shutting down. Goodbye! \r\n"
       settings:
@@ -47323,7 +47367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2093325994
 RectTransform:
   m_ObjectHideFlags: 0
