@@ -204,11 +204,11 @@ T6.6;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*silly* muu
 T6.7;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*playing with flies* muhhh muhuheuhe muhe HUH huheu
 ;Lucy;Lucy;Lucy;-0,2;0;1;;Beorn! Leave those poor flies alone!
 ;Boris;Boris;Boris;-0,2;0;1;;Human, what is the difference between a fly and a bird? A bird can fly but a fly can't bird! *hoot* HUAHUAHUAH
-;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;huehuehue
-;Lucy;Lucy;Lucy;-0,2;0;1;;hihihi
+;Screen Audio;Beorn;Beorn;-1,9;0;0,8;;huehuehue
+;Lucy;Lucy;Lucy;-1,5;0;1;;hihihi
 T6.8;Boris;Boris;Boris;-0,2;0;1;;Oh oh oh! Another one! *hooot!* What do you call a fly without wings? A walk. HUAHUAHUAH
-;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;huehuehue
-;Lucy;Lucy;Lucy;-0,2;0;1;;hihihi
+;Screen Audio;Beorn;Beorn;-1,9;0;0,8;;huehuehue
+;Lucy;Lucy;Lucy;-1,5;0;1;;hihihi
 T6.9;Boris;Boris;Boris;-0,2;0;1;;Lucy *hoot* someone said you sound like an owl.
 ;Lucy;Lucy;Lucy;-0,2;0;1;;Who??
 ;Boris;Boris;Boris;-0,2;0;1;;haha! *hoot* 
@@ -271,7 +271,7 @@ T8.6;Boris;Boris;Boris;-0,2;0;1;;Aha! *hoothoot* The final one. Let's test it to
 ;Boris;Boris;Boris;-0,2;0;1;;Lucy! *hoot* Teleport us into a big empty hall!!
 ;Lucy;Lucy;Lucy;-0,2;0;1;;Okidoki!! Here we go *teleport sounds*
 ;Boris;Boris;Boris;-0,2;0;1;;Awesome!! Ok, *grumbles of stomach* here goes nothing....  *difficult hoot*
-T8.7;Fart 2;Other;Boris;0;0;1;Fart2;*fart*
+T8.7;Fart;Other;Boris;0;0;1;Fart2;*fart*
 ;Distant 1;Other;Boris;0,05;0;0,6;Fart2;*echoing fart*
 ;Distant 2;Other;Boris;0,05;0;0,3;Fart2;*echoing fart*
 ;Distant 3;Other;Boris;0,05;0;0,15;Fart2;*echoing fart*
