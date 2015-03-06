@@ -44871,7 +44871,7 @@ MonoBehaviour:
       subtitle: "Turn off your computer to confirm\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: -.200000003
+        timeOffset: 0
         volume: 1
         pitch: 1
     - name: "Screen Audio: No, human, dont! Iris is kidding... again. \r\n"
@@ -45288,7 +45288,7 @@ MonoBehaviour:
       subtitle: "*my belly?* muumuu?\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: 0
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Okay, human. Lets now head towards his belly rubbing machine...'
@@ -45576,7 +45576,7 @@ MonoBehaviour:
         magnificent body! The spirit world then opens up spirit locations with highly
         concentrated Wibbly Wobbly Timey Wimey spirit magic stuff where I can  teleport
         Beorn to. Whenever he falls off, I will teleport him back to the beginning
-        of the bridge section he fell off from. \r\n\r\nQuickly, follow me!\n"
+        of the bridge section he fell off from. \r\n\r\nQuickly, follow me!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: -.200000003
@@ -45603,7 +45603,7 @@ MonoBehaviour:
       subtitle: "Uh oh!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -1.39999998
         volume: 1
         pitch: 1
     - name: "Other: *teleportation sounds*\r\n"
@@ -45613,7 +45613,7 @@ MonoBehaviour:
       subtitle: "*teleportation sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -1.5
+        timeOffset: -.5
         volume: 1
         pitch: 1
     - name: "Lucy: Good! You are safe now. Lets try again. Follow me!\r\n"
@@ -45623,7 +45623,7 @@ MonoBehaviour:
       subtitle: "Good! You are safe now. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -2.20000005
         volume: 1
         pitch: 1
   - name: T4.2~2
@@ -45647,7 +45647,7 @@ MonoBehaviour:
       subtitle: "Woops! \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -1.39999998
         volume: 1
         pitch: 1
     - name: "Other: *teleportation sounds*\r\n"
@@ -45657,7 +45657,7 @@ MonoBehaviour:
       subtitle: "*teleportation sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -1.5
+        timeOffset: -.5
         volume: 1
         pitch: 1
     - name: "Lucy: Okay! You are safe. Lets try again. Follow me!\r\n"
@@ -45667,7 +45667,7 @@ MonoBehaviour:
       subtitle: "Okay! You are safe. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -2.20000005
         volume: 1
         pitch: 1
   - name: T4.2~3
@@ -45691,7 +45691,7 @@ MonoBehaviour:
       subtitle: "Oh nooo!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -1.39999998
         volume: 1
         pitch: 1
     - name: "Other: *teleportation sounds*\r\n"
@@ -45701,7 +45701,7 @@ MonoBehaviour:
       subtitle: "*teleportation sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -1.5
+        timeOffset: -.5
         volume: 1
         pitch: 1
     - name: "Lucy: Phew!! That was close. Lets try again. Follow me!\r\n"
@@ -45711,7 +45711,7 @@ MonoBehaviour:
       subtitle: "Phew!! That was close. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -2.20000005
         volume: 1
         pitch: 1
   - name: T4.3
