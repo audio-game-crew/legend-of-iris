@@ -24,7 +24,7 @@ public class VisualAidsCamera : MonoBehaviour {
     void FixedUpdate()
     {
         Transform followee = followeeOR.gameObject.activeInHierarchy ? followeeOR : followeeNormal;
-        zoom -= scrollSpeed * Input.GetAxis("Mouse ScrollWheel") / 20f;
+        zoom -= scrollSpeed * Input.GetAxis("ZOOM") / 20f;
         zoom = Mathf.Clamp01(zoom);
 
         float y = maxZoom * zoom + minZoom;
