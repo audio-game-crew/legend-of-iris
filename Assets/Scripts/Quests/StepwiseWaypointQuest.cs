@@ -68,7 +68,7 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
                 var percentageDone = stepSize * (float)i;
                 var newWaypointGO = (GameObject)GameObject.Instantiate(definition.WaypointPrefab,
                     lastPosition + percentageDone * targetVec,
-                    Quaternion.RotateTowards(lastRotation, waypoint.transform.rotation, percentageDone));
+                    Quaternion.LookRotation(targetVec.normalized));
                 var newWaypoint = newWaypointGO.GetComponent<Waypoint>();
                 if (newWaypoint == null)
                     Debug.LogError("The waypoint prefab doesn't contain a Waypoint component", newWaypointGO);
@@ -100,6 +100,14 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         current.onPlayerEnter += OnPlayerEnter;
         var lucy = Characters.instance.Lucy.GetComponent<LucyController>();
         lucy.GotoLocation(new PositionRotation(current.transform.position, current.transform.rotation));
+
+        // Make sure the last reached checkpoint rotates the player towards the current goal.
+        if (CheckpointManager.instance != null)
+        {
+            var lastCheckpoint = CheckpointManager.instance.GetLastCheckpoint();
+            lastCheckpoint.transform.rotation = Quaternion.LookRotation(lastCheckpoint.transform.position - current.transform.position) *
+                Quaternion.Euler(new Vector3(0, Randomg.Range(-45, 45), 0));
+        }
 
         ResetTimers();
 	}

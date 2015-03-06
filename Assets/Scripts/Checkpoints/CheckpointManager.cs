@@ -46,8 +46,8 @@ public class CheckpointManager : MonoBehaviour {
             var progress = time / TeleportTime;
             if (progress > 1)
             { // Stop the teleportation
-                player.transform.position = target.Position;
-                player.transform.rotation = target.Rotation;
+                player.rigidbody.MovePosition(target.Position);
+                player.GetComponent<PlayerController>().camerasContainer.localRotation = target.Rotation;
                 teleporting = false;
                 if (conversationPlayer == null || conversationPlayer.IsFinished())
                     OnEndLastCheckpointTeleport();
@@ -55,10 +55,11 @@ public class CheckpointManager : MonoBehaviour {
             else
             {
                 var newPosRot = PositionRotation.Interpolate(start, target, progress, TeleportAnimationHorizontalDisplacementEasing);
-                player.transform.position = newPosRot.Position
+                player.rigidbody.MovePosition(newPosRot.Position
                     // Add the vertical movement to lift up the player a bit while teleporting
-                    .addy(TeleportAnimationVerticalDisplacementValue.Evaluate(progress) * JumpHeight);
-                player.transform.rotation = newPosRot.Rotation;
+                    .addy(TeleportAnimationVerticalDisplacementValue.Evaluate(progress) * JumpHeight));
+                player.GetComponent<PlayerController>().camerasContainer.localRotation = newPosRot.Rotation;
+                //player.transform.rotation = newPosRot.Rotation;
             }
         }
 	}
@@ -90,7 +91,7 @@ public class CheckpointManager : MonoBehaviour {
     {
 
         TimerManager.RegisterEvent("Dieded");
-        start = new PositionRotation(Characters.instance.Beorn);
+        start = new PositionRotation(Characters.instance.Beorn.transform.position, Characters.GetPlayerController().camerasContainer.localRotation);
         target = new PositionRotation(lastCheckpoint.gameObject);
         teleporting = true;
         SetMovementRelatedComponentsEnabled(false);
