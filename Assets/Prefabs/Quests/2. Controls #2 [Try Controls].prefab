@@ -328,8 +328,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T2.3
   LockPlayerMovement: 1
-  completeAtMessage: 0
-  completeAtMessageIndex: 0
+  LockPlayerRotation: 1
+  completeAtMessage: 1
+  completeAtMessageIndex: 1
   messageEvents: []
 --- !u!114 &11483748
 MonoBehaviour:
@@ -344,7 +345,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T2.6
   LockPlayerMovement: 1
-  completeAtMessage: 0
+  LockPlayerRotation: 1
+  completeAtMessage: 1
   completeAtMessageIndex: 0
   messageEvents: []
 --- !u!114 &11483750
@@ -378,6 +380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T2.1
   LockPlayerMovement: 1
+  LockPlayerRotation: 1
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -448,6 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T2.7
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
