@@ -59,7 +59,7 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         var targetVec = waypoint.transform.position - lastPosition;
 
         var distance = targetVec.magnitude;
-        if (distance > definition.maxStepDistance)
+        if (distance >= definition.maxStepDistance)
         {
             var stepCount = Mathf.Ceil(distance / definition.maxStepDistance);
             var stepSize = 1 / stepCount;
@@ -80,7 +80,17 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         return steps;
     }
 
+    //private void ClearAddedWaypoints()
+    //{
+    //    foreach(var waypoint in addedWaypoints)
+    //    {
+    //        GameObject.Destroy(waypoint.gameObject);
+    //    }
+    //    addedWaypoints.Clear();
+    //}
+
 	private void Next() {
+        //Debug.Log("steps: " + string.Join(", ", steps.Select(s => s.transform.position.ToString()).ToArray()));
 		if (steps.Count == 0) {
 			Complete();
 			return;
@@ -104,6 +114,8 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
     }
 
 	private void OnPlayerEnter(Waypoint waypoint, GameObject player) {
+        if (waypoint != current)
+            return;
 		waypoint.onPlayerEnter -= OnPlayerEnter;
         if (definition.SuccesSound != null)
         {
@@ -190,10 +202,9 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         var player = Characters.instance.Beorn;
         if (player == null)
             return;
-        var newSteps = GetStepsBetween(player.transform.position, player.transform.rotation, current);
-        //Debug.Log("newSteps: " + string.Join(", ", newSteps.Select(s => s.transform.position.ToString()).ToArray()));
-        steps.AddFirst(current);
-        foreach (var step in newSteps.Reverse())
+        var newSteps = GetStepsBetween(player.transform.position, player.transform.rotation, current).ToList();
+        newSteps.Reverse();
+        foreach(var step in newSteps)
             steps.AddFirst(step);
         Next();
     }
