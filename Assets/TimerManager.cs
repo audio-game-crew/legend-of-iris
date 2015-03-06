@@ -64,11 +64,9 @@ public class TimerManager : MonoBehaviour {
     string GetTimerString() {
         TimeSpan t = TimeSpan.FromSeconds(Time.time - startTime);
 
-        return string.Format("{0:D2}h:{1:D2}m:{2:D2}s:{3:D3}ms",
-                        t.Hours,
-                        t.Minutes,
-                        t.Seconds,
-                        t.Milliseconds);
+        return string.Format("{0:D1}m {1:D2}s",
+                        (int)t.TotalMinutes,
+                        t.Seconds);
     }
 	
 	// Update is called once per frame

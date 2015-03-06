@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour {
 
 	private bool onFire = false;
     private ConversationPlayer edgeConversationPlayer;
-    public bool InEdge = false;
+    public int InEdge = 0;
 
     public event EventHandler<TriggerEventArgs> TriggerEntered;
     public event EventHandler<TriggerEventArgs> TriggerExit;
@@ -51,30 +51,34 @@ public class PlayerController : MonoBehaviour {
 
     void instance_PlayerExitEdge(object sender, TriggerEventArgs e)
     {
-        InEdge = false;
-        if (edgeConversationPlayer != null)
+        InEdge--;
+        if (InEdge <= 0 && edgeConversationPlayer != null)
             edgeConversationPlayer.Skip();
     }
 
     void instance_PlayerEnterEdge(object sender, TriggerEventArgs e)
     {
-        InEdge = true;
-        StartEdgeConversation();
+        InEdge++;
+        if (!CheckpointManager.instance.IsTeleporting())
+        {
+            StartEdgeConversation();
+        }
     }
 
     private void StartEdgeConversation()
     {
         if (!string.IsNullOrEmpty(EdgeConversation) && (edgeConversationPlayer == null || edgeConversationPlayer.IsFinished()))
         {
-            edgeConversationPlayer = ConversationManager.GetConversationPlayer(EdgeConversation);
+            edgeConversationPlayer = ConversationManager.GetConversationPlayer(EdgeConversation, 1);
             edgeConversationPlayer.Start();
         }
     }
 
     void Update()
     {
-        if (InEdge && edgeConversationPlayer != null && edgeConversationPlayer.IsFinished())
-            StartEdgeConversation();
+        if (!CheckpointManager.instance.IsTeleporting())
+            if (InEdge > 0 && edgeConversationPlayer != null && edgeConversationPlayer.IsFinished())
+                StartEdgeConversation();
     }
 
 	// Update is called once per frame

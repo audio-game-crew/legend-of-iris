@@ -18,6 +18,7 @@ public class ConversationPlayer
     public event OnMessageStart onMessageStart;
     public event OnMessageEnd onMessageEnd;
     public event OnConversationEnd onConversationEnd;
+    public int layer;
     private Conversation conversation;
     private List<MessageQueueItem> conversationQueue = new List<MessageQueueItem>();
     private List<AudioPlayer> activePlayers = new List<AudioPlayer>();

@@ -13,7 +13,7 @@ T1.3;Screen Audio;Iris;Iris;-0,2;1;1;;Checking response from spirit world... Con
 ;Screen Audio;Lucy;*Lucy*;-0,2;1;1;;What?! NO stop!
 ;Screen Audio;Iris;Iris;-0,2;1;1;;*monotone* Ha. ha. ha. just kidding.
 ;Screen Audio;Lucy;*Lucy*;-0,2;1;1;;Ah phew! haha! Iris is a bit silly sometimes. Anyway, we will start the connection in a moment. But first, let me explain what is going on. I am Lucy, a fairy from the spirit world. We have a huge giant roaming the streets of my spirit village. We have no idea how he got there, and why, but all the spirits of the village are scared and have been hiding in their little houses. No one dares to talk to the giant because we are all so scared! We need an intelligent human who is a good listener. We will connect you with a fluffy spirit bear. You will be able to control his movements, and you will hear everything that he hears. It is quite the experience, really! So, will you help us, human?
-;Screen Audio;Iris;Iris;-0,2;1;1;;Turn off your computer to confirm
+;Screen Audio;Iris;Iris;0;1;1;;Turn off your computer to confirm
 ;Screen Audio;Lucy;*Lucy*;-0,2;1;1;;No, human, don’t! Iris is kidding... again. 
 ;Screen Audio;Iris;Iris;-0,2;1;1;;Ha.ha.ha.
 ;Screen Audio;Lucy;*Lucy*;-0,2;1;1;;Don’t listen to iris! Just press forward to confirm. Will you help us, human?
