@@ -9511,7 +9511,7 @@ Transform:
   - {fileID: 570067664}
   - {fileID: 866997604}
   m_Father: {fileID: 205224287}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &431769421
 GameObject:
   m_ObjectHideFlags: 0
@@ -24176,7 +24176,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 983697078}
   m_LocalRotation: {x: -.469479293, y: .517488122, z: .419825405, w: .579259753}
-  m_LocalPosition: {x: 28.8792496, y: -130.419281, z: -129.403336}
+  m_LocalPosition: {x: -51.6929741, y: -203.793198, z: -137.591232}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -35577,7 +35577,7 @@ Transform:
   m_LocalScale: {x: 60, y: 15, z: 12}
   m_Children: []
   m_Father: {fileID: 1858286747}
-  m_RootOrder: 7
+  m_RootOrder: 10
 --- !u!114 &1512055295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44775,7 +44775,7 @@ MonoBehaviour:
       subtitle: "Turn off your computer to confirm\r\n"
       settings:
         screenAsSource: 1
-        timeOffset: -.200000003
+        timeOffset: 0
         volume: 1
         pitch: 1
     - name: "Screen Audio: No, human, dont! Iris is kidding... again. \r\n"
@@ -45192,7 +45192,7 @@ MonoBehaviour:
       subtitle: "*my belly?* muumuu?\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: 0
         volume: .800000012
         pitch: 1
     - name: 'Lucy: Okay, human. Lets now head towards his belly rubbing machine...'
@@ -45480,7 +45480,7 @@ MonoBehaviour:
         magnificent body! The spirit world then opens up spirit locations with highly
         concentrated Wibbly Wobbly Timey Wimey spirit magic stuff where I can  teleport
         Beorn to. Whenever he falls off, I will teleport him back to the beginning
-        of the bridge section he fell off from. \r\n\r\nQuickly, follow me!\n"
+        of the bridge section he fell off from. \r\n\r\nQuickly, follow me!\r\n"
       settings:
         screenAsSource: 0
         timeOffset: -.200000003
@@ -45507,7 +45507,7 @@ MonoBehaviour:
       subtitle: "Uh oh!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -1.39999998
         volume: 1
         pitch: 1
     - name: "Other: *teleportation sounds*\r\n"
@@ -45517,7 +45517,7 @@ MonoBehaviour:
       subtitle: "*teleportation sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -1.5
+        timeOffset: -.5
         volume: 1
         pitch: 1
     - name: "Lucy: Good! You are safe now. Lets try again. Follow me!\r\n"
@@ -45527,7 +45527,7 @@ MonoBehaviour:
       subtitle: "Good! You are safe now. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -2.20000005
         volume: 1
         pitch: 1
   - name: T4.2~2
@@ -45551,7 +45551,7 @@ MonoBehaviour:
       subtitle: "Woops! \r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -1.39999998
         volume: 1
         pitch: 1
     - name: "Other: *teleportation sounds*\r\n"
@@ -45561,7 +45561,7 @@ MonoBehaviour:
       subtitle: "*teleportation sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -1.5
+        timeOffset: -.5
         volume: 1
         pitch: 1
     - name: "Lucy: Okay! You are safe. Lets try again. Follow me!\r\n"
@@ -45571,7 +45571,7 @@ MonoBehaviour:
       subtitle: "Okay! You are safe. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -2.20000005
         volume: 1
         pitch: 1
   - name: T4.2~3
@@ -45595,7 +45595,7 @@ MonoBehaviour:
       subtitle: "Oh nooo!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -1.39999998
         volume: 1
         pitch: 1
     - name: "Other: *teleportation sounds*\r\n"
@@ -45605,7 +45605,7 @@ MonoBehaviour:
       subtitle: "*teleportation sounds*\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -1.5
+        timeOffset: -.5
         volume: 1
         pitch: 1
     - name: "Lucy: Phew!! That was close. Lets try again. Follow me!\r\n"
@@ -45615,7 +45615,7 @@ MonoBehaviour:
       subtitle: "Phew!! That was close. Lets try again. Follow me!\r\n"
       settings:
         screenAsSource: 0
-        timeOffset: -.200000003
+        timeOffset: -2.20000005
         volume: 1
         pitch: 1
   - name: T4.3

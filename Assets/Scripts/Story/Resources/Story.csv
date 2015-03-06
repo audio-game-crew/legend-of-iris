@@ -47,7 +47,7 @@ T3.2;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*impatiently* muuuuuuu
 ;Lucy;Lucy;Lucy;-0,2;0;1;;Human! Try to focus on the sound of my wings and walk towards me! Listen carefully to where my sound comes from, turn towards it and walk into my direction. You can do it, I believe in you.
 T3.3;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*making effort, putting on shoes* muuuuuuumumuu
 ;Lucy;Lucy;Lucy;-2,2;0;1;;Good job, human!... haha, Beorn! Your shoes are even bigger than your belly is.
-;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*my belly?* muumuu?
+;Screen Audio;Beorn;Beorn;0;0;0,8;;*my belly?* muumuu?
 ;Lucy;Lucy;Lucy;-0,2;0;1;;Okay, human. Let’s now head towards his belly rubbing machine. Follow me!
 T3.4;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*impatiently* muuuuuuu
 ;Lucy;Lucy;Lucy;-0,2;0;1;;Human! Try to focus on the sound of my wings and walk towards me! Listen carefully to where my sound comes from, turn towards it and walk into my direction. You can do it, I believe in you.
@@ -82,17 +82,17 @@ T4.1;Lucy;Lucy;Lucy;-0,2;0;1;;Ahhhh fresh air
 ;;;;;;;;
 ;;;;;;;;Quickly, follow me!
 T4.2~1;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;huuuuuUUu *falls*
-;Lucy;Lucy;Lucy;-0,2;0;1;;Uh oh!
-;Other;Other;Other;-1,5;0;1;Teleportation;*teleportation sounds*
-;Lucy;Lucy;Lucy;-0,2;0;1;;Good! You are safe now. Let’s try again. Follow me!
+;Lucy;Lucy;Lucy;-1,4;0;1;;Uh oh!
+;Other;Other;Other;-0,5;0;1;Teleportation;*teleportation sounds*
+;Lucy;Lucy;Lucy;-2,2;0;1;;Good! You are safe now. Let’s try again. Follow me!
 T4.2~2;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;huuuuUU *falls*
-;Lucy;Lucy;Lucy;-0,2;0;1;;Woops! 
-;Other;Other;Other;-1,5;0;1;Teleportation;*teleportation sounds*
-;Lucy;Lucy;Lucy;-0,2;0;1;;Okay! You are safe. Let’s try again. Follow me!
+;Lucy;Lucy;Lucy;-1,4;0;1;;Woops! 
+;Other;Other;Other;-0,5;0;1;Teleportation;*teleportation sounds*
+;Lucy;Lucy;Lucy;-2,2;0;1;;Okay! You are safe. Let’s try again. Follow me!
 T4.2~3;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;hu hu HUUUU *falls*
-;Lucy;Lucy;Lucy;-0,2;0;1;;Oh nooo!
-;Other;Other;Other;-1,5;0;1;Teleportation;*teleportation sounds*
-;Lucy;Lucy;Lucy;-0,2;0;1;;Phew!! That was close. Let’s try again. Follow me!
+;Lucy;Lucy;Lucy;-1,4;0;1;;Oh nooo!
+;Other;Other;Other;-0,5;0;1;Teleportation;*teleportation sounds*
+;Lucy;Lucy;Lucy;-2,2;0;1;;Phew!! That was close. Let’s try again. Follow me!
 T4.3;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*silly* muu
 ;Lucy;Lucy;Lucy;-0,2;0;1;;Hey come back! You are going the wrong direction!
 T4.4~1;Lucy;Lucy;Lucy;-0,2;0;1;;Watch out for the edge, human!
