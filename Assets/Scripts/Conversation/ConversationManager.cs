@@ -61,12 +61,12 @@ public class ConversationManager : MonoBehaviour {
         playingConversationsCount = playingConversations.Count;
     }
 
-    public static ConversationPlayer GetConversationPlayer(string conversationID)
+    public static ConversationPlayer GetConversationPlayer(string conversationID, int layer = 0)
     {
-        return instance.getConversationPlayer(conversationID);
+        return instance.getConversationPlayer(conversationID, layer);
     }
 
-    private ConversationPlayer getConversationPlayer(string conversationID)
+    private ConversationPlayer getConversationPlayer(string conversationID, int layer = 0)
     {
         Conversation toPlay = null;
         toPlay = conversations.FirstOrDefault(c => c.nameID.Equals(conversationID));
@@ -83,10 +83,12 @@ public class ConversationManager : MonoBehaviour {
             {
                 foreach (ConversationPlayer c in playingConversations.ToArray())
                 {
-                    c.Skip();
+                    if (c.layer == layer)
+                        c.Skip();
                 }
             }
             ConversationPlayer cp = new ConversationPlayer(toPlay);
+            cp.layer = layer;
             playingConversations.Add(cp);
             return cp;
         }

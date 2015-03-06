@@ -22,6 +22,11 @@ public class CheckpointManager : MonoBehaviour {
     private float time = 0;
     private ConversationPlayer conversationPlayer;
 
+    public bool IsTeleporting()
+    {
+        return teleporting;
+    }
+
     public void Start()
     {
         SetLastCheckpoint(InitialCheckpoint);
