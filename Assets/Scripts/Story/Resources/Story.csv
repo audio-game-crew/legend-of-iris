@@ -19,7 +19,7 @@ T1.3;Screen Audio;Iris;Iris;-0,2;1;1;;Checking response from spirit world... Con
 ;Screen Audio;Lucy;*Lucy*;-0,2;1;1;;Don’t listen to iris! Just press forward to confirm. Will you help us, human?
 T1.4;Screen Audio;Lucy;*Lucy*;-0,2;1;1;;Oh... you don't.. want to help us? If you make up your mind, please press forward to confirm that you want to help us. We can really use the help of a talented human like you! Press forward to confirm!
 T1.5;Screen Audio;Lucy;*Lucy*;-0,2;1;1;;Human, would you like to help us? We can really use the help of a talented human like you! Press forward to confirm!
-T1.6;Screen Audio;Iris;Iris;-0,2;0;1;;Question confirmed.
+T1.6;Screen Audio;Iris;Iris;-0,2;1;1;;Question confirmed.
 ;Screen Audio;Lucy;*Lucy*;-0,2;1;1;;Yaaay! That is so great to hear. We are going on an adventure together. It is going to be awesome! Let’s start connecting you to a spirit bear now. Amazing what technology can do nowadays.
 ;Screen Audio;Iris;Iris;-0,2;1;1;;Whoever said technology would replace all paper obviously hasn't tried wiping their butt with an IPad...ha. ha. ha.... Starting connection in 3... 2... 1...
 ;Screen Audio;Iris;Iris;-0,2;1;1;Connect;*connection sounds*
@@ -64,7 +64,7 @@ T3.6;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*impatiently* muuuuuuu
 ;Lucy;Lucy;Lucy;-0,2;0;1;;Human! Try to focus on the sound of my wings and walk towards me! Listen carefully to where my sound comes from, turn towards it and walk into my direction. You can do it, I believe in you.
 T3.7;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*happy* muuuuu!
 ;Lucy;Lucy;Lucy;-0,2;0;1;;Yes!! You made it! You know how to control Beorn and how to follow the sound of my wings. This will come in handy!
-;Other;Other;Other;-0,2;0;1;DoorOpens;*door opens*
+;DoorSoundLocation;Other;Other;-0,2;0;1;DoorOpens;*door opens*
 T4.1;Lucy;Lucy;Lucy;-0,2;0;1;;Ahhhh fresh air
 ;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;*very much liking the air too* muuuuuuu
 ;Lucy;Lucy;Lucy;-0,2;0;1;;We are now on a very lengthy bridge that goes to my village. The bridge is a bit narrow, and has a lot of turns. That’s because the bridge is built over a river that runs through a few high mountains. However, I...
@@ -80,7 +80,7 @@ T4.1;Lucy;Lucy;Lucy;-0,2;0;1;;Ahhhh fresh air
 ;;;;;;;;
 ;;;;;;;;By the way, human, as you noticed I have magical powers! If something significant happens, I get my spirit juices flowing through my magnificent body! The spirit world then opens up spirit locations with highly concentrated Wibbly Wobbly Timey Wimey spirit magic stuff where I can  teleport Beorn to. Whenever he falls off, I will teleport him back to the beginning of the bridge section he fell off from. 
 ;;;;;;;;
-;;;;;;;;Alright! Let’s cross this bridge! Follow me!
+;;;;;;;;Quickly, follow me!
 T4.2~1;Screen Audio;Beorn;Beorn;-0,2;0;0,8;;huuuuuUUu *falls*
 ;Lucy;Lucy;Lucy;-0,2;0;1;;Uh oh!
 ;Other;Other;Other;-1,5;0;1;Teleportation;*teleportation sounds*

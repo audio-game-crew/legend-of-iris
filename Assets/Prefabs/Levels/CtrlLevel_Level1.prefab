@@ -369,6 +369,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &173712
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 473712}
+  m_Layer: 0
+  m_Name: DoorSoundLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -410,7 +425,7 @@ Transform:
   - {fileID: 400234}
   - {fileID: 400166}
   m_Father: {fileID: 400212}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &400166
 Transform:
   m_ObjectHideFlags: 1
@@ -457,6 +472,7 @@ Transform:
   m_LocalPosition: {x: -17.89328, y: -4.99019861, z: 141.511093}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 473712}
   - {fileID: 400158}
   - {fileID: 433706}
   - {fileID: 400220}
@@ -469,7 +485,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .459999084, y: 2.18000007, z: -1.30999756}
+  m_LocalPosition: {x: 1.22000003, y: 2.18000007, z: -1.30999994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400264}
@@ -478,7 +494,7 @@ Transform:
   - {fileID: 400238}
   - {fileID: 400170}
   m_Father: {fileID: 400212}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!4 &400224
 Transform:
   m_ObjectHideFlags: 1
@@ -615,7 +631,7 @@ Transform:
   - {fileID: 433708}
   - {fileID: 433702}
   m_Father: {fileID: 400212}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &433708
 Transform:
   m_ObjectHideFlags: 1
@@ -628,6 +644,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 433706}
   m_RootOrder: 3
+--- !u!4 &473712
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173712}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.20000076, y: 1.99000001, z: -3.86999512}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400212}
+  m_RootOrder: 0
 --- !u!23 &2300122
 Renderer:
   m_ObjectHideFlags: 1
