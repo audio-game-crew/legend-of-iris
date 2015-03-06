@@ -30,7 +30,7 @@ public class SoundSystemManager : MonoBehaviour {
     {
         SetAstoundSoundEnabled(audio, instance.soundSystem == SoundSystem.AstoundSound); 
         SetPhononEnabled(audio, instance.soundSystem == SoundSystem.Phonon);
-        audio.panLevel = instance.soundSystem == SoundSystem.Phonon ? 0 : 1;
+        //audio.panLevel = instance.soundSystem == SoundSystem.Phonon ? 0 : 1;
     }
 
     private static void SetAstoundSoundEnabled(AudioSource audio, bool enabled)
@@ -76,7 +76,7 @@ public class SoundSystemManager : MonoBehaviour {
 
     public static void HandleSourceSettings()
     {
-        FindObjectsOfType<AudioSource>().ToList().ForEach(a => a.panLevel = instance.soundSystem == SoundSystem.Phonon ? 0 : 1);
+        //FindObjectsOfType<AudioSource>().ToList().ForEach(a => a.panLevel = instance.soundSystem == SoundSystem.Phonon ? 0 : 1);
         SetSourcesEnabled<AstoundSoundRTIFilter>(instance.soundSystem == SoundSystem.AstoundSound);
         SetSourcesEnabled<Phonon3DSource>(instance.soundSystem == SoundSystem.Phonon);
     }
