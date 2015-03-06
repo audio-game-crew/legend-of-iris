@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 [RequireComponent (typeof (AudioSource))]
-[RequireComponent (typeof (BinauralSource))]
+[RequireComponent (typeof (Phonon3DSource))]
 
 public class RandomAudioPlayer : MonoBehaviour {
 

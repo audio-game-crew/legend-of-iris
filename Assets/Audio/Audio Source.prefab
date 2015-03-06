@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 82: {fileID: 8200000}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 11400002}
+  - 114: {fileID: 11472264}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -107,7 +107,7 @@ MonoBehaviour:
   reverbCofactor: 50
   enhanceDistEffect: 0
   priorityRatio: 1
---- !u!114 &11400002
+--- !u!114 &11472264
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -115,11 +115,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c96ad51fcf012cb4dbe1d60dbf37ee7d, type: 3}
+  m_Script: {fileID: 11500000, guid: 687b3a43e2b2d244cb3881b1180f4f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 128
-  enableBinauralRendering: 1
+  Priority: 128
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

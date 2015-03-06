@@ -126,7 +126,7 @@ GameObject:
   - 114: {fileID: 11471190}
   - 81: {fileID: 8159796}
   - 114: {fileID: 11459802}
-  - 114: {fileID: 11459800}
+  - 114: {fileID: 11428876}
   m_Layer: 8
   m_Name: CameraRight
   m_TagString: MainCamera
@@ -147,7 +147,7 @@ GameObject:
   - 124: {fileID: 12471200}
   - 81: {fileID: 8159794}
   - 114: {fileID: 11459796}
-  - 114: {fileID: 11459794}
+  - 114: {fileID: 11464880}
   m_Layer: 0
   m_Name: Camera Normal
   m_TagString: MainCamera
@@ -404,7 +404,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171202}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: -10.2399998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 445844}
@@ -699,6 +699,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bumpClip: {fileID: 8300000, guid: 79fdc02ae03ba6645bb8996cd0d3f501, type: 3}
   scatheClip: {fileID: 8300000, guid: 73ac901e70a3dfd43bc11b44fffb5380, type: 3}
+--- !u!114 &11428876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171192}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeeefe499f44fad479526b1e9cfc275e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxSources: 32
+  MaxDistance: 100
 --- !u!114 &11442004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -728,20 +741,6 @@ MonoBehaviour:
   currentGroundType: 0
   currentFootsteps: {fileID: 0}
   enabled: 1
---- !u!114 &11459794
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 171194}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe0ba3bf268068c4f9edee7178180e0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutOffDistance: 100
-  cutOffAmplitude: .0199999996
-  max3DSoundSources: 25
 --- !u!114 &11459796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -771,20 +770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bbedaba7ce2f6f49a1466910cb77554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11459800
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 171192}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe0ba3bf268068c4f9edee7178180e0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutOffDistance: 100
-  cutOffAmplitude: .0199999996
-  max3DSoundSources: 25
 --- !u!114 &11459802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -803,6 +788,19 @@ MonoBehaviour:
   enhanceDistEffect: 1
   maxFull3DVoiceCount: 10
   full3dCullingType: 0
+--- !u!114 &11464880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171194}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeeefe499f44fad479526b1e9cfc275e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxSources: 32
+  MaxDistance: 100
 --- !u!114 &11471188
 MonoBehaviour:
   m_ObjectHideFlags: 1

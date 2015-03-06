@@ -46,10 +46,10 @@ public class SoundSystemManager : MonoBehaviour {
 
     private static void SetPhononEnabled(AudioSource audio, bool enabled)
     {
-        var filter = audio.GetComponent<BinauralSource>();
+        var filter = audio.GetComponent<Phonon3DSource>();
         if (enabled && filter == null)
         {
-            filter = audio.gameObject.AddComponent<BinauralSource>();
+            filter = audio.gameObject.AddComponent<Phonon3DSource>();
         }
         if (filter != null)
             filter.enabled = enabled;
@@ -58,7 +58,7 @@ public class SoundSystemManager : MonoBehaviour {
     public static void HandleListenerSettings()
     {
         SetListenersEnabled<AstoundSoundRTIListener>(instance.soundSystem == SoundSystem.AstoundSound);
-        SetListenersEnabled<BinauralListener>(instance.soundSystem == SoundSystem.Phonon);
+        SetListenersEnabled<Phonon3DListener>(instance.soundSystem == SoundSystem.Phonon);
     }
 
     private static void SetListenersEnabled<T>(bool enabled) where T:MonoBehaviour
@@ -78,7 +78,7 @@ public class SoundSystemManager : MonoBehaviour {
     {
         FindObjectsOfType<AudioSource>().ToList().ForEach(a => a.panLevel = instance.soundSystem == SoundSystem.Phonon ? 0 : 1);
         SetSourcesEnabled<AstoundSoundRTIFilter>(instance.soundSystem == SoundSystem.AstoundSound);
-        SetSourcesEnabled<BinauralSource>(instance.soundSystem == SoundSystem.Phonon);
+        SetSourcesEnabled<Phonon3DSource>(instance.soundSystem == SoundSystem.Phonon);
     }
 
     private static void SetSourcesEnabled<T>(bool enabled) where T:MonoBehaviour
