@@ -111,6 +111,8 @@ public class ConversationManager : MonoBehaviour {
         {
             var m = new ConversationMessage();
             m.audioClip = Resources.Load(obj.files[i], typeof(AudioClip)) as AudioClip;
+            m.audioClipDemo = Resources.Load(obj.demoFiles[i], typeof(AudioClip)) as AudioClip;
+            m.demoSkip = obj.demoSkips[i];
             m.source = GameObject.Find(obj.gameObjects[i]);
             m.sourceName = obj.names[i];
             if (m.source == null)
@@ -135,7 +137,8 @@ public class ConversationManager : MonoBehaviour {
     private const int C_ScreenAsSource = C_Delay + 1;
     private const int C_Volume = C_ScreenAsSource + 1;
     private const int C_File = C_Volume + 1;
-    private const int C_Subtitle = C_File + 1;
+    private const int C_DemoSkip = C_File + 1;
+    private const int C_Subtitle = C_DemoSkip + 1;
 
     private const int COLUMNS = C_Subtitle + 1;
 
@@ -148,8 +151,10 @@ public class ConversationManager : MonoBehaviour {
         public List<float> delays = new List<float>();
         public List<float> volumes = new List<float>();
         public List<bool> screen = new List<bool>();
+        public List<bool> demoSkips = new List<bool>();
         public List<string> texts = new List<string>();
         public List<string> files = new List<string>();
+        public List<string> demoFiles = new List<string>();
 
         public ConversationImport(string[] items)
         {
@@ -165,12 +170,30 @@ public class ConversationManager : MonoBehaviour {
             delays.Add(float.Parse(items[C_Delay].Replace(",", ".")));
             volumes.Add(float.Parse(items[C_Volume].Replace(",", ".")));
             screen.Add(items[C_ScreenAsSource].Equals("1"));
+            demoSkips.Add(items[C_DemoSkip].Equals("1"));
             texts.Add("");
-            
-            if (items[C_File].Length > 0) {
+
+            if (items[C_File].Length > 0)
+            {
                 files.Add(items[C_File]);
-            } else {
-                files.Add(folders[i] + "/" + folders[i] + " - " + nameID + "_" + (i + 1));
+                demoFiles.Add(items[C_File]);
+            }
+            else
+            {
+                string file = folders[i] + " - " + nameID + "_" + (i + 1);
+                string normalPath = folders[i] + "/" + file;
+                string demoPath = folders[i] + "/" + file + " - DEMO";
+
+                files.Add(normalPath);
+
+                if (Resources.Load(demoPath) != null)
+                {
+                    demoFiles.Add(demoPath);
+                }
+                else
+                {
+                    demoFiles.Add(normalPath);
+                }
             }
         }
 

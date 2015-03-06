@@ -24,6 +24,8 @@ public class ConversationMessage
     public GameObject source;
     public string sourceName;
     public AudioClip audioClip;
+    public AudioClip audioClipDemo;
+    public bool demoSkip;
     [Multiline(4)]
     public string subtitle;
     public ConversationMessageSettings settings = new ConversationMessageSettings();
