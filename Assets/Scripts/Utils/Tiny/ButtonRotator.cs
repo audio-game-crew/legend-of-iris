@@ -27,7 +27,7 @@ public class ButtonRotator : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetButtonUp("MENU"))
         {
             ExecuteEvents.Execute(gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.submitHandler);
         }

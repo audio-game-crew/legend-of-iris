@@ -36,7 +36,7 @@ public class ConversationManager : MonoBehaviour {
         }
 
         // check if player wants to skip
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetButtonUp("SKIP"))
         {
             foreach (var cp in playingConversations.ToArray())
             {

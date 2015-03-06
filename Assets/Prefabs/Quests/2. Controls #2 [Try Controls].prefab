@@ -330,6 +330,7 @@ MonoBehaviour:
   LockPlayerMovement: 1
   completeAtMessage: 0
   completeAtMessageIndex: 0
+  messageEvents: []
 --- !u!114 &11483748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -345,6 +346,7 @@ MonoBehaviour:
   LockPlayerMovement: 1
   completeAtMessage: 0
   completeAtMessageIndex: 0
+  messageEvents: []
 --- !u!114 &11483750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -378,6 +380,7 @@ MonoBehaviour:
   LockPlayerMovement: 1
   completeAtMessage: 0
   completeAtMessageIndex: 0
+  messageEvents: []
 --- !u!114 &11483754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -447,6 +450,7 @@ MonoBehaviour:
   LockPlayerMovement: 1
   completeAtMessage: 0
   completeAtMessageIndex: 0
+  messageEvents: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

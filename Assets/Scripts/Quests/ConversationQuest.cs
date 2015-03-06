@@ -15,6 +15,7 @@ public class ConversationQuest : Quest<ConversationQuest, ConversationQuestDefin
             SetPlayerMovementLocked(true);
             player.onConversationEnd += OnConversationEnd;
             player.onMessageEnd += player_onMessageEnd;
+            player.onMessageStart += player_onMessageStart;
             player.Start();
         } else
         {
@@ -22,8 +23,26 @@ public class ConversationQuest : Quest<ConversationQuest, ConversationQuestDefin
         }
 	}
 
+    void player_onMessageStart(ConversationPlayer player, int index)
+    {
+        foreach (var e in definition.messageEvents)
+        {
+            if (e.messageID == index && !e.onEnd)
+            {
+                e.onTrigger.Invoke();
+            }
+        }
+    }
+
     void player_onMessageEnd(ConversationPlayer player, int index)
     {
+        foreach (var e in definition.messageEvents)
+        {
+            if (e.messageID == index && e.onEnd)
+            {
+                e.onTrigger.Invoke();
+            }
+        }
         if (definition.completeAtMessage)
         {
             if (index == definition.completeAtMessageIndex)
