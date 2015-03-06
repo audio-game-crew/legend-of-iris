@@ -23,7 +23,25 @@ public class PlayerController : MonoBehaviour {
     public event EventHandler<TriggerEventArgs> TriggerEntered;
     public event EventHandler<TriggerEventArgs> TriggerExit;
 
-    public bool LockMovement = false;
+    public bool LockMovement1 = false;
+    public bool LockRotation1 = false;
+
+    public bool LockMovement { 
+        get { return LockMovement1; }
+        set { 
+            LockMovement1 = value;
+            Debug.LogError((value ? "Locking" : "Unlocking") + " player movement");
+        }
+    }
+
+    public bool LockRotation
+    {
+        get { return LockRotation1; }
+        set
+        {
+            LockRotation1 = value;
+        }
+    }
 
     void Start()
     {
@@ -74,7 +92,8 @@ public class PlayerController : MonoBehaviour {
 
         if (!LockMovement)
             rigidbody.MovePosition(rigidbody.position + c.GetMove(transform.localPosition) * (Input.GetKey(KeyCode.LeftShift) ? 4f : 1f));
-        camerasContainer.localRotation *= c.GetRotation(camerasContainer.localRotation);
+        if (!LockRotation)
+            camerasContainer.localRotation *= c.GetRotation(camerasContainer.localRotation);
 	}
 
 	public void useGrowl() {
@@ -98,13 +117,6 @@ public class PlayerController : MonoBehaviour {
     {
         if (TriggerExit != null)
             TriggerExit(this, new TriggerEventArgs(other));
-    }
-
-    public void MoveToLocation(PositionRotation location, float moveTime = 0)
-    {
-        // TODO: make this smooth
-        this.transform.position = location.Position;
-        this.transform.rotation = location.Rotation;
     }
 
 	public void setOnFire(bool state) {

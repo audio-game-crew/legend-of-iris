@@ -13,9 +13,23 @@ public class KeyOrderQuest : Quest<KeyOrderQuest, KeyOrderQuestDefinition> {
     protected override void _Start() {
         base._Start();
         Reset();
+
+        SetMovementLocked(true);
+
         lastConversationEnd = Time.time;
         if (definition.StartConversationImmediately)
+        {
             StartConversation();
+            lastConversationEnd = float.MaxValue;
+        }
+
+        Debug.Log("KeyOrderQuest started");
+    }
+
+    protected override void _Complete()
+    {
+        SetMovementLocked(false);
+        base._Complete();
     }
 
     private void Reset()
@@ -55,15 +69,25 @@ public class KeyOrderQuest : Quest<KeyOrderQuest, KeyOrderQuestDefinition> {
 
     private void StartConversation() {
         if (player != null) return;
+        Debug.Log("Starting conversation yolo, it's been " + (Time.time - lastConversationEnd) + " seconds already");
         player = ConversationManager.GetConversationPlayer(definition.conversationId);
         player.onConversationEnd += OnConversationEnd;
         player.Start();
     }
 
     private void OnConversationEnd(ConversationPlayer _player) {
+        Debug.Log("Fuck this shit, I'm done talking (whoever is talking int eh conveffdfje0re " + _player.GetConversationName());
         _player.onConversationEnd -= OnConversationEnd;
         player = null;
         lastConversationEnd = Time.time;
     }
 
+    private void SetMovementLocked(bool locked)
+    {
+        var player = Characters.GetPlayerController();
+        if (player != null)
+        {
+            player.LockMovement = player.LockRotation = locked;
+        }
+    }
 }

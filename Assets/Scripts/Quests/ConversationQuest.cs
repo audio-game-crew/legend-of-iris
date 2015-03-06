@@ -7,12 +7,12 @@ public class ConversationQuest : Quest<ConversationQuest, ConversationQuestDefin
 
 
     protected override void _Start() {
-		base._Start();
-
+        base._Start();
 		var player = ConversationManager.GetConversationPlayer(definition.conversationId);
         if (player != null)
         {
-            SetPlayerMovementLocked(true);
+            SetPlayerMovementLocked(definition.LockPlayerMovement);
+            SetPlayerRotationLock(definition.LockPlayerRotation);
             player.onConversationEnd += OnConversationEnd;
             player.onMessageEnd += player_onMessageEnd;
             player.Start();
@@ -44,12 +44,27 @@ public class ConversationQuest : Quest<ConversationQuest, ConversationQuestDefin
         playerController.LockMovement = locked;
     }
 
+    private void SetPlayerRotationLock(bool locked)
+    {
+        var player = Characters.instance.Beorn;
+        if (player == null) return;
+        var playerController = player.GetComponent<PlayerController>();
+        if (playerController == null) return;
+        playerController.LockRotation = locked;
+    }
+
 	private void OnConversationEnd(ConversationPlayer player) {
         if (player != null)
             player.onConversationEnd -= OnConversationEnd;
-        SetPlayerMovementLocked(false);
+        Debug.Log("Conversation " + definition.name + " ended");
 		Complete();
-            
 	}
 
+    protected override void _Complete()
+    {
+        Debug.Log("Conversation quest completed");
+        SetPlayerMovementLocked(false);
+        SetPlayerRotationLock(false);
+        base._Complete();
+    }
 }

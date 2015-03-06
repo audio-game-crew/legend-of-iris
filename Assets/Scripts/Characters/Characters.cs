@@ -16,4 +16,11 @@ public class Characters : MonoBehaviour {
     {
         instance = this;
     }
+
+    public static PlayerController GetPlayerController()
+    {
+        if (instance == null || instance.Beorn == null)
+            return null;
+        return instance.Beorn.GetComponent<PlayerController>();
+    }
 }
