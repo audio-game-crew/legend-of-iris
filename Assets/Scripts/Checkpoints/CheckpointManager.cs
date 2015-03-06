@@ -38,7 +38,7 @@ public class CheckpointManager : MonoBehaviour {
     }
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (teleporting)
         {
             var player = Characters.instance.Beorn;
@@ -47,6 +47,7 @@ public class CheckpointManager : MonoBehaviour {
             if (progress > 1)
             { // Stop the teleportation
                 player.rigidbody.MovePosition(target.Position);
+                player.rigidbody.useGravity = true;
                 player.GetComponent<PlayerController>().camerasContainer.localRotation = target.Rotation;
                 teleporting = false;
                 if (conversationPlayer == null || conversationPlayer.IsFinished())
@@ -89,10 +90,11 @@ public class CheckpointManager : MonoBehaviour {
 
     public void GotoLastCheckpoint(object sender, string conversation = null)
     {
-
         TimerManager.RegisterEvent("Dieded");
-        start = new PositionRotation(Characters.instance.Beorn.transform.position, Characters.GetPlayerController().camerasContainer.localRotation);
+        var player = Characters.instance.Beorn;
+        start = new PositionRotation(player.transform.position, Characters.GetPlayerController().camerasContainer.localRotation);
         target = new PositionRotation(lastCheckpoint.gameObject);
+        player.rigidbody.useGravity = false;
         teleporting = true;
         SetMovementRelatedComponentsEnabled(false);
         time = 0;

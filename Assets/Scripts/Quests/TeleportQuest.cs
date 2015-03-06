@@ -20,10 +20,8 @@ public class TeleportQuest : Quest<TeleportQuest, TeleportQuestDefinition>
         base._Start();
     }
 
-    public override void Update()
+    public override void FixedUpdate()
     {
-        if (this.state != State.STARTED)
-            return;
         time += Time.deltaTime;
         var progress = time / definition.TeleportTime;
         if (progress > 1)
@@ -39,6 +37,6 @@ public class TeleportQuest : Quest<TeleportQuest, TeleportQuestDefinition>
                 .addy(definition.TeleportAnimationVerticalDisplacementValue.Evaluate(progress) * definition.JumpHeight);
             definition.ObjectToTeleport.transform.rotation = newPosRot.Rotation;
         }
-        base.Update();
+        base.FixedUpdate();
     }
 }

@@ -26,7 +26,6 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         lucyController.StartBell();
         Characters.instance.Lucy.GetComponent<WalkingFollowerScript>().follow = false;
 
-
         FillSteps();
 		Next();
         var checkpointManager = CheckpointManager.instance;
@@ -122,7 +121,7 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
     }
 
 	private void OnPlayerEnter(Waypoint waypoint, GameObject player) {
-        if (waypoint != current)
+        if (waypoint != current || state == State.COMPLETED)
             return;
 		waypoint.onPlayerEnter -= OnPlayerEnter;
         if (definition.SuccesSound != null)
