@@ -22,6 +22,8 @@ public class MoveQuest : Quest<MoveQuest, MoveQuestDefinition> {
         base._Start();
         Reset();
         timer -= definition.InitialFailTimeout;
+        LockOtherRotation(true);
+            
 	}
 
     private void Reset()
@@ -71,8 +73,8 @@ public class MoveQuest : Quest<MoveQuest, MoveQuestDefinition> {
             if (convPlayer != null)
             {
                 playingConversation = true;
-                convPlayer.onConversationEnd += (s) => { Reset(); };
                 convPlayer.Start();
+                Reset();
             }
         }
 
@@ -103,5 +105,27 @@ public class MoveQuest : Quest<MoveQuest, MoveQuestDefinition> {
             case Direction.Right: return Direction.Left;
         }
         return Direction.Backward;
+    }
+
+    protected override void _Complete()
+    {
+        LockOtherRotation(false);
+        base._Complete();
+    }
+
+    private void LockOtherRotation(bool locked)
+    {
+        var playerController = Characters.GetPlayerController();
+        if (playerController == null) return;
+        if (definition.direction == Direction.Backward || definition.direction == Direction.Forward)
+        {
+            playerController.LockRotation = locked;
+            playerController.LockMovement = !locked;
+        }
+        else
+        {
+            playerController.LockMovement = locked;
+            playerController.LockRotation = !locked;
+        }
     }
 }

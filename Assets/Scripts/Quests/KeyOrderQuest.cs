@@ -7,15 +7,24 @@ public class KeyOrderQuest : Quest<KeyOrderQuest, KeyOrderQuestDefinition> {
     private float lastConversationEnd = 0;
     private ConversationPlayer player = null;
     private Queue<Direction> keysToPress;
+    private bool firstPlayed = false;
 
     public KeyOrderQuest(KeyOrderQuestDefinition definition) : base(definition) { }
 
     protected override void _Start() {
         base._Start();
         Reset();
+
+        SetMovementLocked(true);
         lastConversationEnd = Time.time;
-        if (definition.StartConversationImmediately)
-            StartConversation();
+
+        Debug.Log("KeyOrderQuest started");
+    }
+
+    protected override void _Complete()
+    {
+        SetMovementLocked(false);
+        base._Complete();
     }
 
     private void Reset()
@@ -35,9 +44,18 @@ public class KeyOrderQuest : Quest<KeyOrderQuest, KeyOrderQuestDefinition> {
                 Complete();
         }
         
-
-        if (!string.IsNullOrEmpty(definition.conversationId) && Time.time > lastConversationEnd + definition.repeatDelay)
-            StartConversation();
+        if (!string.IsNullOrEmpty(definition.conversationId))
+        {
+            if (firstPlayed)
+            {
+                if (Time.time > lastConversationEnd + definition.repeatDelay)
+                    StartConversation();
+            } else
+            {
+                if (Time.time > lastConversationEnd + definition.StartConversationFirstDelay)
+                    StartConversation();
+            }
+        }
     }
 
     private Direction? GetKeyPressed()
@@ -55,15 +73,26 @@ public class KeyOrderQuest : Quest<KeyOrderQuest, KeyOrderQuestDefinition> {
 
     private void StartConversation() {
         if (player != null) return;
+        Debug.Log("Starting conversation yolo, it's been " + (Time.time - lastConversationEnd) + " seconds already");
         player = ConversationManager.GetConversationPlayer(definition.conversationId);
         player.onConversationEnd += OnConversationEnd;
         player.Start();
     }
 
     private void OnConversationEnd(ConversationPlayer _player) {
+        Debug.Log("Fuck this shit, I'm done talking (whoever is talking int eh conveffdfje0re " + _player.GetConversationName());
         _player.onConversationEnd -= OnConversationEnd;
         player = null;
         lastConversationEnd = Time.time;
+        firstPlayed = true;
     }
 
+    private void SetMovementLocked(bool locked)
+    {
+        var player = Characters.GetPlayerController();
+        if (player != null)
+        {
+            player.LockMovement = player.LockRotation = locked;
+        }
+    }
 }

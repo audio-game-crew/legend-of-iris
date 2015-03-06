@@ -243,9 +243,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T3.5
-  LockPlayerMovement: 1
+  LockPlayerMovement: 0
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
+  messageEvents: []
 --- !u!114 &11455410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -312,9 +314,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T3.1
-  LockPlayerMovement: 1
+  LockPlayerMovement: 0
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
+  messageEvents: []
 --- !u!114 &11455418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -338,9 +342,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T3.7
-  LockPlayerMovement: 1
+  LockPlayerMovement: 0
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
+  messageEvents: []
 --- !u!114 &11455422
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -353,9 +359,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T3.3
-  LockPlayerMovement: 1
+  LockPlayerMovement: 0
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
+  messageEvents: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

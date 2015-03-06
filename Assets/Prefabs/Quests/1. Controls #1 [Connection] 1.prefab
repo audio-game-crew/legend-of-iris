@@ -186,8 +186,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T1.6
   LockPlayerMovement: 1
+  LockPlayerRotation: 1
   completeAtMessage: 0
   completeAtMessageIndex: 0
+  messageEvents:
+  - messageID: 4
+    onEnd: 0
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_MethodName: FadeOut
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+              Culture=neutral, PublicKeyToken=null
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
 --- !u!114 &11424048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,7 +223,7 @@ MonoBehaviour:
   repeatDelay: 10
   conversationId: T1.5
   KeyOrder: 00000000
-  StartConversationImmediately: 0
+  StartConversationFirstDelay: 15
 --- !u!114 &11424050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -216,8 +237,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T1.1
   LockPlayerMovement: 1
+  LockPlayerRotation: 1
   completeAtMessage: 1
   completeAtMessageIndex: 0
+  messageEvents: []
 --- !u!114 &11424052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -231,8 +254,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T1.3
   LockPlayerMovement: 1
+  LockPlayerRotation: 1
   completeAtMessage: 1
   completeAtMessageIndex: 7
+  messageEvents: []
 --- !u!114 &11424054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -247,7 +272,7 @@ MonoBehaviour:
   repeatDelay: 10
   conversationId: T1.2
   KeyOrder: 00000000010000000200000003000000
-  StartConversationImmediately: 0
+  StartConversationFirstDelay: 30
 --- !u!114 &11424056
 MonoBehaviour:
   m_ObjectHideFlags: 1

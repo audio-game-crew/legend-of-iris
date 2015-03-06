@@ -182,4 +182,9 @@ public class ConversationPlayer
         // empty the queue
         conversationQueue = new List<MessageQueueItem>();
     }
+
+    public string GetConversationName()
+    {
+        return conversation.name;
+    }
 }

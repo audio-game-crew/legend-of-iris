@@ -8,6 +8,7 @@ public class ConversationQuestDefinition : QuestDefinition {
 	public string conversationId;
 
     public bool LockPlayerMovement = true;
+    public bool LockPlayerRotation = false;
     public bool completeAtMessage = false;
     public int completeAtMessageIndex = 0;
 

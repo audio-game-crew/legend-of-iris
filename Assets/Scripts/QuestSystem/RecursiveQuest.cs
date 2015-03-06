@@ -14,7 +14,7 @@ public abstract class RecursiveQuest<QuestSC, DefinitionSC> : Quest<QuestSC, Def
 		base._Start();
 		foreach (Transform t in definition.transform) {
 			foreach (QuestDefinition d in t.GetComponents<QuestDefinition>()) {
-				Quest q = d.Create();
+                Quest q = d.Create();
 				q.onQuestComplete += OnChildQuestComplete;
 				children.Add(q);
 			}
