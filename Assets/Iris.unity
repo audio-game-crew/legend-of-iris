@@ -4564,6 +4564,7 @@ Transform:
   - {fileID: 1867359735}
   - {fileID: 184187856}
   - {fileID: 430436075}
+  - {fileID: 1809273791}
   m_Father: {fileID: 2112304529}
   m_RootOrder: 3
 --- !u!1 &206406777
@@ -24175,8 +24176,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 983697078}
-  m_LocalRotation: {x: -.469479293, y: .517488122, z: .419825405, w: .579259753}
-  m_LocalPosition: {x: -51.6929741, y: -203.793198, z: -137.591232}
+  m_LocalRotation: {x: .37221241, y: .579794943, z: .336071044, w: -.642146409}
+  m_LocalPosition: {x: 113.770035, y: -128.40889, z: -160.012207}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -29471,8 +29472,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1229397836}
-  m_LocalRotation: {x: .0542851351, y: .00548061775, z: .000126823288, w: -.99851042}
-  m_LocalPosition: {x: 222.509506, y: -699.541382, z: -1367.73877}
+  m_LocalRotation: {x: .37221241, y: .579794943, z: .336071044, w: -.642146409}
+  m_LocalPosition: {x: 136.065369, y: -166.93631, z: -162.293442}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42547,6 +42548,101 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1377754606}
   m_GameObject: {fileID: 1803297981}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1809273790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1809273791}
+  - 65: {fileID: 1809273793}
+  - 114: {fileID: 1809273792}
+  m_Layer: 0
+  m_Name: Machine Ambient
+  m_TagString: Untagged
+  m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1809273791
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1809273790}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: 8, z: -170}
+  m_LocalScale: {x: 140, y: 20, z: 70}
+  m_Children: []
+  m_Father: {fileID: 205224287}
+  m_RootOrder: 9
+--- !u!114 &1809273792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1809273790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4135f487d7f10cf40934aa3ad1e94d97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientEnabled: 1
+  activeCondition: 1
+  maxColliderDistance: 20
+  convergeVolumeSpeed: 2
+  ambientSources:
+  - name: 'MachineToListen: MachineNoise'
+    initialized: 1
+    locations:
+    - {fileID: 99028473}
+    - {fileID: 303259369}
+    - {fileID: 1626033006}
+    - {fileID: 825511193}
+    - {fileID: 519765887}
+    - {fileID: 1973230906}
+    - {fileID: 626060606}
+    - {fileID: 966341221}
+    - {fileID: 1144274717}
+    - {fileID: 1064141121}
+    - {fileID: 294877102}
+    - {fileID: 1883681938}
+    - {fileID: 2104200122}
+    - {fileID: 21225818}
+    - {fileID: 685198812}
+    - {fileID: 339699738}
+    - {fileID: 1648835795}
+    - {fileID: 19729780}
+    - {fileID: 137444664}
+    - {fileID: 1092063018}
+    - {fileID: 714199146}
+    clips:
+    - {fileID: 8300000, guid: 1c33dd92f071d2f459ee14dfe1005321, type: 3}
+    minAudioDistance: 1
+    maxAudioDistance: 500
+    minPitch: .949999988
+    maxPitch: 1.04999995
+    volumeModifier: 1
+    constantLoop: 1
+    randomClipTime: 1
+    spawnRandom: 0
+    minInterval: 2
+    maxInterval: 6
+    currentTimer: 0
+    turnedOff: 0
+--- !u!65 &1809273793
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1809273790}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1810602291
 GameObject:
   m_ObjectHideFlags: 0
