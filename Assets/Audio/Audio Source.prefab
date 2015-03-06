@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 82: {fileID: 8200000}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 11472264}
+  - 114: {fileID: 11416204}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -107,7 +107,7 @@ MonoBehaviour:
   reverbCofactor: 50
   enhanceDistEffect: 0
   priorityRatio: 1
---- !u!114 &11472264
+--- !u!114 &11416204
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
