@@ -11,7 +11,6 @@ using UnityEngine;
 public class SpiritGeneratorScript : MonoBehaviour {
 	
 	public GameObject spirit;
-	public AudioClip spiritSound;
 	public GameObject spawnPosition;
 	public GameObject spiritLiveArea;
 	public float spiritSpeed;
@@ -20,13 +19,19 @@ public class SpiritGeneratorScript : MonoBehaviour {
 
     public string NearMissConverationID;
     public string HitSpiritConversationID;
+
+    [Tooltip("Ambient Area in which the spirits should be audible.")]
+    public AmbientArea SpiritAmbientArea;
+    [Tooltip("The name of the Ambient Source containing the sprits of this generator.")]
+    public int AmbientSourceID;
+
     private float conversationCooldown = 0;
 
     private ConversationPlayer currentConversation;
-	private Dictionary<GameObject, AudioPlayer> listSpiritsActive;
-	public SpiritController[] ListSpiritsActive
+	private List<GameObject> activeSpirits;
+	public SpiritController[] ActiveSpirits
 	{
-		get { return listSpiritsActive.Select(c => c.Key.GetComponent<SpiritController>()).ToArray(); }
+        get { return activeSpirits.Select(s => s.GetComponent<SpiritController>()).ToArray(); }
 	}
 	
 	private const float MIN_RANDOM_DELAY = 1.5f;
@@ -37,7 +42,7 @@ public class SpiritGeneratorScript : MonoBehaviour {
 	void Start () {
 		timeUntilNextSpirit = 0;
 		isActive = true;
-		listSpiritsActive = new Dictionary<GameObject, AudioPlayer>();
+		activeSpirits = new List<GameObject>();
         conversationCooldown = 0;
 	}
 	
@@ -58,8 +63,8 @@ public class SpiritGeneratorScript : MonoBehaviour {
 		SpiritController spiritCS = spiritGO.GetComponent<SpiritController>();
 		spiritCS.Init(this, spiritSpeed);
 		spiritGO.transform.parent = crossing.transform;
-		var player = AudioManager.PlayAudio(new AudioObject(spiritGO, spiritSound, 1, 0, true));
-		listSpiritsActive.Add(spiritGO, player);
+        SpiritAmbientArea.AddAmbientLocation(AmbientSourceID, spiritGO);
+		activeSpirits.Add(spiritGO);
 	}
 	
 	public void SetActive(bool state) {
@@ -69,15 +74,10 @@ public class SpiritGeneratorScript : MonoBehaviour {
 	public void RemoveSpirit(GameObject spirit)
 	{
 
-		if (!listSpiritsActive.ContainsKey(spirit)) { Debug.LogWarning("Spirit not found"); return; }
-		//listSpiritsActive[spirit].Delete();
-		listSpiritsActive.Remove(spirit);
+		if (!activeSpirits.Contains(spirit)) { Debug.LogWarning("Spirit not found"); return; }
+        SpiritAmbientArea.RemoveAmbientLocation(AmbientSourceID, spirit);
+        activeSpirits.Remove(spirit);
 	}
-	/*
-	public void changeSpeedSpiritAt(int i, float speed){
-		ListSpiritsActive.IndexOf (i).changeSpeed (0f);
-	}
-	*/
 
     /// <summary>
     /// Call this if the player almost hit a spirit

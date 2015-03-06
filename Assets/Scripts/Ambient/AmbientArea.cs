@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 public class AmbientArea : MonoBehaviour {
 
@@ -114,6 +115,29 @@ public class AmbientArea : MonoBehaviour {
         s.currentTimer = Randomg.Range(s.minInterval, s.maxInterval);
     }
 
+    public void AddAmbientLocation(int sourceID, GameObject location)
+    {
+        if (ambientSources.Count <= sourceID)
+            throw new IndexOutOfRangeException("SourceID out of range for the current AmbientArea");
+        var source = ambientSources[sourceID];
+        source.locations.Add(location);
+        if (source.constantLoop)
+            PlaceAmbientSound(source, location);
+    }
+
+    public void RemoveAmbientLocation(int sourceID, GameObject location)
+    {
+        if (ambientSources.Count <= sourceID)
+            throw new IndexOutOfRangeException("SourceID out of range for the current AmbientArea");
+        var source = ambientSources[sourceID];
+        // Check if the given location actually exists. If so remove it.
+        if (source.locations.Any(l => l == location))
+            source.locations.Remove(location);
+        // Remove all audio sources for the location as well
+        foreach (var player in source.players.Where(p => p.GameObject == location))
+            player.MarkRemovable();
+    }
+
     void PlaceAmbientSound(AmbientSource s, GameObject location)
     {
         AudioPlayer ap = AmbientManager.PlaceAmbientSound(location, s.clips.GetRandom(), s.constantLoop, false);
@@ -122,7 +146,6 @@ public class AmbientArea : MonoBehaviour {
         ap.SetPitch(Randomg.Range(s.minPitch, s.maxPitch));
         ap.SetOnRemoveListener(delegate()
         {
-            AmbientSource a = s;
             AudioPlayer myself = ap;
             s.players.Remove(myself);
         });
@@ -133,6 +156,8 @@ public class AmbientArea : MonoBehaviour {
         }
         s.players.Add(ap);
     }
+
+
 	
 	// Update is called once per frame
 	void Update () {

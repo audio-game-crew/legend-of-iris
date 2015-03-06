@@ -13,6 +13,11 @@ public class AudioPlayer
         protected set;
     }
 
+    public GameObject GameObject
+    {
+        get { return audioGO; }
+    }
+
     protected AudioObject audio;
     protected GameObject audioGO;
     protected AudioSource audioAS;

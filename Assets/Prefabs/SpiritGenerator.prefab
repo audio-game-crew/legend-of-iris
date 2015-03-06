@@ -69,8 +69,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_LocalRotation: {x: 0, y: .707106888, z: 0, w: .707106769}
-  m_LocalPosition: {x: 23.6000004, y: 0, z: -111.199997}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: 56.5999985, y: 0, z: -170.839996}
   m_LocalScale: {x: .200000033, y: 1, z: .400000066}
   m_Children:
   - {fileID: 400004}
@@ -167,7 +167,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spirit: {fileID: 100000, guid: 8ddd8c0172c2465449c58e2b8520c08d, type: 2}
-  spiritSound: {fileID: 8300000, guid: 21e1fe7442ed4894c9852a67e0d3af9b, type: 3}
   spawnPosition: {fileID: 100000}
   spiritLiveArea: {fileID: 100004}
   spiritSpeed: 4
@@ -175,6 +174,8 @@ MonoBehaviour:
   isActive: 1
   NearMissConverationID: T4.8
   HitSpiritConversationID: T4.7
+  SpiritAmbientArea: {fileID: 0}
+  AmbientSourceID: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
