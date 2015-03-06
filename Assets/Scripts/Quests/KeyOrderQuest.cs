@@ -7,6 +7,7 @@ public class KeyOrderQuest : Quest<KeyOrderQuest, KeyOrderQuestDefinition> {
     private float lastConversationEnd = 0;
     private ConversationPlayer player = null;
     private Queue<Direction> keysToPress;
+    private bool firstPlayed = false;
 
     public KeyOrderQuest(KeyOrderQuestDefinition definition) : base(definition) { }
 
@@ -15,13 +16,7 @@ public class KeyOrderQuest : Quest<KeyOrderQuest, KeyOrderQuestDefinition> {
         Reset();
 
         SetMovementLocked(true);
-
         lastConversationEnd = Time.time;
-        if (definition.StartConversationImmediately)
-        {
-            StartConversation();
-            lastConversationEnd = float.MaxValue;
-        }
 
         Debug.Log("KeyOrderQuest started");
     }
@@ -49,9 +44,18 @@ public class KeyOrderQuest : Quest<KeyOrderQuest, KeyOrderQuestDefinition> {
                 Complete();
         }
         
-
-        if (!string.IsNullOrEmpty(definition.conversationId) && Time.time > lastConversationEnd + definition.repeatDelay)
-            StartConversation();
+        if (!string.IsNullOrEmpty(definition.conversationId))
+        {
+            if (firstPlayed)
+            {
+                if (Time.time > lastConversationEnd + definition.repeatDelay)
+                    StartConversation();
+            } else
+            {
+                if (Time.time > lastConversationEnd + definition.StartConversationFirstDelay)
+                    StartConversation();
+            }
+        }
     }
 
     private Direction? GetKeyPressed()
@@ -80,6 +84,7 @@ public class KeyOrderQuest : Quest<KeyOrderQuest, KeyOrderQuestDefinition> {
         _player.onConversationEnd -= OnConversationEnd;
         player = null;
         lastConversationEnd = Time.time;
+        firstPlayed = true;
     }
 
     private void SetMovementLocked(bool locked)

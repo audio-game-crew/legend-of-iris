@@ -186,8 +186,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T1.6
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
+  messageEvents: []
 --- !u!114 &11424048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,7 +204,7 @@ MonoBehaviour:
   repeatDelay: 10
   conversationId: T1.5
   KeyOrder: 00000000
-  StartConversationImmediately: 0
+  StartConversationFirstDelay: 15
 --- !u!114 &11424050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -216,8 +218,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T1.1
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 1
   completeAtMessageIndex: 0
+  messageEvents: []
 --- !u!114 &11424052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -231,8 +235,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T1.3
   LockPlayerMovement: 1
+  LockPlayerRotation: 1
   completeAtMessage: 1
   completeAtMessageIndex: 7
+  messageEvents: []
 --- !u!114 &11424054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -247,7 +253,7 @@ MonoBehaviour:
   repeatDelay: 10
   conversationId: T1.2
   KeyOrder: 00000000010000000200000003000000
-  StartConversationImmediately: 0
+  StartConversationFirstDelay: 30
 --- !u!114 &11424056
 MonoBehaviour:
   m_ObjectHideFlags: 1

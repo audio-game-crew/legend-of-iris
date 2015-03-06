@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour {
         get { return LockMovement1; }
         set { 
             LockMovement1 = value;
-            Debug.LogError((value ? "Locking" : "Unlocking") + " player movement");
+            Debug.Log((value ? "Locking" : "Unlocking") + " player movement");
         }
     }
 

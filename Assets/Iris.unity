@@ -671,6 +671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T2.7
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -840,6 +841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T8.1
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -3101,6 +3103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T3.5
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -3108,7 +3111,7 @@ MonoBehaviour:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 124050, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 149159596}
@@ -3124,7 +3127,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 424050, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   m_GameObject: {fileID: 149159595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -3137,7 +3140,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11424050, guid: 349967db34b40f44cb5cd6922373f3d7,
     type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   m_GameObject: {fileID: 149159595}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3146,6 +3149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T1.1
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 1
   completeAtMessageIndex: 0
   messageEvents: []
@@ -3465,6 +3469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T6.9
   LockPlayerMovement: 0
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -4221,6 +4226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T8.7
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -4539,6 +4545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.1
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -4851,6 +4858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T8.8
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -5672,7 +5680,7 @@ MonoBehaviour:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 124046, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 247240682}
@@ -5688,7 +5696,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 424046, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   m_GameObject: {fileID: 247240681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -5701,7 +5709,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11424046, guid: 349967db34b40f44cb5cd6922373f3d7,
     type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   m_GameObject: {fileID: 247240681}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5710,6 +5718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T1.6
   LockPlayerMovement: 1
+  LockPlayerRotation: 1
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -6588,6 +6597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T5.5
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 1
   completeAtMessageIndex: 0
   messageEvents: []
@@ -7975,6 +7985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T6.8
   LockPlayerMovement: 0
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -8147,6 +8158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.9~1
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -8949,6 +8961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T2.1
   LockPlayerMovement: 1
+  LockPlayerRotation: 1
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -9339,6 +9352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.12~1
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -11175,6 +11189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T6.10
   LockPlayerMovement: 0
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -12552,7 +12567,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 124052, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 559084729}
@@ -12568,7 +12583,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 424052, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   m_GameObject: {fileID: 559084728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -12581,7 +12596,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11424052, guid: 349967db34b40f44cb5cd6922373f3d7,
     type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   m_GameObject: {fileID: 559084728}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12590,57 +12605,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T1.3
   LockPlayerMovement: 1
+  LockPlayerRotation: 1
   completeAtMessage: 1
   completeAtMessageIndex: 7
   messageEvents: []
---- !u!1001 &561422814
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 159651634}
-    m_Modifications:
-    - target: {fileID: 424056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -9.4767046
-      objectReference: {fileID: 0}
-    - target: {fileID: 424056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -.677689075
-      objectReference: {fileID: 0}
-    - target: {fileID: 424056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -.766357899
-      objectReference: {fileID: 0}
-    - target: {fileID: 424056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 424056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 424056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 424056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 424056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 124056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-      propertyPath: m_Name
-      value: '1. Controls #1 [Connection]'
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-  m_RootGameObject: {fileID: 1412203964}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &561850450
 GameObject:
   m_ObjectHideFlags: 0
@@ -14090,7 +14058,7 @@ MonoBehaviour:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 124054, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 634189182}
@@ -14106,7 +14074,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 424054, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   m_GameObject: {fileID: 634189181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -14119,7 +14087,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11424054, guid: 349967db34b40f44cb5cd6922373f3d7,
     type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   m_GameObject: {fileID: 634189181}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -14129,7 +14097,7 @@ MonoBehaviour:
   repeatDelay: 10
   conversationId: T1.2
   KeyOrder: 00000000010000000200000003000000
-  StartConversationImmediately: 0
+  StartConversationFirstDelay: 30
 --- !u!1001 &636511511
 Prefab:
   m_ObjectHideFlags: 0
@@ -15988,6 +15956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T6.4
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -19184,6 +19153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T3.1
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -20624,6 +20594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T2.6
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -22863,6 +22834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T5.1
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 1
   completeAtMessageIndex: 14
   messageEvents: []
@@ -23698,6 +23670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T2.3
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -24197,6 +24170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.13
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 1
   completeAtMessageIndex: 1
   messageEvents: []
@@ -24517,6 +24491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T5.6
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 1
   completeAtMessageIndex: 3
   messageEvents: []
@@ -24708,6 +24683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.10
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -29190,6 +29166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.6
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -29343,6 +29320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T9.1
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -29612,7 +29590,7 @@ MonoBehaviour:
   repeatDelay: 0
   conversationId: T0.1
   KeyOrder: 00000000
-  StartConversationImmediately: 1
+  StartConversationFirstDelay: 0
 --- !u!1 &1334374440
 GameObject:
   m_ObjectHideFlags: 0
@@ -31587,7 +31565,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 124056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1412203965}
@@ -31603,7 +31581,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 424056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   m_GameObject: {fileID: 1412203964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.4767046, y: -.677689075, z: -.766357899}
@@ -31621,7 +31599,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11424056, guid: 349967db34b40f44cb5cd6922373f3d7,
     type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   m_GameObject: {fileID: 1412203964}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -33413,6 +33391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.12~2
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -35735,6 +35714,58 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1709360453}
   m_GameObject: {fileID: 1599699950}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1605099156
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 159651634}
+    m_Modifications:
+    - target: {fileID: 424056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -9.4767046
+      objectReference: {fileID: 0}
+    - target: {fileID: 424056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -.677689075
+      objectReference: {fileID: 0}
+    - target: {fileID: 424056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -.766357899
+      objectReference: {fileID: 0}
+    - target: {fileID: 424056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 124056, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
+      propertyPath: m_Name
+      value: '1. Controls #1 [Connection]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11424046, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
+      propertyPath: LockPlayerRotation
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
+  m_RootGameObject: {fileID: 1412203964}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1001 &1608128954
 Prefab:
   m_ObjectHideFlags: 0
@@ -38356,6 +38387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.5~1
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -38390,7 +38422,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 124048, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1709139886}
@@ -38406,7 +38438,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 424048, guid: 349967db34b40f44cb5cd6922373f3d7, type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   m_GameObject: {fileID: 1709139885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -38419,7 +38451,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11424048, guid: 349967db34b40f44cb5cd6922373f3d7,
     type: 2}
-  m_PrefabInternal: {fileID: 561422814}
+  m_PrefabInternal: {fileID: 1605099156}
   m_GameObject: {fileID: 1709139885}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -38429,7 +38461,7 @@ MonoBehaviour:
   repeatDelay: 10
   conversationId: T1.5
   KeyOrder: 00000000
-  StartConversationImmediately: 0
+  StartConversationFirstDelay: 15
 --- !u!1001 &1709360453
 Prefab:
   m_ObjectHideFlags: 0
@@ -39982,6 +40014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T3.7
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -40188,6 +40221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.5~2
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -46145,6 +46179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T3.3
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -46366,6 +46401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T7.1
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -47123,6 +47159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T5.4
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 1
   completeAtMessageIndex: 4
   messageEvents: []
@@ -49028,6 +49065,10 @@ Prefab:
       propertyPath: turnOn.Array.data[0]
       value: 
       objectReference: {fileID: 1507823317}
+    - target: {fileID: 11483752, guid: fae07cceae3c0d04aab7213cb468bfdd, type: 2}
+      propertyPath: LockPlayerRotation
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fae07cceae3c0d04aab7213cb468bfdd, type: 2}
   m_RootGameObject: {fileID: 1711509466}
@@ -49427,6 +49468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T6.1
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -49554,7 +49596,8 @@ MonoBehaviour:
   EdgeConversation: T4.4A
   EdgeSaveConversation: T4.4B
   InEdge: 0
-  LockMovement: 0
+  LockMovement1: 0
+  LockRotation1: 0
 --- !u!54 &2076031672
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -50305,6 +50348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T4.9~2
   LockPlayerMovement: 1
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
@@ -50697,6 +50741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationId: T6.7
   LockPlayerMovement: 0
+  LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
   messageEvents: []
