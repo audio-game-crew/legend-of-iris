@@ -58,7 +58,15 @@ public class QuestManager : MonoBehaviour {
                 }
             }
         }
+    }
 
+    void FixedUpdate()
+    {
+        // Send the quests fixed update notifications, so they can keep internal timers etc.
+        foreach (var quest in quests)
+        {
+            if (quest.state == Quest.State.STARTED) quest.FixedUpdate();
+        }
     }
 
     public void StartQuest(GameObject questGO)

@@ -26,7 +26,6 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         lucyController.StartBell();
         Characters.instance.Lucy.GetComponent<WalkingFollowerScript>().follow = false;
 
-
         FillSteps();
 		Next();
         var checkpointManager = CheckpointManager.instance;
@@ -59,7 +58,7 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         var targetVec = waypoint.transform.position - lastPosition;
 
         var distance = targetVec.magnitude;
-        if (distance > definition.maxStepDistance)
+        if (distance >= definition.maxStepDistance)
         {
             var stepCount = Mathf.Ceil(distance / definition.maxStepDistance);
             var stepSize = 1 / stepCount;
@@ -68,7 +67,7 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
                 var percentageDone = stepSize * (float)i;
                 var newWaypointGO = (GameObject)GameObject.Instantiate(definition.WaypointPrefab,
                     lastPosition + percentageDone * targetVec,
-                    Quaternion.RotateTowards(lastRotation, waypoint.transform.rotation, percentageDone));
+                    Quaternion.LookRotation(targetVec.normalized));
                 var newWaypoint = newWaypointGO.GetComponent<Waypoint>();
                 if (newWaypoint == null)
                     Debug.LogError("The waypoint prefab doesn't contain a Waypoint component", newWaypointGO);
@@ -80,7 +79,17 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         return steps;
     }
 
+    //private void ClearAddedWaypoints()
+    //{
+    //    foreach(var waypoint in addedWaypoints)
+    //    {
+    //        GameObject.Destroy(waypoint.gameObject);
+    //    }
+    //    addedWaypoints.Clear();
+    //}
+
 	private void Next() {
+        //Debug.Log("steps: " + string.Join(", ", steps.Select(s => s.transform.position.ToString()).ToArray()));
 		if (steps.Count == 0) {
 			Complete();
 			return;
@@ -90,6 +99,14 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         current.onPlayerEnter += OnPlayerEnter;
         var lucy = Characters.instance.Lucy.GetComponent<LucyController>();
         lucy.GotoLocation(new PositionRotation(current.transform.position, current.transform.rotation));
+
+        // Make sure the last reached checkpoint rotates the player towards the current goal.
+        if (CheckpointManager.instance != null)
+        {
+            var lastCheckpoint = CheckpointManager.instance.GetLastCheckpoint();
+            lastCheckpoint.transform.rotation = Quaternion.LookRotation(lastCheckpoint.transform.position - current.transform.position) *
+                Quaternion.Euler(new Vector3(0, Randomg.Range(-45, 45), 0));
+        }
 
         ResetTimers();
 	}
@@ -104,6 +121,8 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
     }
 
 	private void OnPlayerEnter(Waypoint waypoint, GameObject player) {
+        if (waypoint != current || state == State.COMPLETED)
+            return;
 		waypoint.onPlayerEnter -= OnPlayerEnter;
         if (definition.SuccesSound != null)
         {
@@ -190,10 +209,9 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         var player = Characters.instance.Beorn;
         if (player == null)
             return;
-        var newSteps = GetStepsBetween(player.transform.position, player.transform.rotation, current);
-        //Debug.Log("newSteps: " + string.Join(", ", newSteps.Select(s => s.transform.position.ToString()).ToArray()));
-        steps.AddFirst(current);
-        foreach (var step in newSteps.Reverse())
+        var newSteps = GetStepsBetween(player.transform.position, player.transform.rotation, current).ToList();
+        newSteps.Reverse();
+        foreach(var step in newSteps)
             steps.AddFirst(step);
         Next();
     }

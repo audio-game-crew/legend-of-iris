@@ -43,6 +43,7 @@ public abstract class Quest {
 	}
 
     public virtual void Update() { }
+    public virtual void FixedUpdate() { }
 
 	public void Complete() {
 		if (_PreComplete() == false) return;

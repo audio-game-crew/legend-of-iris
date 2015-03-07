@@ -42,6 +42,15 @@ public abstract class RecursiveQuest<QuestSC, DefinitionSC> : Quest<QuestSC, Def
         base.Update();
     }
 
+    public override void FixedUpdate()
+    {
+        foreach (var quest in children)
+        {
+            if (quest.state == Quest.State.STARTED) quest.FixedUpdate();
+        }
+        base.FixedUpdate();
+    }
+
 	private void OnChildQuestComplete(Quest quest) {
 		quest.onQuestComplete -= OnChildQuestComplete;
 		Check();

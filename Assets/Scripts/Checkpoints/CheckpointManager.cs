@@ -38,7 +38,7 @@ public class CheckpointManager : MonoBehaviour {
     }
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (teleporting)
         {
             var player = Characters.instance.Beorn;
@@ -46,8 +46,9 @@ public class CheckpointManager : MonoBehaviour {
             var progress = time / TeleportTime;
             if (progress > 1)
             { // Stop the teleportation
-                player.transform.position = target.Position;
-                player.transform.rotation = target.Rotation;
+                player.rigidbody.MovePosition(target.Position);
+                player.rigidbody.useGravity = true;
+                player.GetComponent<PlayerController>().camerasContainer.localRotation = target.Rotation;
                 teleporting = false;
                 if (conversationPlayer == null || conversationPlayer.IsFinished())
                     OnEndLastCheckpointTeleport();
@@ -55,10 +56,11 @@ public class CheckpointManager : MonoBehaviour {
             else
             {
                 var newPosRot = PositionRotation.Interpolate(start, target, progress, TeleportAnimationHorizontalDisplacementEasing);
-                player.transform.position = newPosRot.Position
+                player.rigidbody.MovePosition(newPosRot.Position
                     // Add the vertical movement to lift up the player a bit while teleporting
-                    .addy(TeleportAnimationVerticalDisplacementValue.Evaluate(progress) * JumpHeight);
-                player.transform.rotation = newPosRot.Rotation;
+                    .addy(TeleportAnimationVerticalDisplacementValue.Evaluate(progress) * JumpHeight));
+                player.GetComponent<PlayerController>().camerasContainer.localRotation = newPosRot.Rotation;
+                //player.transform.rotation = newPosRot.Rotation;
             }
         }
 	}
@@ -88,10 +90,11 @@ public class CheckpointManager : MonoBehaviour {
 
     public void GotoLastCheckpoint(object sender, string conversation = null)
     {
-
         TimerManager.RegisterEvent("Dieded");
-        start = new PositionRotation(Characters.instance.Beorn);
+        var player = Characters.instance.Beorn;
+        start = new PositionRotation(player.transform.position, Characters.GetPlayerController().camerasContainer.localRotation);
         target = new PositionRotation(lastCheckpoint.gameObject);
+        player.rigidbody.useGravity = false;
         teleporting = true;
         SetMovementRelatedComponentsEnabled(false);
         time = 0;
