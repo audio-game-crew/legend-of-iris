@@ -69,7 +69,7 @@ public class SettingsManager : MonoBehaviour
         {
             activePlayer.MarkRemovable();
         }
-        AudioObject ao = new AudioObject(ScreenAudioManager.GetScreenAudioObject(), ac, mute ? 0f : 0.6f, 0f, false, false);
+        AudioObject ao = new AudioObject(ScreenAudioManager.GetScreenAudioObject(), ac, mute ? 0f : 1f, 0f, false, false);
         activePlayer = AudioManager.PlayAudio(ao);
         latestClip = ac;
     }

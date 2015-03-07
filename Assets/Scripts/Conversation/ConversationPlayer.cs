@@ -62,15 +62,19 @@ public class ConversationPlayer
         int counter = 0;
         foreach (ConversationMessage m in conversation.messageSequence)
         {
+            bool demo = DemoModeManager.instance.demonstrationMode;
+            bool skip = demo && m.demoSkip;
+            AudioClip clip = demo ? m.audioClipDemo : m.audioClip;
+
             conversationQueue.Add(new MessageQueueItem()
             {
                 message = m,
                 index = counter++,
-                time = cumulativetime + m.settings.timeOffset
+                time = cumulativetime + (skip ? 0f : m.settings.timeOffset)
             });
 
-            if (m.audioClip != null)
-                cumulativetime += m.audioClip.length + m.settings.timeOffset;
+            if (clip != null)
+                cumulativetime += skip ? 0.21f : (clip.length + m.settings.timeOffset);
         }
         conversationQueue = conversationQueue.OrderBy(o => o.time).ToList();
 
@@ -114,8 +118,12 @@ public class ConversationPlayer
         ConversationMessage msg = mqi.message;
         float timer = msg.audioClip == null ? 0f : msg.audioClip.length;
 
+        bool demo = DemoModeManager.instance.demonstrationMode;
+        bool skip = demo && msg.demoSkip;
+
         // start audio
-        AudioPlayer ap = AudioManager.PlayAudio(new AudioObject(msg.source, msg.audioClip, msg.settings.volume));
+        AudioClip clip = demo ? msg.audioClipDemo : msg.audioClip;
+        AudioPlayer ap = AudioManager.PlayAudio(new AudioObject(msg.source, clip, msg.settings.volume));
         activePlayers.Add(ap);
         ap.SetPitch(msg.settings.pitch);
         ap.SetMinDistance(ConversationManager.instance.minAudioDistance);
@@ -156,6 +164,9 @@ public class ConversationPlayer
 
         // on start
         if (onMessageStart != null) onMessageStart(self, mqi.index);
+
+        // check if message chould be skipped
+        if (skip) ap.MarkRemovable();
     }
 
     public void Skip()
