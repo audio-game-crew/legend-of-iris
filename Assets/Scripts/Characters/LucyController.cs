@@ -28,6 +28,7 @@ public class LucyController : MonoBehaviour {
             conversationManager.OnConversationStart += conversationManager_OnConversationStart;
             conversationManager.OnConversationEnd += conversationManager_OnConversationEnd;
         }
+        targetLocation = new PositionRotation(gameObject);
 	}
 
     private void InitBell()
