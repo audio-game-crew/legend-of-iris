@@ -17,8 +17,6 @@ public class KeyOrderQuest : Quest<KeyOrderQuest, KeyOrderQuestDefinition> {
 
         SetMovementLocked(true);
         lastConversationEnd = Time.time;
-
-        Debug.Log("KeyOrderQuest started");
     }
 
     protected override void _Complete()
@@ -73,14 +71,12 @@ public class KeyOrderQuest : Quest<KeyOrderQuest, KeyOrderQuestDefinition> {
 
     private void StartConversation() {
         if (player != null) return;
-        Debug.Log("Starting conversation yolo, it's been " + (Time.time - lastConversationEnd) + " seconds already");
         player = ConversationManager.GetConversationPlayer(definition.conversationId);
         player.ConversationEnd += OnConversationEnd;
         player.Start();
     }
 
     private void OnConversationEnd(ConversationPlayer _player) {
-        Debug.Log("Fuck this shit, I'm done talking (whoever is talking int eh conveffdfje0re " + _player.GetConversationName());
         _player.ConversationEnd -= OnConversationEnd;
         player = null;
         lastConversationEnd = Time.time;
