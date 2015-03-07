@@ -18,7 +18,16 @@ public class WalkingFollowerScript : MonoBehaviour {
 
         toMove = GetToMove();
 
-        transform.position = transform.position + toMove * Timeg.safeFixedDelta(convergeSpeed);
+        Vector3 target = transform.position + toMove * Timeg.safeFixedDelta(convergeSpeed);
+
+        if (rigidbody != null)
+        {
+            rigidbody.position = target;
+        }
+        else
+        {
+            transform.position = target;
+        }
 	}
 
     private Vector3 GetToMove()
