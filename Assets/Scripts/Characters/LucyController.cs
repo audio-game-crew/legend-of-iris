@@ -151,7 +151,6 @@ public class LucyController : MonoBehaviour {
 
     void conversationManager_OnConversationStart(ConversationPlayer player)
     {
-        Debug.Log("Conversation " + player.GetConversationName() + " Start with " + string.Join(" ", player.GetConversationActors().Select(a => a.name).ToArray()));
         // If Lucy is in this conversation, make sure she is close to the player
         if (player.GetConversationActors().Contains(this.gameObject))
         {
@@ -159,14 +158,8 @@ public class LucyController : MonoBehaviour {
         }
     }
 
-    public List<ConversationPlayer> endedConversations = new List<ConversationPlayer>();
-
     void conversationManager_OnConversationEnd(ConversationPlayer player)
     {
-        Debug.Log("Conversation " + player.GetConversationName() + " ended with " + string.Join(" ", player.GetConversationActors().Select(a => a.name).ToArray()));
-        if (endedConversations.Contains(player))
-            Debug.LogError("Conversation ended twice!!!!");
-        endedConversations.Add(player);
         // If Lucy is in this conversation, make sure she is close to the player
         if (player.GetConversationActors().Contains(this.gameObject))
         {
