@@ -60,12 +60,12 @@ public class FirstScienceBirdQuest : Quest<FirstScienceBirdQuest, FirstScienceBi
 		GameObject.Destroy(waypoint.gameObject);
 		state = State.TESTING;
 		var player = ConversationManager.GetConversationPlayer("T7.4");
-		player.onConversationEnd += OnScienceBirdConversationEnd;
+		player.ConversationEnd += OnScienceBirdConversationEnd;
 		player.Start();
 	}
 
 	private void OnScienceBirdConversationEnd(ConversationPlayer player) {
-		player.onConversationEnd -= OnScienceBirdConversationEnd;
+		player.ConversationEnd -= OnScienceBirdConversationEnd;
 		Complete();
 	}
 
@@ -94,14 +94,14 @@ public class FirstScienceBirdQuest : Quest<FirstScienceBirdQuest, FirstScienceBi
 
 			if (Time.time > nextExplanationTime) {
 				explanationPlayer = ConversationManager.GetConversationPlayer("T7.2");
-				explanationPlayer.onConversationEnd += OnExplanationEnd;
+				explanationPlayer.ConversationEnd += OnExplanationEnd;
 				explanationPlayer.Start();
 			}
 		}
 	}
 
 	private void OnExplanationEnd(ConversationPlayer _) {
-		explanationPlayer.onConversationEnd -= OnExplanationEnd;
+		explanationPlayer.ConversationEnd -= OnExplanationEnd;
 		explanationPlayer = null;
 		lastExplanationTime = Time.time;
 		nextExplanationTime = lastExplanationTime + definition.explanationDelay;

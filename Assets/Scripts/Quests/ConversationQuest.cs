@@ -13,9 +13,9 @@ public class ConversationQuest : Quest<ConversationQuest, ConversationQuestDefin
         {
             SetPlayerMovementLocked(definition.LockPlayerMovement);
             SetPlayerRotationLock(definition.LockPlayerRotation);
-            player.onConversationEnd += OnConversationEnd;
-            player.onMessageEnd += player_onMessageEnd;
-            player.onMessageStart += player_onMessageStart;
+            player.ConversationEnd += OnConversationEnd;
+            player.MessageEnd += player_onMessageEnd;
+            player.MessageStart += player_onMessageStart;
             player.Start();
         } else
         {
@@ -73,15 +73,13 @@ public class ConversationQuest : Quest<ConversationQuest, ConversationQuestDefin
     }
 
 	private void OnConversationEnd(ConversationPlayer player) {
-        if (player != null)
-            player.onConversationEnd -= OnConversationEnd;
-        Debug.Log("Conversation " + definition.name + " ended");
-		Complete();
+        if (state != State.COMPLETED)
+            Complete();
 	}
 
     protected override void _Complete()
     {
-        Debug.Log("Conversation quest completed");
+        //Debug.Log("Conversation quest completed");
         SetPlayerMovementLocked(false);
         SetPlayerRotationLock(false);
         base._Complete();

@@ -108,7 +108,7 @@ public class CheckpointManager : MonoBehaviour {
     private void PlayConversation(string conversation)
     {
         var player = ConversationManager.GetConversationPlayer(conversation);
-        player.onConversationEnd += s => OnEndLastCheckpointTeleport();
+        player.ConversationEnd += s => OnEndLastCheckpointTeleport();
         player.Start();
     }
 

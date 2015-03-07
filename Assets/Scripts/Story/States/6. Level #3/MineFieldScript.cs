@@ -241,7 +241,7 @@ public class MineFieldScript : MonoBehaviour {
             else
             { // Player collided with a mine.
                 var failPlayer = ConversationManager.GetConversationPlayer(FailConversations[Random.Range(0, FailConversations.Count)]);
-                failPlayer.onConversationEnd += failPlayer_onConversationEnd;
+                failPlayer.ConversationEnd += failPlayer_onConversationEnd;
                 failPlayer.Start();
                 RemoveMine(collidedMine);
             }
@@ -250,7 +250,7 @@ public class MineFieldScript : MonoBehaviour {
 
     void failPlayer_onConversationEnd(ConversationPlayer player)
     {
-        player.onConversationEnd -= failPlayer_onConversationEnd;
+        player.ConversationEnd -= failPlayer_onConversationEnd;
         CheckpointManager.instance.GotoLastCheckpoint(this);
     }
 

@@ -135,11 +135,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c96ad51fcf012cb4dbe1d60dbf37ee7d, type: 3}
+  m_Script: {fileID: 11500000, guid: eeeefe499f44fad479526b1e9cfc275e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 128
-  enableBinauralRendering: 1
+  MaxSources: 32
+  MaxDistance: 100
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

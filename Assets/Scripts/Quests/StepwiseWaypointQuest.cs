@@ -165,7 +165,7 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         if (playingConversation || teleporting || !definition.TimeoutActive)
             return;
         var player = ConversationManager.GetConversationPlayer(definition.TimeoutConversationID);
-        player.onConversationEnd += s => { timeoutTimer = 0; playingConversation = false; };
+        player.ConversationEnd += s => { timeoutTimer = 0; playingConversation = false; };
         playingConversation = true;
         player.Start();
     }
@@ -175,7 +175,7 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         if (playingConversation || teleporting || !definition.WrongWayActive)
             return;
         var player = ConversationManager.GetConversationPlayer(definition.WrongWayConversationID);
-        player.onConversationEnd += s => { wrongWayTimer = 0; playingConversation = false; };
+        player.ConversationEnd += s => { wrongWayTimer = 0; playingConversation = false; };
         playingConversation = true;
         player.Start();
     }
@@ -186,7 +186,7 @@ public class StepwiseWaypointQuest : Quest<StepwiseWaypointQuest, StepwiseWaypoi
         if (playingConversation || !definition.ResetActive)
             return;
         var player = ConversationManager.GetConversationPlayer(definition.ResetConversationID);
-        player.onConversationEnd += s => { ResetTimers(); playingConversation = false; };
+        player.ConversationEnd += s => { ResetTimers(); playingConversation = false; };
         playingConversation = true;
         player.Start();
     }

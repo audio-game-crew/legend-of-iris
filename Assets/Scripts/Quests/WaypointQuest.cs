@@ -83,7 +83,7 @@ public class WaypointQuest : Quest<WaypointQuest, WaypointQuestDefinition> {
         if (string.IsNullOrEmpty(definition.TimeoutConversationID))
             return;
         var player = ConversationManager.GetConversationPlayer(definition.TimeoutConversationID);
-        player.onConversationEnd += s => { timeoutTimer = 0; playingConversation = false; };
+        player.ConversationEnd += s => { timeoutTimer = 0; playingConversation = false; };
         playingConversation = true;
         player.Start();
     }
@@ -93,7 +93,7 @@ public class WaypointQuest : Quest<WaypointQuest, WaypointQuestDefinition> {
         if (string.IsNullOrEmpty(definition.WrongWayConversationID))
             return;
         var player = ConversationManager.GetConversationPlayer(definition.WrongWayConversationID);
-        player.onConversationEnd += s => { wrongWayTimer = 0; playingConversation = false; };
+        player.ConversationEnd += s => { wrongWayTimer = 0; playingConversation = false; };
         playingConversation = true;
         player.Start();
     }

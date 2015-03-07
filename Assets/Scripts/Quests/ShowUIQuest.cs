@@ -13,7 +13,7 @@ public class ShowUIQuest : Quest<ShowUIQuest, ShowUIQuestDefinition> {
         if (!string.IsNullOrEmpty(definition.ConversationID))
         {
             player = ConversationManager.GetConversationPlayer(definition.ConversationID);
-            player.onConversationEnd += player_onConversationEnd;
+            player.ConversationEnd += player_onConversationEnd;
             player.Start();
         }
     }

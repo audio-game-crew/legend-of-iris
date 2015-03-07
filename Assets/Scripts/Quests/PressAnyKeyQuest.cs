@@ -25,12 +25,12 @@ public class PressAnyKeyQuest : Quest<PressAnyKeyQuest, PressAnyKeyQuestDefiniti
     private void StartConversation() {
         if (player != null) return;
         player = ConversationManager.GetConversationPlayer(definition.conversationId);
-        player.onConversationEnd += OnConversationEnd;
+        player.ConversationEnd += OnConversationEnd;
         player.Start();
     }
 
     private void OnConversationEnd(ConversationPlayer _player) {
-        _player.onConversationEnd -= OnConversationEnd;
+        _player.ConversationEnd -= OnConversationEnd;
         player = null;
         lastConversationEnd = Time.time;
     }
