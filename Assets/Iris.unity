@@ -8633,7 +8633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementThreshold: 320
   direction: 3
-  FailTimeoutConversation: T2.4
+  FailTimeoutConversation: 
   FailTimeout: 30
   InitialFailTimeout: 10
   OppositeDirectionConversation: T2.5
@@ -20344,7 +20344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementThreshold: 320
   direction: 2
-  FailTimeoutConversation: T2.4
+  FailTimeoutConversation: 
   FailTimeout: 30
   InitialFailTimeout: 10
   OppositeDirectionConversation: T2.5
@@ -31393,8 +31393,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1229397836}
-  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: .5, y: -55.8699989, z: -10.6000004}
+  m_LocalRotation: {x: -.388079643, y: .581212044, z: .36802417, w: .613306582}
+  m_LocalPosition: {x: -4.05324554, y: -43.4356766, z: -9.89202499}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42148,7 +42148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1619618162
 RectTransform:
   m_ObjectHideFlags: 0
@@ -56092,6 +56092,14 @@ Prefab:
     - target: {fileID: 11483752, guid: fae07cceae3c0d04aab7213cb468bfdd, type: 2}
       propertyPath: messageEvents.Array.data[0].onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483754, guid: fae07cceae3c0d04aab7213cb468bfdd, type: 2}
+      propertyPath: FailTimeoutConversation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483750, guid: fae07cceae3c0d04aab7213cb468bfdd, type: 2}
+      propertyPath: FailTimeoutConversation
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fae07cceae3c0d04aab7213cb468bfdd, type: 2}

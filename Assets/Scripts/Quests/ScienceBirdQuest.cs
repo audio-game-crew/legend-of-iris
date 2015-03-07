@@ -87,12 +87,12 @@ public class ScienceBirdQuest : Quest<ScienceBirdQuest, ScienceBirdQuestDefiniti
 		GameObject.Destroy(waypoint.gameObject);
 		state = State.COMPLETING;
 		var player = ConversationManager.GetConversationPlayer(definition.successConversationId);
-		player.onConversationEnd += OnScienceBirdConversationEnd;
+		player.ConversationEnd += OnScienceBirdConversationEnd;
 		player.Start();
 	}
 
 	private void OnScienceBirdConversationEnd(ConversationPlayer player) {
-		player.onConversationEnd -= OnScienceBirdConversationEnd;
+		player.ConversationEnd -= OnScienceBirdConversationEnd;
 		Complete();
 	}
 
@@ -116,12 +116,12 @@ public class ScienceBirdQuest : Quest<ScienceBirdQuest, ScienceBirdQuestDefiniti
 		if (state != State.RETURNING) return;
 
 		var player = ConversationManager.GetConversationPlayer("T8.3");
-		player.onConversationEnd += OnReturnConversationEnd;
+		player.ConversationEnd += OnReturnConversationEnd;
 		player.Start();
 	}
 
 	private void OnReturnConversationEnd(ConversationPlayer player) {
-		player.onConversationEnd -= OnReturnConversationEnd;
+		player.ConversationEnd -= OnReturnConversationEnd;
 		state = State.COLLECTING;
 	}
 
@@ -138,7 +138,7 @@ public class ScienceBirdQuest : Quest<ScienceBirdQuest, ScienceBirdQuestDefiniti
 
 			if (Time.time > nextExplanationTime) {
 				explanationPlayer = ConversationManager.GetConversationPlayer(definition.explanationConversationId);
-				explanationPlayer.onConversationEnd += OnExplanationEnd;
+				explanationPlayer.ConversationEnd += OnExplanationEnd;
 				explanationPlayer.Start();
 			}
 		}
@@ -164,7 +164,7 @@ public class ScienceBirdQuest : Quest<ScienceBirdQuest, ScienceBirdQuestDefiniti
 	}
 
 	private void OnExplanationEnd(ConversationPlayer _) {
-		explanationPlayer.onConversationEnd -= OnExplanationEnd;
+		explanationPlayer.ConversationEnd -= OnExplanationEnd;
 		explanationPlayer = null;
 		lastExplanationTime = Time.time;
 		nextExplanationTime = lastExplanationTime + definition.explanationDelay;

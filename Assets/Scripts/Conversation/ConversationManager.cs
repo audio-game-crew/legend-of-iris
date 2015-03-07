@@ -25,6 +25,20 @@ public class ConversationManager : MonoBehaviour {
     [Header("Debug")]
     public int playingConversationsCount = 0;
 
+    [HideInInspector]
+    public delegate void MessageEventHandler(ConversationPlayer player, int index);
+    [HideInInspector]
+    public delegate void ConversationEventHandler(ConversationPlayer player);
+    [HideInInspector]
+    public event MessageEventHandler OnMessageStart;
+    [HideInInspector]
+    public event MessageEventHandler onMessageEnd;
+    [HideInInspector]
+    public event ConversationEventHandler OnConversationStart;
+    [HideInInspector]
+    public event ConversationEventHandler OnConversationEnd;
+
+
     private List<ConversationPlayer> playingConversations = new List<ConversationPlayer>();
 
     // Update is called once per frame
@@ -90,6 +104,12 @@ public class ConversationManager : MonoBehaviour {
             ConversationPlayer cp = new ConversationPlayer(toPlay);
             cp.layer = layer;
             playingConversations.Add(cp);
+            // Register all events:
+            cp.MessageStart += (s, i) => { if (this.OnMessageStart != null) this.OnMessageStart(s, i); };
+            cp.MessageEnd += (s, i) => { if (this.onMessageEnd != null) this.onMessageEnd(s, i); };
+            cp.ConversationEnd += (s) => { if (this.OnConversationEnd != null) this.OnConversationEnd(s); };
+            if (this.OnConversationStart != null) this.OnConversationStart(cp);
+
             return cp;
         }
         else

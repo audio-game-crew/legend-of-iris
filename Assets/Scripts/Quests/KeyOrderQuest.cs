@@ -75,13 +75,13 @@ public class KeyOrderQuest : Quest<KeyOrderQuest, KeyOrderQuestDefinition> {
         if (player != null) return;
         Debug.Log("Starting conversation yolo, it's been " + (Time.time - lastConversationEnd) + " seconds already");
         player = ConversationManager.GetConversationPlayer(definition.conversationId);
-        player.onConversationEnd += OnConversationEnd;
+        player.ConversationEnd += OnConversationEnd;
         player.Start();
     }
 
     private void OnConversationEnd(ConversationPlayer _player) {
         Debug.Log("Fuck this shit, I'm done talking (whoever is talking int eh conveffdfje0re " + _player.GetConversationName());
-        _player.onConversationEnd -= OnConversationEnd;
+        _player.ConversationEnd -= OnConversationEnd;
         player = null;
         lastConversationEnd = Time.time;
         firstPlayed = true;

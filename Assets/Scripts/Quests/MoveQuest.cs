@@ -49,7 +49,7 @@ public class MoveQuest : Quest<MoveQuest, MoveQuestDefinition> {
         {
             var convPlayer = ConversationManager.GetConversationPlayer(definition.FailTimeoutConversation);
             playingConversation = true;
-            convPlayer.onConversationEnd += (s) => { timer = 0; playingConversation = false; };
+            convPlayer.ConversationEnd += (s) => { timer = 0; playingConversation = false; };
             convPlayer.Start();            
         }
 

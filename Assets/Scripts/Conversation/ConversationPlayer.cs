@@ -12,12 +12,12 @@ public class ConversationPlayer
         public ConversationMessage message;
     }
 
-    public delegate void OnMessageStart(ConversationPlayer player, int index);
-    public delegate void OnMessageEnd(ConversationPlayer player, int index);
-    public delegate void OnConversationEnd(ConversationPlayer player);
-    public event OnMessageStart onMessageStart;
-    public event OnMessageEnd onMessageEnd;
-    public event OnConversationEnd onConversationEnd;
+    public delegate void MessageStartEventHandler(ConversationPlayer player, int index);
+    public delegate void MessageEndEventHandler(ConversationPlayer player, int index);
+    public delegate void ConversationEndEventHandler(ConversationPlayer player);
+    public event MessageStartEventHandler MessageStart;
+    public event MessageEndEventHandler MessageEnd;
+    public event ConversationEndEventHandler ConversationEnd;
     public int layer;
     private Conversation conversation;
     private List<MessageQueueItem> conversationQueue = new List<MessageQueueItem>();
@@ -25,9 +25,7 @@ public class ConversationPlayer
     private List<SubtitleElement> activeSubtitles = new List<SubtitleElement>();
     private List<BaseIndicator> activeIndicators = new List<BaseIndicator>();
 
-    // Make sure the script only disables and enables the bell once
-    private bool bellStopped = false;
-    private bool bellStarted = false;
+    private bool conversationEndFired = false;
 
     public int MessagesCount
     {
@@ -77,33 +75,6 @@ public class ConversationPlayer
                 cumulativetime += skip ? 0.21f : (clip.length + m.settings.timeOffset);
         }
         conversationQueue = conversationQueue.OrderBy(o => o.time).ToList();
-
-        // Pause Lucy's bell
-        SetLucyBellEnabled(false);
-        this.onConversationEnd += s => SetLucyBellEnabled(true);
-    }
-
-    private void SetLucyBellEnabled(bool enabled)
-    {
-        //Debug.Log((enabled ? "Enabling" : "Disabling") + " Lucy's bell from " + conversation.name + " " + enabledCount + "," + disabledCount);
-        var lucy = Characters.instance.Lucy;
-        if (lucy != null)
-        {
-            var lucyController = lucy.GetComponent<LucyController>();
-            if (lucyController != null)
-            {
-                if (enabled && !bellStarted)
-                {
-                    lucyController.StartBell();
-                    bellStarted = true;
-                }
-                if (!enabled && !bellStopped)
-                {
-                    lucyController.StopBell();
-                    bellStopped = true;
-                }
-            }
-        }
     }
 
     public void Update()
@@ -155,24 +126,31 @@ public class ConversationPlayer
             mySE.FadeAfterSeconds(1f);
             myAI.Stop();
 
-            if (onMessageEnd != null) onMessageEnd(self, i);
+            if (MessageEnd != null) MessageEnd(self, i);
             if (IsFinished())
             {
-                if (onConversationEnd != null) onConversationEnd(self);
+                OnConversationEnd();
             }
         });
 
         // on start
-        if (onMessageStart != null) onMessageStart(self, mqi.index);
+        if (MessageStart != null) MessageStart(self, mqi.index);
 
         // check if message chould be skipped
         if (skip) ap.MarkRemovable();
     }
 
+    private void OnConversationEnd()
+    {
+        if (ConversationEnd != null && !conversationEndFired)
+        {
+            conversationEndFired = true;
+            ConversationEnd(this);
+        }
+    }
+
     public void Skip()
     {
-        var self = this;
-
         var playersCopy = new List<AudioPlayer>(activePlayers);
         // stop all current audio
         foreach (AudioPlayer ap in playersCopy) ap.MarkRemovable();
@@ -184,12 +162,12 @@ public class ConversationPlayer
             SubtitlesManager.ShowSubtitle(1f, mqi.message.sourceName, mqi.message.subtitle);
 
             // send out messages
-            if (onMessageStart != null) onMessageStart(self, mqi.index);
+            if (MessageStart != null) MessageStart(this, mqi.index);
 
-            if (onMessageEnd != null) onMessageEnd(self, mqi.index);
+            if (MessageEnd != null) MessageEnd(this, mqi.index);
         }
 
-        if (onConversationEnd != null) onConversationEnd(self);
+        OnConversationEnd();
 
         // empty the queue
         conversationQueue = new List<MessageQueueItem>();
@@ -198,5 +176,17 @@ public class ConversationPlayer
     public string GetConversationName()
     {
         return conversation.name;
+    }
+
+    public IEnumerable<GameObject> GetConversationActors()
+    {
+        var actors = new List<GameObject>();
+        foreach(var item in conversation.messageSequence)
+        {
+            var actor = item.source;
+            if (!actors.Contains(actor))
+                actors.Add(actor);
+        }
+        return actors;
     }
 }

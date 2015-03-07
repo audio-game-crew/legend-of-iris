@@ -16,6 +16,13 @@ public class WalkingFollowerScript : MonoBehaviour {
     {
         if (!follow) return;
 
+        toMove = GetToMove();
+
+        transform.position = transform.position + toMove * Timeg.safeFixedDelta(convergeSpeed);
+	}
+
+    private Vector3 GetToMove()
+    {
         toMove = (followee.transform.position + offset) - transform.position;
         if (toMove.magnitude > minDistance)
         {
@@ -25,7 +32,11 @@ public class WalkingFollowerScript : MonoBehaviour {
         {
             toMove = Vector3.zero;
         }
+        return toMove;
+    }
 
-        transform.position = transform.position + toMove * Timeg.safeFixedDelta(convergeSpeed);
-	}
+    public void InstantMove()
+    {
+        transform.position = transform.position + toMove;
+    }
 }

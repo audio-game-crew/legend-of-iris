@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
+using System.Collections.Generic;
 
 public class LucyController : MonoBehaviour {
     [Tooltip("Time it takes lucy to fly to a new location")]
@@ -15,10 +17,17 @@ public class LucyController : MonoBehaviour {
     private AudioPlayer bellPlayer;
     private BaseIndicator bellIndicator;
     private int playing = 0;
+    private int talking = 0;
 
 	// Use this for initialization
 	void Start () {
         InitBell();
+        var conversationManager = ConversationManager.instance;
+        if (conversationManager != null)
+        {
+            conversationManager.OnConversationStart += conversationManager_OnConversationStart;
+            conversationManager.OnConversationEnd += conversationManager_OnConversationEnd;
+        }
 	}
 
     private void InitBell()
@@ -33,7 +42,7 @@ public class LucyController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (moving)
+        if (moving && talking <= 0)
             UpdatePosition();
 	}
 
@@ -90,6 +99,38 @@ public class LucyController : MonoBehaviour {
         }
     }
 
+    public void StartTalking()
+    {
+        talking++;
+        // Pause Lucy's bell
+        StopBell();
+
+        // Teleport near player and follow
+        if (talking > 0)
+        {
+            var follow = gameObject.GetComponent<WalkingFollowerScript>();
+            follow.InstantMove();
+            follow.follow = true;
+        }
+
+    }
+
+    public void StopTalking()
+    {
+        talking--; 
+        // Continue Lucy's bell
+        StartBell();
+
+        // Move back to the current target
+        if (talking <= 0)
+        {
+            var follow = gameObject.GetComponent<WalkingFollowerScript>();
+            follow.follow = false;
+            GotoLocation(targetLocation);
+        }
+
+    }
+
     void OnDrawGizmos()
     {
         Gizmos.color = new Color(0.3f,0.6f,1f);
@@ -106,6 +147,31 @@ public class LucyController : MonoBehaviour {
 
     public void GotoObject(GameObject targetObject) {
         GotoLocation(new PositionRotation(targetObject));
+    }
+
+    void conversationManager_OnConversationStart(ConversationPlayer player)
+    {
+        Debug.Log("Conversation " + player.GetConversationName() + " Start with " + string.Join(" ", player.GetConversationActors().Select(a => a.name).ToArray()));
+        // If Lucy is in this conversation, make sure she is close to the player
+        if (player.GetConversationActors().Contains(this.gameObject))
+        {
+            StartTalking();
+        }
+    }
+
+    public List<ConversationPlayer> endedConversations = new List<ConversationPlayer>();
+
+    void conversationManager_OnConversationEnd(ConversationPlayer player)
+    {
+        Debug.Log("Conversation " + player.GetConversationName() + " ended with " + string.Join(" ", player.GetConversationActors().Select(a => a.name).ToArray()));
+        if (endedConversations.Contains(player))
+            Debug.LogError("Conversation ended twice!!!!");
+        endedConversations.Add(player);
+        // If Lucy is in this conversation, make sure she is close to the player
+        if (player.GetConversationActors().Contains(this.gameObject))
+        {
+            StopTalking();
+        }
     }
 
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class SerialQuest : RecursiveQuest<SerialQuest, SerialQuestDefinition> {
 
@@ -10,11 +11,11 @@ public class SerialQuest : RecursiveQuest<SerialQuest, SerialQuestDefinition> {
 		// Check if all quests have been completed
 		base.Check();
 		// Check if there is quest ready to be started
-		foreach (Quest q in children) {
-			if (q.state != Quest.State.CREATED) continue;
-			q.Start();
-			return;
-		}
+        var firstNew = children.FirstOrDefault(c => c.state == State.CREATED);
+        if (firstNew != null)
+            firstNew.Start();
+        else
+            Complete();
 	}
 
 }

@@ -450,7 +450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationId: T2.7
-  LockPlayerMovement: 1
+  LockPlayerMovement: 0
   LockPlayerRotation: 0
   completeAtMessage: 0
   completeAtMessageIndex: 0
