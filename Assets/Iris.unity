@@ -786,6 +786,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   full3d: 1
   spatialInterpolation: 1
+  filterSmoothing: 1
+  spreadThreshold: 45
   enableReverb: 0
   reverbCofactor: 50
   enhanceDistEffect: 1
@@ -26097,8 +26099,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 983697078}
-  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: .5, y: -55.8699989, z: -10.6000004}
+  m_LocalRotation: {x: .37221241, y: .579794943, z: .336071044, w: -.642146409}
+  m_LocalPosition: {x: 113.770035, y: -128.40889, z: -160.012207}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -35053,6 +35055,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   full3d: 1
   spatialInterpolation: 1
+  filterSmoothing: 1
+  spreadThreshold: 45
   enableReverb: 0
   reverbCofactor: 50
   enhanceDistEffect: 1
