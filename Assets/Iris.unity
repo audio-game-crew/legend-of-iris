@@ -31395,8 +31395,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1229397836}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: 0, y: -11.2599993, z: -10.2399998}
+  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
+  m_LocalPosition: {x: .5, y: -55.8699989, z: -10.6000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -43329,6 +43329,7 @@ GameObject:
   - 114: {fileID: 1645063894}
   - 114: {fileID: 1645063896}
   - 114: {fileID: 1645063895}
+  - 114: {fileID: 1645063893}
   m_Layer: 0
   m_Name: Visual Aids Camera
   m_TagString: MainCamera
@@ -43401,6 +43402,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1645063893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1645063887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c0bb1de2c5507640bef6e047aa9b144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenshotScale: 2
+  folder: ./
+  button: 292
+  ctrl: 0
+  alt: 0
+  cmd: 0
+  shift: 0
 --- !u!114 &1645063894
 MonoBehaviour:
   m_ObjectHideFlags: 0
