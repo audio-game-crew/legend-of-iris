@@ -19,7 +19,7 @@ public class Screenshotter : MonoBehaviour {
         {
             if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
 
-            string filename = "Legend of Iris (" + Screen.width * screenshotScale + " x " + Screen.height * screenshotScale + ") " + System.DateTime.Now.ToString("yyyy-MM-dd hh.mm.ss") + ".jpg";
+            string filename = "Legend of Iris (" + Screen.width * screenshotScale + " x " + Screen.height * screenshotScale + ") " + System.DateTime.Now.ToString("yyyy-MM-dd hh.mm.ss") + ".png";
             string path = Path.GetFullPath(folder + filename);
             Application.CaptureScreenshot(path, screenshotScale);
             SubtitlesManager.ShowSubtitle(3f, "Iris", "Screenshot saved at \n\n" + path);
