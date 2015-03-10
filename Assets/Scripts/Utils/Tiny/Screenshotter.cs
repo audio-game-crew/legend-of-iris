@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.IO;
 
 public class Screenshotter : MonoBehaviour {
 
@@ -16,9 +17,22 @@ public class Screenshotter : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(button))
         {
-            string filename = "Screenshot (" + Screen.width * screenshotScale + " x " + Screen.height * screenshotScale + ") " + System.DateTime.Now.ToString("yyyy-MM-dd hh.mm.ss") + ".jpg";
-            Application.CaptureScreenshot(folder + filename, screenshotScale);
-            SubtitlesManager.ShowSubtitle(3f, "Iris", "Screenshot saved at \n\n" + System.IO.Path.GetFullPath(folder + filename));
+            if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
+
+            string filename = "Legend of Iris (" + Screen.width * screenshotScale + " x " + Screen.height * screenshotScale + ") " + System.DateTime.Now.ToString("yyyy-MM-dd hh.mm.ss") + ".jpg";
+            string path = Path.GetFullPath(folder + filename);
+            Application.CaptureScreenshot(path, screenshotScale);
+            SubtitlesManager.ShowSubtitle(3f, "Iris", "Screenshot saved at \n\n" + path);
+
+            /* the below script doesnt work... why?
+            if (File.Exists(path))
+            {
+                SubtitlesManager.ShowSubtitle(3f, "Iris", "Screenshot saved at \n\n" + path);
+            }
+            else
+            {
+                SubtitlesManager.ShowSubtitle(3f, "Iris", "ERROR: Taking screenshot failed");
+            }*/
         }
 	}
 }

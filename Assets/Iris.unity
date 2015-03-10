@@ -43413,8 +43413,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0bb1de2c5507640bef6e047aa9b144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenshotScale: 2
-  folder: ./
+  screenshotScale: 1
+  folder: Screenshots/
   button: 292
   ctrl: 0
   alt: 0
