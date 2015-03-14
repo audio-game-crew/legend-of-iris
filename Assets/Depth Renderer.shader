@@ -1,30 +1,42 @@
-﻿Shader "Depth/Render Depth" {
-SubShader {
-    Tags { "RenderType"="Opaque" }
-    Pass {
-        Fog { Mode Off }
-CGPROGRAM
+﻿Shader "Depth/Depth Renderer" {
+Properties {
+		_DepthStart ("Start", float) = 0
+		_DepthEnd ("End", float) = 100
+	}
+	SubShader {
+		Cull Back
+		Lighting Off
+		Fog { Mode Off }
+		Blend SrcAlpha OneMinusSrcAlpha
+		LOD 200
+ 
+		CGPROGRAM
+		#pragma surface surf Lambert vertex:vert finalcolor:mycolor
+ 
+		float _DepthStart;
+		float _DepthEnd;
+ 
+		struct Input {
+			float3 depth;
+		};
+ 
+		void vert (inout appdata_full v, out Input o) {
+			UNITY_INITIALIZE_OUTPUT(Input,o);
+			float3 foo = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.depth = clamp((foo.z - _DepthStart) / (_DepthEnd - _DepthStart), 0, 1);
+		}
 
-#pragma vertex vert
-#pragma fragment frag
-#include "UnityCG.cginc"
-
-struct v2f {
-    float4 pos : SV_POSITION;
-    float2 depth : TEXCOORD0;
-};
-
-v2f vert (appdata_base v) {
-    v2f o;
-    o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
-    UNITY_TRANSFER_DEPTH(o.depth);
-    return o;
-}
-
-half4 frag(v2f i) : SV_Target {
-    UNITY_OUTPUT_DEPTH(i.depth);
-}
-ENDCG
-    }
-}
+		void mycolor (Input IN, SurfaceOutput o, inout fixed4 color)
+		{
+			color.rgb = float3(1,1,1) * IN.depth;
+		}
+ 
+		void surf (Input IN, inout SurfaceOutput o) {
+			o.Albedo = 1;
+			o.Alpha = 1;
+		}
+		ENDCG
+	}
+ 
+	Fallback "VertexLit"
 }
