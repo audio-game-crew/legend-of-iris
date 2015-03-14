@@ -23,6 +23,7 @@ public class Screenshotter : MonoBehaviour {
             string path = Path.GetFullPath(folder + filename);
             Application.CaptureScreenshot(path, screenshotScale);
             SubtitlesManager.ShowSubtitle(3f, "Iris", "Screenshot saved at \n\n" + path);
+            Debug.Log("Screenshot saved at \n\n" + path);
 
             /* the below script doesnt work... why?
             if (File.Exists(path))

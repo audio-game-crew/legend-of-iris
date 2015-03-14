@@ -2,10 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 
+[RequireComponent(typeof(Camera))]
 [ExecuteInEditMode]
 public class DepthRenderer : MonoBehaviour {
 
-    public Shader depthCalculator;
+    public Shader depthRenderer;
 
     public float start;
     public float end;
@@ -16,8 +17,11 @@ public class DepthRenderer : MonoBehaviour {
 
     void LateUpdate()
     {
-        Shader.SetGlobalFloat("_DepthStart", start);
-        Shader.SetGlobalFloat("_DepthEnd", end);
+        if (activated)
+        {
+            Shader.SetGlobalFloat("_DepthStart", start);
+            Shader.SetGlobalFloat("_DepthEnd", end);
+        }
         if (toggle)
         {
             toggle = false;
@@ -30,12 +34,12 @@ public class DepthRenderer : MonoBehaviour {
         if (active && !activated)
         {
             activated = true;
-            Camera.main.SetReplacementShader(depthCalculator, "");
+            camera.SetReplacementShader(depthRenderer, "");
         }
         else if (!active && activated)
         {
             activated = false;
-            Camera.main.ResetReplacementShader();
+            camera.ResetReplacementShader();
         }
     }
 

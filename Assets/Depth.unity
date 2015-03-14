@@ -105,9 +105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c82ae3b791c4d45bf86c95a48eb9c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  depthCalculator: {fileID: 4800000, guid: 2f8a66720f8c7d74eabeab17a9170ebf, type: 3}
-  start: 6
-  end: 15
+  depthRenderer: {fileID: 4800000, guid: 2f8a66720f8c7d74eabeab17a9170ebf, type: 3}
+  start: 0
+  end: 25
   toggle: 0
 --- !u!81 &118528835
 AudioListener:
