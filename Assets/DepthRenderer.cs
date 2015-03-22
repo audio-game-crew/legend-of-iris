@@ -31,6 +31,8 @@ public class DepthRenderer : MonoBehaviour {
 
     public void SetDepthRenderer(bool active, float start, float end)
     {
+        this.start = start;
+        this.end = end;
         if (active && !activated)
         {
             activated = true;

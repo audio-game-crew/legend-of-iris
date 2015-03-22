@@ -33,7 +33,7 @@ public class IndicatorManager : MonoBehaviour {
         if (waveperiod.HasValue)
             ai.wavePeriod = waveperiod.Value;
         RectTransform r = ai.GetComponent<RectTransform>();
-        r.SetParent(indicatorPanel);
+        r.SetParent(indicatorPanel, false);
         r.localPosition = Vector3.zero;
         return ai;
     }
@@ -43,7 +43,7 @@ public class IndicatorManager : MonoBehaviour {
         ScreenAudioIndicator si = (ScreenAudioIndicator)Instantiate(screenIndicatorPrefab);
         si.activeTimer = timer;
         RectTransform r = si.GetComponent<RectTransform>();
-        r.SetParent(indicatorPanel);
+        r.SetParent(indicatorPanel, false);
         r.localPosition = Vector3.zero;
         return si;
     }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SourceAudioIndicator : BaseIndicator
 {
@@ -34,7 +35,7 @@ public class SourceAudioIndicator : BaseIndicator
             if (activeTimer > 0f)
             {
                 RectTransform r = (RectTransform)Instantiate(soundWavePrefab);
-                r.SetParent(transform);
+                r.SetParent(transform, false);
                 r.localPosition = Vector3.zero;
             }
         }
@@ -49,6 +50,6 @@ public class SourceAudioIndicator : BaseIndicator
 
         // set position on camera
         Vector3 pos = CameraManager.currentViewingCamera.WorldToScreenPoint(offset + source.transform.position);
-        GetComponent<RectTransform>().anchoredPosition = pos;
+        GetComponent<RectTransform>().position = pos.setz(0);
 	}
 }

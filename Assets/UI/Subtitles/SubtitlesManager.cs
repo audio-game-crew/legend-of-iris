@@ -21,7 +21,7 @@ public class SubtitlesManager : MonoBehaviour {
     private SubtitleElement showSubtitle(float timer, string sourceName, string text)
     {
         SubtitleElement se = (SubtitleElement) Instantiate(subtitlePrefab);
-        se.transform.SetParent(subtitlePanel);
+        se.transform.SetParent(subtitlePanel, false);
         se.Setup(timer, sourceName.Trim(), text.Trim());
         return se;
     }
