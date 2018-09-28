@@ -164,9 +164,9 @@ public class AmbientArea : MonoBehaviour {
         // get distance from player to collider
         Vector3 player = PlayerController.instance.transform.position;
         float distance = 0f;
-        if (!collider.bounds.Contains(player))
+        if (!GetComponent<Collider>().bounds.Contains(player))
         {
-            Vector3 closestPoint = collider.ClosestPointOnBounds(player);
+            Vector3 closestPoint = GetComponent<Collider>().ClosestPointOnBounds(player);
             distance = (player - closestPoint).magnitude;
         }
 

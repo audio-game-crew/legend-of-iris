@@ -13,7 +13,7 @@ public class SpiritController : MonoBehaviour {
 		this.generator = g;
 		this.initialSpeed = startingSpeed;
 		this.speed = startingSpeed;
-        var near = this.transform.FindChild("NearSpirit");
+        var near = this.transform.Find("NearSpirit");
         if (near != null)
         {
             var nearTrigger = near.GetComponent<TriggerEventGenerator>();
@@ -24,7 +24,7 @@ public class SpiritController : MonoBehaviour {
             }
         }
 
-        var body = this.transform.FindChild("Body");
+        var body = this.transform.Find("Body");
         if (body != null)
         {
             var bodyTrigger = body.GetComponent<TriggerEventGenerator>();
@@ -77,7 +77,7 @@ public class SpiritController : MonoBehaviour {
     void bodyTrigger_TriggerExit(object sender, TriggerEventArgs e)
     {
         var other = e.Trigger;
-        if (other == generator.spiritLiveArea.collider)
+        if (other == generator.spiritLiveArea.GetComponent<Collider>())
         {
             // If a spirit isn't in the game anymore we take if off the spirit list
             generator.RemoveSpirit(this.gameObject);

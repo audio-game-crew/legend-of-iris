@@ -20,9 +20,9 @@ public class SoundSystemManager : MonoBehaviour {
 
     public static void HandleAudioSource(GameObject gameObject)
     {
-        if (gameObject.audio != null)
+        if (gameObject.GetComponent<AudioSource>() != null)
         {
-            HandleAudioSource(gameObject.audio);
+            HandleAudioSource(gameObject.GetComponent<AudioSource>());
         }
     }
 

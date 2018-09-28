@@ -1,4 +1,6 @@
-﻿Shader "Depth/Depth Renderer" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Depth/Depth Renderer" {
 Properties {
 		_DepthStart ("Start", float) = 0
 		_DepthEnd ("End", float) = 100
@@ -22,7 +24,7 @@ Properties {
  
 		void vert (inout appdata_full v, out Input o) {
 			UNITY_INITIALIZE_OUTPUT(Input,o);
-			float3 foo = mul(UNITY_MATRIX_MVP, v.vertex);
+			float3 foo = UnityObjectToClipPos(v.vertex);
 			o.depth = clamp((foo.z - _DepthStart) / (_DepthEnd - _DepthStart), 0, 1);
 		}
 

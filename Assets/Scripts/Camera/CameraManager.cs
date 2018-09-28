@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.VR;
+using UnityEngine.XR;
 
 public class CameraManager : MonoBehaviour {
 
@@ -46,18 +48,7 @@ public class CameraManager : MonoBehaviour {
 
     public bool IsOculusRiftConnected()
     {
-        try
-        {
-            if (!OVRDevice.IsHMDPresent())
-            {
-                return false;
-            }
-        }
-        catch (System.Exception e)
-        {
-            return false;
-        }
-        return true;
+        return XRSettings.loadedDeviceName != null && XRSettings.loadedDeviceName.Length > 0;
     }
 
     public void SetNormalMode()
@@ -67,7 +58,7 @@ public class CameraManager : MonoBehaviour {
         setOculusRiftCameraEnabled(false);
         setVisualAidsCameraEnabled(true);
         currentFirstPersonCamera = normalCamera;
-        currentViewingCamera = visualAidsCamera.camera;
+        currentViewingCamera = visualAidsCamera.GetComponent<Camera>();
         visualAidsGroup.alpha = 1f;
         oculusRiftActivated = false;
         ScreenAudioManager.SetScreen(normalCamera);
@@ -85,7 +76,7 @@ public class CameraManager : MonoBehaviour {
         setOculusRiftCameraEnabled(true);
         setVisualAidsCameraEnabled(true);
         currentFirstPersonCamera = oculusRiftRightCamera;
-        currentViewingCamera = visualAidsCamera.camera;
+        currentViewingCamera = visualAidsCamera.GetComponent<Camera>();
         visualAidsGroup.alpha = 1f;
         oculusRiftActivated = true;
         ScreenAudioManager.SetScreen(oculusRiftRightCamera);
@@ -139,6 +130,8 @@ public class CameraManager : MonoBehaviour {
 
     void Start()
     {
+        if (IsOculusRiftConnected())
+            setting = CameraSetting.HEADTRACKING;
         HandleSetting();
     }
 }

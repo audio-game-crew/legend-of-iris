@@ -30,6 +30,6 @@ public class EventEffectScript : MonoBehaviour {
         transform.localScale = transform.localScale.addy(Ease.ioSinusoidal(Ease.loopBounce(Time.time + offset2, duration * 2.0f), - magnitude, 2f * magnitude));
         transform.localScale = transform.localScale.addz(Ease.ioSinusoidal(Ease.loopBounce(Time.time + offset3, duration * 3.1f), - magnitude, 2f * magnitude));
         if (animateColor)
-            renderer.material.color = renderer.material.color.seth(Ease.loop(Time.time + offset3, duration * 15f));
+            GetComponent<Renderer>().material.color = GetComponent<Renderer>().material.color.seth(Ease.loop(Time.time + offset3, duration * 15f));
 	}
 }

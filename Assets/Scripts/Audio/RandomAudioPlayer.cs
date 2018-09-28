@@ -21,16 +21,16 @@ public class RandomAudioPlayer : MonoBehaviour {
     private float nextClipStart;
 
     public void Awake() {
-        originalVolume = audio.volume;
-        originalPitch = audio.pitch;
+        originalVolume = GetComponent<AudioSource>().volume;
+        originalPitch = GetComponent<AudioSource>().pitch;
         clips.RemoveAll(clip => clip == null);
     }
 
     private void LerpVolumeTo(float target) {
-        float v = Mathf.Lerp(audio.volume, target, Time.deltaTime);
+        float v = Mathf.Lerp(GetComponent<AudioSource>().volume, target, Time.deltaTime);
         if (Mathf.Abs(v - target) < 0.01) v = target;
-        audio.volume = v;
-        if (audio.isPlaying && v == 0f) audio.Stop();
+        GetComponent<AudioSource>().volume = v;
+        if (GetComponent<AudioSource>().isPlaying && v == 0f) GetComponent<AudioSource>().Stop();
     }
 
     private AudioClip GetRandomClip() {
@@ -40,7 +40,7 @@ public class RandomAudioPlayer : MonoBehaviour {
     public void Update() {
         switch (state) {
         case State.STOPPING:
-            if (audio.isPlaying) LerpVolumeTo(0f);
+            if (GetComponent<AudioSource>().isPlaying) LerpVolumeTo(0f);
             else if (silent == false) {
                 nextClipStart = Time.time + interval + Random.Range(-intervalVariation, intervalVariation);
                 state = State.WAITING;
@@ -49,14 +49,14 @@ public class RandomAudioPlayer : MonoBehaviour {
         case State.WAITING:
             if (silent) state = State.STOPPING;
             if (Time.time > nextClipStart) {
-                audio.clip = GetRandomClip();
-                audio.pitch = originalPitch + Random.Range(-pitchVariation, pitchVariation);
-                audio.Play();
+                GetComponent<AudioSource>().clip = GetRandomClip();
+                GetComponent<AudioSource>().pitch = originalPitch + Random.Range(-pitchVariation, pitchVariation);
+                GetComponent<AudioSource>().Play();
                 state = State.PLAYING;
             }
             break;
         case State.PLAYING:
-            if (silent || audio.isPlaying == false) state = State.STOPPING;
+            if (silent || GetComponent<AudioSource>().isPlaying == false) state = State.STOPPING;
             else LerpVolumeTo(originalVolume);
             break;
         }

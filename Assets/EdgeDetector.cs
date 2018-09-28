@@ -7,13 +7,13 @@ public class EdgeDetector : MonoBehaviour {
     {
         if (EdgeManager.instance == null)
             return;
-        EdgeManager.instance.EdgeTriggerEnter(this.collider, col);
+        EdgeManager.instance.EdgeTriggerEnter(this.GetComponent<Collider>(), col);
     }
 
     void OnTriggerExit(Collider col)
     {
         if (EdgeManager.instance == null)
             return;
-        EdgeManager.instance.EdgeTriggerExit(this.collider, col);
+        EdgeManager.instance.EdgeTriggerExit(this.GetComponent<Collider>(), col);
     }
 }

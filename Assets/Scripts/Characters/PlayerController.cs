@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         if (!LockMovement)
-            rigidbody.MovePosition(rigidbody.position + c.GetMove(transform.localPosition) * (Input.GetButton("RUN") ? 4f : 1f));
+            GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + c.GetMove(transform.localPosition) * (Input.GetButton("RUN") ? 4f : 1f));
         if (!LockRotation)
             camerasContainer.localRotation *= c.GetRotation(camerasContainer.localRotation);
 	}

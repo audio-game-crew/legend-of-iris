@@ -46,8 +46,8 @@ public class CheckpointManager : MonoBehaviour {
             var progress = time / TeleportTime;
             if (progress > 1)
             { // Stop the teleportation
-                player.rigidbody.MovePosition(target.Position);
-                player.rigidbody.useGravity = true;
+                player.GetComponent<Rigidbody>().MovePosition(target.Position);
+                player.GetComponent<Rigidbody>().useGravity = true;
                 player.GetComponent<PlayerController>().camerasContainer.localRotation = target.Rotation;
                 teleporting = false;
                 if (conversationPlayer == null || conversationPlayer.IsFinished())
@@ -56,7 +56,7 @@ public class CheckpointManager : MonoBehaviour {
             else
             {
                 var newPosRot = PositionRotation.Interpolate(start, target, progress, TeleportAnimationHorizontalDisplacementEasing);
-                player.rigidbody.MovePosition(newPosRot.Position
+                player.GetComponent<Rigidbody>().MovePosition(newPosRot.Position
                     // Add the vertical movement to lift up the player a bit while teleporting
                     .addy(TeleportAnimationVerticalDisplacementValue.Evaluate(progress) * JumpHeight));
                 player.GetComponent<PlayerController>().camerasContainer.localRotation = newPosRot.Rotation;
@@ -94,7 +94,7 @@ public class CheckpointManager : MonoBehaviour {
         var player = Characters.instance.Beorn;
         start = new PositionRotation(player.transform.position, Characters.GetPlayerController().camerasContainer.localRotation);
         target = new PositionRotation(lastCheckpoint.gameObject);
-        player.rigidbody.useGravity = false;
+        player.GetComponent<Rigidbody>().useGravity = false;
         teleporting = true;
         SetMovementRelatedComponentsEnabled(false);
         time = 0;

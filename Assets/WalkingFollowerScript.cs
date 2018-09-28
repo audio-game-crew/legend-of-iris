@@ -20,9 +20,9 @@ public class WalkingFollowerScript : MonoBehaviour {
 
         Vector3 target = transform.position + toMove * Timeg.safeFixedDelta(convergeSpeed);
 
-        if (rigidbody != null)
+        if (GetComponent<Rigidbody>() != null)
         {
-            rigidbody.position = target;
+            GetComponent<Rigidbody>().position = target;
         }
         else
         {

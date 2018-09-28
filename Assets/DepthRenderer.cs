@@ -36,12 +36,12 @@ public class DepthRenderer : MonoBehaviour {
         if (active && !activated)
         {
             activated = true;
-            camera.SetReplacementShader(depthRenderer, "");
+            GetComponent<Camera>().SetReplacementShader(depthRenderer, "");
         }
         else if (!active && activated)
         {
             activated = false;
-            camera.ResetReplacementShader();
+            GetComponent<Camera>().ResetReplacementShader();
         }
     }
 
